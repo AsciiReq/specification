@@ -11,10 +11,7 @@ An AsciiReqs2 document is a regular AsciiDoc document.
 Requirements are written inside it, following the conventions defined below,
 so that they can be identified, referenced and processed by tier tools.
 
-
-== Example
-
-The following requirement shows the format in action:
+The following example shows the format in action:
 
 [source, asciidoc]
 ----
@@ -38,7 +35,7 @@ It may also use regular AsciiDoc formatting syntax
 
 The requirements defining the AsciiReqs2 format are listed below.
 
-NOTE: They are themselves written in AsciiReqs2 format.
+NOTE: They are themselves written with the AsciiReqs2 format.
 
 
 === Requirement structure
