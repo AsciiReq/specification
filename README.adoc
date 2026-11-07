@@ -4,13 +4,8 @@
 
 This project specifies a format based on AsciiDoc to write requirements.
 
-It is named AsciiReq in as much as it is initially inspired from
-the [AsciiReqs](https://github.com/hpenne/asciireqs) project.
-
-Contrary to AsciiReqs, which comes as a tool,
-AsciiReq does not implement anything, but just specifies the requirement format.
-
-Requirement Management tools are then expected as tier tools.
+Requirement Management tools are not part of this repository,
+but are then expected as tier tools.
 
 
 == Example
@@ -32,6 +27,8 @@ It may also use regular AsciiDoc formatting syntax
 * Type: example
 ----
 
+NOTE: Syntax inspired
+from the [AsciiReqs](https://github.com/hpenne/asciireqs) project.
 
 == Full specification
 
