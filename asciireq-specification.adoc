@@ -1,13 +1,13 @@
-= AsciiReqs2 Specification
+= AsciiReq Specification
 :toc:
 
 
 == Introduction
 
-This document specifies the AsciiReqs2 format,
+This document specifies the AsciiReq format,
 used to write requirements with AsciiDoc.
 
-An AsciiReqs2 document is a regular AsciiDoc document.
+An AsciiReq document is a regular AsciiDoc document.
 Requirements are written inside it, following the conventions defined below,
 so that they can be identified, referenced and processed by tier tools.
 
@@ -33,9 +33,9 @@ It may also use regular AsciiDoc formatting syntax
 
 == Requirements
 
-The requirements defining the AsciiReqs2 format are listed below.
+The requirements defining the AsciiReq format are listed below.
 
-NOTE: They are themselves written with the AsciiReqs2 format.
+NOTE: They are themselves written with the AsciiReq format.
 
 
 === Requirement structure

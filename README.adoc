@@ -1,14 +1,14 @@
-= AsciiReqs2 - Requirements with AsciiDoc
+= AsciiReq - Requirements with AsciiDoc
 
 == What it is
 
 This project specifies a format based on AsciiDoc to write requirements.
 
-It is named AsciiReqs2 in as much as it is initially inspired from
+It is named AsciiReq in as much as it is initially inspired from
 the [AsciiReqs](https://github.com/hpenne/asciireqs) project.
 
 Contrary to AsciiReqs, which comes as a tool,
-AsciiReqs2 does not implement anything, but just specifies the requirement format.
+AsciiReq does not implement anything, but just specifies the requirement format.
 
 Requirement Management tools are then expected as tier tools.
 
@@ -35,5 +35,5 @@ It may also use regular AsciiDoc formatting syntax
 
 == Full specification
 
-See the link:./asciireqs2-specification.adoc[full specification]
-written in AsciiReqs2 itself.
+See the link:./asciireq-specification.adoc[full specification]
+written in AsciiReq itself.
