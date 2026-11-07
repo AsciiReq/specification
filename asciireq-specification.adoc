@@ -26,7 +26,6 @@ The requirement body may contain several paragraphs.
 It may also use regular AsciiDoc formatting syntax
 (such as lists, tables, admonitions, ...)
 --
-* Version: 1.0.0
 * Type: example
 * Refers: UPPER-REQ-100
 ** Coverage justification.
@@ -37,56 +36,185 @@ It may also use regular AsciiDoc formatting syntax
 
 The requirements defining the AsciiReq format are listed below.
 
-NOTE: They are themselves written with the AsciiReq format.
+[NOTE]
+.Reflective proof of concept
+====
+The AsciiReq requirements are written
+with the AsciiReq format themselves.
+====
 
 
 === Requirement structure
 
-[.req]
-REQ-010::
+==== General AsciiDoc requirement syntax
+
+The AsciiReq format must enable
+the processing of requirement documents
+in a fast and deterministic way.
+
+[#ASCIIREQ-REQ-010, reftext="ASCIIREQ-REQ-010", .req]
+ASCIIREQ-REQ-010::
+Deterministic AsciiDoc format
+--
+Inside an AsciiDoc document,
+a requirement is defined
+as a link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
+with the `.req` link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
+assigned to it.
+--
+* Version: 1.0.0
+* Type: format
+
+[IMPORTANT, #ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT"]
+.ASCIIREQ-REQUIREMENT definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-REQUIREMENT_
+
+will refer to the
+
+> _AsciiDoc description list item defining a requirement (as of <<ASCIIREQ-REQ-010>>)_.
+====
+
+The following requirement ensures
+that the whole content of a requirement
+remains _AsciiDoc-ly_ attached
+to the requirement defined in <<ASCIIREQ-REQ-010>>.
+
+[#ASCIIREQ-REQ-015, reftext="ASCIIREQ-REQ-015", .req]
+ASCIIREQ-REQ-015::
+Requirement content
++
+--
+The _description_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy of a description list item])
+of a description list item defining a requirement (as of <<ASCIIREQ-REQ-010>>)
+must be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[compound].
+
+link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-continuation[List continuations] (i.e. `+` lines)
+must be used to ensure the continuation of the _description_.
+--
+* Version: 1.0.0
+* Type: format
+
+[IMPORTANT, #ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT"]
+.ASCIIREQ-CONTENT definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-CONTENT_
+
+will refer to the
+
+> _AsciiDoc compound content (as of <<ASCIIREQ-REQ-015>>) of an <<ASCIIREQ-REQUIREMENT>>.
+====
+
+
+==== Requirement identifier
+
+Requirement management commonly requires
+that requirements be identified
+with unique identifiers.
+
+[#ASCIIREQ-REQ-020, reftext="ASCIIREQ-REQ-020", .req]
+ASCIIREQ-REQ-020::
 Requirement identifier
 --
-A requirement has an identifier, unique across the document.
-
-The identifier is written on a single line, preceding the
-requirement statement.
+The _term_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy] of a description list item)
+of an <<ASCIIREQ-REQUIREMENT>>
+constitutes the identifier of the requirement.
 --
 * Version: 1.0.0
 * Type: format
 
-[.req]
-REQ-020::
+[IMPORTANT, #ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER"]
+.ASCIIREQ-IDENTIFIER definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-IDENTIFIER_
+
+will refer to the
+
+> _requirement identifier (as of <<ASCIIREQ-REQ-020>>).
+====
+
+
+==== Requirement title
+
+It is usually practical to define requirement titles,
+i.e. a short phrase summarizing the purpose off the requirement.
+This is especially useful
+when requirements are listed in tables,
+in order to quickly understand
+what the requirement talks about.
+
+[#ASCIIREQ-REQ-030, reftext="ASCIIREQ-REQ-030", .req]
+ASCIIREQ-REQ-030::
 Requirement title
 --
-A requirement may have a title:
-a short phrase summarizing the requirement,
-written just after the identifier.
+A requirement title may optionally be defined
+as a first non link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] paragraph
+in the <<REQUIREMENT-CONTENT>>.
 --
 * Version: 1.0.0
 * Type: format
 
-[.req]
-REQ-030::
+The <<ASCIIREQ-REQ-030>> requirement labels "first (...) paragraph"
+for compliance purpose with AsciiDoc syntax definitions,
+but the requirement title shall generally be a single line in practice.
+
+
+==== Requirement body
+
+The requirement body then gives the full text of the requirement.
+
+[#ASCIIREQ-REQ-040, reftext="ASCIIREQ-REQ-040", .req]
+ASCIIREQ-REQ-040::
 Requirement body
 --
-A requirement defines a body:
-the text describing what is required.
-
-The statement may span several lines
-and may use any AsciiDoc formatting (lists, tables, admonitions, ...).
+The requirement body is given
+as a single link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
+in the <<REQUIREMENT-CONTENT>>.
 --
 * Version: 1.0.0
 * Type: format
 
-[.req]
-REQ-004::
+Defining the requirement body as an open block makes it possible to
+write it freely with several paragraphs,
+and use any AsciiDoc formatting (lists, tables, admonitions, ...).
+
+
+==== Requirement attributes
+
+Requirement management commonly requires the usage of additional attributes
+attached with the requirements.
+
+[#ASCIIREQ-REQ-050, reftext="ASCIIREQ-REQ-050", .req]
+ASCIIREQ-REQ-050::
 Requirement attributes
 --
-A requirement may carry metadata, written as a AsciiDoc list of
-`name: value` pairs, placed after the requirement statement.
-
-Metadata may for instance define the version and the type of the
-requirement.
+Requirement attributes may be defined
+in a unique AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
+of `name: value` pairs,
+placed after the requirement body (as of <<Requirement body>>).
 --
 * Version: 1.0.0
 * Type: format
+
+[IMPORTANT, #ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES"]
+.ASCIIREQ-ATTRIBUTES definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-ATTRIBUTES_
+
+will refer to the
+
+> _AsciiDoc unordered list (as of <<ASCIIREQ-REQ-050>>) of an <<ASCIIREQ-REQUIREMENT>>.
+====
+
+
+== References
+
+TODO
