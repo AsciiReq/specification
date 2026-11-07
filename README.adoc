@@ -1,6 +1,6 @@
 = AsciiReq - Requirements with AsciiDoc
 
-== What it is
+== Purpose
 
 This project specifies a format based on AsciiDoc to write requirements.
 
