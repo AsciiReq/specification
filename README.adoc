@@ -14,17 +14,19 @@ but are then expected as tier tools.
 ----
 [.req]
 REQ-010::
-This is the (optional) requirement title
+Requirement title
 --
-This is the text defining the requirement.
+Text defining the requirement body.
 
-The text can span multiple lines.
+The requirement body may contain several paragraphs.
 
 It may also use regular AsciiDoc formatting syntax
-(like lists, tables, admonitions, ...)
+(such as lists, tables, admonitions, ...)
 --
 * Version: 1.0.0
 * Type: example
+* Refers: UPPER-REQ-100
+** Coverage justification.
 ----
 
 NOTE: Syntax inspired
