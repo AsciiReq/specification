@@ -180,7 +180,16 @@ The <<ASCIIREQ-REQ-030>> requirement labels "first (...) paragraph"
 for compliance purpose with AsciiDoc syntax definitions,
 but the requirement title shall generally be a single line in practice.
 
-TODO: Say that the title may be presented on the same line as the requirement identifier.
+[NOTE]
+.One line heading style
+====
+Considering that requirement titles usually consist of a single line,
+we may consider a good option to present the requirement title on the same text line as the <<ASCIIREQ-IDENTIFIER>>.
+Doing so enables `grep` commands to retrieve corresponding requirement identifiers and titles
+in a row.
+
+Let's call it the _one line heading_ style.
+====
 
 TODO: Adopt the "one line id/title" style.
 
