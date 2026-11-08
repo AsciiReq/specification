@@ -64,12 +64,12 @@ It may also use regular AsciiDoc formatting syntax
 TODO
 
 
-=== Actors
+== Actors
 
 TODO
 
 
-=== Data
+== Data
 
 TODO
 
