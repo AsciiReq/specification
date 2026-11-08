@@ -63,6 +63,16 @@ It may also use regular AsciiDoc formatting syntax
 TODO
 
 
+=== Actors
+
+TODO
+
+
+=== Data
+
+TODO
+
+
 == Requirements
 
 TODO: Define an `Actor` section.
