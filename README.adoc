@@ -19,6 +19,7 @@ but are expected as tier tools.
 [.req]
 REQ-010::
 Requirement title
++
 --
 Text defining the requirement body.
 
@@ -27,6 +28,7 @@ The requirement body may contain several paragraphs.
 It may also use regular AsciiDoc formatting syntax
 (such as lists, tables, admonitions, ...)
 --
++
 * Version: 1.0.0
 * Type: example
 * Refers: UPPER-REQ-100

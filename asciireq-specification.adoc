@@ -18,6 +18,7 @@ The following example shows the format in action:
 [.req]
 REQ-010::
 Requirement title
++
 --
 Text defining the requirement body.
 
@@ -26,6 +27,7 @@ The requirement body may contain several paragraphs.
 It may also use regular AsciiDoc formatting syntax
 (such as lists, tables, admonitions, ...)
 --
++
 * Type: example
 * Refers: UPPER-REQ-100
 ** Coverage justification.
@@ -55,6 +57,7 @@ in a fast and deterministic way.
 [#ASCIIREQ-REQ-010, reftext="ASCIIREQ-REQ-010", .req]
 ASCIIREQ-REQ-010::
 Deterministic AsciiDoc format
++
 --
 Inside an AsciiDoc document,
 a requirement is defined
@@ -62,6 +65,7 @@ as a link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[descri
 with the `.req` link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
 assigned to it.
 --
++
 * Version: 1.0.0
 * Type: format
 
@@ -94,6 +98,7 @@ must be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[co
 link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-continuation[List continuations] (i.e. `+` lines)
 must be used to ensure the continuation of the _description_.
 --
++
 * Version: 1.0.0
 * Type: format
 
@@ -119,11 +124,13 @@ with unique identifiers.
 [#ASCIIREQ-REQ-020, reftext="ASCIIREQ-REQ-020", .req]
 ASCIIREQ-REQ-020::
 Requirement identifier
++
 --
 The _term_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy] of a description list item)
 of an <<ASCIIREQ-REQUIREMENT>>
 constitutes the identifier of the requirement.
 --
++
 * Version: 1.0.0
 * Type: format
 
@@ -152,11 +159,13 @@ what the requirement talks about.
 [#ASCIIREQ-REQ-030, reftext="ASCIIREQ-REQ-030", .req]
 ASCIIREQ-REQ-030::
 Requirement title
++
 --
 A requirement title may optionally be defined
 as a first non link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] paragraph
 in the <<REQUIREMENT-CONTENT>>.
 --
++
 * Version: 1.0.0
 * Type: format
 
@@ -172,11 +181,13 @@ The requirement body then gives the full text of the requirement.
 [#ASCIIREQ-REQ-040, reftext="ASCIIREQ-REQ-040", .req]
 ASCIIREQ-REQ-040::
 Requirement body
++
 --
 The requirement body is given
 as a single link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
 in the <<REQUIREMENT-CONTENT>>.
 --
++
 * Version: 1.0.0
 * Type: format
 
@@ -193,12 +204,14 @@ attached with the requirements.
 [#ASCIIREQ-REQ-050, reftext="ASCIIREQ-REQ-050", .req]
 ASCIIREQ-REQ-050::
 Requirement attributes
++
 --
 Requirement attributes may be defined
 in a unique AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
 of `name: value` pairs,
 placed after the requirement body (as of <<Requirement body>>).
 --
++
 * Version: 1.0.0
 * Type: format
 
