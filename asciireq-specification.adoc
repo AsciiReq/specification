@@ -1,6 +1,7 @@
 = AsciiReq v0.1 specification
 :sectnums:
 :toc:
+:toclevels: 5
 
 
 == About this document
