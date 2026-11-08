@@ -71,71 +71,73 @@ TODO
 
 == Data
 
-The following definitions apply until the end of the document.
+The following data definitions helps writing this specification in a more formal way.
+
+[#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
+ASCIIREQ-ITEM::
+AsciiReq item
++
+--
+General AsciiReq item (as of <<ASCIIREQ-REQ-010>>).
+--
+
+[#ASCIIREQ-REF, reftext="ASCIIREQ-REF", .req-data]
+ASCIIREQ-REF::
+AsciiReq foreign document reference
++
+--
+<<ASCIIREQ-ITEM>> for a foreign document reference definition (as of <<ASCIIREQ-REQ-010>>).
+--
+
+[#ASCIIREQ-ACTOR, reftext="ASCIIREQ-ACTOR", .req-data]
+ASCIIREQ-ACTOR::
+AsciiReq formal actor
++
+--
+<<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-REQ-010>>).
+--
+
+[#ASCIIREQ-DATA, reftext="ASCIIREQ-DATA", .req-data]
+ASCIIREQ-DATA::
+AsciiReq formal data
++
+--
+<<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-REQ-010>>).
+--
 
 [#ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT", .req-data]
 ASCIIREQ-REQUIREMENT::
 AsciiReq requirement
 +
 --
-Until the end of the document, the term
-
-> _ASCIIREQ-REQUIREMENT_
-
-will refer to the
-
-> _AsciiDoc description list item defining a requirement (as of <<ASCIIREQ-REQ-010>>)_.
+<<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-REQ-010>>).
 --
-+
-* Version: 1.0.0
 
 [#ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT", .req-data]
 ASCIIREQ-CONTENT::
-AsciiReq requirement content
+AsciiReq item content
 +
 --
-Until the end of the document, the term
-
-> _ASCIIREQ-CONTENT_
-
-will refer to the
-
-> _AsciiDoc compound content (as of <<ASCIIREQ-REQ-015>>) of an <<ASCIIREQ-REQUIREMENT>>.
+<<ASCIIREQ-ITEM>> content (as of <<ASCIIREQ-REQ-015>>).
 --
-+
-* Version: 1.0.0
 
 [#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
 ASCIIREQ-IDENTIFIER::
-AsciiReq requirement identifier
+AsciiReq item identifier
 +
 --
-Until the end of the document, the term
-
-> _ASCIIREQ-IDENTIFIER_
-
-will refer to the
-
-> _requirement identifier (as of <<ASCIIREQ-REQ-020>>).
+Identifier (as of <<ASCIIREQ-REQ-020>>)
+of an <<ASCIREQ-ITEM>>.
 --
-+
-* Version: 1.0.0
 
 [#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
 ASCIIREQ-ATTRIBUTES::
 AsciiReq requirement attributes
 +
 --
-Until the end of the document, the term
-
-> _ASCIIREQ-ATTRIBUTES_
-
-will refer to the
-
-> _AsciiDoc unordered list (as of <<ASCIIREQ-REQ-050>>) of an <<ASCIIREQ-REQUIREMENT>>.
+Attributes (as of <<ASCIIREQ-REQ-050>>)
+of an <<ASCIIREQ-REQUIREMENT>>.
 --
-+
-* Version: 1.0.0
 
 
 == Requirements
@@ -169,12 +171,12 @@ Inside an AsciiDoc document,
 an AsciiReq item is defined
 as a link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
 with an link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
-assigned to it being one of :
+assigned to it being only one of :
 
+`.req-ref`:: The `.req-ref` defines a foreign document reference.
 `.req-actor`:: The `.req-actor` AsciiDoc role defines a formal AsciiReq actor.
 `.req-data`:: The `.req-data` AsciiDoc role defines a formal AsciiReq data.
 `.req`:: The `.req` AsciiDoc role defines an AsciiReq requirement.
-`.req-ref`:: The `.req-ref` defines a foreign document reference.
 --
 +
 * Version: 1.0.0
