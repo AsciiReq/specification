@@ -73,9 +73,11 @@ TODO
 
 The following definitions apply until the end of the document.
 
-[IMPORTANT, #ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT"]
-.ASCIIREQ-REQUIREMENT definition
-====
+[#ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT", .req-data]
+ASCIIREQ-REQUIREMENT::
+AsciiReq requirement
++
+--
 Until the end of the document, the term
 
 > _ASCIIREQ-REQUIREMENT_
@@ -83,11 +85,15 @@ Until the end of the document, the term
 will refer to the
 
 > _AsciiDoc description list item defining a requirement (as of <<ASCIIREQ-REQ-010>>)_.
-====
+--
++
+* Version: 1.0.0
 
-[IMPORTANT, #ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT"]
-.ASCIIREQ-CONTENT definition
-====
+[#ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT", .req-data]
+ASCIIREQ-CONTENT::
+AsciiReq requirement content
++
+--
 Until the end of the document, the term
 
 > _ASCIIREQ-CONTENT_
@@ -95,11 +101,15 @@ Until the end of the document, the term
 will refer to the
 
 > _AsciiDoc compound content (as of <<ASCIIREQ-REQ-015>>) of an <<ASCIIREQ-REQUIREMENT>>.
-====
+--
++
+* Version: 1.0.0
 
-[IMPORTANT, #ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER"]
-.ASCIIREQ-IDENTIFIER definition
-====
+[#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
+ASCIIREQ-IDENTIFIER::
+AsciiReq requirement identifier
++
+--
 Until the end of the document, the term
 
 > _ASCIIREQ-IDENTIFIER_
@@ -107,11 +117,15 @@ Until the end of the document, the term
 will refer to the
 
 > _requirement identifier (as of <<ASCIIREQ-REQ-020>>).
-====
+--
++
+* Version: 1.0.0
 
-[IMPORTANT, #ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES"]
-.ASCIIREQ-ATTRIBUTES definition
-====
+[#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
+ASCIIREQ-ATTRIBUTES::
+AsciiReq requirement attributes
++
+--
 Until the end of the document, the term
 
 > _ASCIIREQ-ATTRIBUTES_
@@ -119,7 +133,9 @@ Until the end of the document, the term
 will refer to the
 
 > _AsciiDoc unordered list (as of <<ASCIIREQ-REQ-050>>) of an <<ASCIIREQ-REQUIREMENT>>.
-====
+--
++
+* Version: 1.0.0
 
 
 == Requirements
