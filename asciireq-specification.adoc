@@ -1,4 +1,4 @@
-= AsciiReq Specification
+= AsciiReq v0.1 specification
 :sectnums:
 :toc:
 
