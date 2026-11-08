@@ -146,14 +146,19 @@ in a fast and deterministic way.
 
 [#ASCIIREQ-REQ-010, reftext="ASCIIREQ-REQ-010", .req]
 ASCIIREQ-REQ-010::
-Deterministic AsciiDoc format
+AsciiReq item
 +
 --
 Inside an AsciiDoc document,
-a requirement is defined
+an AsciiReq item is defined
 as a link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
-with the `.req` link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
-assigned to it.
+with an link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
+assigned to it being one of :
+
+`.req-actor`:: The `.req-actor` AsciiDoc role defines a formal AsciiReq actor.
+`.req-data`:: The `.req-data` AsciiDoc role defines a formal AsciiReq data.
+`.req`:: The `.req` AsciiDoc role defines an AsciiReq requirement.
+`.req-ref`:: The `.req-ref` defines a foreign document reference.
 --
 +
 * Version: 1.0.0
@@ -161,17 +166,16 @@ assigned to it.
 
 
 The following requirement ensures
-that the whole content of a requirement
-remains _AsciiDoc-ly_ attached
-to the requirement defined in <<ASCIIREQ-REQ-010>>.
+that the whole content of an <<ASCIIREQ-ITEM>>
+remains _AsciiDoc-ly_ attached to it.
 
 [#ASCIIREQ-REQ-015, reftext="ASCIIREQ-REQ-015", .req]
 ASCIIREQ-REQ-015::
-Requirement content
+AsciiReq item content
 +
 --
 The _description_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy of a description list item])
-of a description list item defining a requirement (as of <<ASCIIREQ-REQ-010>>)
+of an <<ASCIIREQ-ITEM>>
 must be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[compound].
 
 link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-continuation[List continuations] (i.e. `+` lines)
