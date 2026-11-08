@@ -156,6 +156,8 @@ with the AsciiReq format themselves.
 
 === Requirement structure
 
+TODO: Check that formal data is used appropriately.
+
 ==== General AsciiDoc requirement syntax
 
 The AsciiReq format must enable
@@ -304,6 +306,21 @@ placed after the requirement body (as of <<Requirement body>>).
 +
 * Version: 1.0.0
 * Type: format
+
+
+=== Versioning
+
+TODO
+
+
+=== AsciiReq standard
+
+TODO
+
+
+=== Scenario specification
+
+TODO
 
 
 == Tables
