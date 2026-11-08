@@ -1,4 +1,5 @@
 = AsciiReq Specification
+:sectnums:
 :toc:
 
 
