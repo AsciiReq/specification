@@ -3,6 +3,8 @@
 :toc:
 
 
+TODO: Add introductive sections.
+
 == Introduction
 
 This document specifies the AsciiReq format,
@@ -37,6 +39,8 @@ It may also use regular AsciiDoc formatting syntax
 
 == Requirements
 
+TODO: Define an `Actor` section.
+
 The requirements defining the AsciiReq format are listed below.
 
 [NOTE]
@@ -69,6 +73,8 @@ assigned to it.
 +
 * Version: 1.0.0
 * Type: format
+
+TODO: Gather definitions in a dedicated `Data` section.
 
 [IMPORTANT, #ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT"]
 .ASCIIREQ-REQUIREMENT definition
@@ -174,6 +180,10 @@ The <<ASCIIREQ-REQ-030>> requirement labels "first (...) paragraph"
 for compliance purpose with AsciiDoc syntax definitions,
 but the requirement title shall generally be a single line in practice.
 
+TODO: Say that the title may be presented on the same line as the requirement identifier.
+
+TODO: Adopt the "one line id/title" style.
+
 
 ==== Requirement body
 
@@ -227,6 +237,11 @@ will refer to the
 
 > _AsciiDoc unordered list (as of <<ASCIIREQ-REQ-050>>) of an <<ASCIIREQ-REQUIREMENT>>.
 ====
+
+
+== Tables
+
+TODO
 
 
 == References
