@@ -71,7 +71,55 @@ TODO
 
 == Data
 
-TODO
+The following definitions apply until the end of the document.
+
+[IMPORTANT, #ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT"]
+.ASCIIREQ-REQUIREMENT definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-REQUIREMENT_
+
+will refer to the
+
+> _AsciiDoc description list item defining a requirement (as of <<ASCIIREQ-REQ-010>>)_.
+====
+
+[IMPORTANT, #ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT"]
+.ASCIIREQ-CONTENT definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-CONTENT_
+
+will refer to the
+
+> _AsciiDoc compound content (as of <<ASCIIREQ-REQ-015>>) of an <<ASCIIREQ-REQUIREMENT>>.
+====
+
+[IMPORTANT, #ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER"]
+.ASCIIREQ-IDENTIFIER definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-IDENTIFIER_
+
+will refer to the
+
+> _requirement identifier (as of <<ASCIIREQ-REQ-020>>).
+====
+
+[IMPORTANT, #ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES"]
+.ASCIIREQ-ATTRIBUTES definition
+====
+Until the end of the document, the term
+
+> _ASCIIREQ-ATTRIBUTES_
+
+will refer to the
+
+> _AsciiDoc unordered list (as of <<ASCIIREQ-REQ-050>>) of an <<ASCIIREQ-REQUIREMENT>>.
+====
 
 
 == Requirements
@@ -111,19 +159,6 @@ assigned to it.
 * Version: 1.0.0
 * Type: format
 
-TODO: Gather definitions in a dedicated `Data` section.
-
-[IMPORTANT, #ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT"]
-.ASCIIREQ-REQUIREMENT definition
-====
-Until the end of the document, the term
-
-> _ASCIIREQ-REQUIREMENT_
-
-will refer to the
-
-> _AsciiDoc description list item defining a requirement (as of <<ASCIIREQ-REQ-010>>)_.
-====
 
 The following requirement ensures
 that the whole content of a requirement
@@ -146,18 +181,6 @@ must be used to ensure the continuation of the _description_.
 * Version: 1.0.0
 * Type: format
 
-[IMPORTANT, #ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT"]
-.ASCIIREQ-CONTENT definition
-====
-Until the end of the document, the term
-
-> _ASCIIREQ-CONTENT_
-
-will refer to the
-
-> _AsciiDoc compound content (as of <<ASCIIREQ-REQ-015>>) of an <<ASCIIREQ-REQUIREMENT>>.
-====
-
 
 ==== Requirement identifier
 
@@ -177,18 +200,6 @@ constitutes the identifier of the requirement.
 +
 * Version: 1.0.0
 * Type: format
-
-[IMPORTANT, #ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER"]
-.ASCIIREQ-IDENTIFIER definition
-====
-Until the end of the document, the term
-
-> _ASCIIREQ-IDENTIFIER_
-
-will refer to the
-
-> _requirement identifier (as of <<ASCIIREQ-REQ-020>>).
-====
 
 
 ==== Requirement title
@@ -271,18 +282,6 @@ placed after the requirement body (as of <<Requirement body>>).
 +
 * Version: 1.0.0
 * Type: format
-
-[IMPORTANT, #ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES"]
-.ASCIIREQ-ATTRIBUTES definition
-====
-Until the end of the document, the term
-
-> _ASCIIREQ-ATTRIBUTES_
-
-will refer to the
-
-> _AsciiDoc unordered list (as of <<ASCIIREQ-REQ-050>>) of an <<ASCIIREQ-REQUIREMENT>>.
-====
 
 
 == Tables
