@@ -211,7 +211,7 @@ as a link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[descri
 with an link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
 assigned to it being only one of :
 
-`.req-ref`:: The `.req-ref` defines a foreign document reference.
+`.req-ref`:: The `.req-ref` AsciiDoc role defines a foreign document reference.
 `.req-actor`:: The `.req-actor` AsciiDoc role defines a formal AsciiReq actor.
 `.req-data`:: The `.req-data` AsciiDoc role defines a formal AsciiReq data.
 `.req`:: The `.req` AsciiDoc role defines an AsciiReq requirement.
