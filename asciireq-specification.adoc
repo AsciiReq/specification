@@ -109,8 +109,9 @@ ASCIIREQ-WRITER::
 AsciiReq writer
 +
 --
-An <<ASCIIREQ-ACTOR>> which writes and maintains AsciiReq specifications;
-may be a human or a tool.
+Writes and maintains AsciiReq specifications.
+
+May be a human or a tool.
 --
 
 [#ASCIIREQ-READER, reftext="ASCIIREQ-READER", .req-actor]
@@ -118,8 +119,9 @@ ASCIIREQ-READER::
 AsciiReq reader
 +
 --
-An <<ASCIIREQ-ACTOR>> which reads AsciiReq specifications;
-may be a human or a tool.
+Reads AsciiReq specifications.
+
+May be a human or a tool.
 --
 
 [#ASCIIDOC-RENDERER, reftext="ASCIIDOC-RENDERER", .req-actor]
@@ -127,9 +129,10 @@ ASCIIDOC-RENDERER::
 AsciiDoc renderer
 +
 --
-An <<ASCIIREQ-ACTOR>> which reads AsciiDoc
-and makes a presentation of it for humans;
-basically a tool.
+Reads AsciiDoc documents (possibly containing AsciiReq content)
+and makes a presentation of it for humans.
+
+Basically a tool.
 --
 
 
