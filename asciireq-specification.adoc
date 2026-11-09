@@ -61,7 +61,43 @@ It may also use regular AsciiDoc formatting syntax
 
 === Motivation
 
-TODO
+In the age of AI,
+it is essential to constitute a clear specification format
+to help AI agents work even better.
+Clear specifications lead to better verifications,
+and thus better quality.
+
+One major interest of defining a specification format
+based upon a plain text technology
+such as link:https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
+is that it makes it compatible with source code management tools
+like link:https://git-scm.com/[git].
+By the way, lots of aspects become easier:
+
+* modification history,
+* collaborative working, even with AI agents,
+* branches,
+* versioning,
+* ...
+
+Furthermore,
+link:https://mermaid.js.org/intro/[Mermaid] diagrams,
+being a plain text technology as well,
+integrate naturally with AsciiDoc,
+which makes great sens when writing specifications.
+
+Using AsciiDoc
+instead of link:https://daringfireball.net/projects/markdown/syntax/[Markdown]
+is motivated by the fact that AsciiDoc comes with a couple of native key features
+which make it easier to write and maintain large technical documentations:
+
+* automatic link:https://docs.asciidoctor.org/asciidoc/latest/toc/[table of content],
+* automatic link:https://docs.asciidoctor.org/asciidoc/latest/sections/numbers/[section numbers]
+* link:https://docs.asciidoctor.org/asciidoc/latest/directives/include/[includes]
+  which make it possible to split a large document,
+* better link:https://docs.asciidoctor.org/asciidoc/latest/tables/build-a-basic-table/[table] management in smaller lines,
+* better link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross-reference] support,
+* ...
 
 
 == Actors
