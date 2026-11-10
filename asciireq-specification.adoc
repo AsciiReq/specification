@@ -100,6 +100,23 @@ which make it easier to write and maintain large technical documentations:
 * ...
 
 
+=== Conventions
+
+Because it is the aim of it,
+this document follows the <<ASCIIREQ-SPECIFICATION>> given by itself
+(which constitutes some kind of reflective proof of concept).
+
+This document furthermore uses <<RFC-2119>> and <<RFC-8174>> conventions
+for the understanding of the capitalized keywords
+"MAY",
+"MUST", "MUST NOT",
+"SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT",
+"REQUIRED", "RECOMMENDED", and "OPTIONAL".
+
+TODO: Check usage of capitalized keywords in the specifications.
+
+
 == Actors
 
 The following actors interact with AsciiReq specifications.
@@ -220,13 +237,6 @@ of an <<ASCIIREQ-REQUIREMENT>>.
 == Requirements
 
 The requirements defining the AsciiReq format are listed below.
-
-[NOTE]
-.Reflective proof of concept
-====
-The AsciiReq requirements are written
-with the AsciiReq format themselves.
-====
 
 
 === Requirement structure
