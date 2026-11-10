@@ -140,6 +140,8 @@ Basically a tool.
 
 The following data definitions helps writing this specification in a more formal way.
 
+TODO: Check usage of formal definitions in the document.
+
 [#ASCIIREQ-DOC, reftext="ASCIIREQ-DOC", .req-data]
 ASCIIREQ-DOC::
 AsciiReq document
