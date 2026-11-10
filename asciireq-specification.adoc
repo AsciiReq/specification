@@ -397,4 +397,43 @@ TODO
 
 == References
 
-TODO
+[#ASCIIREQ-SPECIFICATION, reftext="ASCIIREQ-SPECIFICATION", .req-ref]
+ASCIIREQ-SPECIFICATION::
+AsciiReq specification
++
+--
+This document.
+--
+
+[#ASCIIDOC-DOCUMENTATION, reftext="ASCIIDOC-DOCUMENTATION", .req-ref]
+ASCIIDOC-DOCUMENTATION::
+AsciiDoc documentation
++
+--
+Official AsciiDoc documentation.
+
+See https://docs.asciidoctor.org/asciidoc/latest/.
+
+Sublinks of the latter are given in this document,
+in order to point directly the useful AsciiDoc information in the context.
+--
+
+[#RFC-2119, reftext="RFC-2119", .req-ref]
+RFC-2119::
+RFC-2119
++
+--
+RFC 2119: BCP 14: Key words for use in RFCs to Indicate Requirement Levels
+
+See https://www.rfc-editor.org/info/rfc2119/.
+--
+
+[#RFC-8174, reftext="RFC-8174", .req-ref]
+RFC-8174::
+RFC-8174
++
+--
+RFC 8174: BCP 14: Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words
+
+See https://www.rfc-editor.org/info/rfc8174/.
+--
