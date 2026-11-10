@@ -243,12 +243,12 @@ The requirements defining the AsciiReq format are listed below.
 === AsciiReq standard
 
 In order to make it clear that an AsciiDoc document contains AsciiReq content,
-this shall be declared in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[document header].
+it shall be declared in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
 
 [NOTE]
 .AsciiDoc custom attributes
 ====
-The definition of custom attributes is allowed by the AsciiDoc format
+The definition of custom attributes is natively allowed by the AsciiDoc format
 (see https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/),
 which makes the following requirements possible.
 ====
@@ -266,10 +266,10 @@ giving the AsciiReq standard version the document is based onto.
 
 _MAJOR_, _MINOR_ and _PATCH_ following the https://semver.org/spec/v2.0.0.html[Semantic Versioning 2.0.0] definitions :
 
-* The `:asciireq-version:` attribute value SHOULD be given as a browsable URL
+* The `:asciireq-version:` attribute value MUST be given as a browsable URL
   giving the latest _MAJOR.MINOR_ version of the AsciiReq specification
   followed by the AsciiDoc document.
-* The _PATCH_ version SHOULD NOT be specified in the latter URL.
+* The _PATCH_ version MUST NOT be specified in the latter URL.
 --
 +
 * Version: 1.0.0
