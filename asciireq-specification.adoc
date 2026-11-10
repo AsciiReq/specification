@@ -217,8 +217,6 @@ of an <<ASCIIREQ-REQUIREMENT>>.
 
 == Requirements
 
-TODO: Define an `Actor` section.
-
 The requirements defining the AsciiReq format are listed below.
 
 [NOTE]
