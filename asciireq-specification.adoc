@@ -140,6 +140,14 @@ Basically a tool.
 
 The following data definitions helps writing this specification in a more formal way.
 
+[#ASCIIREQ-DOC, reftext="ASCIIREQ-DOC", .req-data]
+ASCIIREQ-DOC::
+AsciiReq document
++
+--
+AsciiDoc document following the <<ASCIIREQ-SPECIFICATION>>.
+--
+
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
 ASCIIREQ-ITEM::
 AsciiReq item
