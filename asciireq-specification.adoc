@@ -17,7 +17,7 @@ AsciiReq v0.1 specification
 link:https://github.com/alxroyer[alxroyer]
 
 |Version|
-0.1.0-rc
+v0.1.0-rc
 
 |Date|
 2026-11-xx
