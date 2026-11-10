@@ -17,7 +17,7 @@ but are expected as tier tools.
 [source, asciidoc]
 ----
 [.req]
-REQ-010::
+REQ-010-v1.0::
 Requirement title
 +
 --
@@ -29,7 +29,6 @@ It may also use regular AsciiDoc formatting syntax
 (such as lists, tables, admonitions, ...)
 --
 +
-* Version: 1.0.0
 * Type: example
 * Refers: UPPER-REQ-100
 ** Coverage justification.

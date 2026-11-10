@@ -41,7 +41,7 @@ The following example shows the format in action:
 [source, asciidoc]
 ----
 [.req]
-REQ-010::
+REQ-010-v1.0::
 Requirement title
 +
 --
