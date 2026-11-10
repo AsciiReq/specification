@@ -1,4 +1,5 @@
 = AsciiReq v0.1 specification
+:asciireq-version: https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
 :sectnums:
 :toc:
 :toclevels: 5
@@ -239,6 +240,61 @@ of an <<ASCIIREQ-REQUIREMENT>>.
 The requirements defining the AsciiReq format are listed below.
 
 
+=== AsciiReq standard
+
+In order to make it clear that an AsciiDoc document contains AsciiReq content,
+this shall be declared in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[document header].
+
+[NOTE]
+.AsciiDoc custom attributes
+====
+The definition of custom attributes is allowed by the AsciiDoc format
+(see https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/),
+which makes the following requirements possible.
+====
+
+[#ASCIIREQ-STANDARD-100, reftext="ASCIIREQ-STANDARD-100", .req]
+ASCIIREQ-STANDARD-100::
+`:asciireq-version:` document attribute declaration
++
+--
+An <<ASCIIREQ-WRITER>>,
+when writing an AsciiDoc document containing AsciiReq content,
+SHOULD declare the `:asciireq-version:` attribute
+in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
+giving the AsciiReq standard version the document is based onto.
+
+_MAJOR_, _MINOR_ and _PATCH_ following the https://semver.org/spec/v2.0.0.html[Semantic Versioning 2.0.0] definitions :
+
+* The `:asciireq-version:` attribute value SHOULD be given as a browsable URL
+  giving the latest _MAJOR.MINOR_ version of the AsciiReq specification
+  followed by the AsciiDoc document.
+* The _PATCH_ version SHOULD NOT be specified in the latter URL.
+--
++
+* Version: 1.0.0
+* Type: format
+
+As of the SemVer standard, _PATCH_ versions won't break the compatibility.
+That's the reason why there is no need to give it with `:asciireq-version:` attributes.
+
+[#ASCIIREQ-STANDARD-110, reftext="ASCIIREQ-STANDARD-110", .req]
+ASCIIREQ-STANDARD-110::
+`:asciireq-version:` document attribute processing
++
+--
+An <<ASCIIREQ-READER>>,
+when reading an AsciiDoc document which may contain AsciiReq content,
+...
+TODO
+--
++
+* Version: 1.0.0
+* Type: format
+
+TODO: Finish the `AsciiReq standard` section.
+
+
 === Requirement structure
 
 TODO: Check that formal data is used appropriately.
@@ -394,11 +450,6 @@ placed after the requirement body (as of <<Requirement body>>).
 
 
 === Requirement versioning
-
-TODO
-
-
-=== AsciiReq standard
 
 TODO
 
