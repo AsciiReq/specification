@@ -393,7 +393,7 @@ placed after the requirement body (as of <<Requirement body>>).
 * Type: format
 
 
-=== Versioning
+=== Requirement versioning
 
 TODO
 
