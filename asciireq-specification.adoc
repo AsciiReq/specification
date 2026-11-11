@@ -559,6 +559,11 @@ should make it deterministic
 to parse requirement attributes.
 
 
+=== Cross references
+
+TODO
+
+
 === Requirement versioning
 
 Requirement identifiers MAY end with a `-vX.Y` pattern,
