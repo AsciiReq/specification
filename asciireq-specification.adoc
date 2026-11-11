@@ -232,6 +232,14 @@ Identifier (as of <<ASCIIREQ-REQ-020>>)
 of an <<ASCIREQ-ITEM>>.
 --
 
+[#ASCIIREQ-TITLE, reftext="ASCIIREQ-TITLE", .req-data]
+ASCIIREQ-TITLE:: AsciiReq item title
++
+--
+Optional title (as of <<ASCIIREQ-REQ-030>>)
+of an <<ASCIIREQ-ITEM>>.
+--
+
 [#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
 ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
 +
