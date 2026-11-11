@@ -256,7 +256,7 @@ ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
 +
 --
 Attributes (as of <<ASCIIREQ-REQ-050>>)
-of an <<ASCIIREQ-REQUIREMENT>>,
+of an <<ASCIIREQ-REQUIREMENT>> (requirements only!),
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
@@ -358,11 +358,11 @@ As of the <<SEMVER>> standard, _PATCH_ versions won't break the compatibility.
 That's the reason why there is no need to give them with AsciiReq standard versioned URLs.
 
 
-=== Requirement structure
+=== AsciiReq items
 
 TODO: Check that formal data is used appropriately.
 
-==== General AsciiDoc requirement syntax
+==== General AsciiDoc syntax
 
 The AsciiReq format must enable
 the processing of requirement documents
@@ -410,19 +410,22 @@ must be used to ensure the continuation of the _description_.
 ** <<ASCIIREQ-READER>>
 
 
-==== Requirement identifier
+==== AsciiReq item identifier
 
 Requirement management commonly requires
 that requirements be identified
 with unique identifiers.
 
+The same goes with formal items
+like actors, data and references.
+
 [#ASCIIREQ-REQ-020, reftext="ASCIIREQ-REQ-020", .req]
-ASCIIREQ-REQ-020:: Requirement identifier
+ASCIIREQ-REQ-020:: AsciiReq item identifier
 +
 --
 The _term_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy] of a description list item)
-of an <<ASCIIREQ-REQUIREMENT>>
-constitutes the identifier of the requirement.
+of an <<ASCIIREQ-ITEM>>
+constitutes the identifier of the <<ASCIIREQ-ITEM>>.
 --
 +
 * *Actors:*
@@ -430,7 +433,7 @@ constitutes the identifier of the requirement.
 ** <<ASCIIREQ-READER>>
 
 
-==== Requirement title
+==== AsciiReq item title
 
 It is usually practical to define requirement titles,
 i.e. a short phrase summarizing the purpose off the requirement.
@@ -439,22 +442,26 @@ when requirements are listed in tables,
 in order to quickly understand
 what the requirement talks about.
 
+Titles may also be useful for formal items.
+That's the reason why titles also apply to any type of AsciiReq item.
+
 [#ASCIIREQ-REQ-030, reftext="ASCIIREQ-REQ-030", .req]
-ASCIIREQ-REQ-030:: Requirement title
+ASCIIREQ-REQ-030:: Requirement item title
 +
 --
-A requirement title may optionally be defined
+A title may be defined
 as a first non link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] paragraph
-in the <<ASCIIREQ-COMPOUND-CONTENT>>.
+in the <<ASCIIREQ-COMPOUND-CONTENT>>
+of an <<ASCIIREQ-ITEM>>.
 --
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
-The <<ASCIIREQ-REQ-030>> requirement labels "first (...) paragraph"
+The requirement labels "first (...) paragraph"
 for compliance purpose with AsciiDoc syntax definitions,
-but the requirement title shall generally be a single line in practice.
+but a title will generally be a single line in practice.
 
 Considering that requirement titles usually consist of a single line,
 it may be a good option to present the title on the same text line as the identifier.
@@ -475,17 +482,18 @@ as its <<ASCIIREQ-IDENTIFIER>>.
 ** <<ASCIIREQ-WRITER>>
 
 
-==== Requirement body
+==== AsciiReq item body
 
 The requirement body then gives the full text of the requirement.
 
 [#ASCIIREQ-REQ-040, reftext="ASCIIREQ-REQ-040", .req]
-ASCIIREQ-REQ-040:: Requirement body
+ASCIIREQ-REQ-040:: AsciiReq item body
 +
 --
-The requirement body is given
+The AsciiReq item body is given
 as a single link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
-in the <<ASCIIREQ-COMPOUND-CONTENT>>.
+in the <<ASCIIREQ-COMPOUND-CONTENT>>
+of an <<ASCIIREQ-ITEM>>.
 --
 +
 * *Actors:*
@@ -497,19 +505,24 @@ write it freely with several paragraphs,
 and use any AsciiDoc formatting (lists, tables, admonitions, ...).
 
 
-==== Requirement attributes
+==== AsciiReq requirement attributes
 
 Requirement management commonly requires the usage of additional attributes
 attached with the requirements.
 
+Please note that attributes apply to requirements only
+(not to actors, data, nor references).
+
 [#ASCIIREQ-REQ-050, reftext="ASCIIREQ-REQ-050", .req]
-ASCIIREQ-REQ-050:: Requirement attributes
+ASCIIREQ-REQ-050:: AsciiReq requirement attributes
 +
 --
 Requirement attributes MAY be defined
 in a unique AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
 of `*name:* value` pairs
-placed after the requirement body (as of <<ASCIIREQ-REQ-040>>).
+in the <<ASCIIREQ-COMPOUND-CONTENT>>
+placed after the <<ASCIIREQ-BODY>>
+of an <<ASCIIREQ-REQUIREMENT>>.
 
 The full `name:` pattern,
 including the `:` separator at its end,
