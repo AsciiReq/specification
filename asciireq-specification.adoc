@@ -42,8 +42,7 @@ The following example shows the format in action:
 [source, asciidoc]
 ----
 [.req]
-REQ-010-v1.0::
-Requirement title
+REQ-010-v1.0:: Requirement title
 +
 --
 Text defining the requirement body.
@@ -142,8 +141,7 @@ TODO: Check usage of capitalized keywords in the specifications.
 The following actors interact with AsciiReq specifications.
 
 [#ASCIIREQ-WRITER, reftext="ASCIIREQ-WRITER", .req-actor]
-ASCIIREQ-WRITER::
-AsciiReq writer
+ASCIIREQ-WRITER:: AsciiReq writer
 +
 --
 Writes and maintains AsciiReq specifications.
@@ -152,8 +150,7 @@ May be a human or a tool.
 --
 
 [#ASCIIREQ-READER, reftext="ASCIIREQ-READER", .req-actor]
-ASCIIREQ-READER::
-AsciiReq reader
+ASCIIREQ-READER:: AsciiReq reader
 +
 --
 Reads AsciiReq specifications.
@@ -162,8 +159,7 @@ May be a human or a tool.
 --
 
 [#ASCIIDOC-RENDERER, reftext="ASCIIDOC-RENDERER", .req-actor]
-ASCIIDOC-RENDERER::
-AsciiDoc renderer
+ASCIIDOC-RENDERER:: AsciiDoc renderer
 +
 --
 Reads AsciiDoc documents (possibly containing AsciiReq content)
@@ -180,64 +176,56 @@ The following data definitions helps writing this specification in a more formal
 TODO: Check usage of formal definitions in the document.
 
 [#ASCIIREQ-DOCUMENT, reftext="ASCIIREQ-DOCUMENT", .req-data]
-ASCIIREQ-DOCUMENT::
-AsciiReq document
+ASCIIREQ-DOCUMENT:: AsciiReq document
 +
 --
 AsciiDoc document following the <<ASCIIREQ-SPECIFICATION>>.
 --
 
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
-ASCIIREQ-ITEM::
-AsciiReq item
+ASCIIREQ-ITEM:: AsciiReq item
 +
 --
 General AsciiReq item (as of <<ASCIIREQ-REQ-010>>).
 --
 
 [#ASCIIREQ-REF, reftext="ASCIIREQ-REF", .req-data]
-ASCIIREQ-REF::
-AsciiReq foreign document reference
+ASCIIREQ-REF:: AsciiReq foreign document reference
 +
 --
 <<ASCIIREQ-ITEM>> for a foreign document reference definition (as of <<ASCIIREQ-REQ-010>>).
 --
 
 [#ASCIIREQ-ACTOR, reftext="ASCIIREQ-ACTOR", .req-data]
-ASCIIREQ-ACTOR::
-AsciiReq formal actor
+ASCIIREQ-ACTOR:: AsciiReq formal actor
 +
 --
 <<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-REQ-010>>).
 --
 
 [#ASCIIREQ-DATA, reftext="ASCIIREQ-DATA", .req-data]
-ASCIIREQ-DATA::
-AsciiReq formal data
+ASCIIREQ-DATA:: AsciiReq formal data
 +
 --
 <<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-REQ-010>>).
 --
 
 [#ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT", .req-data]
-ASCIIREQ-REQUIREMENT::
-AsciiReq requirement
+ASCIIREQ-REQUIREMENT:: AsciiReq requirement
 +
 --
 <<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-REQ-010>>).
 --
 
 [#ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT", .req-data]
-ASCIIREQ-CONTENT::
-AsciiReq item content
+ASCIIREQ-CONTENT:: AsciiReq item content
 +
 --
 <<ASCIIREQ-ITEM>> content (as of <<ASCIIREQ-REQ-015>>).
 --
 
 [#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
-ASCIIREQ-IDENTIFIER::
-AsciiReq item identifier
+ASCIIREQ-IDENTIFIER:: AsciiReq item identifier
 +
 --
 Identifier (as of <<ASCIIREQ-REQ-020>>)
@@ -245,8 +233,7 @@ of an <<ASCIREQ-ITEM>>.
 --
 
 [#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
-ASCIIREQ-ATTRIBUTES::
-AsciiReq requirement attributes
+ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
 +
 --
 Attributes (as of <<ASCIIREQ-REQ-050>>)
@@ -277,8 +264,7 @@ which makes the definition of `:asciireq-version:` possible.
 AsciiReq standard versioning follows the <<SEMVER>> rules.
 
 [#ASCIIREQ-STANDARD-100, reftext="ASCIIREQ-STANDARD-100", .req]
-ASCIIREQ-STANDARD-100::
-`:asciireq-version:` document attribute declaration
+ASCIIREQ-STANDARD-100:: `:asciireq-version:` document attribute declaration
 +
 --
 An <<ASCIIREQ-WRITER>>,
@@ -299,8 +285,7 @@ so that an <<ASCII-READER>> can figure out which version of AsciiReq standard it
 as specified in <<ASCIIREQ-STANDARD-110>>.
 
 [#ASCIIREQ-STANDARD-110, reftext="ASCIIREQ-STANDARD-110", .req]
-ASCIIREQ-STANDARD-110::
-`:asciireq-version:` document attribute processing
+ASCIIREQ-STANDARD-110:: `:asciireq-version:` document attribute processing
 +
 --
 An <<ASCIIREQ-READER>>,
@@ -330,8 +315,7 @@ in order to help humans
 easily find and read through the referenced specification.
 
 [#ASCIIREQ-STANDARD-120, reftext="ASCIIREQ-STANDARD-120", .req]
-ASCIIREQ-STANDARD-120::
-AsciiReq standard versionned URLs
+ASCIIREQ-STANDARD-120:: AsciiReq standard versionned URLs
 +
 --
 The table below gives the authorized values
@@ -365,8 +349,7 @@ the processing of requirement documents
 in a fast and deterministic way.
 
 [#ASCIIREQ-REQ-010, reftext="ASCIIREQ-REQ-010", .req]
-ASCIIREQ-REQ-010::
-AsciiReq item
+ASCIIREQ-REQ-010:: AsciiReq item
 +
 --
 Inside an AsciiDoc document,
@@ -391,8 +374,7 @@ that the whole content of an <<ASCIIREQ-ITEM>>
 remains _AsciiDoc-ly_ attached to it.
 
 [#ASCIIREQ-REQ-015, reftext="ASCIIREQ-REQ-015", .req]
-ASCIIREQ-REQ-015::
-AsciiReq item content
+ASCIIREQ-REQ-015:: AsciiReq item content
 +
 --
 The _description_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy of a description list item])
@@ -415,8 +397,7 @@ that requirements be identified
 with unique identifiers.
 
 [#ASCIIREQ-REQ-020, reftext="ASCIIREQ-REQ-020", .req]
-ASCIIREQ-REQ-020::
-Requirement identifier
+ASCIIREQ-REQ-020:: Requirement identifier
 +
 --
 The _term_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy] of a description list item)
@@ -439,8 +420,7 @@ in order to quickly understand
 what the requirement talks about.
 
 [#ASCIIREQ-REQ-030, reftext="ASCIIREQ-REQ-030", .req]
-ASCIIREQ-REQ-030::
-Requirement title
+ASCIIREQ-REQ-030:: Requirement title
 +
 --
 A requirement title may optionally be defined
@@ -467,16 +447,13 @@ in a row.
 Let's call it the _one line heading_ style.
 ====
 
-TODO: Adopt the "one line id/title" style.
-
 
 ==== Requirement body
 
 The requirement body then gives the full text of the requirement.
 
 [#ASCIIREQ-REQ-040, reftext="ASCIIREQ-REQ-040", .req]
-ASCIIREQ-REQ-040::
-Requirement body
+ASCIIREQ-REQ-040:: Requirement body
 +
 --
 The requirement body is given
@@ -499,8 +476,7 @@ Requirement management commonly requires the usage of additional attributes
 attached with the requirements.
 
 [#ASCIIREQ-REQ-050, reftext="ASCIIREQ-REQ-050", .req]
-ASCIIREQ-REQ-050::
-Requirement attributes
+ASCIIREQ-REQ-050:: Requirement attributes
 +
 --
 Requirement attributes MAY be defined
@@ -548,8 +524,7 @@ only the version changes,
 when the content of the requirement changes.
 
 [#ASCIIREQ-VERSIONING-200, reftext="ASCIIREQ-VERSIONING-200", .req]
-ASCIIREQ-VERSIONING-200::
-Requirement identifier version
+ASCIIREQ-VERSIONING-200:: Requirement identifier version
 +
 --
 The identifier (as of <<ASCIIREQ-REQ-020>>) of an <<ASCIIREQ-REQUIREMENT>>
@@ -580,8 +555,7 @@ TODO
 == References
 
 [#ASCIIDOC, reftext="ASCIIDOC", .req-ref]
-ASCIIDOC::
-AsciiDoc
+ASCIIDOC:: AsciiDoc
 +
 --
 See documentation:
@@ -592,24 +566,21 @@ in order to point directly the useful AsciiDoc information in the context.
 --
 
 [#ASCIIREQ-SPECIFICATION, reftext="ASCIIREQ-SPECIFICATION", .req-ref]
-ASCIIREQ-SPECIFICATION::
-AsciiReq specification
+ASCIIREQ-SPECIFICATION:: AsciiReq specification
 +
 --
 This document.
 --
 
 [#GIT, reftext="GIT", .req-ref]
-GIT::
-Git SCM
+GIT:: Git SCM
 +
 --
 See link:https://git-scm.com/[git].
 --
 
 [#RFC-2119, reftext="RFC-2119", .req-ref]
-RFC-2119::
-RFC-2119
+RFC-2119:: RFC-2119
 +
 --
 RFC 2119: BCP 14: Key words for use in RFCs to Indicate Requirement Levels
@@ -618,8 +589,7 @@ See https://www.rfc-editor.org/info/rfc2119/.
 --
 
 [#RFC-8174, reftext="RFC-8174", .req-ref]
-RFC-8174::
-RFC-8174
+RFC-8174:: RFC-8174
 +
 --
 RFC 8174: BCP 14: Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words
@@ -628,8 +598,7 @@ See https://www.rfc-editor.org/info/rfc8174/.
 --
 
 [#SEMVER, reftext="SEMVER"]
-SEMVER::
-Semantic Versioning 2.0.0
+SEMVER:: Semantic Versioning 2.0.0
 +
 --
 See https://semver.org/spec/v2.0.0.html.
