@@ -648,7 +648,7 @@ This document.
 GIT:: Git SCM
 +
 --
-See link:https://git-scm.com/[git].
+See https://git-scm.com/.
 --
 
 [#RFC-2119, reftext="RFC-2119", .req-ref]
