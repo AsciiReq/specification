@@ -360,8 +360,6 @@ That's the reason why there is no need to give them with AsciiReq standard versi
 
 === AsciiReq items
 
-TODO: Check that formal data is used appropriately.
-
 ==== General AsciiDoc syntax
 
 The AsciiReq format must enable
@@ -376,7 +374,9 @@ Inside an AsciiDoc document,
 an AsciiReq item is defined
 as a link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
 with an link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
-assigned to it being only one of :
+assigned to it.
+
+The Ascii role attached MUST be one of :
 
 `.req-ref`:: The `.req-ref` AsciiDoc role defines a foreign document reference.
 `.req-actor`:: The `.req-actor` AsciiDoc role defines a formal AsciiReq actor.
@@ -399,10 +399,10 @@ ASCIIREQ-REQ-015:: AsciiReq item compound content
 --
 The _description_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy of a description list item])
 of an <<ASCIIREQ-ITEM>>
-must be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[compound].
+MUST be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[compound].
 
 link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-continuation[List continuations] (i.e. `+` lines)
-must be used to ensure the continuation of the _description_.
+MUST be used to ensure the continuation of the _description_.
 --
 +
 * *Actors:*
@@ -423,9 +423,8 @@ like actors, data and references.
 ASCIIREQ-REQ-020:: AsciiReq item identifier
 +
 --
-The _term_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy] of a description list item)
-of an <<ASCIIREQ-ITEM>>
-constitutes the identifier of the <<ASCIIREQ-ITEM>>.
+The REQUIRED identifier of an <<ASCIIREQ-ITEM>> is defined
+as the _term_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy] of a description list item).
 --
 +
 * *Actors:*
@@ -449,10 +448,9 @@ That's the reason why titles also apply to any type of AsciiReq item.
 ASCIIREQ-REQ-030:: Requirement item title
 +
 --
-A title may be defined
+An OPTIONAL title for an <<ASCIIREQ-ITEM>> may be defined
 as a first non link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] paragraph
-in the <<ASCIIREQ-COMPOUND-CONTENT>>
-of an <<ASCIIREQ-ITEM>>.
+at the beginning of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 +
 * *Actors:*
@@ -490,8 +488,11 @@ The requirement body then gives the full text of the requirement.
 ASCIIREQ-REQ-040:: AsciiReq item body
 +
 --
-The AsciiReq item body is given
-as a single link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
+The REQUIRED body of an <<ASCIIREQ-ITEM>> is given
+as an AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
+in the <<ASCIIREQ-COMPOUND-CONTENT>>.
+
+There MUST be only one open block
 in the <<ASCIIREQ-COMPOUND-CONTENT>>
 of an <<ASCIIREQ-ITEM>>.
 --
@@ -517,21 +518,26 @@ Please note that attributes apply to requirements only
 ASCIIREQ-REQ-050:: AsciiReq requirement attributes
 +
 --
-Requirement attributes MAY be defined
-in a unique AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
+The OPTIONAL requirement attributes of an <<ASCIIREQ-REQUIREMENT>> are defined
+as an AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
 of `*name:* value` pairs
-in the <<ASCIIREQ-COMPOUND-CONTENT>>
-placed after the <<ASCIIREQ-BODY>>
-of an <<ASCIIREQ-REQUIREMENT>>.
+at the end of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 
 The full `name:` pattern,
 including the `:` separator at its end,
 MUST be written in bold.
+
+There MUST be only one unordered list
+in the <<ASCIIREQ-COMPOUND-CONTENT>>
+of an <<ASCIIREQ-REQUIREMENT>>.
 --
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
+
+It may happen that no attributes be useful for a given specification or single requirement.
+That's the reason why requirement attributes remain optional.
 
 A link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list]
 would have been syntactically better
