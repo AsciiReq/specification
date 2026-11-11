@@ -140,7 +140,7 @@ TODO: Check usage of capitalized keywords in the specifications.
 
 The following actors interact with AsciiReq specifications.
 
-[#ASCIIREQ-WRITER, reftext="ASCIIREQ-WRITER", .req-actor]
+[#ASCIIREQ-WRITER, .req-actor]
 ASCIIREQ-WRITER:: AsciiReq writer
 +
 --
@@ -149,7 +149,7 @@ Writes and maintains AsciiReq specifications.
 May be a human or a tool.
 --
 
-[#ASCIIREQ-READER, reftext="ASCIIREQ-READER", .req-actor]
+[#ASCIIREQ-READER, .req-actor]
 ASCIIREQ-READER:: AsciiReq reader
 +
 --
@@ -158,7 +158,7 @@ Reads AsciiReq specifications.
 May be a human or a tool.
 --
 
-[#ASCIIDOC-RENDERER, reftext="ASCIIDOC-RENDERER", .req-actor]
+[#ASCIIDOC-RENDERER, .req-actor]
 ASCIIDOC-RENDERER:: AsciiDoc renderer
 +
 --
@@ -175,49 +175,49 @@ The following data definitions helps writing this specification in a more formal
 
 TODO: Check usage of formal definitions in the document.
 
-[#ASCIIREQ-DOCUMENT, reftext="ASCIIREQ-DOCUMENT", .req-data]
+[#ASCIIREQ-DOCUMENT, .req-data]
 ASCIIREQ-DOCUMENT:: AsciiReq document
 +
 --
 AsciiDoc document following the <<ASCIIREQ-SPECIFICATION>>.
 --
 
-[#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
+[#ASCIIREQ-ITEM, .req-data]
 ASCIIREQ-ITEM:: AsciiReq item
 +
 --
 General AsciiReq item (as of <<ASCIIREQ-REQ-0200>>).
 --
 
-[#ASCIIREQ-REF, reftext="ASCIIREQ-REF", .req-data]
+[#ASCIIREQ-REF, .req-data]
 ASCIIREQ-REF:: AsciiReq foreign document reference
 +
 --
 <<ASCIIREQ-ITEM>> for a foreign document reference definition (as of <<ASCIIREQ-REQ-0200>>).
 --
 
-[#ASCIIREQ-ACTOR, reftext="ASCIIREQ-ACTOR", .req-data]
+[#ASCIIREQ-ACTOR, .req-data]
 ASCIIREQ-ACTOR:: AsciiReq formal actor
 +
 --
 <<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-REQ-0200>>).
 --
 
-[#ASCIIREQ-DATA, reftext="ASCIIREQ-DATA", .req-data]
+[#ASCIIREQ-DATA, .req-data]
 ASCIIREQ-DATA:: AsciiReq formal data
 +
 --
 <<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-REQ-0200>>).
 --
 
-[#ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT", .req-data]
+[#ASCIIREQ-REQUIREMENT, .req-data]
 ASCIIREQ-REQUIREMENT:: AsciiReq requirement
 +
 --
 <<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-REQ-0200>>).
 --
 
-[#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
+[#ASCIIREQ-IDENTIFIER, .req-data]
 ASCIIREQ-IDENTIFIER:: AsciiReq item identifier
 +
 --
@@ -225,7 +225,7 @@ Identifier (as of <<ASCIIREQ-REQ-0300>>)
 of an <<ASCIIREQ-ITEM>>.
 --
 
-[#ASCIIREQ-COMPOUND-CONTENT, reftext="ASCIIREQ-COMPOUND-CONTENT", .req-data]
+[#ASCIIREQ-COMPOUND-CONTENT, .req-data]
 ASCIIREQ-COMPOUND-CONTENT:: AsciiReq item content
 +
 --
@@ -233,7 +233,7 @@ Compound content (as of <<ASCIIREQ-REQ-0210>>)
 attached with an <<ASCIIREQ-ITEM>>.
 --
 
-[#ASCIIREQ-TITLE, reftext="ASCIIREQ-TITLE", .req-data]
+[#ASCIIREQ-TITLE, .req-data]
 ASCIIREQ-TITLE:: AsciiReq item title
 +
 --
@@ -242,7 +242,7 @@ of an <<ASCIIREQ-ITEM>>,
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
-[#ASCIIREQ-BODY, reftext="ASCIIREQ-BODY", .req-data]
+[#ASCIIREQ-BODY, .req-data]
 ASCIIREQ-BODY:: AsciiReq item body
 +
 --
@@ -251,7 +251,7 @@ of an <<ASCIIREQ-ITEM>>,
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
-[#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
+[#ASCIIREQ-ATTRIBUTES, .req-data]
 ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
 +
 --
@@ -283,7 +283,7 @@ which makes the definition of `:asciireq-version:` possible.
 
 AsciiReq standard versioning follows the <<SEMVER>> rules.
 
-[#ASCIIREQ-STANDARD-0100, reftext="ASCIIREQ-STANDARD-0100", .req]
+[#ASCIIREQ-STANDARD-0100, .req]
 ASCIIREQ-STANDARD-0100:: `:asciireq-version:` document attribute declaration
 +
 --
@@ -305,7 +305,7 @@ The usage of the `:asciireq-version:` attribute in REQUIRED on purpose,
 so that an <<ASCIIREQ-READER>> can figure out which version of AsciiReq standard it is working with
 as specified in <<ASCIIREQ-STANDARD-0110>>.
 
-[#ASCIIREQ-STANDARD-0110, reftext="ASCIIREQ-STANDARD-0110", .req]
+[#ASCIIREQ-STANDARD-0110, .req]
 ASCIIREQ-STANDARD-0110:: `:asciireq-version:` document attribute processing
 +
 --
@@ -335,7 +335,7 @@ are browsable URLs,
 in order to help humans
 easily find and read through the referenced specification.
 
-[#ASCIIREQ-STANDARD-0120, reftext="ASCIIREQ-STANDARD-0120", .req]
+[#ASCIIREQ-STANDARD-0120, .req]
 ASCIIREQ-STANDARD-0120:: AsciiReq standard versioned URLs
 +
 --
@@ -367,7 +367,7 @@ The AsciiReq format must enable
 the processing of requirement documents
 in a fast and deterministic way.
 
-[#ASCIIREQ-REQ-0200, reftext="ASCIIREQ-REQ-0200", .req]
+[#ASCIIREQ-REQ-0200, .req]
 ASCIIREQ-REQ-0200:: AsciiReq item
 +
 --
@@ -394,7 +394,7 @@ The following requirement ensures
 that the whole content of an <<ASCIIREQ-ITEM>>
 remains _AsciiDoc-ly_ attached to it.
 
-[#ASCIIREQ-REQ-0210, reftext="ASCIIREQ-REQ-0210", .req]
+[#ASCIIREQ-REQ-0210, .req]
 ASCIIREQ-REQ-0210:: AsciiReq item compound content
 +
 --
@@ -420,7 +420,7 @@ with unique identifiers.
 The same goes with formal items
 like actors, data and references.
 
-[#ASCIIREQ-REQ-0300, reftext="ASCIIREQ-REQ-0300", .req]
+[#ASCIIREQ-REQ-0300, .req]
 ASCIIREQ-REQ-0300:: AsciiReq item identifier
 +
 --
@@ -445,7 +445,7 @@ what the requirement talks about.
 Titles may also be useful for formal items.
 That's the reason why titles also apply to any type of AsciiReq item.
 
-[#ASCIIREQ-REQ-0400, reftext="ASCIIREQ-REQ-0400", .req]
+[#ASCIIREQ-REQ-0400, .req]
 ASCIIREQ-REQ-0400:: Requirement item title
 +
 --
@@ -467,7 +467,7 @@ it may be a good option to present the title on the same text line as the identi
 Doing so enables `grep` commands to retrieve corresponding identifiers and titles
 in single rows.
 
-[#ASCIIREQ-REQ-0410, reftext="ASCIIREQ-REQ-0410", .req]
+[#ASCIIREQ-REQ-0410, .req]
 ASCIIREQ-REQ-0410:: One line heading style
 +
 --
@@ -485,7 +485,7 @@ as its <<ASCIIREQ-IDENTIFIER>>.
 
 The requirement body then gives the full text of the requirement.
 
-[#ASCIIREQ-REQ-0500, reftext="ASCIIREQ-REQ-0500", .req]
+[#ASCIIREQ-REQ-0500, .req]
 ASCIIREQ-REQ-0500:: AsciiReq item body
 +
 --
@@ -515,7 +515,7 @@ attached with the requirements.
 Please note that attributes apply to requirements only
 (not to actors, data, nor references).
 
-[#ASCIIREQ-REQ-0600, reftext="ASCIIREQ-REQ-0600", .req]
+[#ASCIIREQ-REQ-0600, .req]
 ASCIIREQ-REQ-0600:: AsciiReq requirement attributes
 +
 --
@@ -568,7 +568,7 @@ navigate within an AsciiReq document.
 The following requirement proposes a pattern
 to ease AsciiDoc cross references for AsciiReq items.
 
-[#ASCIIREQ-XREF-0700, reftext="ASCIIREQ-XREF-0700", .req]
+[#ASCIIREQ-XREF-0700, .req]
 ASCIIREQ-XREF-0700:: AsciiReq item cross references
 +
 --
@@ -621,7 +621,7 @@ a version modification for a requirement
 will cause errors in downstream traceability
 referring to a previous version of the modified requirement.
 
-[#ASCIIREQ-VERSIONING-0800, reftext="ASCIIREQ-VERSIONING-0800", .req]
+[#ASCIIREQ-VERSIONING-0800, .req]
 ASCIIREQ-VERSIONING-0800:: Versioned requirement identifiers
 +
 --
@@ -659,7 +659,7 @@ TODO
 
 == References
 
-[#ASCIIDOC, reftext="ASCIIDOC", .req-ref]
+[#ASCIIDOC, .req-ref]
 ASCIIDOC:: AsciiDoc
 +
 --
@@ -670,21 +670,21 @@ Sublinks of the latter are given in this document,
 in order to point directly the useful AsciiDoc information in the context.
 --
 
-[#ASCIIREQ-SPECIFICATION, reftext="ASCIIREQ-SPECIFICATION", .req-ref]
+[#ASCIIREQ-SPECIFICATION, .req-ref]
 ASCIIREQ-SPECIFICATION:: AsciiReq specification
 +
 --
 This document.
 --
 
-[#GIT, reftext="GIT", .req-ref]
+[#GIT, .req-ref]
 GIT:: Git SCM
 +
 --
 See https://git-scm.com/.
 --
 
-[#RFC-2119, reftext="RFC-2119", .req-ref]
+[#RFC-2119, .req-ref]
 RFC-2119:: RFC-2119
 +
 --
@@ -693,7 +693,7 @@ RFC 2119: BCP 14: Key words for use in RFCs to Indicate Requirement Levels
 See https://www.rfc-editor.org/info/rfc2119/.
 --
 
-[#RFC-8174, reftext="RFC-8174", .req-ref]
+[#RFC-8174, .req-ref]
 RFC-8174:: RFC-8174
 +
 --
@@ -702,7 +702,7 @@ RFC 8174: BCP 14: Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words
 See https://www.rfc-editor.org/info/rfc8174/.
 --
 
-[#SEMVER, reftext="SEMVER"]
+[#SEMVER]
 SEMVER:: Semantic Versioning 2.0.0
 +
 --
