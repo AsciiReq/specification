@@ -276,7 +276,7 @@ in the AsciiDoc document header.
 [NOTE]
 .AsciiDoc custom attributes
 ====
-The definition of https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/[custom attributes]
+The definition of link:https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/[custom attributes]
 is natively allowed by the AsciiDoc format,
 which makes the definition of `:asciireq-version:` possible.
 ====
@@ -288,9 +288,9 @@ ASCIIREQ-STANDARD-0100:: `:asciireq-version:` document attribute declaration
 +
 --
 When writing an <<ASCIIREQ-DOCUMENT>>,
-the `:asciireq-version:` https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
+the `:asciireq-version:` link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
 MUST be declared
-in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
+in the link:https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
 
 The `:asciireq-version:` document attribute value
 MUST be a URL
