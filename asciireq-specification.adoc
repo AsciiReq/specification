@@ -291,7 +291,8 @@ giving the AsciiReq standard version (as of <<ASCIIREQ-STANDARD-120>>)
 used to write the <<ASCIIREQ-DOCUMENT>>.
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
 
 The usage of the `:asciireq-version:` attribute in REQUIRED on purpose,
 so that an <<ASCII-READER>> can figure out which version of AsciiReq standard it is working with
@@ -311,7 +312,8 @@ If the <<ASCIIREQ-READER>> does not handle the AsciiReq standard version specifi
 it SHOULD display a warning message.
 --
 +
-* *Actors:* <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-READER>>
 
 If the reader does not handle the AsciiReq standard version specified,
 it is its own responsibility to decide the behavior after:
@@ -339,7 +341,9 @@ don't give
 |===
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>, <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 As of the <<SEMVER>> standard, _PATCH_ versions won't break the compatibility.
 That's the reason why there is no need to give them with AsciiReq standard versionned URLs.
@@ -379,7 +383,9 @@ assigned to it being only one of :
 `.req`:: The `.req` AsciiDoc role defines an AsciiReq requirement.
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>, <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 
 The following requirement ensures
@@ -399,7 +405,9 @@ link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-conti
 must be used to ensure the continuation of the _description_.
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>, <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 
 ==== Requirement identifier
@@ -418,7 +426,9 @@ of an <<ASCIIREQ-REQUIREMENT>>
 constitutes the identifier of the requirement.
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>, <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 
 ==== Requirement title
@@ -440,7 +450,9 @@ as a first non link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blo
 in the <<REQUIREMENT-CONTENT>>.
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>, <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 The <<ASCIIREQ-REQ-030>> requirement labels "first (...) paragraph"
 for compliance purpose with AsciiDoc syntax definitions,
@@ -474,7 +486,9 @@ as a single link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks
 in the <<REQUIREMENT-CONTENT>>.
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>, <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 Defining the requirement body as an open block makes it possible to
 write it freely with several paragraphs,
@@ -501,7 +515,9 @@ including the `:` separator at its end,
 MUST be written in bold.
 --
 +
-* *Actors:* <<ASCIIREQ-WRITER>>, <<ASCIIREQ-READER>>
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 A link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list]
 would have been syntactically better
