@@ -561,7 +561,23 @@ to parse requirement attributes.
 
 === Cross references
 
-TODO
+AsciiReq items MAY be attached an AsciiDoc identifier and reftext
+in order to ease <<ASCIIDOC>> cross references.
+
+[#ASCIIREQ-XREF-300, reftext="ASCIIREQ-XREF-300", .req]
+ASCIIREQ-XREF-300:: AsciiReq item cross references
++
+--
+An <<ASCIIREQ-ITEM>> MAY be attached
+an link:https://docs.asciidoctor.org/asciidoc/latest/attributes/positional-and-named/[AsciiDoc identifier attribute]
+and link:https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/[reftext attribute],
+both with the same value as the AsciiReq identifier,
+in order to ease <<ASCIIDOC>> cross references.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 
 === Requirement versioning
