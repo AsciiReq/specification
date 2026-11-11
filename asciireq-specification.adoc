@@ -480,22 +480,19 @@ ASCIIREQ-REQ-050::
 Requirement attributes
 +
 --
-Requirement attributes may be defined
+Requirement attributes MAY be defined
 in a unique AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
-of `name: value` pairs,
-placed after the requirement body (as of <<Requirement body>>).
+of `*name:* value` pairs
+placed after the requirement body (as of <<ASCIIREQ-REQ-040>>).
 
-The `name:` pattern,
+The full `name:` pattern,
 including the `:` separator at its end,
-must be written in bold (i.e. as `*name:*`).
+MUST be written in bold.
 --
 +
 * *Version:* 1.0.0
 * *Type:* format
 
-[NOTE]
-.Why an unordered list instead of a description list
-====
 A link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list]
 would have been syntactically better
 to define requirement attributes as `name:: value` pairs.
@@ -514,7 +511,6 @@ the `name:` pattern is written in bold.
 Including the `:` separator at the end of the bold part
 should make it deterministic
 to parse requirement attributes.
-====
 
 
 === Requirement versioning
