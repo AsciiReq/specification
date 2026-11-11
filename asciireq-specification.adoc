@@ -484,10 +484,37 @@ Requirement attributes may be defined
 in a unique AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
 of `name: value` pairs,
 placed after the requirement body (as of <<Requirement body>>).
+
+The `name:` pattern,
+including the `:` separator at its end,
+must be written in bold (i.e. as `*name:*`).
 --
 +
-* Version: 1.0.0
-* Type: format
+* *Version:* 1.0.0
+* *Type:* format
+
+[NOTE]
+.Why an unordered list instead of a description list
+====
+A link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list]
+would have been syntactically better
+to define requirement attributes as `name:: value` pairs.
+
+However,
+requirement attributes are defined as a simple unordered list
+as a matter of rendering with <<ASCIIDOC-RENDERER>>s
+(especially the GitHub web platform),
+which can't be configured.
+
+A description list would display badly
+and make the reading more difficult for humans.
+
+As a workaround,
+the `name:` pattern is written in bold.
+Including the `:` separator at the end of the bold part
+should make it deterministic
+to parse requirement attributes.
+====
 
 
 === Requirement versioning
