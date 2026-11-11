@@ -705,7 +705,7 @@ RFC 8174: BCP 14: Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words
 See https://www.rfc-editor.org/info/rfc8174/.
 --
 
-[#SEMVER]
+[#SEMVER, .req-ref]
 SEMVER:: Semantic Versioning 2.0.0
 +
 --
