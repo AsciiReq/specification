@@ -315,7 +315,7 @@ in order to help humans
 easily find and read through the referenced specification.
 
 [#ASCIIREQ-STANDARD-120, reftext="ASCIIREQ-STANDARD-120", .req]
-ASCIIREQ-STANDARD-120:: AsciiReq standard versionned URLs
+ASCIIREQ-STANDARD-120:: AsciiReq standard versioned URLs
 +
 --
 The table below gives the authorized values
@@ -335,7 +335,7 @@ for `:asciireq-version:` document attributes:
 ** <<ASCIIREQ-READER>>
 
 As of the <<SEMVER>> standard, _PATCH_ versions won't break the compatibility.
-That's the reason why there is no need to give them with AsciiReq standard versionned URLs.
+That's the reason why there is no need to give them with AsciiReq standard versioned URLs.
 
 
 === Requirement structure
