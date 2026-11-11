@@ -287,12 +287,13 @@ AsciiReq standard versioning follows the <<SEMVER>> rules.
 ASCIIREQ-STANDARD-0100:: `:asciireq-version:` document attribute declaration
 +
 --
-An <<ASCIIREQ-WRITER>>,
-when writing an <<ASCIIREQ-DOCUMENT>>,
-MUST declare the `:asciireq-version:` document attribute
+When writing an <<ASCIIREQ-DOCUMENT>>,
+the `:asciireq-version:` https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
+MUST be declared
 in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
 
-The `:asciireq-version:` document attribute value MUST be an URL
+The `:asciireq-version:` document attribute value
+MUST be a URL
 giving the AsciiReq standard version (as of <<ASCIIREQ-STANDARD-0120>>)
 used to write the <<ASCIIREQ-DOCUMENT>>.
 --
