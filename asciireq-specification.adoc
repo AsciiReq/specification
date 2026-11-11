@@ -217,19 +217,20 @@ ASCIIREQ-REQUIREMENT:: AsciiReq requirement
 <<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-REQ-010>>).
 --
 
-[#ASCIIREQ-CONTENT, reftext="ASCIIREQ-CONTENT", .req-data]
-ASCIIREQ-CONTENT:: AsciiReq item content
-+
---
-<<ASCIIREQ-ITEM>> content (as of <<ASCIIREQ-REQ-015>>).
---
-
 [#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
 ASCIIREQ-IDENTIFIER:: AsciiReq item identifier
 +
 --
 Identifier (as of <<ASCIIREQ-REQ-020>>)
-of an <<ASCIREQ-ITEM>>.
+of an <<ASCIIREQ-ITEM>>.
+--
+
+[#ASCIIREQ-COMPOUND-CONTENT, reftext="ASCIIREQ-COMPOUND-CONTENT", .req-data]
+ASCIIREQ-COMPOUND-CONTENT:: AsciiReq item content
++
+--
+Compound content (as of <<ASCIIREQ-REQ-015>>)
+attached with an <<ASCIIREQ-ITEM>>.
 --
 
 [#ASCIIREQ-TITLE, reftext="ASCIIREQ-TITLE", .req-data]
@@ -237,7 +238,8 @@ ASCIIREQ-TITLE:: AsciiReq item title
 +
 --
 Optional title (as of <<ASCIIREQ-REQ-030>>)
-of an <<ASCIIREQ-ITEM>>.
+of an <<ASCIIREQ-ITEM>>,
+part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
 [#ASCIIREQ-BODY, reftext="ASCIIREQ-BODY", .req-data]
@@ -245,7 +247,8 @@ ASCIIREQ-BODY:: AsciiReq item body
 +
 --
 Body (as of <<ASCIIREQ-REQ-040>>)
-of an <<ASCIIREQ-ITEM>>.
+of an <<ASCIIREQ-ITEM>>,
+part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
 [#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
@@ -253,7 +256,8 @@ ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
 +
 --
 Attributes (as of <<ASCIIREQ-REQ-050>>)
-of an <<ASCIIREQ-REQUIREMENT>>.
+of an <<ASCIIREQ-REQUIREMENT>>,
+part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
 
@@ -390,7 +394,7 @@ that the whole content of an <<ASCIIREQ-ITEM>>
 remains _AsciiDoc-ly_ attached to it.
 
 [#ASCIIREQ-REQ-015, reftext="ASCIIREQ-REQ-015", .req]
-ASCIIREQ-REQ-015:: AsciiReq item content
+ASCIIREQ-REQ-015:: AsciiReq item compound content
 +
 --
 The _description_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy of a description list item])
@@ -441,7 +445,7 @@ ASCIIREQ-REQ-030:: Requirement title
 --
 A requirement title may optionally be defined
 as a first non link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] paragraph
-in the <<REQUIREMENT-CONTENT>>.
+in the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 +
 * *Actors:*
@@ -481,7 +485,7 @@ ASCIIREQ-REQ-040:: Requirement body
 --
 The requirement body is given
 as a single link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
-in the <<REQUIREMENT-CONTENT>>.
+in the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 +
 * *Actors:*
