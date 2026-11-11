@@ -616,7 +616,7 @@ only the final `-vX.Y` pattern MUST be updated.
 
 === Scenario specification
 
-TODO
+Not covered yet.
 
 
 == Tables
