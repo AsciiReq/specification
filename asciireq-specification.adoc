@@ -160,8 +160,8 @@ The following data definitions helps writing this specification in a more formal
 
 TODO: Check usage of formal definitions in the document.
 
-[#ASCIIREQ-DOC, reftext="ASCIIREQ-DOC", .req-data]
-ASCIIREQ-DOC::
+[#ASCIIREQ-DOCUMENT, reftext="ASCIIREQ-DOCUMENT", .req-data]
+ASCIIREQ-DOCUMENT::
 AsciiReq document
 +
 --
@@ -243,15 +243,19 @@ The requirements defining the AsciiReq format are listed below.
 === AsciiReq standard
 
 In order to make it clear that an AsciiDoc document contains AsciiReq content,
-it shall be declared in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
+and which version of the standard is used,
+a declaration shall be made
+in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
 
 [NOTE]
 .AsciiDoc custom attributes
 ====
 The definition of custom attributes is natively allowed by the AsciiDoc format
 (see https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/),
-which makes the following requirements possible.
+which makes the definition of `:asciireq-version:` possible.
 ====
+
+AsciiReq standard versioning commonly follows the <<SEMVER>> rules.
 
 [#ASCIIREQ-STANDARD-100, reftext="ASCIIREQ-STANDARD-100", .req]
 ASCIIREQ-STANDARD-100::
@@ -259,24 +263,21 @@ ASCIIREQ-STANDARD-100::
 +
 --
 An <<ASCIIREQ-WRITER>>,
-when writing an AsciiDoc document containing AsciiReq content,
-SHOULD declare the `:asciireq-version:` attribute
+when writing an <<ASCIIREQ-DOCUMENT>>,
+MUST declare the `:asciireq-version:` document attribute
 in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
-giving the AsciiReq standard version the document is based onto.
 
-_MAJOR_, _MINOR_ and _PATCH_ following the https://semver.org/spec/v2.0.0.html[Semantic Versioning 2.0.0] definitions :
-
-* The `:asciireq-version:` attribute value MUST be given as a browsable URL
-  giving the latest _MAJOR.MINOR_ version of the AsciiReq specification
-  followed by the AsciiDoc document.
-* The _PATCH_ version MUST NOT be specified in the latter URL.
+The `:asciireq-version:` document attribute value MUST be an URL
+giving the AsciiReq standard version (as of <<ASCIIREQ-STANDARD-120>>)
+used to write the <<ASCIIREQ-DOCUMENT>>.
 --
 +
 * Version: 1.0.0
 * Type: format
 
-As of the SemVer standard, _PATCH_ versions won't break the compatibility.
-That's the reason why there is no need to give it with `:asciireq-version:` attributes.
+The usage of the `:asciireq-version:` attribute in REQUIRED on purpose,
+so that an <<ASCII-READER>> can figure out which version of AsciiReq standard it is working with
+as specified in <<ASCIIREQ-STANDARD-110>>.
 
 [#ASCIIREQ-STANDARD-110, reftext="ASCIIREQ-STANDARD-110", .req]
 ASCIIREQ-STANDARD-110::
@@ -284,15 +285,55 @@ ASCIIREQ-STANDARD-110::
 +
 --
 An <<ASCIIREQ-READER>>,
-when reading an AsciiDoc document which may contain AsciiReq content,
-...
-TODO
+when reading an AsciiDoc document containing an `:asciireq-version:` document attribute,
+MUST process the document as an <<ASCIIREQ-DOCUMENT>>,
+according to the AsciiReq standard version specified as of <<ASCIIREQ-STANDARD-120>>.
+
+If the <<ASCIIREQ-READER>> does not handle the AsciiReq standard version specified,
+it SHOULD display a warning message.
 --
 +
 * Version: 1.0.0
 * Type: format
 
-TODO: Finish the `AsciiReq standard` section.
+If the reader does not handle the AsciiReq standard version specified,
+it is its own responsibility to decide the behavior after:
+
+* stop processing;
+* consider the latest AsciiReq standard version by default;
+* try to guess the AsciiReq standard version from the content of the document;
+* ...
+
+[#ASCIIREQ-STANDARD-120, reftext="ASCIIREQ-STANDARD-120", .req]
+ASCIIREQ-STANDARD-120::
+AsciiReq standard versionned URLs
++
+--
+The table below gives the authorized values
+for `:asciireq-version:` document attributes:
+
+[cols="1,5"]
+|===
+|AsciiReq standard version|URL|
+|v0.1|https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc|
+
+The AsciiReq standard versionned URLs
+don't give 
+|===
+--
++
+* Version: 1.0.0
+* Type: format
+
+As of the <<SEMVER>> standard, _PATCH_ versions won't break the compatibility.
+That's the reason why there is no need to give them with AsciiReq standard versionned URLs.
+
+The URLs specified in <<ASCIIREQ-STANDARD-120>>
+are browsable URLs,
+in order to help humans
+easily find and read through this specification.
+
+_MAJOR_, _MINOR_ and _PATCH_ following <<SEMVER>> definitions :
 
 
 === Requirement structure
@@ -466,14 +507,6 @@ TODO
 
 == References
 
-[#ASCIIREQ-SPECIFICATION, reftext="ASCIIREQ-SPECIFICATION", .req-ref]
-ASCIIREQ-SPECIFICATION::
-AsciiReq specification
-+
---
-This document.
---
-
 [#ASCIIDOC-DOCUMENTATION, reftext="ASCIIDOC-DOCUMENTATION", .req-ref]
 ASCIIDOC-DOCUMENTATION::
 AsciiDoc documentation
@@ -485,6 +518,14 @@ See https://docs.asciidoctor.org/asciidoc/latest/.
 
 Sublinks of the latter are given in this document,
 in order to point directly the useful AsciiDoc information in the context.
+--
+
+[#ASCIIREQ-SPECIFICATION, reftext="ASCIIREQ-SPECIFICATION", .req-ref]
+ASCIIREQ-SPECIFICATION::
+AsciiReq specification
++
+--
+This document.
 --
 
 [#RFC-2119, reftext="RFC-2119", .req-ref]
@@ -505,4 +546,11 @@ RFC-8174
 RFC 8174: BCP 14: Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words
 
 See https://www.rfc-editor.org/info/rfc8174/.
+--
+
+[#SEMVER, reftext="SEMVER"]
+SEMVER::
+Semantic Versioning 2.0.0
+--
+See https://semver.org/spec/v2.0.0.html.
 --
