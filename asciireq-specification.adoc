@@ -41,7 +41,7 @@ The following example shows the format in action:
 
 [source, asciidoc]
 ----
-[.req]
+[#REQ-010-v1.0, reftext="REQ-010-v1.0", .req]
 REQ-010-v1.0:: Requirement title
 +
 --
@@ -595,13 +595,37 @@ even if not rendered.
 .Cross references redundancy
 ====
 The drawback of this pattern is that it creates redundancy between
-1) the AsciiDoc ID attribute,
-2) the AsciiDoc `reftext` attribute, and
-3) the AsciiReq identifier.
 
-As shown in the example,
-all this redundant information
-remains packed in the heading part of the requirement.
+1. the AsciiDoc ID attribute,
+2. the AsciiDoc `reftext` attribute,
+3. the AsciiReq identifier.
+
+One could hope that
+the `reftext` attribute could be spared,
+which would quite kill this redundancy issue.
+
+Nevertheless, without `reftext` attributes, AsciiDoc renderers seem to behave differently:
+
+* GitHub displays cross references with AsciiReq identifiers between square brackets,
+* The link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc VSCode extension]
+  displays the AsciiReq identifiers only (without square brackets).
+* ...
+
+Sometimes, renderers fail:
+
+* The link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc VSCode extension]
+  sometimes displays `null` for an AsciiReq item reference.
+
+With `reftext` attributes,
+AsciiReq identifiers only (without square brackets)
+are always displayed.
+
+That' the reason why
+<<ASCIIREQ-XREF-0700>> proposes to duplicate the AsciiReq identifier information again
+with the addition of a `reftext` attribute.
+
+As shown in the example at the beginning of this document,
+the redundant information remains packed in the heading part of the requirement.
 But still, it creates a pitfall, and errors can be made.
 ====
 
