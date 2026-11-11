@@ -110,9 +110,21 @@ this document follows the <<ASCIIREQ-SPECIFICATION>> given by itself
 The AsciiReq attributes for the requirements in this document are the following:
 
 * *Actors:*
-  actors, as defined by the "Actors" section of this document,
+  Actors, as defined by the "Actors" section of this document,
   concerned by the requirement.
-  Given as an unordered sublist below the "Actors:" attribute list item.
+  Given as a level 2 unordered sublist below the "Actors:" attribute list item.
+  Level 3 sublist items may be used for justifications.
+
+  Example:
+  [source, asciidoc]
+  ----
+  * *Actors:*
+  ** <<ASCIIREQ-WRITER>>
+  *** Justification.
+  *** Justification.
+  ** <<ASCIIREQ-READER>>
+  ***Justification.
+  ----
 
 This document furthermore uses <<RFC-2119>> and <<RFC-8174>> conventions
 for the understanding of the capitalized keywords
