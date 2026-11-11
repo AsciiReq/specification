@@ -271,13 +271,13 @@ The requirements defining the AsciiReq format are listed below.
 In order to make it clear that an AsciiDoc document contains AsciiReq content,
 and which version of the standard is used,
 a declaration shall be made
-in the https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
+in the AsciiDoc document header.
 
 [NOTE]
 .AsciiDoc custom attributes
 ====
-The definition of custom attributes is natively allowed by the AsciiDoc format
-(see https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/),
+The definition of https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/[custom attributes]
+is natively allowed by the AsciiDoc format,
 which makes the definition of `:asciireq-version:` possible.
 ====
 
