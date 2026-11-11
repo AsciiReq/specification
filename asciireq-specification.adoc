@@ -274,7 +274,7 @@ The definition of custom attributes is natively allowed by the AsciiDoc format
 which makes the definition of `:asciireq-version:` possible.
 ====
 
-AsciiReq standard versioning commonly follows the <<SEMVER>> rules.
+AsciiReq standard versioning follows the <<SEMVER>> rules.
 
 [#ASCIIREQ-STANDARD-100, reftext="ASCIIREQ-STANDARD-100", .req]
 ASCIIREQ-STANDARD-100::
@@ -316,12 +316,18 @@ it SHOULD display a warning message.
 ** <<ASCIIREQ-READER>>
 
 If the reader does not handle the AsciiReq standard version specified,
-it is its own responsibility to decide the behavior after:
+it is its own responsibility to decide the behavior after,
+either:
 
 * stop processing;
 * consider the latest AsciiReq standard version by default;
 * try to guess the AsciiReq standard version from the content of the document;
 * ...
+
+The URLs specified with `:asciireq-version:` document attributes
+are browsable URLs,
+in order to help humans
+easily find and read through the referenced specification.
 
 [#ASCIIREQ-STANDARD-120, reftext="ASCIIREQ-STANDARD-120", .req]
 ASCIIREQ-STANDARD-120::
@@ -346,13 +352,6 @@ for `:asciireq-version:` document attributes:
 
 As of the <<SEMVER>> standard, _PATCH_ versions won't break the compatibility.
 That's the reason why there is no need to give them with AsciiReq standard versionned URLs.
-
-The URLs specified in <<ASCIIREQ-STANDARD-120>>
-are browsable URLs,
-in order to help humans
-easily find and read through this specification.
-
-_MAJOR_, _MINOR_ and _PATCH_ following <<SEMVER>> definitions :
 
 
 === Requirement structure
