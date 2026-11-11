@@ -599,6 +599,7 @@ See https://www.rfc-editor.org/info/rfc8174/.
 [#SEMVER, reftext="SEMVER"]
 SEMVER::
 Semantic Versioning 2.0.0
++
 --
 See https://semver.org/spec/v2.0.0.html.
 --
