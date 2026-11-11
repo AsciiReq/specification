@@ -333,11 +333,10 @@ for `:asciireq-version:` document attributes:
 
 [cols="1,5"]
 |===
-|AsciiReq standard version|URL|
-|v0.1|https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc|
+|AsciiReq standard version |URL
 
-The AsciiReq standard versionned URLs
-don't give 
+|v0.1
+|https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
 |===
 --
 +
