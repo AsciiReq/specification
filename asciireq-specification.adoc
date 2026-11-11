@@ -64,9 +64,9 @@ It may also use regular AsciiDoc formatting syntax
 
 One major interest of defining a specification format
 based upon a plain text technology
-such as link:https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
+such as <<ASCIIDOC>>
 is that it makes it compatible with source code management tools
-like link:https://git-scm.com/[git].
+like <<GIT>>.
 By the way, lots of aspects become easier:
 
 * modification history,
@@ -584,14 +584,13 @@ TODO
 
 == References
 
-[#ASCIIDOC-DOCUMENTATION, reftext="ASCIIDOC-DOCUMENTATION", .req-ref]
-ASCIIDOC-DOCUMENTATION::
-AsciiDoc documentation
+[#ASCIIDOC, reftext="ASCIIDOC", .req-ref]
+ASCIIDOC::
+AsciiDoc
 +
 --
-Official AsciiDoc documentation.
-
-See https://docs.asciidoctor.org/asciidoc/latest/.
+See documentation:
+https://docs.asciidoctor.org/asciidoc/latest/.
 
 Sublinks of the latter are given in this document,
 in order to point directly the useful AsciiDoc information in the context.
@@ -603,6 +602,14 @@ AsciiReq specification
 +
 --
 This document.
+--
+
+[#GIT, reftext="GIT", .req-ref]
+GIT::
+Git SCM
++
+--
+See link:https://git-scm.com/[git].
 --
 
 [#RFC-2119, reftext="RFC-2119", .req-ref]
