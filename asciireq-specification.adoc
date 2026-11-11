@@ -62,12 +62,6 @@ It may also use regular AsciiDoc formatting syntax
 
 === Motivation
 
-In the age of AI,
-it is essential to constitute a clear specification format
-to help AI agents work even better.
-Clear specifications lead to better verifications,
-and thus better quality.
-
 One major interest of defining a specification format
 based upon a plain text technology
 such as link:https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
@@ -99,6 +93,12 @@ which make it easier to write and maintain large technical documentations:
 * better link:https://docs.asciidoctor.org/asciidoc/latest/tables/build-a-basic-table/[table] management in smaller lines,
 * better link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross-reference] support,
 * ...
+
+We bet that a clear specification format
+may also be a key point
+to help AI agents work even better.
+Clear specifications lead to better verifications,
+and thus better quality.
 
 
 === Conventions
