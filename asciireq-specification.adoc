@@ -561,23 +561,48 @@ to parse requirement attributes.
 
 === Cross references
 
-AsciiReq items MAY be attached an AsciiDoc identifier and reftext
-in order to ease <<ASCIIDOC>> cross references.
+Cross references may be convenient to help humans
+navigate within an AsciiReq document.
+
+The following requirement proposes a pattern
+to ease AsciiDoc cross references for AsciiReq items.
 
 [#ASCIIREQ-XREF-0700, reftext="ASCIIREQ-XREF-0700", .req]
 ASCIIREQ-XREF-0700:: AsciiReq item cross references
 +
 --
 An <<ASCIIREQ-ITEM>> MAY be attached
-an link:https://docs.asciidoctor.org/asciidoc/latest/attributes/positional-and-named/[AsciiDoc identifier attribute]
-and link:https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/[reftext attribute],
-both with the same value as the AsciiReq identifier,
-in order to ease <<ASCIIDOC>> cross references.
+an AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
+and AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/#default-styling[reftext attribute],
+both with <<ASCIIREQ-IDENTIFIER>> for value.
+
+AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
+to the <<ASCIIREQ-ITEM>>
+MAY then be made
+with the <<ASCIIREQ-IDENTIFIER>>
+between AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[double angled brackets].
 --
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
+
+The double angled bracket format
+makes it simple for humans to read the raw AsciiDoc file,
+even if not rendered.
+
+[WARNING]
+.Cross references redundancy
+====
+The drawback of this pattern is that it creates redundancy between
+1) the AsciiDoc ID attribute,
+2) the AsciiDoc `reftext` attribute, and
+3) the AsciiReq identifier.
+
+As shown in the example,
+all this redundant information
+remains packed in the heading part of the requirement.
+But still, it creates a pitfall, and errors can be made.
+====
 
 
 === Requirement versioning
