@@ -663,11 +663,14 @@ TODO
 ASCIIDOC:: AsciiDoc
 +
 --
-See documentation:
+See https://asciidoc.org/.
+
+Documentation:
 https://docs.asciidoctor.org/asciidoc/latest/.
 
-Sublinks of the latter are given in this document,
-in order to point directly the useful AsciiDoc information in the context.
+Sublinks of the AsciiDoc documentation are usually given in this document,
+especially in requirements,
+in order to point directly the useful information in the context.
 --
 
 [#ASCIIREQ-SPECIFICATION, .req-ref]
