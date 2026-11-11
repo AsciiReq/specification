@@ -566,26 +566,31 @@ TODO
 
 === Requirement versioning
 
-Requirement identifiers MAY end with a `-vX.Y` pattern,
-giving the latest MAJOR.MINOR version of the given requirement.
+Requirement management commonly requires that requirements be versioned.
 
-The purpose of this schema is to help impact analyses:
-the root part of the identifier remains,
-only the version changes,
-when the content of the requirement changes.
+Versions could simply be defined with <<ASCIIREQ-ATTRIBUTES>>.
+But doing so may result with errors in impact analyses.
+
+Another strategy,
+recommended by AsciiReq,
+is that versions may be part of requirement identifiers.
+As a consequence,
+a version modification for a requirement
+will cause errors in downstream traceability
+referring to a previous version of the modified requirement.
 
 [#ASCIIREQ-VERSIONING-200, reftext="ASCIIREQ-VERSIONING-200", .req]
-ASCIIREQ-VERSIONING-200:: Requirement identifier version
+ASCIIREQ-VERSIONING-200:: Versioned requirement identifiers
 +
 --
-The identifier (as of <<ASCIIREQ-REQ-020>>) of an <<ASCIIREQ-REQUIREMENT>>
-MAY end with a `-vX.Y` pattern,
-where `X` and `Y` are the MAJOR and MINOR parts
-of the latest <<SEMVER>> version of the given requirement.
+The <<ASCIIREQ-IDENTIFIER>> of an <<ASCIIREQ-REQUIREMENT>>
+SHOULD end with a `-vX.Y` pattern,
+where `X` and `Y` are the <<SEMVER>> MAJOR and MINOR parts
+of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
 
-When the content of a requirement changes,
-the root part of the identifier remains,
-and only the `-vX.Y` pattern is updated.
+When the <<ASCIIREQ-REQUIREMENT>> changes,
+the root part of the <<ASCIIREQ-IDENTIFIER>> MUST remain the same,
+only the final `-vX.Y` pattern MUST be updated.
 --
 +
 * *Actors:*
