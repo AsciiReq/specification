@@ -429,36 +429,6 @@ constitutes the identifier of the requirement.
 ** <<ASCIIREQ-READER>>
 
 
-==== Requirement identifier versioning
-
-Requirement identifiers MAY end with a `-vX.Y` pattern,
-giving the latest MAJOR.MINOR version of the given requirement.
-
-The purpose of this schema is to help impact analyses:
-the root part of the identifier remains,
-only the version changes,
-when the content of the requirement changes.
-
-[#ASCIIREQ-REQ-025, reftext="ASCIIREQ-REQ-025", .req]
-ASCIIREQ-REQ-025::
-Requirement identifier version
-+
---
-The identifier (as of <<ASCIIREQ-REQ-020>>) of an <<ASCIIREQ-REQUIREMENT>>
-MAY end with a `-vX.Y` pattern,
-where `X` and `Y` are the MAJOR and MINOR parts
-of the latest <<SEMVER>> version of the given requirement.
-
-When the content of a requirement changes,
-the root part of the identifier remains,
-and only the `-vX.Y` pattern is updated.
---
-+
-* *Actors:*
-** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
-
-
 ==== Requirement title
 
 It is usually practical to define requirement titles,
@@ -569,7 +539,32 @@ to parse requirement attributes.
 
 === Requirement versioning
 
-TODO
+Requirement identifiers MAY end with a `-vX.Y` pattern,
+giving the latest MAJOR.MINOR version of the given requirement.
+
+The purpose of this schema is to help impact analyses:
+the root part of the identifier remains,
+only the version changes,
+when the content of the requirement changes.
+
+[#ASCIIREQ-VERSIONING-200, reftext="ASCIIREQ-VERSIONING-200", .req]
+ASCIIREQ-VERSIONING-200::
+Requirement identifier version
++
+--
+The identifier (as of <<ASCIIREQ-REQ-020>>) of an <<ASCIIREQ-REQUIREMENT>>
+MAY end with a `-vX.Y` pattern,
+where `X` and `Y` are the MAJOR and MINOR parts
+of the latest <<SEMVER>> version of the given requirement.
+
+When the content of a requirement changes,
+the root part of the identifier remains,
+and only the `-vX.Y` pattern is updated.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 
 === Scenario specification
