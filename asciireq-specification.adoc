@@ -107,6 +107,11 @@ Because it is the aim of it,
 this document follows the <<ASCIIREQ-SPECIFICATION>> given by itself
 (which constitutes some kind of reflective proof of concept).
 
+The AsciiReq attributes for the requirements in this document are the following:
+
+* *Actors:* the <<ASCIIREQ-ACTOR>>s concerned by the requirement,
+given as a comma-separated list of actor identifiers.
+
 This document furthermore uses <<RFC-2119>> and <<RFC-8174>> conventions
 for the understanding of the capitalized keywords
 "MAY",
@@ -114,13 +119,6 @@ for the understanding of the capitalized keywords
 "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT",
 "REQUIRED", "RECOMMENDED", and "OPTIONAL".
-
-The requirements of this document
-are given with the following final set of attributes
-(as of <<ASCIIREQ-REQ-050>>):
-
-* *Actors:* the <<ASCIIREQ-ACTOR>>s concerned by the requirement,
-given as a comma-separated list of actor identifiers.
 
 TODO: Check usage of capitalized keywords in the specifications.
 
