@@ -240,6 +240,14 @@ Optional title (as of <<ASCIIREQ-REQ-030>>)
 of an <<ASCIIREQ-ITEM>>.
 --
 
+[#ASCIIREQ-BODY, reftext="ASCIIREQ-BODY", .req-data]
+ASCIIREQ-BODY:: AsciiReq item body
++
+--
+Body (as of <<ASCIIREQ-REQ-040>>)
+of an <<ASCIIREQ-ITEM>>.
+--
+
 [#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
 ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
 +
