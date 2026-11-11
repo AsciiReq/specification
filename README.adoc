@@ -29,8 +29,8 @@ It may also use regular AsciiDoc formatting syntax
 (such as lists, tables, admonitions, ...)
 --
 +
-* Type: example
-* Refers: UPPER-REQ-100
+* *Type:* example
+* *Refers:* UPPER-REQ-100
 ** Coverage justification.
 ----
 
