@@ -109,8 +109,10 @@ this document follows the <<ASCIIREQ-SPECIFICATION>> given by itself
 
 The AsciiReq attributes for the requirements in this document are the following:
 
-* *Actors:* the <<ASCIIREQ-ACTOR>>s concerned by the requirement,
-given as a comma-separated list of actor identifiers.
+* *Actors:*
+  actors, as defined by the "Actors" section of this document,
+  concerned by the requirement.
+  Given as an unordered sublist below the "Actors:" attribute list item.
 
 This document furthermore uses <<RFC-2119>> and <<RFC-8174>> conventions
 for the understanding of the capitalized keywords
