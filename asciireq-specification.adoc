@@ -302,7 +302,7 @@ used to write the <<ASCIIREQ-DOCUMENT>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-The usage of the `:asciireq-version:` attribute in REQUIRED on purpose,
+The usage of the `:asciireq-version:` attribute is REQUIRED on purpose,
 so that an <<ASCIIREQ-READER>> can figure out which version of AsciiReq standard it is working with
 as specified in <<ASCIIREQ-STANDARD-0110>>.
 
