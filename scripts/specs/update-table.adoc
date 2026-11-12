@@ -114,17 +114,6 @@ placed in the `scripts/src/` subdirectory
 of the <<ASCIIREQ>> specification repository.
 --
 
-[#UPDATE-TABLE-0210, reftext="UPDATE-TABLE-0210", .req]
-UPDATE-TABLE-0210:: List of requirements columns
-+
---
-The <<REQUIREMENTS-TABLE>> MUST give,
-for each requirement:
-
-* its identifier;
-* its title.
---
-
 [#UPDATE-TABLE-0220, reftext="UPDATE-TABLE-0220", .req]
 UPDATE-TABLE-0220:: Asciidoctor.js based design
 +
