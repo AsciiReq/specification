@@ -500,8 +500,18 @@ The REQUIRED identifier of an <<ASCIIREQ-ITEM>> is defined
 as the _term_
 (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy]
 of an <<ASCIIDOC>> description list item).
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
-<<ASCIIREQ-ITEM>> identifiers MUST NOT contain space characters.
+[#ASCIIREQ-ID-0310, reftext="ASCIIREQ-ID-0310", .req]
+ASCIIREQ-ID-0310:: AsciiReq item identifier space characters
++
+--
+<<ASCIIREQ-ITEM>> identifiers (as of <<ASCIIREQ-ID-0300>>)
+MUST NOT contain space characters.
 --
 +
 * *Actors:*
