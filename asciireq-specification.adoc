@@ -103,7 +103,7 @@ and thus better quality.
 === Conventions
 
 Because it is the aim of it,
-this document follows the <<ASCIIREQ-SPECIFICATION>> given by itself
+this document follows the <<ASCIIREQ>> specification given by itself
 (which constitutes some kind of reflective proof of concept).
 
 The AsciiReq attributes for the requirements in this document are the following:
@@ -162,7 +162,7 @@ May be a human or a tool.
 ASCIIDOC-RENDERER:: AsciiDoc renderer
 +
 --
-Reads <<ASCIIDOC>> documents (possibly containing AsciiReq content)
+Reads <<ASCIIDOC>> documents (possibly containing <<ASCIIREQ>> content)
 and makes a presentation of it for humans.
 
 Basically a tool.
@@ -179,7 +179,7 @@ TODO: Check usage of formal definitions in the document.
 ASCIIREQ-DOCUMENT:: AsciiReq document
 +
 --
-<<ASCIIDOC>> document following the <<ASCIIREQ-SPECIFICATION>>.
+<<ASCIIDOC>> document following the <<ASCIIREQ>> specification.
 --
 
 [#ASCIIREQ-ITEM, .req-data]
@@ -713,11 +713,13 @@ especially in requirements,
 in order to point directly the useful information in the context.
 --
 
-[#ASCIIREQ-SPECIFICATION, .req-ref]
-ASCIIREQ-SPECIFICATION:: AsciiReq specification
+[#ASCIIREQ, .req-ref]
+ASCIIREQ:: AsciiReq specification
 +
 --
 This document.
+
+See https://github.com/AsciiReq/specification.
 --
 
 [#GIT, .req-ref]
