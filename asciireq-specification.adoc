@@ -190,10 +190,10 @@ General AsciiReq item (as of <<ASCIIREQ-ITEM-0200>>).
 --
 
 [#ASCIIREQ-REF, reftext="ASCIIREQ-REF", .req-data]
-ASCIIREQ-REF:: AsciiReq foreign document reference
+ASCIIREQ-REF:: AsciiReq foreign reference
 +
 --
-<<ASCIIREQ-ITEM>> for a foreign document reference definition (as of <<ASCIIREQ-ITEM-0200>>).
+<<ASCIIREQ-ITEM>> for a foreign reference definition (as of <<ASCIIREQ-ITEM-0200>>).
 --
 
 [#ASCIIREQ-ACTOR, reftext="ASCIIREQ-ACTOR", .req-data]
@@ -382,7 +382,7 @@ assigned to it.
 
 The <<ASCIIDOC>> role attached MUST be one of :
 
-`.req-ref`:: The `.req-ref` <<ASCIIDOC>> role defines a foreign document reference.
+`.req-ref`:: The `.req-ref` <<ASCIIDOC>> role defines a foreign reference.
 `.req-actor`:: The `.req-actor` <<ASCIIDOC>> role defines a formal AsciiReq actor.
 `.req-data`:: The `.req-data` <<ASCIIDOC>> role defines a formal AsciiReq data.
 `.req`:: The `.req` <<ASCIIDOC>> role defines an AsciiReq requirement.
