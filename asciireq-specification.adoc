@@ -476,13 +476,28 @@ The requirement labels "first (...) paragraph"
 for compliance purpose with AsciiDoc syntax definitions,
 but a title will generally be a single line in practice.
 
+Titles are particularly useful for requirements.
+That's the reason why it's an option for other AsciiReq items,
+but a recommendation for requirements.
+
+[#ASCIIREQ-TITLE-0410, reftext="ASCIIREQ-TITLE-0410", .req]
+ASCIIREQ-TITLE-0410:: Requirement title recommendation
++
+--
+<<ASCIIREQ-TITLE>>s are RECOMMENDED
+for <<ASCIIREQ-REQUIREMENT>>s.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
 Considering that requirement titles usually consist of a single line,
 it may be a good option to present the title on the same text line as the identifier.
 Doing so enables `grep` commands to retrieve corresponding identifiers and titles
 in single rows.
 
-[#ASCIIREQ-TITLE-0410, reftext="ASCIIREQ-TITLE-0410", .req]
-ASCIIREQ-TITLE-0410:: One line heading style
+[#ASCIIREQ-TITLE-0420, reftext="ASCIIREQ-TITLE-0420", .req]
+ASCIIREQ-TITLE-0420:: One line heading style
 +
 --
 The <<ASCIIREQ-TITLE>> (if any)
@@ -493,20 +508,6 @@ as its <<ASCIIREQ-IDENTIFIER>>.
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-
-Requirement titles are useful for <<ASCIIREQ-REQUIREMENT>>s in particular.
-
-[#ASCIIREQ-TITLE-0420, reftext="ASCIIREQ-TITLE-0420", .req]
-ASCIIREQ-TITLE-0420:: Requirement title recommendation
-+
---
-A <<ASCIIREQ-TITLE>> is RECOMMENDED
-for <<ASCIIREQ-REQUIREMENT>>s.
---
-+
-* *Actors:*
-** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
 
 
 ==== AsciiReq item body
