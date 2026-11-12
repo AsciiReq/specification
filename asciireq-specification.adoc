@@ -662,7 +662,7 @@ ASCIIREQ-VERSIONING-0800:: Versioned requirement identifiers
 --
 The <<ASCIIREQ-IDENTIFIER>> of an <<ASCIIREQ-REQUIREMENT>>
 SHOULD end with a `-vX.Y` pattern,
-where `X` and `Y` are the <<SEMVER>> MAJOR and MINOR parts
+where `X` and `Y` are the <<SEMVER>> _MAJOR_ and _MINOR_ parts
 of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
 
 When the <<ASCIIREQ-REQUIREMENT>> changes,
