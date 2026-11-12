@@ -251,11 +251,12 @@ of an <<ASCIIREQ-ITEM>>,
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
-[#ASCIIREQ-ATTRIBUTES, reftext="ASCIIREQ-ATTRIBUTES", .req-data]
-ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
+[#ASCIIREQ-ATTRIBUTE, reftext="ASCIIREQ-ATTRIBUTE", .req-data]
+ASCIIREQ-ATTRIBUTE:: AsciiReq requirement attribute
 +
 --
-Attributes (as of <<ASCIIREQ-ATTRIBUTES-0600>>)
+One attribute
+in the attributes (as of <<ASCIIREQ-ATTRIBUTES-0600>>)
 of an <<ASCIIREQ-REQUIREMENT>> (requirements only!),
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
@@ -655,38 +656,29 @@ But still, it creates a pitfall, and errors can be made.
 
 === Requirement versioning
 
-TODO: Rework req versioning with an attribute.
-
 Requirement management commonly requires that requirements be versioned.
 
-Versions could simply be defined with <<ASCIIREQ-ATTRIBUTES>>.
-But doing so may result with errors in impact analyses.
-
-Another strategy,
-recommended by AsciiReq,
-is that versions may be part of requirement identifiers.
-As a consequence,
-a version modification for a requirement
-will cause errors in downstream traceability
-referring to a previous version of the modified requirement.
-
 [#ASCIIREQ-VERSIONING-0800, reftext="ASCIIREQ-VERSIONING-0800", .req]
-ASCIIREQ-VERSIONING-0800:: Versioned requirement identifiers
+ASCIIREQ-VERSIONING-0800:: AsciiReq requirement version
 +
 --
-The <<ASCIIREQ-IDENTIFIER>> of an <<ASCIIREQ-REQUIREMENT>>
-SHOULD end with a `-vX.Y` pattern,
+<<ASCIIREQ-REQUIREMENT>>s
+SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>
+with a `X.Y` text value,
 where `X` and `Y` are the <<SEMVER>> _MAJOR_ and _MINOR_ parts
 of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
 
-When the <<ASCIIREQ-REQUIREMENT>> changes,
-the root part of the <<ASCIIREQ-IDENTIFIER>> MUST remain the same,
-only the final `-vX.Y` pattern MUST be updated.
+When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>),
+the `Version` <<ASCIIREQ-ATTRIBUTE>> must be updated with the current version of the specification.
 --
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
+
+In this version of the AsciiReq specification,
+this requirements imposes <<SEMVER>> versions.
+
+Other kind of versioning strategies may be considered in the future.
 
 
 === Scenario specification
