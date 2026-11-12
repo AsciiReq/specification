@@ -138,25 +138,31 @@ apply to this document.
 
 The AsciiReq attributes for the requirements in this document are the following:
 
-* *Version:*
-  As defined by <<ASCIIREQ-VERSIONING-0800>>.
+Version::
+As defined by <<ASCIIREQ-VERSIONING-0800>>.
 
+Actors::
++
+--
+Actors concerned by the requirement.
+
+See the <<Actors>> section of this document for the list of possible actor values.
+
+MUST be given as a level 2 unordered sublist below the "Actors:" attribute list item.
+
+Level 3 sublist items MAY be used for justifications.
+
+Example:
+[source, asciidoc]
+----
 * *Actors:*
-  Actors, as defined by the "Actors" section of this document,
-  concerned by the requirement.
-  Given as a level 2 unordered sublist below the "Actors:" attribute list item.
-  Level 3 sublist items may be used for justifications.
-
-  Example:
-  [source, asciidoc]
-  ----
-  * *Actors:*
-  ** <<ASCIIREQ-WRITER>>
-  *** Justification.
-  *** Justification.
-  ** <<ASCIIREQ-READER>>
-  ***Justification.
-  ----
+** <<ASCIIREQ-WRITER>>
+*** Justification.
+*** Justification.
+** <<ASCIIREQ-READER>>
+***Justification.
+----
+--
 
 This document furthermore uses <<RFC-2119>> and <<RFC-8174>> conventions
 for the understanding of the capitalized keywords
