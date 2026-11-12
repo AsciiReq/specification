@@ -507,19 +507,23 @@ of an <<ASCIIDOC>> description list item).
 ** <<ASCIIREQ-READER>>
 
 [#ASCIIREQ-ID-0310, reftext="ASCIIREQ-ID-0310", .req]
-ASCIIREQ-ID-0310:: AsciiReq item identifier space characters
+ASCIIREQ-ID-0310:: AsciiReq item identifier authorized characters
 +
 --
 <<ASCIIREQ-ITEM>> identifiers (as of <<ASCIIREQ-ID-0300>>)
-MUST NOT contain space characters.
+MUST contain only the following characters:
+
+* letters
+* numbers
+* underscores
+* hyphens
 --
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
 
 [#ASCIIREQ-ID-0320, reftext="ASCIIREQ-ID-0320", .req]
-ASCIIREQ-ID-0320:: AsciiReq item identifier uniqueness
+ASCIIREQ-ID-0320:: AsciiReq item identifier unicity
 +
 --
 <<ASCIIREQ-IDENTIFIER>>s MUST be unique
@@ -528,7 +532,6 @@ in an <<ASCIIREQ-DOCUMENT>>.
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
 
 
 ==== AsciiReq item title
