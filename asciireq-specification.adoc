@@ -207,7 +207,11 @@ ASCIIREQ-DOCUMENT:: AsciiReq document
 --
 <<ASCIIDOC>> document following the <<ASCIIREQ>> specification.
 
-TODO: includes => main file with resolved includes (as of new req)
+May be defined with different `.adoc` files
+using the <<ASCIIDOC>> ability to include files
+(as of <<ASCIIREQ-DOC-0020>>):
+the <<ASCIIREQ-DOCUMENT>> is then the main file
+with its includes resolved.
 --
 
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
@@ -310,7 +314,22 @@ is `.adoc`.
 ** <<ASCIIREQ-WRITER>>
 *** Makes the <<ASCIIREQ-DOCUMENT>> compatible with general <<ASCIIDOC-RENDERER>>s.
 
-TODO: MAY includes
+[#ASCIIREQ-DOC-0020, reftext="ASCIIREQ-DOC-0020", .req]
+ASCIIREQ-DOC-0020:: AsciiDoc includes
++
+--
+An <<ASCIIREQ-DOCUMENT>>
+MAY be defined with different `.adoc` files
+using the <<ASCIIDOC>> ability to link:https://docs.asciidoctor.org/asciidoc/latest/directives/include/[include files].
+
+To read the full <<ASCIIREQ-DOCUMENT>>,
+an <<ASCIIREQ-READER>>
+MUST process the <<ASCIIDOC>> include macros.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 
 === AsciiReq standard
