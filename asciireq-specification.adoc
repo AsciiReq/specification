@@ -42,7 +42,7 @@ The following example shows the format in action:
 [source, asciidoc]
 ----
 [.req]
-REQ-010-v1.0:: Requirement title
+REQ-010:: Requirement title
 +
 --
 Text defining the requirement body.
@@ -53,7 +53,7 @@ It may also use regular AsciiDoc formatting syntax
 (such as lists, tables, admonitions, ...)
 --
 +
-* *Type:* example
+* *Version:* 1.0
 * *Refers:* UPPER-REQ-100
 ** Coverage justification.
 ----
@@ -137,6 +137,9 @@ even though RECOMMENDED or OPTIONAL,
 apply to this document.
 
 The AsciiReq attributes for the requirements in this document are the following:
+
+* *Version:*
+  As defined by <<ASCIIREQ-VERSIONING-0800>>.
 
 * *Actors:*
   Actors, as defined by the "Actors" section of this document,
@@ -365,6 +368,7 @@ giving the AsciiReq standard version (as of <<ASCIIREQ-STANDARD-0120>>)
 used to write the <<ASCIIREQ-DOCUMENT>>.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
@@ -387,6 +391,7 @@ If the <<ASCIIREQ-READER>> does not handle the AsciiReq standard version specifi
 it SHOULD display a warning message.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-READER>>
 
@@ -420,6 +425,7 @@ for `:asciireq-version:` document attributes:
 |===
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
@@ -454,6 +460,7 @@ The <<ASCIIDOC>> role attached MUST be one of :
 `.req`:: The `.req` <<ASCIIDOC>> role defines an AsciiReq requirement.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
@@ -478,6 +485,7 @@ MUST be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[co
 MUST be used to ensure the continuation of the _description_.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
@@ -502,6 +510,7 @@ as the _term_
 of an <<ASCIIDOC>> description list item).
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
@@ -555,6 +564,7 @@ as a first non <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/bl
 at the beginning of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
@@ -593,6 +603,7 @@ SHOULD be presented on the same line
 as its <<ASCIIREQ-IDENTIFIER>>.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
@@ -614,6 +625,7 @@ at the root level of the <<ASCIIREQ-COMPOUND-CONTENT>>
 of an <<ASCIIREQ-ITEM>>.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
@@ -649,6 +661,7 @@ at the root level of the <<ASCIIREQ-COMPOUND-CONTENT>>
 of an <<ASCIIREQ-REQUIREMENT>>.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
@@ -700,6 +713,7 @@ with the <<ASCIIREQ-IDENTIFIER>>
 between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[double angled brackets].
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
@@ -708,8 +722,8 @@ given at the beginning of this document becomes:
 
 [source, asciidoc]
 ----
-[#REQ-010-v1.0, reftext="REQ-010-v1.0", .req]
-REQ-010-v1.0:: Requirement title
+[#REQ-010, reftext="REQ-010", .req]
+REQ-010:: Requirement title
 ----
 
 The double angled bracket format
@@ -718,7 +732,7 @@ even if not rendered.
 
 [source, asciidoc]
 ----
-This is a cross reference: <<REQ-010-v1.0>>.
+This is a cross reference: <<REQ-010>>.
 ----
 
 [WARNING]
@@ -802,6 +816,7 @@ When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>
 the `Version` <<ASCIIREQ-ATTRIBUTE>> must be updated with the current version of the specification.
 --
 +
+* *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
