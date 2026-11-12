@@ -176,6 +176,8 @@ ASCIIREQ-DOCUMENT:: AsciiReq document
 +
 --
 <<ASCIIDOC>> document following the <<ASCIIREQ>> specification.
+
+TODO: includes => main file with resolved includes (as of new req)
 --
 
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
@@ -261,6 +263,13 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 == Requirements
 
 The requirements defining the AsciiReq format are listed below.
+
+
+=== AsciiReq document
+
+TODO: SHOULD .adoc extension
+
+TODO: MAY includes
 
 
 === AsciiReq standard
