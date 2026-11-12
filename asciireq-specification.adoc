@@ -18,13 +18,13 @@ AsciiReq v0.1 specification
 link:https://github.com/alxroyer[alxroyer]
 
 |Version|
-v0.1.0-rc
+TODO: v0.1.0-rc
 
 |Date|
-2026-11-xx
+TODO: 2026-11-xx
 
 |URL|
-https://github.com/alxroyer/asciireq/blob/0.1.0/asciireq-specification.adoc
+https://github.com/AsciiReq/specification/blob/0.1.0/asciireq-specification.adoc
 |===
 
 
