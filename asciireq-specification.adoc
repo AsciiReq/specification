@@ -58,6 +58,32 @@ It may also use regular AsciiDoc formatting syntax
 ** Coverage justification.
 ----
 
+The following sequence diagram shows a typical workflow
+involving the actors of the AsciiReq format:
+
+[mermaid]
+....
+sequenceDiagram
+    actor Human
+    participant ASCIIREQ-WRITER
+    participant ASCIIREQ-DOCUMENT
+    participant ASCIIDOC-RENDERER
+    participant ASCIIREQ-READER
+
+    ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: creates
+    ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: updates
+
+    Human->>ASCIIREQ-DOCUMENT: reads (raw AsciiReq syntax)
+
+    Human->>ASCIIDOC-RENDERER: uses
+    ASCIIDOC-RENDERER->>ASCIIREQ-DOCUMENT: reads (as ASCIIDOC-DOCUMENT)
+    ASCIIDOC-RENDERER-->>Human: delivers a display
+
+    Human->>ASCIIREQ-READER: uses
+    ASCIIREQ-READER->>ASCIIREQ-DOCUMENT: reads
+    ASCIIREQ-READER-->>Human: processes a task
+....
+
 
 === Motivation
 
