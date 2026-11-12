@@ -106,6 +106,10 @@ Because it is the aim of it,
 this document follows the <<ASCIIREQ>> specification given by itself
 (which constitutes some kind of reflective proof of concept).
 
+All <<ASCIIREQ>> requirements,
+even though RECOMMENDED or OPTIONAL,
+apply to this document.
+
 The AsciiReq attributes for the requirements in this document are the following:
 
 * *Actors:*
