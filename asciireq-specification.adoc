@@ -133,8 +133,6 @@ for the understanding of the capitalized keywords
 "SHOULD", "SHOULD NOT",
 "REQUIRED", "RECOMMENDED", and "OPTIONAL".
 
-TODO: Check usage of capitalized keywords in the specifications.
-
 
 == Actors
 
@@ -172,8 +170,6 @@ Basically a tool.
 == Data
 
 The following data definitions helps writing this specification in a more formal way.
-
-TODO: Check usage of formal definitions in the document.
 
 [#ASCIIREQ-DOCUMENT, reftext="ASCIIREQ-DOCUMENT", .req-data]
 ASCIIREQ-DOCUMENT:: AsciiReq document
@@ -699,8 +695,6 @@ TODO
 
 
 == References
-
-TODO: Check <<ASCIIDOC>> references to set along the document.
 
 [#ASCIIDOC, reftext="ASCIIDOC", .req-ref]
 ASCIIDOC:: AsciiDoc
