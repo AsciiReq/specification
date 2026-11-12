@@ -18,10 +18,10 @@ AsciiReq v0.1 specification
 link:https://github.com/alxroyer[alxroyer]
 
 |Version|
-TODO: v0.1.0-rc
+v0.1.0
 
 |Date|
-TODO: 2026-11-xx
+2026-11-13
 
 |URL|
 https://github.com/AsciiReq/specification/blob/0.1.0/asciireq-specification.adoc
