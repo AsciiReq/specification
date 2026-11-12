@@ -494,6 +494,20 @@ as its <<ASCIIREQ-IDENTIFIER>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+Requirement titles are useful for <<ASCIIREQ-REQUIREMENT>>s in particular.
+
+[#ASCIIREQ-TITLE-0420, reftext="ASCIIREQ-TITLE-0420", .req]
+ASCIIREQ-TITLE-0420:: Requirement title recommendation
++
+--
+A <<ASCIIREQ-TITLE>> is RECOMMENDED
+for <<ASCIIREQ-REQUIREMENT>>s.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
 
 ==== AsciiReq item body
 
