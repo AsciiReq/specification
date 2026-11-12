@@ -41,7 +41,7 @@ The following example shows the format in action:
 
 [source, asciidoc]
 ----
-[#REQ-010-v1.0, reftext="REQ-010-v1.0", .req]
+[.req]
 REQ-010-v1.0:: Requirement title
 +
 --
@@ -595,9 +595,23 @@ between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xr
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+With this suggestion, the heading of the example
+given at the beginning of this document becomes:
+
+[source, asciidoc]
+----
+[#REQ-010-v1.0, reftext="REQ-010-v1.0", .req]
+REQ-010-v1.0:: Requirement title
+----
+
 The double angled bracket format
 makes it simple for humans to read the raw AsciiDoc file,
 even if not rendered.
+
+[source, asciidoc]
+----
+This is a cross reference: <<REQ-010-v1.0>>.
+----
 
 [WARNING]
 .Cross references redundancy
