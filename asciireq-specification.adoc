@@ -271,7 +271,18 @@ The requirements defining the AsciiReq format are listed below.
 
 === AsciiReq document
 
-TODO: SHOULD .adoc extension
+[#ASCIIREQ-DOC-0010, reftext="ASCIIREQ-DOC-0010", .req]
+ASCIIREQ-DOC-0010:: `.adoc` file name extension
++
+--
+When writing an <<ASCIIREQ-DOCUMENT>>,
+it is RECOMMENDED that the file name extension of the <<ASCIIREQ-DOCUMENT>>
+is `.adoc`.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+*** Makes the <<ASCIIREQ-DOCUMENT>> compatible with general <<ASCIIDOC-RENDERER>>s.
 
 TODO: MAY includes
 
