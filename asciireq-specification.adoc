@@ -606,7 +606,8 @@ which would quite kill this redundancy issue.
 
 Nevertheless, without `reftext` attributes, AsciiDoc renderers seem to behave differently:
 
-* GitHub displays cross references with AsciiReq identifiers between square brackets,
+* `asciidoctor` (v2.0.20 and v3.2.0) displays cross references with AsciiReq identifiers between square brackets,
+* GitHub seems to behave the same as `asciidoctor`.
 * The link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc VSCode extension]
   displays the AsciiReq identifiers only (without square brackets).
 * ...
@@ -692,6 +693,9 @@ ASCIIDOC:: AsciiDoc
 +
 --
 See https://asciidoc.org/.
+
+Text-base documentation format originating from the `asciidoctor` tool:
+https://asciidoctor.org/
 
 Documentation:
 https://docs.asciidoctor.org/asciidoc/latest/.
