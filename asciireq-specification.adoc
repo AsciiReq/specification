@@ -80,7 +80,7 @@ being a plain text technology as well,
 integrate naturally with AsciiDoc,
 which makes great sens when writing specifications.
 
-Using AsciiDoc
+Using <<ASCIIDOC>>
 instead of <<MARKDOWN>>
 is motivated by the fact that AsciiDoc comes with a couple of native key features
 which make it easier to write and maintain large technical documentations:
@@ -162,7 +162,7 @@ May be a human or a tool.
 ASCIIDOC-RENDERER:: AsciiDoc renderer
 +
 --
-Reads AsciiDoc documents (possibly containing AsciiReq content)
+Reads <<ASCIIDOC>> documents (possibly containing AsciiReq content)
 and makes a presentation of it for humans.
 
 Basically a tool.
@@ -179,7 +179,7 @@ TODO: Check usage of formal definitions in the document.
 ASCIIREQ-DOCUMENT:: AsciiReq document
 +
 --
-AsciiDoc document following the <<ASCIIREQ-SPECIFICATION>>.
+<<ASCIIDOC>> document following the <<ASCIIREQ-SPECIFICATION>>.
 --
 
 [#ASCIIREQ-ITEM, .req-data]
@@ -288,9 +288,10 @@ ASCIIREQ-STANDARD-0100:: `:asciireq-version:` document attribute declaration
 +
 --
 When writing an <<ASCIIREQ-DOCUMENT>>,
-the `:asciireq-version:` link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
+the `:asciireq-version:`
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
 MUST be declared
-in the link:https://docs.asciidoctor.org/asciidoc/latest/document/header/[AsciiDoc document header].
+in the <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/document/header/[document header].
 
 The `:asciireq-version:` document attribute value
 MUST be a URL
@@ -310,7 +311,9 @@ ASCIIREQ-STANDARD-0110:: `:asciireq-version:` document attribute processing
 +
 --
 An <<ASCIIREQ-READER>>,
-when reading an AsciiDoc document containing an `:asciireq-version:` document attribute,
+when reading an <<ASCIIDOC>> document
+containing an `:asciireq-version:`
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute],
 MUST process the document as an <<ASCIIREQ-DOCUMENT>>,
 according to the AsciiReq standard version specified as of <<ASCIIREQ-STANDARD-0120>>.
 
@@ -371,18 +374,18 @@ in a fast and deterministic way.
 ASCIIREQ-ITEM-0200:: AsciiReq item
 +
 --
-Inside an AsciiDoc document,
+Inside an <<ASCIIDOC>> document,
 an AsciiReq item is defined
-as a link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
-with an link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[AsciiDoc role]
+as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
+with an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[role]
 assigned to it.
 
-The Ascii role attached MUST be one of :
+The <<ASCIIDOC>> role attached MUST be one of :
 
-`.req-ref`:: The `.req-ref` AsciiDoc role defines a foreign document reference.
-`.req-actor`:: The `.req-actor` AsciiDoc role defines a formal AsciiReq actor.
-`.req-data`:: The `.req-data` AsciiDoc role defines a formal AsciiReq data.
-`.req`:: The `.req` AsciiDoc role defines an AsciiReq requirement.
+`.req-ref`:: The `.req-ref` <<ASCIIDOC>> role defines a foreign document reference.
+`.req-actor`:: The `.req-actor` <<ASCIIDOC>> role defines a formal AsciiReq actor.
+`.req-data`:: The `.req-data` <<ASCIIDOC>> role defines a formal AsciiReq data.
+`.req`:: The `.req` <<ASCIIDOC>> role defines an AsciiReq requirement.
 --
 +
 * *Actors:*
@@ -398,11 +401,14 @@ remains _AsciiDoc-ly_ attached to it.
 ASCIIREQ-ITEM-0210:: AsciiReq item compound content
 +
 --
-The _description_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy of a description list item])
+The _description_
+(as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy]
+of an <<ASCIIDOC>> description list item)
 of an <<ASCIIREQ-ITEM>>
 MUST be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[compound].
 
-link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-continuation[List continuations] (i.e. `+` lines)
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-continuation[List continuations]
+(i.e. `+` lines)
 MUST be used to ensure the continuation of the _description_.
 --
 +
@@ -425,7 +431,9 @@ ASCIIREQ-ID-0300:: AsciiReq item identifier
 +
 --
 The REQUIRED identifier of an <<ASCIIREQ-ITEM>> is defined
-as the _term_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy] of a description list item).
+as the _term_
+(as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy]
+of an <<ASCIIDOC>> description list item).
 --
 +
 * *Actors:*
@@ -450,7 +458,7 @@ ASCIIREQ-TITLE-0400:: Requirement item title
 +
 --
 An OPTIONAL title for an <<ASCIIREQ-ITEM>> may be defined
-as a first non link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] paragraph
+as a first non <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] paragraph
 at the beginning of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 +
@@ -490,11 +498,11 @@ ASCIIREQ-BODY-0500:: AsciiReq item body
 +
 --
 The REQUIRED body of an <<ASCIIREQ-ITEM>> is given
-as an AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
+as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
 in the <<ASCIIREQ-COMPOUND-CONTENT>>.
 
-There MUST be only one open block
-in the <<ASCIIREQ-COMPOUND-CONTENT>>
+There MUST be only one <<ASCIIDOC>> open block
+at the root level of the <<ASCIIREQ-COMPOUND-CONTENT>>
 of an <<ASCIIREQ-ITEM>>.
 --
 +
@@ -520,7 +528,7 @@ ASCIIREQ-ATTRIBUTES-0600:: AsciiReq requirement attributes
 +
 --
 The OPTIONAL requirement attributes of an <<ASCIIREQ-REQUIREMENT>> are defined
-as an AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
+as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
 of `*name:* value` pairs
 at the end of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 
@@ -528,8 +536,8 @@ The full `name:` pattern,
 including the `:` separator at its end,
 MUST be written in bold.
 
-There MUST be only one unordered list
-in the <<ASCIIREQ-COMPOUND-CONTENT>>
+There MUST be only one <<ASCIIDOC>> unordered list
+at the root level of the <<ASCIIREQ-COMPOUND-CONTENT>>
 of an <<ASCIIREQ-REQUIREMENT>>.
 --
 +
@@ -573,15 +581,15 @@ ASCIIREQ-XREF-0700:: AsciiReq item cross references
 +
 --
 An <<ASCIIREQ-ITEM>> MAY be attached
-an AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
-and AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/#default-styling[reftext attribute],
+an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
+and an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/#default-styling[reftext attribute],
 both with <<ASCIIREQ-IDENTIFIER>> for value.
 
-AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
 to the <<ASCIIREQ-ITEM>>
 MAY then be made
 with the <<ASCIIREQ-IDENTIFIER>>
-between AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[double angled brackets].
+between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[double angled brackets].
 --
 +
 * *Actors:*
