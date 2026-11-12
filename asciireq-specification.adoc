@@ -186,42 +186,42 @@ AsciiDoc document following the <<ASCIIREQ-SPECIFICATION>>.
 ASCIIREQ-ITEM:: AsciiReq item
 +
 --
-General AsciiReq item (as of <<ASCIIREQ-REQ-0200>>).
+General AsciiReq item (as of <<ASCIIREQ-ITEM-0200>>).
 --
 
 [#ASCIIREQ-REF, .req-data]
 ASCIIREQ-REF:: AsciiReq foreign document reference
 +
 --
-<<ASCIIREQ-ITEM>> for a foreign document reference definition (as of <<ASCIIREQ-REQ-0200>>).
+<<ASCIIREQ-ITEM>> for a foreign document reference definition (as of <<ASCIIREQ-ITEM-0200>>).
 --
 
 [#ASCIIREQ-ACTOR, .req-data]
 ASCIIREQ-ACTOR:: AsciiReq formal actor
 +
 --
-<<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-REQ-0200>>).
+<<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-ITEM-0200>>).
 --
 
 [#ASCIIREQ-DATA, .req-data]
 ASCIIREQ-DATA:: AsciiReq formal data
 +
 --
-<<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-REQ-0200>>).
+<<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-ITEM-0200>>).
 --
 
 [#ASCIIREQ-REQUIREMENT, .req-data]
 ASCIIREQ-REQUIREMENT:: AsciiReq requirement
 +
 --
-<<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-REQ-0200>>).
+<<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-ITEM-0200>>).
 --
 
 [#ASCIIREQ-IDENTIFIER, .req-data]
 ASCIIREQ-IDENTIFIER:: AsciiReq item identifier
 +
 --
-Identifier (as of <<ASCIIREQ-REQ-0300>>)
+Identifier (as of <<ASCIIREQ-ID-0300>>)
 of an <<ASCIIREQ-ITEM>>.
 --
 
@@ -229,7 +229,7 @@ of an <<ASCIIREQ-ITEM>>.
 ASCIIREQ-COMPOUND-CONTENT:: AsciiReq item content
 +
 --
-Compound content (as of <<ASCIIREQ-REQ-0210>>)
+Compound content (as of <<ASCIIREQ-ITEM-0210>>)
 attached with an <<ASCIIREQ-ITEM>>.
 --
 
@@ -237,7 +237,7 @@ attached with an <<ASCIIREQ-ITEM>>.
 ASCIIREQ-TITLE:: AsciiReq item title
 +
 --
-Optional title (as of <<ASCIIREQ-REQ-0400>>)
+Optional title (as of <<ASCIIREQ-TITLE-0400>>)
 of an <<ASCIIREQ-ITEM>>,
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
@@ -246,7 +246,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 ASCIIREQ-BODY:: AsciiReq item body
 +
 --
-Body (as of <<ASCIIREQ-REQ-0500>>)
+Body (as of <<ASCIIREQ-BODY-0500>>)
 of an <<ASCIIREQ-ITEM>>,
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
@@ -255,7 +255,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 ASCIIREQ-ATTRIBUTES:: AsciiReq requirement attributes
 +
 --
-Attributes (as of <<ASCIIREQ-REQ-0600>>)
+Attributes (as of <<ASCIIREQ-ATTRIBUTES-0600>>)
 of an <<ASCIIREQ-REQUIREMENT>> (requirements only!),
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
@@ -367,8 +367,8 @@ The AsciiReq format must enable
 the processing of requirement documents
 in a fast and deterministic way.
 
-[#ASCIIREQ-REQ-0200, .req]
-ASCIIREQ-REQ-0200:: AsciiReq item
+[#ASCIIREQ-ITEM-0200, .req]
+ASCIIREQ-ITEM-0200:: AsciiReq item
 +
 --
 Inside an AsciiDoc document,
@@ -394,8 +394,8 @@ The following requirement ensures
 that the whole content of an <<ASCIIREQ-ITEM>>
 remains _AsciiDoc-ly_ attached to it.
 
-[#ASCIIREQ-REQ-0210, .req]
-ASCIIREQ-REQ-0210:: AsciiReq item compound content
+[#ASCIIREQ-ITEM-0210, .req]
+ASCIIREQ-ITEM-0210:: AsciiReq item compound content
 +
 --
 The _description_ (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy of a description list item])
@@ -420,8 +420,8 @@ with unique identifiers.
 The same goes with formal items
 like actors, data and references.
 
-[#ASCIIREQ-REQ-0300, .req]
-ASCIIREQ-REQ-0300:: AsciiReq item identifier
+[#ASCIIREQ-ID-0300, .req]
+ASCIIREQ-ID-0300:: AsciiReq item identifier
 +
 --
 The REQUIRED identifier of an <<ASCIIREQ-ITEM>> is defined
@@ -445,8 +445,8 @@ what the requirement talks about.
 Titles may also be useful for formal items.
 That's the reason why titles also apply to any type of AsciiReq item.
 
-[#ASCIIREQ-REQ-0400, .req]
-ASCIIREQ-REQ-0400:: Requirement item title
+[#ASCIIREQ-TITLE-0400, .req]
+ASCIIREQ-TITLE-0400:: Requirement item title
 +
 --
 An OPTIONAL title for an <<ASCIIREQ-ITEM>> may be defined
@@ -467,8 +467,8 @@ it may be a good option to present the title on the same text line as the identi
 Doing so enables `grep` commands to retrieve corresponding identifiers and titles
 in single rows.
 
-[#ASCIIREQ-REQ-0410, .req]
-ASCIIREQ-REQ-0410:: One line heading style
+[#ASCIIREQ-TITLE-0410, .req]
+ASCIIREQ-TITLE-0410:: One line heading style
 +
 --
 The <<ASCIIREQ-TITLE>> (if any)
@@ -485,8 +485,8 @@ as its <<ASCIIREQ-IDENTIFIER>>.
 
 The requirement body then gives the full text of the requirement.
 
-[#ASCIIREQ-REQ-0500, .req]
-ASCIIREQ-REQ-0500:: AsciiReq item body
+[#ASCIIREQ-BODY-0500, .req]
+ASCIIREQ-BODY-0500:: AsciiReq item body
 +
 --
 The REQUIRED body of an <<ASCIIREQ-ITEM>> is given
@@ -515,8 +515,8 @@ attached with the requirements.
 Please note that attributes apply to requirements only
 (not to actors, data, nor references).
 
-[#ASCIIREQ-REQ-0600, .req]
-ASCIIREQ-REQ-0600:: AsciiReq requirement attributes
+[#ASCIIREQ-ATTRIBUTES-0600, .req]
+ASCIIREQ-ATTRIBUTES-0600:: AsciiReq requirement attributes
 +
 --
 The OPTIONAL requirement attributes of an <<ASCIIREQ-REQUIREMENT>> are defined
