@@ -632,6 +632,8 @@ But still, it creates a pitfall, and errors can be made.
 
 === Requirement versioning
 
+TODO: Rework req versioning with an attribute.
+
 Requirement management commonly requires that requirements be versioned.
 
 Versions could simply be defined with <<ASCIIREQ-ATTRIBUTES>>.
@@ -682,6 +684,8 @@ TODO
 
 
 == References
+
+TODO: Check <<ASCIIDOC>> references to set along the document.
 
 [#ASCIIDOC, .req-ref]
 ASCIIDOC:: AsciiDoc
