@@ -96,7 +96,13 @@ contained in the <<ASCIIREQ>> specification.
 --
 
 
-=== Implementation
+=== Design
+
+The design of the `update-table` script
+relies on the <<ASCIIDOCTOR-JS>> library,
+in order to parse the AsciiDoc content
+in a robust way,
+instead of relying on fragile text processing.
 
 [#UPDATE-TABLE-0200, reftext="UPDATE-TABLE-0200", .req]
 UPDATE-TABLE-0200:: TypeScript implementation
@@ -108,17 +114,19 @@ placed in the `scripts/src/` subdirectory
 of the <<ASCIIREQ>> specification repository.
 --
 
+[#UPDATE-TABLE-0210, reftext="UPDATE-TABLE-0210", .req]
+UPDATE-TABLE-0210:: List of requirements columns
++
+--
+The <<REQUIREMENTS-TABLE>> MUST give,
+for each requirement:
 
-=== Design
+* its identifier;
+* its title.
+--
 
-The design of the `update-table` script
-relies on the <<ASCIIDOCTOR-JS>> library,
-in order to parse the AsciiDoc content
-in a robust way,
-instead of relying on fragile text processing.
-
-[#UPDATE-TABLE-0300, reftext="UPDATE-TABLE-0300", .req]
-UPDATE-TABLE-0300:: Asciidoctor.js based design
+[#UPDATE-TABLE-0220, reftext="UPDATE-TABLE-0220", .req]
+UPDATE-TABLE-0220:: Asciidoctor.js based design
 +
 --
 The `update-table` script MUST use
