@@ -184,6 +184,9 @@ ASCIIREQ-WRITER:: AsciiReq writer
 --
 Writes and maintains AsciiReq specifications.
 
+In order to be able to maintain AsciiReq specifications,
+ASCIIREQ-WRITERs implicitely also have ASCIIREQ-READER abilities.
+
 May be a human or a tool.
 --
 
