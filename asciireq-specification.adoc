@@ -711,10 +711,15 @@ MUST be unique for a given <<ASCIIREQ-REQUIREMENT>>.
 ** <<ASCIIREQ-READER>>
 
 
-=== Cross references
+=== AsciiDoc cross references
 
 Cross references may be convenient to help humans
 navigate within an AsciiReq document.
+
+It also helps ensuring AsciiReq consistency,
+in as much as AsciiReq formal item references,
+implemented as AsciiDoc cross references,
+can be verified by regular AsciiDoc verification tools.
 
 The following requirement proposes a pattern
 to ease AsciiDoc cross references for AsciiReq items.
