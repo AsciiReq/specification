@@ -1,0 +1,18 @@
+{
+  "name": "asciireq-specification-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tooling scripts for the AsciiReq specification repository",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.6.0"
+  }
+}

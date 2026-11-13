@@ -1,0 +1,177 @@
+= update-table script specification
+:asciireq-version: https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
+:sectnums:
+:toc:
+:toclevels: 5
+
+
+== About this document
+
+=== Identification
+
+[cols="1,3"]
+|===
+|Name|
+update-table script specification
+
+|Version|
+0.1.0
+
+|URL|
+https://github.com/AsciiReq/specification/blob/devel0/scripts/specs/update-table.adoc
+|===
+
+=== Purpose
+
+This document specifies the `update-table` script,
+which updates the "List of requirements" table
+of the link:../asciireq-specification.adoc[AsciiReq specification].
+
+=== Conventions
+
+This document is written with the <<ASCIIREQ>> format.
+
+This document uses <<RFC-2119>> and <<RFC-8174>> conventions
+for the understanding of the capitalized keywords
+"MAY",
+"MUST", "MUST NOT",
+"SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT",
+"REQUIRED", "RECOMMENDED", and "OPTIONAL".
+
+
+== Actors
+
+The following actors interact with the `update-table` script.
+
+[#UPDATE-TABLE, reftext="UPDATE-TABLE", .req-actor]
+UPDATE-TABLE:: update-table script
++
+--
+The `update-table` script,
+which updates the "List of requirements" of the <<ASCIIREQ>> specification.
+
+A tool.
+--
+
+[#ASCIIREQ-WRITER, reftext="ASCIIREQ-WRITER", .req-actor]
+ASCIIREQ-WRITER:: AsciiReq writer
++
+--
+Writes and maintains <<ASCIIREQ>> specifications.
+
+May be a human or a tool
+(the `update-table` script being one of them).
+--
+
+
+== Data
+
+[#REQUIREMENTS-TABLE, reftext="REQUIREMENTS-TABLE", .req-data]
+REQUIREMENTS-TABLE:: List of requirements
++
+--
+The "List of requirements" table
+of the <<ASCIIREQ>> specification,
+giving the identifiers and titles
+of the requirements it contains.
+--
+
+
+== Requirements
+
+=== Functional
+
+[#UPDATE-TABLE-0100, reftext="UPDATE-TABLE-0100", .req]
+UPDATE-TABLE-0100:: List of requirements update
++
+--
+The `update-table` script MUST update
+the <<REQUIREMENTS-TABLE>>
+of the <<ASCIIREQ>> specification,
+so that it gives
+the identifiers and titles
+of all the requirements
+contained in the <<ASCIIREQ>> specification.
+--
+
+
+=== Design
+
+The design of the `update-table` script
+relies on the <<ASCIIDOCTOR-JS>> library,
+in order to parse the AsciiDoc content
+in a robust way,
+instead of relying on fragile text processing.
+
+[#UPDATE-TABLE-0200, reftext="UPDATE-TABLE-0200", .req]
+UPDATE-TABLE-0200:: TypeScript implementation
++
+--
+The `update-table` script MUST be implemented in TypeScript,
+with its source files
+placed in the `scripts/src/` subdirectory
+of the <<ASCIIREQ>> specification repository.
+--
+
+[#UPDATE-TABLE-0220, reftext="UPDATE-TABLE-0220", .req]
+UPDATE-TABLE-0220:: Asciidoctor.js based design
++
+--
+The `update-table` script MUST use
+the <<ASCIIDOCTOR-JS>> library
+to parse the <<ASCIIDOC>> content
+of the <<ASCIIREQ>> specification,
+and to generate the updated <<REQUIREMENTS-TABLE>>.
+
+The built script MUST be placed
+in the `scripts/dist/` subdirectory
+of the <<ASCIIREQ>> specification repository.
+--
+
+
+== References
+
+[#ASCIIREQ, reftext="ASCIIREQ", .req-ref]
+ASCIIREQ:: AsciiReq specification
++
+--
+See https://github.com/AsciiReq/specification.
+--
+
+[#ASCIIDOC, reftext="ASCIIDOC", .req-ref]
+ASCIIDOC:: AsciiDoc
++
+--
+See https://asciidoc.org/.
+
+Documentation:
+https://docs.asciidoctor.org/asciidoc/latest/.
+--
+
+[#ASCIIDOCTOR-JS, reftext="ASCIIDOCTOR-JS", .req-ref]
+ASCIIDOCTOR-JS:: Asciidoctor.js
++
+--
+JavaScript implementation of the `asciidoctor` tool.
+
+See https://docs.asciidoctor.org/asciidoctor.js/latest/.
+--
+
+[#RFC-2119, reftext="RFC-2119", .req-ref]
+RFC-2119:: RFC-2119
++
+--
+RFC 2119: BCP 14: Key words for use in RFCs to Indicate Requirement Levels
+
+See https://www.rfc-editor.org/info/rfc2119/.
+--
+
+[#RFC-8174, reftext="RFC-8174", .req-ref]
+RFC-8174:: RFC-8174
++
+--
+RFC 8174: BCP 14: Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words
+
+See https://www.rfc-editor.org/info/rfc8174/.
+--
