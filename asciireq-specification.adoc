@@ -54,8 +54,9 @@ It may also use regular AsciiDoc formatting syntax
 --
 +
 * *Version:* 1.0
-* *Refers:* UPPER-REQ-100
-** Coverage justification.
+* *Refers:*
+** UPPER-REQ-100
+*** Coverage justification.
 ----
 
 The following sequence diagram shows a typical workflow
@@ -795,25 +796,43 @@ But still, it creates a pitfall, and errors can be made.
 
 === Traceability
 
+Traceability is one of the main goals of requirement management.
+
 [#ASCIIREQ-TRACEABILITY-0750, reftext="ASCIIREQ-TRACEABILITY-0750", .req]
 ASCIIREQ-TRACEABILITY-0750:: `Refers` requirement attribute
 +
 --
 An <<ASCIIREQ-REQUIREMENT>>
-MAY have a `Refers` <<ASCIIREQ-ATTRIBUTE>>
-following the same model as the `Actors` attribute (as of the "Conventions" section):
+MAY have `Refers` <<ASCIIREQ-ATTRIBUTE>>s
+giving traceability information for the current <<ASCIIREQ-REQUIREMENT>>.
 
-* level 2 unordered list items
-  give <<ASCIIREQ-IDENTIFIER>>s of foreign requirements;
-* level 3 unordered list items
-  give justifications.
+Foreign <<ASCIIREQ-IDENTIFIER>>s MUST be given as level 2 unordered list items.
+
+Justification for each foreign <<ASCIIREQ-IDENTIFIER>> referred MAY be given.
+If so, it MUST be given as level 2 unordered list items.
 --
 +
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-*** Traceability is one of the main goals of requirement management.
-*** Important to be able to track justification with traceability links established,
-otherwise hard to maintain.
+*** <<ASCIIREQ-WRITER>>s are responsible for traceability definition.
+** <<ASCIIREQ-READER>>
+*** <<ASCIIREQ-READER>>s must be able to read traceability information in order to process it,
+    especially for impact analyses.
+
+Example:
+[source, asciidoc]
+----
+* *Refers:*
+** UPPER-REQ-100
+*** Justification.
+*** Justification again.
+** UPPER-REQ-200
+*** Justification.
+----
+
+It is important to be able to track justification
+with traceability links established,
+otherwise traceability usually reveals hard to maintain.
 
 
 === Requirement versioning
