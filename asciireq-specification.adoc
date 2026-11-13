@@ -842,6 +842,54 @@ It is important to be able to track justification
 with traceability links established,
 otherwise traceability usually reveals hard to maintain.
 
+In case the specification document covers different foreign specifications,
+then comes a risk of requirement identifiers overlapping.
+
+[#ASCIIREQ-TRACEABILITY-0755, reftext="ASCIIREQ-TRACEABILITY-0755", .req]
+ASCIIREQ-TRACEABILITY-0755:: Specialized `Refers` requirement attribute
++
+--
+A `Refers` <<ASCIIREQ-ATTRIBUTE>> name (as of <<ASCIIREQ-TRACEABILITY-0750>>)
+SHOULD be specialized
+with an <<ASCIIREQ-REF>> <<ASCIIREQ-IDENTIFIER>>
+between square brackets,
+after the `Refers` keyword.
+
+The <<ASCIIREQ-REF>> <<ASCIIREQ-IDENTIFIER>>
+identifies the foreign document
+holding the <<ASCIIREQ-REQUIREMENT>> <<ASCIIREQ-IDENTIFIER>>s referred
+below this specialized `Refers` <<ASCIIREQ-ATTRIBUTE>>.
+
+The <<ASCIIREQ-REF>> <<ASCIIREQ-IDENTIFIER>>,
+between the square brackets,
+MAY be be given as an <<ASCIIDOC>> cross reference.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Example:
+[source, asciidoc]
+----
+* *Refers[<<UPPER-SPEC>>]:*
+** UPPER-REQ-100
+----
+
+This requirement comes as a recommendation, in as much as
+if there's only one requirement source to cover,
+then it may be considered trivial which requirement source is being covered.
+
+Nevertheless:
+
+* Using specialized `Refers` requirement attributes makes it clear, more formal,
+  easier for <<ASCIIREQ-READER>> tools to process.
+* It also gives an opportunity to set an AsciiDoc cross reference to the related <<ASCIIREQ-REF>>,
+  practical for humans.
+* It also prepares maintainability
+  in case other sets of <<ASCIIREQ-REF>> coverage are added in the future.
+
 
 === Requirement versioning
 
