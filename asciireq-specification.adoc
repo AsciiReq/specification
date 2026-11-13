@@ -763,7 +763,25 @@ But still, it creates a pitfall, and errors can be made.
 
 === Traceability
 
-TODO
+[#ASCIIREQ-TRACEABILITY-0750, reftext="ASCIIREQ-TRACEABILITY-0750", .req]
+ASCIIREQ-TRACEABILITY-0750:: `Refers` requirement attribute
++
+--
+An <<ASCIIREQ-REQUIREMENT>>
+MAY have a `Refers` <<ASCIIREQ-ATTRIBUTE>>
+following the same model as the `Actors` attribute (as of the "Conventions" section):
+
+* level 2 unordered list items
+  give <<ASCIIREQ-IDENTIFIER>>s of foreign requirements;
+* level 3 unordered list items
+  give justifications.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+*** Traceability is one of the main goals of requirement management.
+*** Important to be able to track justification with traceability links established,
+otherwise hard to maintain.
 
 
 === Requirement versioning
