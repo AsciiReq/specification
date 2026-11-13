@@ -694,6 +694,18 @@ Including the `:` separator at the end of the bold part
 should make it deterministic
 to parse requirement attributes.
 
+[#ASCIIREQ-ATTRIBUTES-0610, reftext="ASCIIREQ-ATTRIBUTES-0610", .req]
+ASCIIREQ-ATTRIBUTES-0610:: AsciiReq requirement attribute name uniqueness
++
+--
+<<ASCIIREQ-ATTRIBUTE>> names
+MUST be unique for a given <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
 
 === Cross references
 
