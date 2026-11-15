@@ -443,6 +443,10 @@ for `:asciireq-version:` document attributes:
 |v0.1
 |https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
 |===
+
+If an <<ASCIIREQ-READER>> does not know the URL,
+it MAY fetch the URL
+and check for the `:revnumber:` in the document header.
 --
 +
 * *Version:* 0.1
