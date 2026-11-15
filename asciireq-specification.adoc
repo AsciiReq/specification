@@ -315,7 +315,9 @@ is `.adoc`.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-*** Makes the <<ASCIIREQ-DOCUMENT>> compatible with general <<ASCIIDOC-RENDERER>>s.
+
+The <<ASCIIREQ-WRITER>> makes the <<ASCIIREQ-DOCUMENT>>
+compatible with general <<ASCIIDOC-RENDERER>>s.
 
 [#ASCIIREQ-DOC-0020, reftext="ASCIIREQ-DOC-0020", .req]
 ASCIIREQ-DOC-0020:: AsciiDoc includes
