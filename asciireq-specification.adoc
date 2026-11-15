@@ -186,7 +186,7 @@ ASCIIDOC-RENDERER:: AsciiDoc renderer
 --
 Reads <<ASCIIDOC>> documents
 (possibly containing <<ASCIIREQ>> content)
-and makes a presentation of it for humans.
+and makes a visual presentation of it for humans.
 
 Basically a tool.
 --
