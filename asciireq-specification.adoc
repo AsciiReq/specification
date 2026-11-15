@@ -794,6 +794,10 @@ in as much as AsciiReq formal item references,
 implemented as AsciiDoc cross references,
 can be verified by regular AsciiDoc verification tools.
 
+Eventually, it may also help AI
+clearly identify what is actually referenced
+by AsciiDoc formal references.
+
 The following requirement proposes a pattern
 to ease AsciiDoc cross references for AsciiReq items.
 
