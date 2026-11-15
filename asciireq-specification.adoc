@@ -994,6 +994,15 @@ of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
 
 When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>),
 the `Version` <<ASCIIREQ-ATTRIBUTE>> must be updated with the current version of the <<ASCIIREQ-DOCUMENT>>.
+
+When the <<ASCIIREQ-REQUIREMENT>> is modified without significant changes,
+its version MUST NOT be modified.
+
+Examples of non significant changes:
+
+* typos fixed MUST NOT change the version;
+* rewordings for clarification SHOULD NOT update the version,
+  unless the previous text led to wrong understandings of the requirement.
 --
 +
 * *Version:* 0.1
