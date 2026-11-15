@@ -325,7 +325,8 @@ ASCIIREQ-DOC-0020:: AsciiDoc includes
 --
 An <<ASCIIREQ-DOCUMENT>>
 MAY be defined with different `.adoc` files
-using the <<ASCIIDOC>> ability to link:https://docs.asciidoctor.org/asciidoc/latest/directives/include/[include files].
+using the <<ASCIIDOC>> ability
+to link:https://docs.asciidoctor.org/asciidoc/latest/directives/include/[include files].
 
 To read the full <<ASCIIREQ-DOCUMENT>>,
 an <<ASCIIREQ-READER>>
