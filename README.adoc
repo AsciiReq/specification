@@ -67,7 +67,7 @@ Furthermore,
 link:https://mermaid.js.org/intro/[Mermaid] diagrams,
 being a plain text technology as well,
 integrate naturally with AsciiDoc,
-which makes great sens when writing specifications.
+which makes great sense when writing specifications.
 
 Using AsciiDoc
 instead of link:https://daringfireball.net/projects/markdown/syntax[Markdown]

@@ -86,7 +86,7 @@ Furthermore,
 <<MERMAID>> diagrams,
 being a plain text technology as well,
 integrate naturally with AsciiDoc,
-which makes great sens when writing specifications.
+which makes great sense when writing specifications.
 
 Using <<ASCIIDOC>>
 instead of <<MARKDOWN>>
@@ -167,7 +167,7 @@ ASCIIREQ-WRITER:: AsciiReq writer
 Writes and maintains AsciiReq specifications.
 
 In order to be able to maintain AsciiReq specifications,
-<<ASCIIREQ-WRITER>>s implicitely also have <<ASCIIREQ-READER>> abilities.
+<<ASCIIREQ-WRITER>>s implicitly also have <<ASCIIREQ-READER>> abilities.
 
 May be a human or a tool.
 --
@@ -881,7 +881,7 @@ With `reftext` attributes,
 AsciiReq identifiers only (without square brackets)
 are always displayed.
 
-That' the reason why
+That's the reason why
 <<ASCIIREQ-XREF-0700>> assumes the duplication of the AsciiReq identifier information again
 with the addition of a `reftext` attribute.
 
@@ -949,7 +949,7 @@ below this specialized `Refers` <<ASCIIREQ-ATTRIBUTE>>.
 
 The <<ASCIIREQ-REF>> <<ASCIIREQ-IDENTIFIER>>,
 between the square brackets,
-MAY be be given as an <<ASCIIDOC>> cross reference.
+MAY be given as an <<ASCIIDOC>> cross reference.
 --
 +
 * *Version:* 0.1
