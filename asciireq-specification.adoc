@@ -1,5 +1,7 @@
 = AsciiReq v0.1 specification
 :asciireq-version: https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
+:revnumber: 0.1.0
+:revdate: 2026-11-13
 :sectnums:
 :toc:
 :toclevels: 5
@@ -18,10 +20,10 @@ AsciiReq v0.1 specification
 link:https://github.com/alxroyer[alxroyer]
 
 |Version|
-v0.1.0
+v{revnumber}
 
 |Date|
-2026-11-13
+{revdate}
 
 |URL|
 https://github.com/AsciiReq/specification/blob/0.1.0/asciireq-specification.adoc
