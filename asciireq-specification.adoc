@@ -494,7 +494,6 @@ The <<ASCIIDOC>> role assigned MUST be one of :
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
-
 The following requirement ensures
 that the whole content of an <<ASCIIREQ-ITEM>>
 remains _AsciiDoc-ly_ attached to it.
