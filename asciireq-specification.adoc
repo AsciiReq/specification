@@ -901,8 +901,6 @@ If so, it MUST be given as level 3 unordered list items.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
-*** <<ASCIIREQ-READER>>s must be able to read traceability information in order to process it,
-    especially for impact analyses.
 
 Example:
 [source, asciidoc]
