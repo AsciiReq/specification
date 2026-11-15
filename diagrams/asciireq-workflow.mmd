@@ -1,19 +1,26 @@
 sequenceDiagram
-    participant ASCIIREQ-WRITER
-    participant ASCIIREQ-DOCUMENT
-    participant ASCIIDOC-RENDERER
-    participant ASCIIREQ-READER
-    actor Human
 
-    ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: creates
-    ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: updates
+participant ASCIIREQ-WRITER
+participant ASCIIREQ-DOCUMENT
+participant ASCIIDOC-RENDERER
+participant ASCIIREQ-READER as Tool (ASCIIREQ-READER)
+actor Human
 
-    Human->>ASCIIREQ-DOCUMENT: reads (raw AsciiReq syntax)
+Note over ASCIIREQ-WRITER,ASCIIREQ-DOCUMENT: Document creation
+ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: Create
+activate ASCIIREQ-DOCUMENT
+ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: Update
 
-    Human->>ASCIIDOC-RENDERER: uses
-    ASCIIDOC-RENDERER->>ASCIIREQ-DOCUMENT: reads (as ASCIIDOC-DOCUMENT)
-    ASCIIDOC-RENDERER-->>Human: delivers a display
+Note over ASCIIREQ-DOCUMENT,Human: Raw AsciiReq reading
+Human->>ASCIIREQ-DOCUMENT: Read (as AsciiReq)
 
-    Human->>ASCIIREQ-READER: uses
-    ASCIIREQ-READER->>ASCIIREQ-DOCUMENT: reads
-    ASCIIREQ-READER-->>ASCIIREQ-READER: processes a task
+Note over ASCIIREQ-DOCUMENT,Human: AsciiDoc rendering
+Human->>ASCIIDOC-RENDERER: Use
+ASCIIDOC-RENDERER->>ASCIIREQ-DOCUMENT: Read (as AsciiDoc)
+ASCIIDOC-RENDERER-->>Human: Deliver AsciiDoc display
+
+Note over ASCIIREQ-DOCUMENT,ASCIIREQ-READER: Document processing with tools
+ASCIIREQ-READER->>ASCIIREQ-DOCUMENT: Read (as AsciiReq)
+ASCIIREQ-READER-->>ASCIIREQ-READER: Process a task
+
+deactivate ASCIIREQ-DOCUMENT
