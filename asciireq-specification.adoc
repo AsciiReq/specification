@@ -643,7 +643,8 @@ for compliance purpose with AsciiDoc syntax definitions,
 but a title will generally be a single line in practice.
 
 As a consequence,
-it may be a good option to present the title on the same text line as the identifier.
+it may be a good option to present the title on the same text line
+as the identifier.
 Doing so enables `grep` commands to retrieve corresponding identifiers and titles
 in single rows.
 
