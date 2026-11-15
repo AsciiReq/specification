@@ -585,6 +585,10 @@ in an <<ASCIIREQ-DOCUMENT>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+This specification does not define
+what an <<ASCIIREQ-READER>> MUST do
+when it detects identifier duplicates.
+
 
 ==== AsciiReq item title
 
