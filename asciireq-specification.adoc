@@ -330,7 +330,7 @@ to link:https://docs.asciidoctor.org/asciidoc/latest/directives/include/[include
 
 To read the full <<ASCIIREQ-DOCUMENT>>,
 an <<ASCIIREQ-READER>>
-MUST process the <<ASCIIDOC>> include macros.
+MUST process the <<ASCIIDOC>> include directives.
 --
 +
 * *Version:* 0.1
