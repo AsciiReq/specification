@@ -1022,6 +1022,9 @@ Other kind of versioning strategies may be considered in the future.
 
 Not covered yet.
 
+Scenario specification in a future version of AsciiReq
+is tracked in issue link:https://github.com/AsciiReq/specification/issues/3[#3].
+
 
 == Tables
 
