@@ -290,7 +290,7 @@ ASCIIREQ-ATTRIBUTE:: AsciiReq requirement attribute
 +
 --
 One attribute
-in the attributes (as of <<ASCIIREQ-ATTRIBUTES-0600>>)
+in the attribute set (as of <<ASCIIREQ-ATTRIBUTES-0600>>)
 of an <<ASCIIREQ-REQUIREMENT>> (requirements only!),
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
