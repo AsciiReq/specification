@@ -216,6 +216,14 @@ the <<ASCIIREQ-DOCUMENT>> is then the main file
 with its includes resolved.
 --
 
+[#ASCIIREQ-DOCUMENT-HEADER, reftext="ASCIIREQ-DOCUMENT-HEADER", .req-data]
+ASCIIREQ-DOCUMENT-HEADER:: AsciiReq document header
++
+--
+The <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/document/header/[document header]
+of an <<ASCIIREQ-DOCUMENT>>.
+--
+
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
 ASCIIREQ-ITEM:: AsciiReq item
 +
@@ -345,7 +353,7 @@ In order to make it clear
 that an AsciiDoc document contains AsciiReq content,
 and which version of the standard is used,
 a declaration shall be made
-in the AsciiDoc document header.
+in the <<ASCIIREQ-DOCUMENT-HEADER>>.
 
 [NOTE]
 .AsciiDoc custom attributes
