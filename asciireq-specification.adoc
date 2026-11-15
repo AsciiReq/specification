@@ -185,11 +185,12 @@ and makes a visual presentation of it for humans.
 
 Basically a tool.
 
-Known tools:
+Examples:
 
 * link:https://asciidoctor.org/[asciidoctor]
-* Viscose extension
-* Git platforms, such as GitHub
+* link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc] VSCode extension
+* Git platforms, such as link:https://github.com/[GitHub]
+* ...
 --
 
 
