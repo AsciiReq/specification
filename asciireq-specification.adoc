@@ -432,7 +432,8 @@ easily find and read through the referenced specification.
 ASCIIREQ-STANDARD-0120:: AsciiReq standard versioned URLs
 +
 --
-The table below gives the authorized values
+The table below gives the known values
+as of this version of the specification,
 for `:asciireq-version:` document attributes:
 
 [cols="1,5"]
