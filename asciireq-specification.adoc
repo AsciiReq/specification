@@ -775,7 +775,6 @@ MUST be unique for a given <<ASCIIREQ-REQUIREMENT>>.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
 
 
 === AsciiDoc cross references
