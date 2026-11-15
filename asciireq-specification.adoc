@@ -593,7 +593,8 @@ when it detects identifier duplicates.
 ==== AsciiReq item title
 
 It is usually practical to define requirement titles,
-i.e. a short phrase summarizing the purpose off the requirement.
+i.e. a short phrase summarizing
+the purpose of the requirement.
 This is especially useful
 when requirements are listed in tables,
 in order to quickly understand
