@@ -74,7 +74,7 @@ based upon a plain text technology
 such as <<ASCIIDOC>>
 is that it makes it compatible with source code management tools
 like <<GIT>>.
-By the way, lots of aspects become easier:
+Doing so, lots of aspects become easier:
 
 * modification history,
 * collaborative working, even with AI agents,
