@@ -784,6 +784,18 @@ as done for the `Refers` attribute
 (see <<ASCIIREQ-TRACEABILITY-0750>> for an example).
 
 
+==== Justifications
+
+It is RECOMMENDED to set justifications as free text,
+out of formal requirement definitions.
+
+This pattern clearly separates the _what_ and the _why_.
+The _why_ is important to track.
+But it is important to keep the _what_ separately,
+so that it can be clearly identified and processed
+without being polluted by _why_ concerns.
+
+
 === AsciiDoc cross references
 
 Cross references may be convenient to help humans
