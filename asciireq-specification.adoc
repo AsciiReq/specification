@@ -421,7 +421,6 @@ either:
 
 * stop processing;
 * consider the latest AsciiReq standard version it knows by default;
-* try to guess the AsciiReq standard version from the content of the document;
 * ...
 
 The URLs specified with `:asciireq-version:` document attributes
