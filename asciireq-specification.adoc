@@ -130,7 +130,8 @@ Actors concerned by the requirement.
 
 See the <<Actors>> section of this document for the list of possible actor values.
 
-MUST be given as a level 2 unordered sublist below the "Actors:" attribute list item.
+MUST be given as a level 2 unordered sublist below the "Actors:" attribute list item,
+as AsciiDoc cross references.
 
 Level 3 sublist items MAY be used for justifications.
 
