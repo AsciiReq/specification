@@ -888,7 +888,7 @@ ASCIIREQ-TRACEABILITY-0750:: `Refers` requirement attribute
 +
 --
 An <<ASCIIREQ-REQUIREMENT>>
-MAY have `Refers` <<ASCIIREQ-ATTRIBUTE>>s
+MAY have a single `Refers` <<ASCIIREQ-ATTRIBUTE>>
 giving traceability information for the current <<ASCIIREQ-REQUIREMENT>>.
 
 Foreign <<ASCIIREQ-IDENTIFIER>>s MUST be given as level 2 unordered list items.
