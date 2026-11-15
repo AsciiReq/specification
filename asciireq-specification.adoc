@@ -1009,6 +1009,9 @@ Examples of non significant changes:
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+Aligning the requirement version with the one of the <<ASCIIREQ-DOCUMENT>>
+makes it easier to understand when the change occurred, obviously.
+
 In this version of the AsciiReq specification,
 this requirements imposes <<SEMVER>> versions.
 
