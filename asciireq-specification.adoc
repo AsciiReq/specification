@@ -189,6 +189,12 @@ Reads <<ASCIIDOC>> documents
 and makes a visual presentation of it for humans.
 
 Basically a tool.
+
+Known tools:
+
+* link:https://asciidoctor.org/[asciidoctor]
+* Viscose extension
+* Git platforms, such as GitHub
 --
 
 
