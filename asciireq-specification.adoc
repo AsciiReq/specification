@@ -475,7 +475,7 @@ in a fast and deterministic way.
 ASCIIREQ-ITEM-0200:: AsciiReq item
 +
 --
-Inside an <<ASCIIDOC>> document,
+Inside an <<ASCIIREQ-DOCUMENT>>,
 an AsciiReq item is defined
 as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
 with an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[role]
