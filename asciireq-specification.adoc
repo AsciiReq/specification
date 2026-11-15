@@ -900,7 +900,6 @@ If so, it MUST be given as level 3 unordered list items.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-*** <<ASCIIREQ-WRITER>>s are responsible for traceability definition.
 ** <<ASCIIREQ-READER>>
 *** <<ASCIIREQ-READER>>s must be able to read traceability information in order to process it,
     especially for impact analyses.
