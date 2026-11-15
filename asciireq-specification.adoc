@@ -717,7 +717,7 @@ but it is usually practical
 to fit requirement management with the specific needs of the project.
 
 Please note that attributes apply to requirements only
-(not to actors, data, nor references).
+(not to actors, data, nor foreign references).
 
 [#ASCIIREQ-ATTRIBUTES-0600, reftext="ASCIIREQ-ATTRIBUTES-0600", .req]
 ASCIIREQ-ATTRIBUTES-0600:: AsciiReq requirement attributes
