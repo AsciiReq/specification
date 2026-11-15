@@ -306,6 +306,9 @@ The requirements defining the AsciiReq format are listed below.
 
 === AsciiReq document
 
+The following recommendation makes the <<ASCIIREQ-DOCUMENT>>
+compatible with general <<ASCIIDOC-RENDERER>>s.
+
 [#ASCIIREQ-DOC-0010, reftext="ASCIIREQ-DOC-0010", .req]
 ASCIIREQ-DOC-0010:: `.adoc` file name extension
 +
@@ -319,8 +322,8 @@ is `.adoc`.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-The <<ASCIIREQ-WRITER>> makes the <<ASCIIREQ-DOCUMENT>>
-compatible with general <<ASCIIDOC-RENDERER>>s.
+Spliting a large specification document in different files
+generally helps for maintenance.
 
 [#ASCIIREQ-DOC-0020, reftext="ASCIIREQ-DOC-0020", .req]
 ASCIIREQ-DOC-0020:: AsciiDoc includes
