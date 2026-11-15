@@ -1028,6 +1028,10 @@ is tracked in issue link:https://github.com/AsciiReq/specification/issues/3[#3].
 
 == Tables
 
+Scripts for updating the tables in this section
+are planned for a future version of AsciiReq:
+see issue link:https://github.com/AsciiReq/specification/issues/4[#4].
+
 === List of requirements
 
 TODO
