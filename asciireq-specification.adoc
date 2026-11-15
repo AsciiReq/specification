@@ -548,6 +548,7 @@ ASCIIREQ-ID-0310:: AsciiReq item identifier authorized characters
 +
 --
 <<ASCIIREQ-ITEM>> identifiers (as of <<ASCIIREQ-ID-0300>>)
+MUST be non empty strings, and
 MUST contain only the following characters:
 
 * letters
