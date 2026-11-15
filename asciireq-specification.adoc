@@ -420,7 +420,7 @@ it is its own responsibility to decide the behavior after,
 either:
 
 * stop processing;
-* consider the latest AsciiReq standard version by default;
+* consider the latest AsciiReq standard version it knows by default;
 * try to guess the AsciiReq standard version from the content of the document;
 * ...
 
