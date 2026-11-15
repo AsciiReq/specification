@@ -1013,7 +1013,7 @@ Aligning the requirement version with the one of the <<ASCIIREQ-DOCUMENT>>
 makes it easier to understand when the change occurred, obviously.
 
 In this version of the AsciiReq specification,
-this requirements imposes <<SEMVER>> versions.
+this requirement recommends <<SEMVER>> versions.
 
 Other kind of versioning strategies may be considered in the future.
 
