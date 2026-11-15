@@ -751,7 +751,7 @@ to define requirement attributes as `name:: value` pairs.
 
 However,
 requirement attributes are defined as a simple unordered list
-as a matter of rendering with <<ASCIIDOC-RENDERER>>s
+for visual presentation concerns with regular <<ASCIIDOC-RENDERER>>s
 (especially the GitHub web platform),
 which can't be configured.
 
