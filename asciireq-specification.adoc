@@ -390,6 +390,12 @@ so that an <<ASCIIREQ-READER>>
 can figure out which version of AsciiReq standard it is working with
 as specified in <<ASCIIREQ-STANDARD-0110>>.
 
+AsciiReq documents are RECOMMENDED to have a `.adoc` extension
+(as specified by <<ASCIIREQ-DOC-0010>>).
+But a `.adoc` file without the `:asciireq-version:` document attribute
+is out of scope of this specification.
+An <<ASCIIREQ-READER>> may choose the behaviour.
+
 [#ASCIIREQ-STANDARD-0110, reftext="ASCIIREQ-STANDARD-0110", .req]
 ASCIIREQ-STANDARD-0110:: `:asciireq-version:` document attribute processing
 +
