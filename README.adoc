@@ -77,12 +77,6 @@ which make it easier to write and maintain large technical documentations:
 * better link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross-reference] support,
 * ...
 
-We bet that a clear specification format
-may also be a key point
-to help AI agents work even better.
-Clear specifications lead to better verifications,
-and thus better quality.
-
 
 == Full specification
 
