@@ -481,7 +481,7 @@ as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/descr
 with an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[role]
 assigned to it.
 
-The <<ASCIIDOC>> role attached MUST be one of :
+The <<ASCIIDOC>> role assigned MUST be one of :
 
 `.req-ref`:: The `.req-ref` <<ASCIIDOC>> role defines a foreign reference.
 `.req-actor`:: The `.req-actor` <<ASCIIDOC>> role defines a formal AsciiReq actor.
