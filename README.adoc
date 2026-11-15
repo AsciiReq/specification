@@ -29,8 +29,9 @@ It may also use regular AsciiDoc formatting syntax
 --
 +
 * *Version:* 1.0
-* *Refers:* UPPER-REQ-100
-** Coverage justification.
+* *Refers:*
+** UPPER-REQ-100
+*** Coverage justification.
 ----
 
 [NOTE]
