@@ -776,6 +776,13 @@ MUST be unique for a given <<ASCIIREQ-REQUIREMENT>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+Please note that repeating an attribute could be understood
+as defining several items of a list.
+The choice is assumed, and if one needs to define list values,
+then consider using AsciiDoc unordered lists,
+as done for the `Refers` attribute
+(see <<ASCIIREQ-TRACEABILITY-0750>> for an example).
+
 
 === AsciiDoc cross references
 
