@@ -894,7 +894,7 @@ giving traceability information for the current <<ASCIIREQ-REQUIREMENT>>.
 Foreign <<ASCIIREQ-IDENTIFIER>>s MUST be given as level 2 unordered list items.
 
 Justification for each foreign <<ASCIIREQ-IDENTIFIER>> referred MAY be given.
-If so, it MUST be given as level 2 unordered list items.
+If so, it MUST be given as level 3 unordered list items.
 --
 +
 * *Version:* 0.1
