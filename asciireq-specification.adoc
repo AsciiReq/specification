@@ -730,7 +730,7 @@ at the end of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 
 The full `name:` pattern,
 including the `:` separator at its end,
-MUST be written in bold.
+MUST be written in link:https://docs.asciidoctor.org/asciidoc/latest/text/text-formatting/#bold[bold].
 
 There MUST be only one <<ASCIIDOC>> unordered list
 at the root level of the <<ASCIIREQ-COMPOUND-CONTENT>>
