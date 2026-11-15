@@ -184,7 +184,8 @@ May be a human or a tool.
 ASCIIDOC-RENDERER:: AsciiDoc renderer
 +
 --
-Reads <<ASCIIDOC>> documents (possibly containing <<ASCIIREQ>> content)
+Reads <<ASCIIDOC>> documents
+(possibly containing <<ASCIIREQ>> content)
 and makes a presentation of it for humans.
 
 Basically a tool.
