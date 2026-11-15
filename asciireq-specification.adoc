@@ -454,6 +454,11 @@ and check for the `:revnumber:` in the document header.
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
+The URLs are currently defined with GitHub URLs,
+but the project could possibly be hosted somewhere else later.
+That's the reason why an <<ASCIIREQ-READER>> may fetch the URL if it does not know it yet.
+It is an option, but not a recommendation, for security reasons.
+
 As of the <<SEMVER>> standard, _PATCH_ versions won't break the compatibility.
 That's the reason why there is no need to give them with AsciiReq standard versioned URLs.
 
