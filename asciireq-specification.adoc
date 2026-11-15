@@ -355,7 +355,7 @@ is natively allowed by the AsciiDoc format,
 which makes the definition of `:asciireq-version:` possible.
 ====
 
-AsciiReq standard versioning follows the <<SEMVER>> rules.
+AsciiReq standard versioning follows <<SEMVER>> rules.
 
 [#ASCIIREQ-STANDARD-0100, reftext="ASCIIREQ-STANDARD-0100", .req]
 ASCIIREQ-STANDARD-0100:: `:asciireq-version:` document attribute declaration
