@@ -378,7 +378,8 @@ used to write the <<ASCIIREQ-DOCUMENT>>.
 ** <<ASCIIREQ-WRITER>>
 
 The usage of the `:asciireq-version:` attribute is REQUIRED on purpose,
-so that an <<ASCIIREQ-READER>> can figure out which version of AsciiReq standard it is working with
+so that an <<ASCIIREQ-READER>>
+can figure out which version of AsciiReq standard it is working with
 as specified in <<ASCIIREQ-STANDARD-0110>>.
 
 [#ASCIIREQ-STANDARD-0110, reftext="ASCIIREQ-STANDARD-0110", .req]
