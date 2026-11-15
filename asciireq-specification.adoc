@@ -712,8 +712,9 @@ and use any AsciiDoc formatting (lists, tables, admonitions, ...).
 
 ==== AsciiReq requirement attributes
 
-Requirement management commonly requires the usage of additional attributes
-attached with the requirements.
+It is not exactly _required_ by requirement management,
+but it is usually practical
+to fit requirement management with the specific needs of the project.
 
 Please note that attributes apply to requirements only
 (not to actors, data, nor references).
