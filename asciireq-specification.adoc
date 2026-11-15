@@ -621,10 +621,6 @@ Titles are RECOMMENDED for <<ASCIIREQ-REQUIREMENT>>s.
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
-The requirement labels "first (...) paragraph"
-for compliance purpose with AsciiDoc syntax definitions,
-but a title will generally be a single line in practice.
-
 Titles are particularly useful for requirements.
 That's the reason why it's an option for other AsciiReq items,
 but a recommendation for requirements.
@@ -640,6 +636,11 @@ for <<ASCIIREQ-REQUIREMENT>>s.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+
+Comment about <<ASCIIREQ-TITLE-0400>>:
+the requirement labels "first (...) paragraph"
+for compliance purpose with AsciiDoc syntax definitions,
+but a title will generally be a single line in practice.
 
 Considering that requirement titles usually consist of a single line,
 it may be a good option to present the title on the same text line as the identifier.
