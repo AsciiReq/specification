@@ -870,7 +870,7 @@ AsciiReq identifiers only (without square brackets)
 are always displayed.
 
 That' the reason why
-<<ASCIIREQ-XREF-0700>> proposes to duplicate the AsciiReq identifier information again
+<<ASCIIREQ-XREF-0700>> assumes the duplication of the AsciiReq identifier information again
 with the addition of a `reftext` attribute.
 
 As shown in the example at the beginning of this document,
