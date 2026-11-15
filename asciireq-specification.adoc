@@ -77,7 +77,7 @@ like <<GIT>>.
 Doing so, lots of aspects become easier:
 
 * modification history,
-* collaborative working, even with AI agents,
+* collaborative working,
 * branches,
 * versioning,
 * ...
