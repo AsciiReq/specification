@@ -341,7 +341,8 @@ MUST process the <<ASCIIDOC>> include directives.
 
 === AsciiReq standard
 
-In order to make it clear that an AsciiDoc document contains AsciiReq content,
+In order to make it clear
+that an AsciiDoc document contains AsciiReq content,
 and which version of the standard is used,
 a declaration shall be made
 in the AsciiDoc document header.
