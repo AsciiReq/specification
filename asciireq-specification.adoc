@@ -112,7 +112,7 @@ and thus better quality.
 
 Because it is the aim of it,
 this document follows the <<ASCIIREQ>> specification given by itself
-(which constitutes some kind of reflective proof of concept).
+(which constitutes some kind of proof of concept).
 
 All <<ASCIIREQ>> requirements,
 even though RECOMMENDED or OPTIONAL,
