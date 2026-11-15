@@ -846,7 +846,7 @@ The drawback of this pattern is that it creates redundancy between
 
 1. the AsciiDoc ID attribute,
 2. the AsciiDoc `reftext` attribute,
-3. the AsciiReq identifier.
+3. the AsciiReq identifier itself.
 
 One could hope that
 the `reftext` attribute could be spared,
