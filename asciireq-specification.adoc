@@ -875,7 +875,7 @@ with the addition of a `reftext` attribute.
 
 As shown in the example at the beginning of this document,
 the redundant information remains packed in the heading part of the requirement.
-But still, it creates a pitfall, and errors can be made.
+Still, it creates a pitfall, and errors can be made, but it is assumed.
 ====
 
 
