@@ -443,10 +443,6 @@ for <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>s:
 |0.1
 |https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
 |===
-
-If an <<ASCIIREQ-READER>> does not know the URL given by the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>,
-it MAY fetch the URL
-and check for the `:revnumber:` in the document header.
 --
 +
 * *Version:* 0.1
@@ -457,6 +453,20 @@ and check for the `:revnumber:` in the document header.
 The URLs are currently defined with GitHub URLs,
 but the project could possibly be hosted somewhere else later.
 That's the reason why an <<ASCIIREQ-READER>> may fetch the URL if it does not know it yet.
+
+[#ASCIIREQ-HEADER-0130, reftext="ASCIIREQ-HEADER-0130", .req]
+ASCIIREQ-HEADER-0130:: AsciiReq URL fetching
++
+--
+If an <<ASCIIREQ-READER>> does not know the URL given by the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>,
+it MAY fetch the URL given
+and check for the `:revnumber:` in the document header.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-READER>>
+
 It is an option, but not a recommendation, for security reasons.
 
 As of <<SEMVER>>, _PATCH_ versions won't break the compatibility.
