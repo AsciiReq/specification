@@ -395,12 +395,6 @@ so that an <<ASCIIREQ-READER>>
 can figure out which version of AsciiReq specification it is working with
 as specified in <<ASCIIREQ-HEADER-0110>>.
 
-AsciiReq documents are RECOMMENDED to have a `.adoc` extension
-(as specified by <<ASCIIREQ-DOC-0010>>).
-But a `.adoc` file without an <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>
-is out of scope of this specification.
-An <<ASCIIREQ-READER>> may choose the behaviour.
-
 [#ASCIIREQ-HEADER-0110, reftext="ASCIIREQ-HEADER-0110", .req]
 ASCIIREQ-HEADER-0110:: <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> processing
 +
@@ -420,11 +414,13 @@ it SHOULD display a warning message.
 ** <<ASCIIREQ-READER>>
 
 If the reader does not handle the AsciiReq specification version specified,
+or no AsciiReq specification version is specified,
 it is its own responsibility to decide the behavior after,
 either:
 
 * stop processing;
 * consider the latest AsciiReq specification version it knows by default;
+* try to guess the AsciiReq specification version from the document content;
 * ...
 
 The URLs specified with <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>s
