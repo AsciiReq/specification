@@ -216,12 +216,13 @@ the <<ASCIIREQ-DOCUMENT>> is then the main file
 with its includes resolved.
 --
 
-[#ASCIIREQ-DOCUMENT-HEADER, reftext="ASCIIREQ-DOCUMENT-HEADER", .req-data]
-ASCIIREQ-DOCUMENT-HEADER:: AsciiReq document header
+[#ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE, reftext="ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE", .req-data]
+ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE:: `:asciireq-version:` document attribute
 +
 --
-The <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/document/header/[document header]
-of an <<ASCIIREQ-DOCUMENT>>.
+Specific <<ASCIIDOC>> document attribute for <<ASCIIREQ>> (as of <<ASCIIREQ-HEADER-0100>>)
+giving the version of <<ASCIIREQ>> specification used,
+and stating consequently that the <<ASCIIDOC>> document is actually an <<ASCIIREQ-DOCUMENT>>.
 --
 
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
@@ -356,21 +357,21 @@ In order to make it clear
 that an AsciiDoc document contains AsciiReq content,
 and which version of the specification is used,
 a declaration shall be made
-in the <<ASCIIREQ-DOCUMENT-HEADER>>.
+in the <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/document/header/[document header].
 
 [NOTE]
 .AsciiDoc custom attributes
 ====
 The definition of link:https://docs.asciidoctor.org/asciidoc/latest/attributes/custom-attributes/[custom attributes]
 is natively allowed by the AsciiDoc format,
-which makes the definition of `:asciireq-version:` possible.
+which makes the definition of <<ASCIIREQ>> document attributes possible.
 ====
 
 The single <<ASCIIDOC>> custom attribute defined for <<ASCIIREQ>>
 gives the AsciiReq specification version used to write the current document.
 
 [#ASCIIREQ-HEADER-0100, reftext="ASCIIREQ-HEADER-0100", .req]
-ASCIIREQ-HEADER-0100:: `:asciireq-version:` document attribute declaration
+ASCIIREQ-HEADER-0100:: <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> declaration
 +
 --
 When writing an <<ASCIIREQ-DOCUMENT>>,
@@ -379,7 +380,7 @@ the `:asciireq-version:`
 MUST be declared
 in the <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/document/header/[document header].
 
-The `:asciireq-version:` document attribute value
+This document attribute value
 MUST be a URL
 giving the AsciiReq specification version (as of <<ASCIIREQ-HEADER-0120>>)
 used to write the <<ASCIIREQ-DOCUMENT>>.
@@ -389,25 +390,24 @@ used to write the <<ASCIIREQ-DOCUMENT>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-The usage of the `:asciireq-version:` attribute is REQUIRED on purpose,
+The usage of the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> is REQUIRED on purpose,
 so that an <<ASCIIREQ-READER>>
 can figure out which version of AsciiReq specification it is working with
 as specified in <<ASCIIREQ-HEADER-0110>>.
 
 AsciiReq documents are RECOMMENDED to have a `.adoc` extension
 (as specified by <<ASCIIREQ-DOC-0010>>).
-But a `.adoc` file without the `:asciireq-version:` document attribute
+But a `.adoc` file without an <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>
 is out of scope of this specification.
 An <<ASCIIREQ-READER>> may choose the behaviour.
 
 [#ASCIIREQ-HEADER-0110, reftext="ASCIIREQ-HEADER-0110", .req]
-ASCIIREQ-HEADER-0110:: `:asciireq-version:` document attribute processing
+ASCIIREQ-HEADER-0110:: <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> processing
 +
 --
 An <<ASCIIREQ-READER>>,
 when reading an <<ASCIIDOC>> document
-containing an `:asciireq-version:`
-<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute],
+containing an <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>,
 MUST process the document as an <<ASCIIREQ-DOCUMENT>>,
 according to the AsciiReq specification version specified as of <<ASCIIREQ-HEADER-0120>>.
 
@@ -427,7 +427,7 @@ either:
 * consider the latest AsciiReq specification version it knows by default;
 * ...
 
-The URLs specified with `:asciireq-version:` document attributes
+The URLs specified with <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>s
 are browsable URLs,
 in order to help humans
 easily find and read through the referenced specification.
@@ -437,18 +437,18 @@ ASCIIREQ-HEADER-0120:: AsciiReq specification versioned URLs
 +
 --
 The table below gives the known values
-as of this version of the specification,
-for `:asciireq-version:` document attributes:
+as of this version of the <<ASCIIREQ>> specification,
+for <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>s:
 
 [cols="1,5"]
 |===
-|<<ASCIIREQ>> specification version |URL
+|<<ASCIIREQ>> specification version |<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> value
 
 |0.1
 |https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
 |===
 
-If an <<ASCIIREQ-READER>> does not know the URL,
+If an <<ASCIIREQ-READER>> does not know the URL given by the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>,
 it MAY fetch the URL
 and check for the `:revnumber:` in the document header.
 --
