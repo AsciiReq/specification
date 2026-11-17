@@ -1008,9 +1008,8 @@ Examples of non significant changes:
 Aligning the requirement version with the one of the <<ASCIIREQ-DOCUMENT>>
 makes it easier to understand when the change occurred, obviously.
 
-This requirement recommends <<SEMVER>> versions.
-
-Other kind of versioning strategies may be considered in the future.
+Other kind of versioning strategies may be considered.
+Nevertheless, <<SEMVER>> versions are recommended.
 
 
 === Scenario specification
