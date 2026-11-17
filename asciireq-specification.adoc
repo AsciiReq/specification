@@ -11,7 +11,7 @@
 
 === Identification
 
-[cols="1,3"]
+[cols="1,5"]
 |===
 |Name|
 {doctitle}
