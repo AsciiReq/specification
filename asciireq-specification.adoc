@@ -586,22 +586,28 @@ MUST contain only the following characters:
 * underscores
 * hyphens
 * slashes
-
-Slashes are useful to separate parts in an identifier,
-for data/subdata definitions for instance.
-
-Other special characters are not authorized
-in order to avoid breaking AsciiDoc compatibility.
-Dots among others, parts would be interpreted as AsciiDoc roles
-when used in the AsciiDoc #ID syntax.
-
-This is a restrictive set for the moment,
-it may be extended in future versions of AsciiReq.
 --
 +
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+
+Slashes are useful to separate parts in an identifier,
+for data/subdata definitions for instance.
+
+Other special characters are not authorized
+in order to avoid breaking AsciiDoc compatibility, especially:
+
+* *dots:*
+  Parts would be interpreted as AsciiDoc roles
+  when used in the AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
+  shorthand syntax.
+* *sharps:*
+  May be misinterpreted due to AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
+  shorthand syntax as well.
+
+<<ASCIIREQ-ID-0310>> is defined as a restrictive set for the moment.
+It may be extended in future versions of AsciiReq.
 
 [#ASCIIREQ-ID-0320, reftext="ASCIIREQ-ID-0320", .req]
 ASCIIREQ-ID-0320:: AsciiReq item identifier unicity
