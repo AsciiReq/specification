@@ -58,9 +58,8 @@ It may also use regular AsciiDoc formatting syntax
 ****
 
 [NOTE]
-.Inspiration from AsciiReqs project
 ====
-Syntax inspired
+Syntax originally inspired
 from the link:https://github.com/hpenne/asciireqs[AsciiReqs] (with a final 's') Python project
 by link:https://github.com/hpenne[hpenne].
 ====
