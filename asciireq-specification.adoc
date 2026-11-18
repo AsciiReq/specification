@@ -642,7 +642,7 @@ ASCIIREQ-TITLE-0400:: Requirement item title
 +
 --
 An OPTIONAL title for an <<ASCIIREQ-ITEM>> may be defined
-as a first non <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block] link:https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/[paragraph]
+as a first <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/[paragraph]
 at the beginning of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 
 Titles are RECOMMENDED for <<ASCIIREQ-REQUIREMENT>>s.
@@ -652,6 +652,13 @@ Titles are RECOMMENDED for <<ASCIIREQ-REQUIREMENT>>s.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
+
+According to <<ASCIIDOC>> definition,
+an link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
+IS NOT a link:https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/[paragraph].
+Consequently, the formulation above ensures
+an optional <<ASCIIREQ-TITLE>> cannot be confused
+with the <<ASCIIREQ-BODY>>.
 
 Titles are particularly useful for requirements.
 That's the reason why it's an option for other AsciiReq items,
