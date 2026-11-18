@@ -634,7 +634,7 @@ what the requirement talks about.
 
 Titles are useful for requirements,
 but may also be useful for other requirement items as well.
-This gives the opportunity to display quick info on them:
+This gives the opportunity to display quick information on them:
 tables, hover pop-ups, ...
 
 [#ASCIIREQ-TITLE-0400, reftext="ASCIIREQ-TITLE-0400", .req]
