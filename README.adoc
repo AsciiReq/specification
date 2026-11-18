@@ -17,7 +17,7 @@ but are expected as tier tools.
 [source, asciidoc]
 ----
 [.req]
-REQ-010:: Requirement title
+REQ-010:: _Requirement title_
 +
 --
 Text defining the requirement body.
