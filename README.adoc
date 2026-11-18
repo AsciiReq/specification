@@ -14,6 +14,8 @@ but are expected as tier tools.
 
 == Example
 
+AsciiReq syntax:
+
 [source, asciidoc]
 ----
 [.req]
@@ -33,6 +35,27 @@ It may also use regular AsciiDoc formatting syntax
 ** UPPER-REQ-100
 *** Coverage justification.
 ----
+
+Regular AsciiDoc rendering:
+
+****
+[.req]
+REQ-010:: _Requirement title_
++
+--
+Text defining the requirement body.
+
+The requirement body may contain several paragraphs.
+
+It may also use regular AsciiDoc formatting syntax
+(such as lists, tables, admonitions, ...)
+--
++
+* *Version:* 1.0
+* *Refers:*
+** UPPER-REQ-100
+*** Coverage justification.
+****
 
 [NOTE]
 .Inspiration from AsciiReqs project
