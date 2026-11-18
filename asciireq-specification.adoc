@@ -41,6 +41,10 @@ so that they can be identified, referenced and processed by tier tools.
 
 The following example shows the format in action:
 
+[#introduction-example]
+[example]
+.Introduction example
+====
 [source, asciidoc]
 ----
 [.req]
@@ -60,6 +64,7 @@ It may also use regular AsciiDoc formatting syntax
 ** UPPER-REQ-100
 *** Coverage justification.
 ----
+====
 
 The following sequence diagram shows a typical workflow
 involving the actors of the AsciiReq format:
@@ -528,26 +533,6 @@ MUST be used to ensure the continuation of the _description_.
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
-Bad example (the content is not attached to the item):
-
-[source, asciidoc]
-----
-REQ-010:: Requirement title
-
-Text defining the requirement body.
-----
-
-Good example (the content is attached with a `+` continuation):
-
-[source, asciidoc]
-----
-REQ-010:: Requirement title
-+
---
-Text defining the requirement body.
---
-----
-
 
 ==== AsciiReq item identifier
 
@@ -698,6 +683,25 @@ as its <<ASCIIREQ-IDENTIFIER>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+[example]
+.One line heading style
+====
+Instead of:
+
+[source, asciidoc]
+----
+REQ-010::
+Requirement title
+----
+
+prefer:
+
+[source, asciidoc]
+----
+REQ-010:: Requirement title
+----
+====
+
 
 ==== AsciiReq item body
 
@@ -845,8 +849,10 @@ between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xr
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-With this suggestion, the heading of the example
-given at the beginning of this document becomes:
+[example]
+.Introduction example with AsciiReq item cross reference support
+====
+With this suggestion, the heading of the <<introduction-example>> becomes:
 
 [source, asciidoc]
 ----
@@ -862,6 +868,7 @@ even if not rendered.
 ----
 This is a cross reference: <<REQ-010>>.
 ----
+====
 
 [WARNING]
 .Cross references redundancy
@@ -897,7 +904,7 @@ That's the reason why
 <<ASCIIREQ-XREF-0700>> assumes the duplication of the AsciiReq identifier information again
 with the addition of a `reftext` attribute.
 
-As shown in the example at the beginning of this document,
+As shown in the <<introduction-example>>,
 the redundant information remains packed in the heading part of the requirement.
 Still, it creates a pitfall, and errors can be made, but it is assumed.
 ====
