@@ -353,6 +353,8 @@ The requirements defining the AsciiReq format are listed below.
 
 === AsciiReq document
 
+==== File extension
+
 The following recommendation makes the <<ASCIIREQ-DOCUMENT>>
 compatible with general <<ASCIIDOC-RENDERER>>s.
 
@@ -392,7 +394,7 @@ MUST process the <<ASCIIDOC>> include directives.
 ** <<ASCIIREQ-READER>>
 
 
-=== AsciiReq document header
+==== Document header
 
 In order to make it clear
 that an AsciiDoc document contains AsciiReq content,
@@ -570,7 +572,7 @@ MUST be used to ensure the continuation of the _description_.
 ** <<ASCIIREQ-READER>>
 
 
-==== AsciiReq item identifier
+==== Identifier
 
 Requirement management commonly requires
 that requirements be identified
@@ -643,7 +645,7 @@ in an <<ASCIIREQ-DOCUMENT>>.
 ** <<ASCIIREQ-WRITER>>
 
 
-==== AsciiReq item title
+==== Title
 
 It is usually practical to define requirement titles,
 i.e. a short phrase summarizing
@@ -791,7 +793,7 @@ to parse the <<ASCIIREQ-TITLE>>.
 ** <<ASCIIREQ-READER>>
 
 
-==== AsciiReq item body
+==== Body
 
 The requirement body then gives the full text of the requirement.
 
@@ -818,7 +820,7 @@ write it freely with several paragraphs,
 and use any AsciiDoc formatting (lists, tables, admonitions, ...).
 
 
-==== AsciiReq requirement attributes
+==== Attributes
 
 It is not exactly _required_ by requirement management,
 but it is usually practical
@@ -892,7 +894,7 @@ as done for the `Refers` attribute
 (see <<ASCIIREQ-TRACEABILITY-0750>> for an example).
 
 
-==== Justifications
+=== Justifications
 
 It is RECOMMENDED to set justifications as free text,
 out of formal requirement definitions.
@@ -904,7 +906,7 @@ so that it can be clearly identified and processed
 without being polluted by _why_ concerns.
 
 
-=== AsciiDoc cross references
+=== Cross references
 
 Cross references may be convenient to help humans
 navigate within an AsciiReq document.
