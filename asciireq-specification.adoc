@@ -997,7 +997,7 @@ Nevertheless, without `reftext` attributes, AsciiDoc renderers seem to behave di
   displays the AsciiReq identifiers only (without square brackets).
 * ...
 
-Worse, sometimes, renderers fail:
+Worse, sometimes renderers fail:
 
 * The link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc VSCode extension]
   sometimes displays `null` for an AsciiReq item reference.
