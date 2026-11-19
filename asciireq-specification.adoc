@@ -863,8 +863,8 @@ to define requirement attributes as `name:: value` pairs.
 However,
 requirement attributes are defined as a simple unordered list
 for visual presentation concerns with regular <<ASCIIDOC-RENDERER>>s
-(especially the GitHub web platform),
-which can't be configured.
+which may not be configurable
+(especially the GitHub web platform).
 
 A description list would display badly
 and make the reading more difficult for humans.
