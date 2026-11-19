@@ -32,7 +32,7 @@ It may also use regular AsciiDoc formatting syntax
 +
 * *Version:* 1.0
 * *Refers:*
-** UPPER-REQ-100
+** UPPER-REQ-100 - 1.2
 *** Coverage justification.
 ----
 
@@ -53,7 +53,7 @@ It may also use regular AsciiDoc formatting syntax
 +
 * *Version:* 1.0
 * *Refers:*
-** UPPER-REQ-100
+** UPPER-REQ-100 - 1.2
 *** Coverage justification.
 ****
 
