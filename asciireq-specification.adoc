@@ -762,6 +762,21 @@ REQ-010:: _Requirement title_
 ----
 ====
 
+[#ASCIIREQ-TITLE-0440, reftext="ASCIIREQ-TITLE-0440", .req]
+ASCIIREQ-TITLE-0440:: _Decorated title parsing_
++
+--
+When an <<ASCIIREQ-TITLE>>
+is entirely decorated
+in <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/text/italic/[italic],
+<<ASCIIREQ-READER>>s SHOULD remove this decoration
+to parse the <<ASCIIREQ-TITLE>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-READER>>
+
 
 ==== AsciiReq item body
 
