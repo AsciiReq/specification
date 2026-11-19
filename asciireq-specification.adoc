@@ -897,14 +897,29 @@ as done for the `Refers` attribute
 
 === Justifications
 
-It is RECOMMENDED to set justifications as free text,
-out of formal requirement definitions.
+[#ASCIIREQ-JUSTIFICATIONS-0650, reftext="ASCIIREQ-JUSTIFICATIONS-0650", .req]
+ASCIIREQ-JUSTIFICATIONS-0650:: _Justification as free text_
++
+--
+It is RECOMMENDED to set <<ASCIIREQ-BODY>> justifications
+as free text,
+out of the <<ASCIIREQ-ITEM>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
 
 This pattern clearly separates the _what_ and the _why_.
 The _why_ is important to track.
 But it is important to keep the _what_ separately,
 so that it can be clearly identified and processed
 without being polluted by _why_ concerns.
+
+Apart from <<ASCIIREQ-BODY>> justifications,
+dedicated justifications
+may also be attached with <<ASCIIREQ-ATTRIBUTE>>s
+(see <<ASCIIREQ-TRACEABILITY-0750>> for instance).
 
 
 === Cross references
