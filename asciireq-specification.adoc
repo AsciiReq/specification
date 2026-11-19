@@ -229,7 +229,8 @@ Examples:
 
 == Data
 
-The following data definitions helps writing this specification in a more formal way.
+The following data definitions help writing this specification
+in a more formal way.
 
 
 === AsciiReq document
