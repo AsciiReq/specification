@@ -231,6 +231,9 @@ Examples:
 
 The following data definitions helps writing this specification in a more formal way.
 
+
+=== AsciiReq document
+
 [#ASCIIREQ-DOCUMENT, reftext="ASCIIREQ-DOCUMENT", .req-data]
 ASCIIREQ-DOCUMENT:: _AsciiReq document_
 +
@@ -253,12 +256,18 @@ giving the version of <<ASCIIREQ>> specification used,
 and stating consequently that the <<ASCIIDOC>> document is actually an <<ASCIIREQ-DOCUMENT>>.
 --
 
+
+=== AsciiReq items
+
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
 ASCIIREQ-ITEM:: _AsciiReq item_
 +
 --
 General AsciiReq item (as of <<ASCIIREQ-ITEM-0200>>).
 --
+
+General <<ASCIIREQ-ITEM>>s
+correspond to one of the following specialized items.
 
 [#ASCIIREQ-ACTOR, reftext="ASCIIREQ-ACTOR", .req-data]
 ASCIIREQ-ACTOR:: _AsciiReq formal actor_
@@ -287,6 +296,9 @@ ASCIIREQ-REF:: _AsciiReq foreign reference_
 --
 <<ASCIIREQ-ITEM>> for a foreign reference definition (as of <<ASCIIREQ-ITEM-0200>>).
 --
+
+
+=== AsciiReq item parts
 
 [#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
 ASCIIREQ-IDENTIFIER:: _AsciiReq item identifier_
