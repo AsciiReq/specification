@@ -822,9 +822,10 @@ and use any AsciiDoc formatting (lists, tables, admonitions, ...).
 
 ==== Attributes
 
-It is not exactly _required_ by requirement management,
-but it is usually practical
-to fit requirement management with the specific needs of the project.
+It is common in requirement management
+to use additional attributes
+in order to fit the process
+with the specific needs of a project.
 
 Please note that attributes apply to requirements only
 (not to actors, data, nor foreign references).
