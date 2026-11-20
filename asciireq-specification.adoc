@@ -346,6 +346,25 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
 
+=== AsciiReq cross references
+
+[#ASCIIREQ-ANCHOR, reftext="ASCIIREQ-ANCHOR", .req-data]
+ASCIIREQ-ANCHOR:: _AsciiReq item anchor_
++
+--
+Anchor set on an <<ASCIIREQ-ITEM>>
+as of <<ASCIIREQ-XREF-0700>>.
+--
+
+[#ASCIIREQ-CROSS-REFERENCE, reftext="ASCIIREQ-CROSS-REFERENCE", .req-data]
+ASCIIREQ-CROSS-REFERENCE:: _AsciiReq item cross reference_
++
+--
+Cross reference to an <<ASCIIREQ-ANCHOR>>
+as of <<ASCIIREQ-XREF-0710>>.
+--
+
+
 == Requirements
 
 The requirements defining the AsciiReq format are listed below.
@@ -853,7 +872,7 @@ of an <<ASCIIREQ-REQUIREMENT>>.
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
-It may happen that no attributes be useful for a given specification or single requirement.
+It may happen that no attributes be useful for a given specification or a single requirement.
 That's the reason why requirement attributes remain optional.
 
 A link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list]
@@ -932,23 +951,17 @@ in as much as AsciiReq formal item references,
 implemented as AsciiDoc cross references,
 can be verified by regular AsciiDoc verification tools.
 
-The following requirement proposes a pattern
+The following requirement recommends a pattern
 to ease AsciiDoc cross references for AsciiReq items.
 
 [#ASCIIREQ-XREF-0700, reftext="ASCIIREQ-XREF-0700", .req]
-ASCIIREQ-XREF-0700:: _AsciiReq item cross references_
+ASCIIREQ-XREF-0700:: _AsciiReq item cross reference anchor
 +
 --
-An <<ASCIIREQ-ITEM>> MAY be attached
+An <<ASCIIREQ-ITEM>> SHOULD be attached
 an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
 and an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/#default-styling[reftext attribute],
 both with <<ASCIIREQ-IDENTIFIER>> for value.
-
-<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
-to the <<ASCIIREQ-ITEM>>
-MAY then be made
-with the <<ASCIIREQ-IDENTIFIER>>
-between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[double angled brackets].
 --
 +
 * *Version:* 0.1
@@ -956,7 +969,7 @@ between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xr
 ** <<ASCIIREQ-WRITER>>
 
 [example]
-.Introduction example with AsciiReq item cross reference support
+.AsciiReq item cross reference anchor
 ====
 With this suggestion, the heading of the <<introduction-example>> becomes:
 
@@ -965,11 +978,30 @@ With this suggestion, the heading of the <<introduction-example>> becomes:
 [#REQ-010, reftext="REQ-010", .req]
 REQ-010:: _Requirement title_
 ----
+====
+
+[#ASCIIREQ-XREF-0710, reftext="ASCIIREQ-XREF-0710", .req]
+ASCIIREQ-XREF-0710:: _AsciiReq item cross reference_
++
+--
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
+to an <<ASCIIREQ-ANCHOR>>
+SHOULD be made
+with the <<ASCIIREQ-IDENTIFIER>>
+between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[double angled brackets].
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
 
 The double angled bracket format
 makes it simple for humans to read the raw AsciiDoc file,
 even if not rendered.
 
+[example]
+.AsciiReq item cross reference
+====
 [source, asciidoc]
 ----
 This is a cross reference: <<REQ-010>>.
