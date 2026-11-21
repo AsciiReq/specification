@@ -155,7 +155,7 @@ See the <<Actors>> section of this document for the list of possible actor value
 The `Actors` attribute is defined
 as a _justified list attribute_ (as of <<ASCIIREQ-ATTRIBUTES-0630>>),
 whose items are <<ASCIIREQ>> actors
-given as cross references (as of <<ASCIIREQ-XREF-0710>>).
+given as an <<ASCIIREQ-CROSS-REFERENCE>>s.
 
 Example:
 [source, asciidoc]
@@ -1149,7 +1149,7 @@ below this specialized `Refers` <<ASCIIREQ-ATTRIBUTE>>.
 
 The <<ASCIIREQ-REF>> <<ASCIIREQ-IDENTIFIER>>,
 between the square brackets,
-MAY be given as an <<ASCIIDOC>> cross reference.
+MAY be given as an <<ASCIIREQ-CROSS-REFERENCE>>.
 --
 +
 * *Version:* 0.1
@@ -1172,7 +1172,7 @@ Nevertheless:
 
 * Using specialized `Refers` requirement attributes makes it clear, more formal,
   easier for <<ASCIIREQ-READER>> tools to process.
-* It also gives an opportunity to set an AsciiDoc cross reference to the related <<ASCIIREQ-REF>>,
+* It also gives an opportunity to set an <<ASCIIREQ-CROSS-REFERENCE>> to the related <<ASCIIREQ-REF>>,
   practical for humans.
 * It also prepares maintainability
   in case other sets of <<ASCIIREQ-REF>> coverage are added in the future.
