@@ -1135,7 +1135,7 @@ ASCIIREQ-TRACEABILITY-0750:: _``Refers`` requirement attribute_
 +
 --
 An <<ASCIIREQ-REQUIREMENT>>
-MAY have a single `Refers` <<ASCIIREQ-ATTRIBUTE>>
+MAY have a `Refers` <<ASCIIREQ-ATTRIBUTE>>
 giving traceability information for the current <<ASCIIREQ-REQUIREMENT>>.
 
 The `Refers` <<ASCIIREQ-ATTRIBUTE>>
