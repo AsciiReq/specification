@@ -872,6 +872,18 @@ of an <<ASCIIREQ-REQUIREMENT>>.
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
+[#ASCIIREQ-ATTRIBUTES-0610, reftext="ASCIIREQ-ATTRIBUTES-0610", .req]
+ASCIIREQ-ATTRIBUTES-0610:: _AsciiReq requirement attribute name uniqueness_
++
+--
+<<ASCIIREQ-ATTRIBUTE>> names
+MUST be unique for a given <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
 It may happen that no attributes be useful for a given specification or a single requirement.
 That's the reason why requirement attributes remain optional.
 
@@ -894,24 +906,55 @@ Including the `:` separator at the end of the bold part
 should make it deterministic
 to parse requirement attributes.
 
-[#ASCIIREQ-ATTRIBUTES-0610, reftext="ASCIIREQ-ATTRIBUTES-0610", .req]
-ASCIIREQ-ATTRIBUTES-0610:: _AsciiReq requirement attribute name uniqueness_
+Repeating an attribute name in the unordered list
+could have been understood
+as defining several items of a same list.
+
+The choice of unicity in <<ASCIIREQ-ATTRIBUTES-0610>> is assumed,
+and lets the opportunity in future versions of AsciiReq
+to define attributes with a description list.
+
+If one needs to define list values,
+the general pattern below is recommended.
+
+[#ASCIIREQ-ATTRIBUTES-0620, reftext="ASCIIREQ-ATTRIBUTES-0620", .req]
+ASCIIREQ-ATTRIBUTES-0620:: _List attributes_
 +
 --
-<<ASCIIREQ-ATTRIBUTE>> names
-MUST be unique for a given <<ASCIIREQ-REQUIREMENT>>.
+When an <<ASCIIREQ-ATTRIBUTE>> is defined as a list,
+its items
+SHOULD be given
+as level 2
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list] items.
 --
 +
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
-Please note that repeating an attribute could be understood
-as defining several items of a list.
-The choice is assumed, and if one needs to define list values,
-then consider using AsciiDoc unordered lists,
-as done for the `Refers` attribute
-(see <<ASCIIREQ-TRACEABILITY-0750>> for an example).
+[#ASCIIREQ-ATTRIBUTES-0630, reftext="ASCIIREQ-ATTRIBUTES-0630", .req]
+ASCIIREQ-ATTRIBUTES-0630:: _Justified list attributes_
++
+--
+When an <<ASCIIREQ-ATTRIBUTE>> is defined as a list,
+with items being justified,
+it should define its items as of <<ASCIIREQ-ATTRIBUTES-0620>>.
+
+Each attribute list item
+MAY receive justifications.
+
+Attribute list item justfifications
+SHOULD be given
+as level 3
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list] items
+below the justified items.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 
 === Justifications
