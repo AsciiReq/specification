@@ -1360,10 +1360,6 @@ See https://semver.org/spec/v2.0.0.html.
 [appendix]
 == Tables
 
-Scripts for updating the tables in this section
-are planned for a future version of AsciiReq:
-see issue link:https://github.com/AsciiReq/specification/issues/4[#4].
-
 === List of requirements
 
 TODO
