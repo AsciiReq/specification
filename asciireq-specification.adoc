@@ -1344,8 +1344,9 @@ See the <<introduction-example>>.
 
 Not covered yet.
 
-Scenario specification in a future version of AsciiReq
-is tracked in issue link:https://github.com/AsciiReq/specification/issues/3[#3].
+Shall be specified
+in a future version of AsciiReq
+(see issue link:https://github.com/AsciiReq/specification/issues/3[#3]).
 
 
 [appendix]
