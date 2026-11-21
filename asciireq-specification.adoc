@@ -1235,27 +1235,7 @@ of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
 Other kind of versioning strategies may be considered.
 Nevertheless, <<SEMVER>> versions are recommended.
 
-The main interest of requirement versioning
-comes with traceability and impact analyses.
-
-[#ASCIIREQ-VERSIONING-0810, reftext="ASCIIREQ-VERSIONING-0810", .req]
-ASCIIREQ-VERSIONING-0810:: _Versioned requirement references_
-+
---
-In a level 2 traceability reference (as of <<ASCIIREQ-TRACEABILITY-0750>>),
-if the foreign <<ASCIIREQ-REQUIREMENT>> holds a version (as of <<ASCIIREQ-VERSIONING-0800>>),
-the foreign <<ASCIIREQ-IDENTIFIER>> reference
-SHOULD be followed by
-the `` - `` pattern,
-then the version of the foreign <<ASCIIREQ-REQUIREMENT>>.
---
-+
-* *Version:* 0.1
-* *Actors:*
-** <<ASCIIREQ-WRITER>>
-** <<ASCIIREQ-READER>>
-
-See the <<introduction-example>>.
+The following requirements give recommendations on situations when the version should be updated or not.
 
 [#ASCIIREQ-VERSIONING-0820, reftext="ASCIIREQ-VERSIONING-0820", .req]
 ASCIIREQ-VERSIONING-0820:: _Version update on significant changes_
@@ -1310,6 +1290,28 @@ unless the previous text led to wrong understandings of the requirement.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+
+The main interest of requirement versioning
+comes with traceability and impact analyses.
+
+[#ASCIIREQ-VERSIONING-0810, reftext="ASCIIREQ-VERSIONING-0810", .req]
+ASCIIREQ-VERSIONING-0810:: _Versioned requirement references_
++
+--
+In a level 2 traceability reference (as of <<ASCIIREQ-TRACEABILITY-0750>>),
+if the foreign <<ASCIIREQ-REQUIREMENT>> holds a version (as of <<ASCIIREQ-VERSIONING-0800>>),
+the foreign <<ASCIIREQ-IDENTIFIER>> reference
+SHOULD be followed by
+the `` - `` pattern,
+then the version of the foreign <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+See the <<introduction-example>>.
 
 === Scenario specification
 
