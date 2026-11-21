@@ -1224,8 +1224,8 @@ ASCIIREQ-VERSIONING-0800:: _AsciiReq requirement version_
 <<ASCIIREQ-REQUIREMENT>>s
 SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>
 with a `X.Y` text value,
-where `X` and `Y` are the <<SEMVER>> _MAJOR_ and _MINOR_ parts
-of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
+where `X` and `Y` are the <<SEMVER>> _MAJOR_ and _MINOR_ parts of the <<ASCIIREQ-DOCUMENT>> version
+corresponding with the latest modification of the <<ASCIIREQ-REQUIREMENT>>.
 --
 +
 * *Version:* 0.1
@@ -1235,7 +1235,15 @@ of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
 Other kind of versioning strategies may be considered.
 Nevertheless, <<SEMVER>> versions are recommended.
 
-The following requirements give recommendations on situations when the version should be updated or not.
+Aligning the requirement version
+with the one of the <<ASCIIREQ-DOCUMENT>>
+makes it easier to understand
+when the change occurred.
+
+The following requirements
+give recommendations on situations
+when the requirement version
+should be updated or not.
 
 [#ASCIIREQ-VERSIONING-0820, reftext="ASCIIREQ-VERSIONING-0820", .req]
 ASCIIREQ-VERSIONING-0820:: _Version update on significant changes_
@@ -1249,9 +1257,6 @@ with the current version of the <<ASCIIREQ-DOCUMENT>>.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-
-Aligning the requirement version with the one of the <<ASCIIREQ-DOCUMENT>>
-makes it easier to understand when the change occurred, obviously.
 
 [#ASCIIREQ-VERSIONING-0830, reftext="ASCIIREQ-VERSIONING-0830", .req]
 ASCIIREQ-VERSIONING-0830:: _No version update on non significant changes_
