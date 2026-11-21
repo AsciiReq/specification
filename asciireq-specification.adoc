@@ -1226,26 +1226,11 @@ SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>
 with a `X.Y` text value,
 where `X` and `Y` are the <<SEMVER>> _MAJOR_ and _MINOR_ parts
 of the latest modified version of the <<ASCIIREQ-REQUIREMENT>>.
-
-When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>),
-the `Version` <<ASCIIREQ-ATTRIBUTE>> must be updated with the current version of the <<ASCIIREQ-DOCUMENT>>.
-
-When the <<ASCIIREQ-REQUIREMENT>> is modified without significant changes,
-its version MUST NOT be modified.
-
-Examples of non significant changes:
-
-* typos fixed MUST NOT change the version;
-* rewordings for clarification SHOULD NOT update the version,
-  unless the previous text led to wrong understandings of the requirement.
 --
 +
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
-
-Aligning the requirement version with the one of the <<ASCIIREQ-DOCUMENT>>
-makes it easier to understand when the change occurred, obviously.
 
 Other kind of versioning strategies may be considered.
 Nevertheless, <<SEMVER>> versions are recommended.
@@ -1271,6 +1256,59 @@ then the version of the foreign <<ASCIIREQ-REQUIREMENT>>.
 ** <<ASCIIREQ-READER>>
 
 See the <<introduction-example>>.
+
+[#ASCIIREQ-VERSIONING-0820, reftext="ASCIIREQ-VERSIONING-0820", .req]
+ASCIIREQ-VERSIONING-0820:: _Version update on significant changes_
++
+--
+When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>),
+the `Version` <<ASCIIREQ-ATTRIBUTE>> must be updated
+with the current version of the <<ASCIIREQ-DOCUMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Aligning the requirement version with the one of the <<ASCIIREQ-DOCUMENT>>
+makes it easier to understand when the change occurred, obviously.
+
+[#ASCIIREQ-VERSIONING-0830, reftext="ASCIIREQ-VERSIONING-0830", .req]
+ASCIIREQ-VERSIONING-0830:: _No version update on non significant changes_
++
+--
+When the <<ASCIIREQ-REQUIREMENT>> is modified without significant changes,
+its version MUST NOT be modified.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+[#ASCIIREQ-VERSIONING-0840, reftext="ASCIIREQ-VERSIONING-0840", .req]
+ASCIIREQ-VERSIONING-0840:: _Typos fixed do not change the version_
++
+--
+Typos fixed in an <<ASCIIREQ-REQUIREMENT>>
+MUST NOT change its version.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+[#ASCIIREQ-VERSIONING-0850, reftext="ASCIIREQ-VERSIONING-0850", .req]
+ASCIIREQ-VERSIONING-0850:: _Clarification rewordings do not update the version_
++
+--
+Rewordings for clarification of an <<ASCIIREQ-REQUIREMENT>>
+SHOULD NOT update its version,
+unless the previous text led to wrong understandings of the requirement.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
 
 
 === Scenario specification
