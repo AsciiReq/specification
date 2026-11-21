@@ -148,14 +148,14 @@ As defined by <<ASCIIREQ-VERSIONING-0800>>.
 Actors::
 +
 --
-Actors concerned by the requirement.
+<<ASCIIREQ>> actors concerned by the requirement.
 
 See the <<Actors>> section of this document for the list of possible actor values.
 
-MUST be given as a level 2 unordered sublist below the "Actors:" attribute list item,
-as AsciiDoc cross references.
-
-Level 3 sublist items MAY be used for justifications.
+The `Actors` attribute is defined
+as a _justified list attribute_ (as of <<ASCIIREQ-ATTRIBUTES-0630>>),
+whose items are <<ASCIIREQ>> actors
+given as cross references (as of <<ASCIIREQ-XREF-0710>>).
 
 Example:
 [source, asciidoc]
@@ -165,7 +165,7 @@ Example:
 *** Justification.
 *** Justification.
 ** <<ASCIIREQ-READER>>
-***Justification.
+*** Justification.
 ----
 --
 
@@ -1103,10 +1103,10 @@ An <<ASCIIREQ-REQUIREMENT>>
 MAY have a single `Refers` <<ASCIIREQ-ATTRIBUTE>>
 giving traceability information for the current <<ASCIIREQ-REQUIREMENT>>.
 
-Foreign <<ASCIIREQ-IDENTIFIER>>s MUST be given as level 2 unordered list items.
-
-Justification for each foreign <<ASCIIREQ-IDENTIFIER>> referred MAY be given.
-If so, it MUST be given as level 3 unordered list items.
+The `Refers` <<ASCIIREQ-ATTRIBUTE>>
+is defined as a justified list attribute
+(as of <<ASCIIREQ-ATTRIBUTES-0630>>)
+whose items are foreign <<ASCIIREQ-IDENTIFIER>>s.
 --
 +
 * *Version:* 0.1
