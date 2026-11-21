@@ -14,10 +14,6 @@ but are expected as tier tools.
 
 == Example
 
-[#introduction-example]
-[example]
-.Introduction example
-====
 AsciiReq syntax:
 
 [source, asciidoc]
@@ -60,7 +56,6 @@ It may also use regular AsciiDoc formatting syntax
 ** UPPER-REQ-100 - 1.2
 *** Coverage justification.
 ****
-====
 
 [NOTE]
 ====
