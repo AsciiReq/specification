@@ -1223,17 +1223,39 @@ ASCIIREQ-VERSIONING-0800:: _AsciiReq requirement version_
 --
 <<ASCIIREQ-REQUIREMENT>>s
 SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>
-with a `X.Y` text value,
-where `X` and `Y` are the <<SEMVER>> _MAJOR_ and _MINOR_ parts of the <<ASCIIREQ-DOCUMENT>> version
-corresponding with the latest modification of the <<ASCIIREQ-REQUIREMENT>>.
+with a `X.Y` text value.
 --
 +
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+[#ASCIIREQ-VERSIONING-0860, reftext="ASCIIREQ-VERSIONING-0860", .req]
+ASCIIREQ-VERSIONING-0860:: _SemVer versions recommended_
++
+--
 Other kind of versioning strategies may be considered.
-Nevertheless, <<SEMVER>> versions are recommended.
+Nevertheless, the `Version` <<ASCIIREQ-ATTRIBUTE>> value
+SHOULD follow the <<SEMVER>> versioning rules.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+[#ASCIIREQ-VERSIONING-0870, reftext="ASCIIREQ-VERSIONING-0870", .req]
+ASCIIREQ-VERSIONING-0870:: _Version MAJOR.MINOR synchronized with the document version_
++
+--
+In the `X.Y` text value of the `Version` <<ASCIIREQ-ATTRIBUTE>>,
+`X` and `Y` SHOULD be the <<SEMVER>> _MAJOR_ and _MINOR_ parts
+of the <<ASCIIREQ-DOCUMENT>> version
+corresponding with the latest modification of the <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
 
 Aligning the requirement version
 with the one of the <<ASCIIREQ-DOCUMENT>>
