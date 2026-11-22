@@ -178,7 +178,7 @@ apply to this document.
 The AsciiReq attributes for the requirements in this document are the following:
 
 Version::
-As defined by <<ASCIIREQ-VERSIONING-0800>>.
+As defined by <<ASCIIREQ-VERSIONING-1120>>.
 
 Actors::
 +
@@ -188,7 +188,7 @@ Actors::
 See the <<Actors>> section of this document for the list of possible actor values.
 
 The `Actors` attribute is defined
-as a _justified list attribute_ (as of <<ASCIIREQ-ATTRIBUTES-0630>>),
+as a _justified list attribute_ (as of <<ASCIIREQ-ATTRIBUTES-0730>>),
 whose items are <<ASCIIREQ>> actors
 given as an <<ASCIIREQ-CROSS-REFERENCE>>s.
 
@@ -278,7 +278,7 @@ ASCIIREQ-DOCUMENT:: _AsciiReq document_
 
 May be defined with different `.adoc` files
 using the <<ASCIIDOC>> ability to include files
-(as of <<ASCIIREQ-DOC-0020>>):
+(as of <<ASCIIREQ-DOC-0110>>):
 the <<ASCIIREQ-DOCUMENT>> is then the main file
 with its includes resolved.
 --
@@ -287,7 +287,7 @@ with its includes resolved.
 ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE:: _``:asciireq-version:`` document attribute_
 +
 --
-Specific <<ASCIIDOC>> document attribute for <<ASCIIREQ>> (as of <<ASCIIREQ-HEADER-0100>>)
+Specific <<ASCIIDOC>> document attribute for <<ASCIIREQ>> (as of <<ASCIIREQ-HEADER-0200>>)
 giving the version of <<ASCIIREQ>> specification used,
 and stating consequently that the <<ASCIIDOC>> document is actually an <<ASCIIREQ-DOCUMENT>>.
 --
@@ -296,7 +296,7 @@ and stating consequently that the <<ASCIIDOC>> document is actually an <<ASCIIRE
 +
 --
 Version of an <<ASCIIREQ-DOCUMENT>>,
-as of <<ASCIIREQ-VERSIONING-0805>>.
+as of <<ASCIIREQ-VERSIONING-1100>>.
 --
 
 
@@ -306,7 +306,7 @@ as of <<ASCIIREQ-VERSIONING-0805>>.
 ASCIIREQ-ITEM:: _AsciiReq item_
 +
 --
-General AsciiReq item (as of <<ASCIIREQ-ITEM-0200>>).
+General AsciiReq item (as of <<ASCIIREQ-ITEM-0300>>).
 --
 
 General <<ASCIIREQ-ITEM>>s
@@ -316,28 +316,28 @@ correspond to one of the following specialized items.
 ASCIIREQ-ACTOR:: _AsciiReq formal actor_
 +
 --
-<<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-ITEM-0200>>).
+<<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-ITEM-0300>>).
 --
 
 [#ASCIIREQ-DATA, reftext="ASCIIREQ-DATA", .req-data]
 ASCIIREQ-DATA:: _AsciiReq formal data_
 +
 --
-<<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-ITEM-0200>>).
+<<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-ITEM-0300>>).
 --
 
 [#ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT", .req-data]
 ASCIIREQ-REQUIREMENT:: _AsciiReq requirement_
 +
 --
-<<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-ITEM-0200>>).
+<<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-ITEM-0300>>).
 --
 
 [#ASCIIREQ-REF, reftext="ASCIIREQ-REF", .req-data]
 ASCIIREQ-REF:: _AsciiReq foreign reference_
 +
 --
-<<ASCIIREQ-ITEM>> for a foreign reference definition (as of <<ASCIIREQ-ITEM-0200>>).
+<<ASCIIREQ-ITEM>> for a foreign reference definition (as of <<ASCIIREQ-ITEM-0300>>).
 --
 
 
@@ -347,7 +347,7 @@ ASCIIREQ-REF:: _AsciiReq foreign reference_
 ASCIIREQ-IDENTIFIER:: _AsciiReq item identifier_
 +
 --
-Identifier (as of <<ASCIIREQ-ID-0300>>)
+Identifier (as of <<ASCIIREQ-ID-0400>>)
 of an <<ASCIIREQ-ITEM>>.
 --
 
@@ -355,7 +355,7 @@ of an <<ASCIIREQ-ITEM>>.
 ASCIIREQ-COMPOUND-CONTENT:: _AsciiReq item content_
 +
 --
-Compound content (as of <<ASCIIREQ-ITEM-0210>>)
+Compound content (as of <<ASCIIREQ-ITEM-0310>>)
 attached with an <<ASCIIREQ-ITEM>>.
 --
 
@@ -363,7 +363,7 @@ attached with an <<ASCIIREQ-ITEM>>.
 ASCIIREQ-TITLE:: _AsciiReq item title_
 +
 --
-Optional title (as of <<ASCIIREQ-TITLE-0400>>)
+Optional title (as of <<ASCIIREQ-TITLE-0500>>)
 of an <<ASCIIREQ-ITEM>>,
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
@@ -372,7 +372,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 ASCIIREQ-BODY:: _AsciiReq item body_
 +
 --
-Body (as of <<ASCIIREQ-BODY-0500>>)
+Body (as of <<ASCIIREQ-BODY-0600>>)
 of an <<ASCIIREQ-ITEM>>,
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
@@ -382,7 +382,7 @@ ASCIIREQ-ATTRIBUTE:: _AsciiReq requirement attribute_
 +
 --
 One attribute
-in the attribute set (as of <<ASCIIREQ-ATTRIBUTES-0600>>)
+in the attribute set (as of <<ASCIIREQ-ATTRIBUTES-0700>>)
 of an <<ASCIIREQ-REQUIREMENT>> (requirements only!),
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
@@ -394,7 +394,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 +
 --
 Version of an <<ASCIIREQ-DOCUMENT>>,
-as of <<ASCIIREQ-VERSIONING-0800>>.
+as of <<ASCIIREQ-VERSIONING-1120>>.
 --
 
 
@@ -405,7 +405,7 @@ ASCIIREQ-ANCHOR:: _AsciiReq item anchor_
 +
 --
 Anchor set on an <<ASCIIREQ-ITEM>>
-as of <<ASCIIREQ-XREF-0700>>.
+as of <<ASCIIREQ-XREF-0900>>.
 --
 
 [#ASCIIREQ-CROSS-REFERENCE, reftext="ASCIIREQ-CROSS-REFERENCE", .req-data]
@@ -413,7 +413,7 @@ ASCIIREQ-CROSS-REFERENCE:: _AsciiReq item cross reference_
 +
 --
 Cross reference to an <<ASCIIREQ-ANCHOR>>
-as of <<ASCIIREQ-XREF-0710>>.
+as of <<ASCIIREQ-XREF-0910>>.
 --
 
 
@@ -429,8 +429,8 @@ The requirements defining the AsciiReq format are listed below.
 The following recommendation makes the <<ASCIIREQ-DOCUMENT>>
 compatible with general <<ASCIIDOC-RENDERER>>s.
 
-[#ASCIIREQ-DOC-0010, reftext="ASCIIREQ-DOC-0010", .req]
-ASCIIREQ-DOC-0010:: _``.adoc`` file name extension_
+[#ASCIIREQ-DOC-0100, reftext="ASCIIREQ-DOC-0100", .req]
+ASCIIREQ-DOC-0100:: _``.adoc`` file name extension_
 +
 --
 When writing an <<ASCIIREQ-DOCUMENT>>,
@@ -445,8 +445,8 @@ is `.adoc`.
 Spliting a large specification document in different files
 generally helps for maintenance.
 
-[#ASCIIREQ-DOC-0020, reftext="ASCIIREQ-DOC-0020", .req]
-ASCIIREQ-DOC-0020:: _AsciiDoc includes_
+[#ASCIIREQ-DOC-0110, reftext="ASCIIREQ-DOC-0110", .req]
+ASCIIREQ-DOC-0110:: _AsciiDoc includes_
 +
 --
 An <<ASCIIREQ-DOCUMENT>>
@@ -486,8 +486,8 @@ which makes the definition of <<ASCIIREQ>> document attributes possible.
 The single <<ASCIIDOC>> custom attribute defined for <<ASCIIREQ>>
 gives the AsciiReq version used to write the current document.
 
-[#ASCIIREQ-HEADER-0100, reftext="ASCIIREQ-HEADER-0100", .req]
-ASCIIREQ-HEADER-0100:: _<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> declaration_
+[#ASCIIREQ-HEADER-0200, reftext="ASCIIREQ-HEADER-0200", .req]
+ASCIIREQ-HEADER-0200:: _<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> declaration_
 +
 --
 When writing an <<ASCIIREQ-DOCUMENT>>,
@@ -498,7 +498,7 @@ in the <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/document/h
 
 This document attribute value
 MUST be a URL
-giving the AsciiReq version (as of <<ASCIIREQ-HEADER-0120>>)
+giving the AsciiReq version (as of <<ASCIIREQ-HEADER-0220>>)
 used to write the <<ASCIIREQ-DOCUMENT>>.
 --
 +
@@ -511,17 +511,17 @@ Let's formally identify the `:asciireq-version:` document attribute as <<ASCIIRE
 The usage of the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> is REQUIRED on purpose,
 so that an <<ASCIIREQ-READER>>
 can figure out which version of AsciiReq it is working with
-as specified in <<ASCIIREQ-HEADER-0110>>.
+as specified in <<ASCIIREQ-HEADER-0210>>.
 
-[#ASCIIREQ-HEADER-0110, reftext="ASCIIREQ-HEADER-0110", .req]
-ASCIIREQ-HEADER-0110:: _<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> processing_
+[#ASCIIREQ-HEADER-0210, reftext="ASCIIREQ-HEADER-0210", .req]
+ASCIIREQ-HEADER-0210:: _<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> processing_
 +
 --
 An <<ASCIIREQ-READER>>,
 when reading an <<ASCIIDOC>> document
 containing an <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>,
 MUST process the document as an <<ASCIIREQ-DOCUMENT>>,
-according to the AsciiReq version specified as of <<ASCIIREQ-HEADER-0120>>.
+according to the AsciiReq version specified as of <<ASCIIREQ-HEADER-0220>>.
 
 If the <<ASCIIREQ-READER>> does not handle the AsciiReq version specified,
 it SHOULD display a warning message.
@@ -546,8 +546,8 @@ are browsable URLs,
 in order to help humans
 easily find and read through the referenced specification.
 
-[#ASCIIREQ-HEADER-0120, reftext="ASCIIREQ-HEADER-0120", .req]
-ASCIIREQ-HEADER-0120:: _AsciiReq versioned URLs_
+[#ASCIIREQ-HEADER-0220, reftext="ASCIIREQ-HEADER-0220", .req]
+ASCIIREQ-HEADER-0220:: _AsciiReq versioned URLs_
 +
 --
 The table below gives the known values
@@ -572,8 +572,8 @@ The URLs are currently defined with GitHub URLs,
 but the project could possibly be hosted somewhere else later.
 That's the reason why an <<ASCIIREQ-READER>> may fetch the URL if it does not know it yet.
 
-[#ASCIIREQ-HEADER-0130, reftext="ASCIIREQ-HEADER-0130", .req]
-ASCIIREQ-HEADER-0130:: _AsciiReq URL fetching_
+[#ASCIIREQ-HEADER-0230, reftext="ASCIIREQ-HEADER-0230", .req]
+ASCIIREQ-HEADER-0230:: _AsciiReq URL fetching_
 +
 --
 If an <<ASCIIREQ-READER>> does not know the URL given by the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>,
@@ -605,8 +605,8 @@ The AsciiReq format must enable
 the processing of requirement documents
 in a fast and deterministic way.
 
-[#ASCIIREQ-ITEM-0200, reftext="ASCIIREQ-ITEM-0200", .req]
-ASCIIREQ-ITEM-0200:: _AsciiReq item_
+[#ASCIIREQ-ITEM-0300, reftext="ASCIIREQ-ITEM-0300", .req]
+ASCIIREQ-ITEM-0300:: _AsciiReq item_
 +
 --
 Inside an <<ASCIIREQ-DOCUMENT>>,
@@ -640,8 +640,8 @@ The following requirement ensures
 that the whole content of an <<ASCIIREQ-ITEM>>
 remains _AsciiDoc-ly_ attached to it.
 
-[#ASCIIREQ-ITEM-0210, reftext="ASCIIREQ-ITEM-0210", .req]
-ASCIIREQ-ITEM-0210:: _AsciiReq item compound content_
+[#ASCIIREQ-ITEM-0310, reftext="ASCIIREQ-ITEM-0310", .req]
+ASCIIREQ-ITEM-0310:: _AsciiReq item compound content_
 +
 --
 The _description_
@@ -672,8 +672,8 @@ with unique identifiers.
 The same goes with formal items
 like actors, data and references.
 
-[#ASCIIREQ-ID-0300, reftext="ASCIIREQ-ID-0300", .req]
-ASCIIREQ-ID-0300:: _AsciiReq item identifier_
+[#ASCIIREQ-ID-0400, reftext="ASCIIREQ-ID-0400", .req]
+ASCIIREQ-ID-0400:: _AsciiReq item identifier_
 +
 --
 The REQUIRED identifier of an <<ASCIIREQ-ITEM>> is defined
@@ -689,11 +689,11 @@ of an <<ASCIIDOC>> description list item).
 
 Let's formally identify the identifier of an AsciiReq item as <<ASCIIREQ-IDENTIFIER>>.
 
-[#ASCIIREQ-ID-0310, reftext="ASCIIREQ-ID-0310", .req]
-ASCIIREQ-ID-0310:: _AsciiReq item identifier authorized characters_
+[#ASCIIREQ-ID-0410, reftext="ASCIIREQ-ID-0410", .req]
+ASCIIREQ-ID-0410:: _AsciiReq item identifier authorized characters_
 +
 --
-<<ASCIIREQ-ITEM>> identifiers (as of <<ASCIIREQ-ID-0300>>)
+<<ASCIIREQ-ITEM>> identifiers (as of <<ASCIIREQ-ID-0400>>)
 MUST be non empty strings,
 and MUST contain only the following characters:
 
@@ -722,11 +722,11 @@ in order to avoid breaking AsciiDoc compatibility, especially:
   May be misinterpreted due to AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
   shorthand syntax as well.
 
-<<ASCIIREQ-ID-0310>> is defined as a restrictive set for the moment.
+<<ASCIIREQ-ID-0410>> is defined as a restrictive set for the moment.
 It may be extended in future versions of AsciiReq.
 
-[#ASCIIREQ-ID-0320, reftext="ASCIIREQ-ID-0320", .req]
-ASCIIREQ-ID-0320:: _AsciiReq item identifier unicity_
+[#ASCIIREQ-ID-0420, reftext="ASCIIREQ-ID-0420", .req]
+ASCIIREQ-ID-0420:: _AsciiReq item identifier unicity_
 +
 --
 <<ASCIIREQ-IDENTIFIER>>s MUST be unique
@@ -748,14 +748,14 @@ when requirements are listed in tables,
 in order to quickly understand
 what the requirement talks about.
 
-As stated by <<ASCIIREQ-TITLE-0410>>,
+As stated by <<ASCIIREQ-TITLE-0510>>,
 titles are recommended for requirements.
 They may also be useful for other items, but remain optional.
 It gives the opportunity to display quick information on the latter:
 in table columns, hover pop-ups, ...
 
-[#ASCIIREQ-TITLE-0400, reftext="ASCIIREQ-TITLE-0400", .req]
-ASCIIREQ-TITLE-0400:: _AsciiReq item title_
+[#ASCIIREQ-TITLE-0500, reftext="ASCIIREQ-TITLE-0500", .req]
+ASCIIREQ-TITLE-0500:: _AsciiReq item title_
 +
 --
 An OPTIONAL title for an <<ASCIIREQ-ITEM>> may be defined
@@ -770,8 +770,8 @@ at the beginning of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 
 Let's formally identify the title of an AsciiReq item as <<ASCIIREQ-TITLE>>.
 
-[#ASCIIREQ-TITLE-0410, reftext="ASCIIREQ-TITLE-0410", .req]
-ASCIIREQ-TITLE-0410:: _Requirement title recommendation_
+[#ASCIIREQ-TITLE-0510, reftext="ASCIIREQ-TITLE-0510", .req]
+ASCIIREQ-TITLE-0510:: _Requirement title recommendation_
 +
 --
 <<ASCIIREQ-TITLE>>s are RECOMMENDED
@@ -785,11 +785,11 @@ for <<ASCIIREQ-REQUIREMENT>>s.
 According to <<ASCIIDOC>> definition,
 an link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
 IS NOT a link:https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/[paragraph].
-Consequently, the formulation in <<ASCIIREQ-TITLE-0400>> ensures
+Consequently, the formulation in <<ASCIIREQ-TITLE-0500>> ensures
 an optional <<ASCIIREQ-TITLE>> cannot be confused
 with the <<ASCIIREQ-BODY>>.
 
-<<ASCIIREQ-TITLE-0400>> labels "first (...) paragraph"
+<<ASCIIREQ-TITLE-0500>> labels "first (...) paragraph"
 for compliance purpose with AsciiDoc syntax definitions,
 but a title will generally be a single line in practice.
 
@@ -800,8 +800,8 @@ Doing so enables `grep` commands to retrieve
 corresponding identifiers and titles
 in single rows.
 
-[#ASCIIREQ-TITLE-0420, reftext="ASCIIREQ-TITLE-0420", .req]
-ASCIIREQ-TITLE-0420:: _One line heading style_
+[#ASCIIREQ-TITLE-0520, reftext="ASCIIREQ-TITLE-0520", .req]
+ASCIIREQ-TITLE-0520:: _One line heading style_
 +
 --
 The <<ASCIIREQ-TITLE>> (if any)
@@ -838,8 +838,8 @@ for humans using an <<ASCIIDOC-RENDERER>>,
 titles should be decorated,
 in order to detach them from the following bodies.
 
-[#ASCIIREQ-TITLE-0430, reftext="ASCIIREQ-TITLE-0430", .req]
-ASCIIREQ-TITLE-0430:: _Requirement item title decoration_
+[#ASCIIREQ-TITLE-0530, reftext="ASCIIREQ-TITLE-0530", .req]
+ASCIIREQ-TITLE-0530:: _Requirement item title decoration_
 +
 --
 The <<ASCIIREQ-TITLE>> (if any)
@@ -870,8 +870,8 @@ REQ-010:: _Requirement title_
 ----
 ====
 
-[#ASCIIREQ-TITLE-0440, reftext="ASCIIREQ-TITLE-0440", .req]
-ASCIIREQ-TITLE-0440:: _Decorated title parsing_
+[#ASCIIREQ-TITLE-0540, reftext="ASCIIREQ-TITLE-0540", .req]
+ASCIIREQ-TITLE-0540:: _Decorated title parsing_
 +
 --
 When an <<ASCIIREQ-TITLE>>
@@ -890,8 +890,8 @@ to parse the <<ASCIIREQ-TITLE>>.
 
 The requirement body then gives the full text of the requirement.
 
-[#ASCIIREQ-BODY-0500, reftext="ASCIIREQ-BODY-0500", .req]
-ASCIIREQ-BODY-0500:: _AsciiReq item body_
+[#ASCIIREQ-BODY-0600, reftext="ASCIIREQ-BODY-0600", .req]
+ASCIIREQ-BODY-0600:: _AsciiReq item body_
 +
 --
 The REQUIRED body of an <<ASCIIREQ-ITEM>> is given
@@ -925,8 +925,8 @@ with the specific needs of a project.
 Please note that attributes apply to requirements only
 (not to actors, data, nor foreign references).
 
-[#ASCIIREQ-ATTRIBUTES-0600, reftext="ASCIIREQ-ATTRIBUTES-0600", .req]
-ASCIIREQ-ATTRIBUTES-0600:: _AsciiReq requirement attributes_
+[#ASCIIREQ-ATTRIBUTES-0700, reftext="ASCIIREQ-ATTRIBUTES-0700", .req]
+ASCIIREQ-ATTRIBUTES-0700:: _AsciiReq requirement attributes_
 +
 --
 The OPTIONAL requirement attributes of an <<ASCIIREQ-REQUIREMENT>> are defined
@@ -950,8 +950,8 @@ of an <<ASCIIREQ-REQUIREMENT>>.
 
 Let's formally identify an attribute of an AsciiReq requirement as <<ASCIIREQ-ATTRIBUTE>>.
 
-[#ASCIIREQ-ATTRIBUTES-0610, reftext="ASCIIREQ-ATTRIBUTES-0610", .req]
-ASCIIREQ-ATTRIBUTES-0610:: _AsciiReq requirement attribute name uniqueness_
+[#ASCIIREQ-ATTRIBUTES-0710, reftext="ASCIIREQ-ATTRIBUTES-0710", .req]
+ASCIIREQ-ATTRIBUTES-0710:: _AsciiReq requirement attribute name uniqueness_
 +
 --
 <<ASCIIREQ-ATTRIBUTE>> names
@@ -988,15 +988,15 @@ Repeating an attribute name in the unordered list
 could have been understood
 as defining several items of a same list.
 
-The choice of unicity in <<ASCIIREQ-ATTRIBUTES-0610>> is assumed,
+The choice of unicity in <<ASCIIREQ-ATTRIBUTES-0710>> is assumed,
 and lets the opportunity in future versions of AsciiReq
 to define attributes with a description list.
 
 If one needs to define list values,
 the general pattern below is recommended.
 
-[#ASCIIREQ-ATTRIBUTES-0620, reftext="ASCIIREQ-ATTRIBUTES-0620", .req]
-ASCIIREQ-ATTRIBUTES-0620:: _List attributes_
+[#ASCIIREQ-ATTRIBUTES-0720, reftext="ASCIIREQ-ATTRIBUTES-0720", .req]
+ASCIIREQ-ATTRIBUTES-0720:: _List attributes_
 +
 --
 When an <<ASCIIREQ-ATTRIBUTE>> is defined as a list,
@@ -1011,13 +1011,13 @@ as level 2
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
-[#ASCIIREQ-ATTRIBUTES-0630, reftext="ASCIIREQ-ATTRIBUTES-0630", .req]
-ASCIIREQ-ATTRIBUTES-0630:: _Justified list attributes_
+[#ASCIIREQ-ATTRIBUTES-0730, reftext="ASCIIREQ-ATTRIBUTES-0730", .req]
+ASCIIREQ-ATTRIBUTES-0730:: _Justified list attributes_
 +
 --
 When an <<ASCIIREQ-ATTRIBUTE>> is defined as a list,
 with items being justified,
-it should define its items as of <<ASCIIREQ-ATTRIBUTES-0620>>.
+it should define its items as of <<ASCIIREQ-ATTRIBUTES-0720>>.
 
 Each attribute list item
 MAY receive justifications.
@@ -1037,8 +1037,8 @@ below the justified items.
 
 === Justifications
 
-[#ASCIIREQ-JUSTIFICATIONS-0650, reftext="ASCIIREQ-JUSTIFICATIONS-0650", .req]
-ASCIIREQ-JUSTIFICATIONS-0650:: _Justification as free text_
+[#ASCIIREQ-JUSTIFICATIONS-0800, reftext="ASCIIREQ-JUSTIFICATIONS-0800", .req]
+ASCIIREQ-JUSTIFICATIONS-0800:: _Justification as free text_
 +
 --
 It is RECOMMENDED to set <<ASCIIREQ-BODY>> justifications
@@ -1059,7 +1059,7 @@ without being polluted by _why_ concerns.
 Apart from <<ASCIIREQ-BODY>> justifications,
 dedicated justifications
 may also be attached with <<ASCIIREQ-ATTRIBUTE>>s
-(see <<ASCIIREQ-TRACEABILITY-0750>> for instance).
+(see <<ASCIIREQ-TRACEABILITY-1000>> for instance).
 
 
 === Cross references
@@ -1075,8 +1075,8 @@ can be verified by regular AsciiDoc verification tools.
 The following requirement recommends a pattern
 to ease AsciiDoc cross references for AsciiReq items.
 
-[#ASCIIREQ-XREF-0700, reftext="ASCIIREQ-XREF-0700", .req]
-ASCIIREQ-XREF-0700:: _AsciiReq item cross reference anchor
+[#ASCIIREQ-XREF-0900, reftext="ASCIIREQ-XREF-0900", .req]
+ASCIIREQ-XREF-0900:: _AsciiReq item cross reference anchor
 +
 --
 An <<ASCIIREQ-ITEM>> SHOULD be attached
@@ -1091,8 +1091,8 @@ both with <<ASCIIREQ-IDENTIFIER>> for value.
 
 Let's formally identify the anchor set on an AsciiReq item as <<ASCIIREQ-ANCHOR>>.
 
-[#ASCIIREQ-XREF-0710, reftext="ASCIIREQ-XREF-0710", .req]
-ASCIIREQ-XREF-0710:: _AsciiReq item cross reference_
+[#ASCIIREQ-XREF-0910, reftext="ASCIIREQ-XREF-0910", .req]
+ASCIIREQ-XREF-0910:: _AsciiReq item cross reference_
 +
 --
 <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
@@ -1152,7 +1152,7 @@ AsciiReq identifiers only (without square brackets)
 are always displayed.
 
 That's the reason why
-<<ASCIIREQ-XREF-0700>> assumes the duplication of the AsciiReq identifier information again
+<<ASCIIREQ-XREF-0900>> assumes the duplication of the AsciiReq identifier information again
 with the addition of a `reftext` attribute.
 
 As shown in the <<introduction-example>>,
@@ -1165,8 +1165,8 @@ Still, it creates a pitfall, and errors can be made, but it is assumed.
 
 Traceability is one of the main goals of requirement management.
 
-[#ASCIIREQ-TRACEABILITY-0750, reftext="ASCIIREQ-TRACEABILITY-0750", .req]
-ASCIIREQ-TRACEABILITY-0750:: _``Refers`` requirement attribute_
+[#ASCIIREQ-TRACEABILITY-1000, reftext="ASCIIREQ-TRACEABILITY-1000", .req]
+ASCIIREQ-TRACEABILITY-1000:: _``Refers`` requirement attribute_
 +
 --
 An <<ASCIIREQ-REQUIREMENT>>
@@ -1175,7 +1175,7 @@ giving traceability information for the current <<ASCIIREQ-REQUIREMENT>>.
 
 The `Refers` <<ASCIIREQ-ATTRIBUTE>>
 is defined as a justified list attribute
-(as of <<ASCIIREQ-ATTRIBUTES-0630>>)
+(as of <<ASCIIREQ-ATTRIBUTES-0730>>)
 whose items are foreign <<ASCIIREQ-IDENTIFIER>>s.
 --
 +
@@ -1202,11 +1202,11 @@ otherwise traceability usually reveals hard to maintain.
 In case the specification document covers different foreign specifications,
 then comes a risk of requirement identifiers overlapping.
 
-[#ASCIIREQ-TRACEABILITY-0755, reftext="ASCIIREQ-TRACEABILITY-0755", .req]
-ASCIIREQ-TRACEABILITY-0755:: _Specialized ``Refers`` requirement attribute_
+[#ASCIIREQ-TRACEABILITY-1010, reftext="ASCIIREQ-TRACEABILITY-1010", .req]
+ASCIIREQ-TRACEABILITY-1010:: _Specialized ``Refers`` requirement attribute_
 +
 --
-A `Refers` <<ASCIIREQ-ATTRIBUTE>> name (as of <<ASCIIREQ-TRACEABILITY-0750>>)
+A `Refers` <<ASCIIREQ-ATTRIBUTE>> name (as of <<ASCIIREQ-TRACEABILITY-1000>>)
 SHOULD be specialized
 with an <<ASCIIREQ-REF>> <<ASCIIREQ-IDENTIFIER>>
 between square brackets,
@@ -1252,8 +1252,8 @@ Nevertheless:
 
 Requirement management commonly requires that requirements be versioned.
 
-[#ASCIIREQ-VERSIONING-0805, reftext="ASCIIREQ-VERSIONING-0805", .req]
-ASCIIREQ-VERSIONING-0805:: _Document version_
+[#ASCIIREQ-VERSIONING-1100, reftext="ASCIIREQ-VERSIONING-1100", .req]
+ASCIIREQ-VERSIONING-1100:: _Document version_
 +
 --
 <<ASCIIREQ-DOCUMENT>>s
@@ -1265,8 +1265,8 @@ giving its version.
 
 Let's formally identify the version of an AsciiReq document as <<ASCIIREQ-DOCUMENT-VERSION>>.
 
-[#ASCIIREQ-VERSIONING-0806, reftext="ASCIIREQ-VERSIONING-0806", .req]
-ASCIIREQ-VERSIONING-0806:: _SemVer requirement versions_
+[#ASCIIREQ-VERSIONING-1110, reftext="ASCIIREQ-VERSIONING-1110", .req]
+ASCIIREQ-VERSIONING-1110:: _SemVer requirement versions_
 +
 --
 <<ASCIIREQ-DOCUMENT-VERSION>>s
@@ -1278,8 +1278,8 @@ but each requirement may be versioned as well,
 in order to track changes
 in a more accurate way.
 
-[#ASCIIREQ-VERSIONING-0800, reftext="ASCIIREQ-VERSIONING-0800", .req]
-ASCIIREQ-VERSIONING-0800:: _Requirement version attribute_
+[#ASCIIREQ-VERSIONING-1120, reftext="ASCIIREQ-VERSIONING-1120", .req]
+ASCIIREQ-VERSIONING-1120:: _Requirement version attribute_
 +
 --
 <<ASCIIREQ-REQUIREMENT>>s
@@ -1293,8 +1293,8 @@ with text value.
 
 Let's formally identify the version of an AsciiReq requirement as <<ASCIIREQ-REQUIREMENT-VERSION>>.
 
-[#ASCIIREQ-VERSIONING-0860, reftext="ASCIIREQ-VERSIONING-0860", .req]
-ASCIIREQ-VERSIONING-0860:: _SemVer requirement versions_
+[#ASCIIREQ-VERSIONING-1130, reftext="ASCIIREQ-VERSIONING-1130", .req]
+ASCIIREQ-VERSIONING-1130:: _SemVer requirement versions_
 +
 --
 <<ASCIIREQ-REQUIREMENT-VERSION>>s
@@ -1313,10 +1313,10 @@ The reason why the _PATCH_ version
 should not be given
 in AsciiReq requirement versions
 is due to impact analysis concerns
-combined with the <<ASCIIREQ-VERSIONING-0870>> recommendation.
+combined with the <<ASCIIREQ-VERSIONING-1140>> recommendation.
 
-[#ASCIIREQ-VERSIONING-0870, reftext="ASCIIREQ-VERSIONING-0870", .req]
-ASCIIREQ-VERSIONING-0870:: _Requirement version synchronized with document_
+[#ASCIIREQ-VERSIONING-1140, reftext="ASCIIREQ-VERSIONING-1140", .req]
+ASCIIREQ-VERSIONING-1140:: _Requirement version synchronized with document_
 +
 --
 When modified,
@@ -1335,8 +1335,8 @@ when the change occurred.
 
 As a consequence:
 
-[#ASCIIREQ-VERSIONING-0875, reftext="ASCIIREQ-VERSIONING-0875", .req]
-ASCIIREQ-VERSIONING-0875:: _Document version bumping_
+[#ASCIIREQ-VERSIONING-1150, reftext="ASCIIREQ-VERSIONING-1150", .req]
+ASCIIREQ-VERSIONING-1150:: _Document version bumping_
 +
 --
 When a new version of an <<ASCIIREQ-DOCUMENT>> is released,
@@ -1358,7 +1358,7 @@ other requirements
 which would normally require their minor version to be bumped
 as of <<SEMVER>>,
 should still be aligned with the document version
-as of <<ASCIIREQ-VERSIONING-0870>>.
+as of <<ASCIIREQ-VERSIONING-1140>>.
 
 It is the responsibility of the document publisher to decide whether modifications
 should be delivered in a single major version,
@@ -1372,8 +1372,8 @@ give recommendations on situations
 when the requirement version
 should be updated or not.
 
-[#ASCIIREQ-VERSIONING-0820, reftext="ASCIIREQ-VERSIONING-0820", .req]
-ASCIIREQ-VERSIONING-0820:: _Version update on significant changes_
+[#ASCIIREQ-VERSIONING-1160, reftext="ASCIIREQ-VERSIONING-1160", .req]
+ASCIIREQ-VERSIONING-1160:: _Version update on significant changes_
 +
 --
 When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>),
@@ -1397,8 +1397,8 @@ intend to clarify what should be understood
 as "significant changes"
 in terms of requirement management.
 
-[#ASCIIREQ-VERSIONING-0840, reftext="ASCIIREQ-VERSIONING-0840", .req]
-ASCIIREQ-VERSIONING-0840:: _Typos & requirement version_
+[#ASCIIREQ-VERSIONING-1170, reftext="ASCIIREQ-VERSIONING-1170", .req]
+ASCIIREQ-VERSIONING-1170:: _Typos & requirement version_
 +
 --
 Typos fixed in an <<ASCIIREQ-REQUIREMENT>>
@@ -1410,8 +1410,8 @@ its <<ASCIIREQ-REQUIREMENT-VERSION>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-[#ASCIIREQ-VERSIONING-0850, reftext="ASCIIREQ-VERSIONING-0850", .req]
-ASCIIREQ-VERSIONING-0850:: _Cosmetic rewordings & requirement version_
+[#ASCIIREQ-VERSIONING-1180, reftext="ASCIIREQ-VERSIONING-1180", .req]
+ASCIIREQ-VERSIONING-1180:: _Cosmetic rewordings & requirement version_
 +
 --
 Rewordings for clarification of an <<ASCIIREQ-REQUIREMENT>>
@@ -1434,11 +1434,11 @@ The following requirement
 completes the requirements
 from the "Traceability" section before.
 
-[#ASCIIREQ-VERSIONING-0810, reftext="ASCIIREQ-VERSIONING-0810", .req]
-ASCIIREQ-VERSIONING-0810:: _Versioned requirement references_
+[#ASCIIREQ-VERSIONING-1190, reftext="ASCIIREQ-VERSIONING-1190", .req]
+ASCIIREQ-VERSIONING-1190:: _Versioned requirement references_
 +
 --
-In a level 2 traceability reference (as of <<ASCIIREQ-TRACEABILITY-0750>>),
+In a level 2 traceability reference (as of <<ASCIIREQ-TRACEABILITY-1000>>),
 if the foreign <<ASCIIREQ-REQUIREMENT>> holds aN <<ASCIIREQ-REQUIREMENT-VERSION>>,
 the foreign <<ASCIIREQ-IDENTIFIER>> reference
 SHOULD be followed by
