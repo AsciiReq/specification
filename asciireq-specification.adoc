@@ -449,8 +449,6 @@ generally helps for maintenance.
 ASCIIREQ-DOC-0020:: _AsciiDoc includes_
 +
 --
-
-Let's formally identify an AsciiReq document as <<ASCIIREQ-DOCUMENT>>.
 An <<ASCIIREQ-DOCUMENT>>
 MAY be defined with different `.adoc` files
 using the <<ASCIIDOC>> ability
@@ -490,8 +488,6 @@ gives the AsciiReq version used to write the current document.
 ASCIIREQ-HEADER-0100:: _<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> declaration_
 +
 --
-
-Let's formally identify the `:asciireq-version:` document attribute as <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>.
 When writing an <<ASCIIREQ-DOCUMENT>>,
 the `:asciireq-version:`
 <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
@@ -603,16 +599,6 @@ in a fast and deterministic way.
 ASCIIREQ-ITEM-0200:: _AsciiReq item_
 +
 --
-
-Let's formally identify an AsciiReq item as <<ASCIIREQ-ITEM>>.
-
-Let's formally identify a formal actor as <<ASCIIREQ-ACTOR>>.
-
-Let's formally identify a formal data as <<ASCIIREQ-DATA>>.
-
-Let's formally identify a requirement as <<ASCIIREQ-REQUIREMENT>>.
-
-Let's formally identify a foreign reference as <<ASCIIREQ-REF>>.
 Inside an <<ASCIIREQ-DOCUMENT>>,
 an AsciiReq item is defined
 as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
@@ -640,8 +626,6 @@ remains _AsciiDoc-ly_ attached to it.
 ASCIIREQ-ITEM-0210:: _AsciiReq item compound content_
 +
 --
-
-Let's formally identify the compound content of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-COMPOUND-CONTENT>>.
 The _description_
 (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy]
 of an <<ASCIIDOC>> description list item)
@@ -672,8 +656,6 @@ like actors, data and references.
 ASCIIREQ-ID-0300:: _AsciiReq item identifier_
 +
 --
-
-Let's formally identify the identifier of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-IDENTIFIER>>.
 The REQUIRED identifier of an <<ASCIIREQ-ITEM>> is defined
 as the _term_
 (as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy]
@@ -754,8 +736,6 @@ in table columns, hover pop-ups, ...
 ASCIIREQ-TITLE-0400:: _Requirement item title_
 +
 --
-
-Let's formally identify the title of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-TITLE>>.
 An OPTIONAL title for an <<ASCIIREQ-ITEM>> may be defined
 as a first <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/[paragraph]
 at the beginning of the <<ASCIIREQ-COMPOUND-CONTENT>>.
@@ -892,8 +872,6 @@ The requirement body then gives the full text of the requirement.
 ASCIIREQ-BODY-0500:: _AsciiReq item body_
 +
 --
-
-Let's formally identify the body of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-BODY>>.
 The REQUIRED body of an <<ASCIIREQ-ITEM>> is given
 as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
 in the <<ASCIIREQ-COMPOUND-CONTENT>>.
@@ -927,8 +905,6 @@ Please note that attributes apply to requirements only
 ASCIIREQ-ATTRIBUTES-0600:: _AsciiReq requirement attributes_
 +
 --
-
-Let's formally identify an attribute of an <<ASCIIREQ-REQUIREMENT>> as <<ASCIIREQ-ATTRIBUTE>>.
 The OPTIONAL requirement attributes of an <<ASCIIREQ-REQUIREMENT>> are defined
 as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
 of `*name:* value` pairs
@@ -1077,8 +1053,6 @@ to ease AsciiDoc cross references for AsciiReq items.
 ASCIIREQ-XREF-0700:: _AsciiReq item cross reference anchor
 +
 --
-
-Let's formally identify the anchor set on an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-ANCHOR>>.
 An <<ASCIIREQ-ITEM>> SHOULD be attached
 an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
 and an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/#default-styling[reftext attribute],
@@ -1093,8 +1067,6 @@ both with <<ASCIIREQ-IDENTIFIER>> for value.
 ASCIIREQ-XREF-0710:: _AsciiReq item cross reference_
 +
 --
-
-Let's formally identify a cross reference to an <<ASCIIREQ-ANCHOR>> as <<ASCIIREQ-CROSS-REFERENCE>>.
 <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
 to an <<ASCIIREQ-ANCHOR>>
 SHOULD be made
@@ -1254,8 +1226,6 @@ Requirement management commonly requires that requirements be versioned.
 ASCIIREQ-VERSIONING-0805:: _Document version_
 +
 --
-
-Let's formally identify the version of an <<ASCIIREQ-DOCUMENT>> as <<ASCIIREQ-DOCUMENT-VERSION>>.
 <<ASCIIREQ-DOCUMENT>>s
 SHOULD hold an <<ASCIIDOC>>
 link:https://docs.asciidoctor.org/asciidoc/latest/document/revision-information/#revision-attributes[`:revnumber:`]
@@ -1280,8 +1250,6 @@ in a more accurate way.
 ASCIIREQ-VERSIONING-0800:: _Requirement version attribute_
 +
 --
-
-Let's formally identify the version of an <<ASCIIREQ-REQUIREMENT>> as <<ASCIIREQ-REQUIREMENT-VERSION>>.
 <<ASCIIREQ-REQUIREMENT>>s
 SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>,
 with text value.
