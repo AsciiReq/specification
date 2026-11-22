@@ -590,6 +590,12 @@ It is an option, but not a recommendation, for security reasons.
 As of <<SEMVER>>, _PATCH_ versions won't break the compatibility.
 That's the reason why there is no need to give them with AsciiReq versioned URLs.
 
+Other document headings are specified
+later in this specification.
+See:
+
+* <<ASCIIREQ-DOCUMENT-VERSION>>
+
 
 === AsciiReq items
 
