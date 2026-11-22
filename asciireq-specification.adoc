@@ -1355,14 +1355,15 @@ it contains.
 ** <<ASCIIREQ-WRITER>>
 
 [WARNING]
+.Major / minor document & requirement versioning
 ====
 When the major version of an AsciiReq document
 must be bumped
 due to compatibilty reasons for certain requirements,
 other requirements
-which would normally require their minor version to be bumped
+which would normally require their minor version to be bumped only
 as of <<SEMVER>>,
-should still be aligned with the document version
+should still be aligned with the new major document version
 as of <<ASCIIREQ-VERSIONING-1140>>.
 
 It is the responsibility of the document publisher to decide whether modifications
