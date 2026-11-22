@@ -1205,13 +1205,25 @@ Nevertheless:
 
 Requirement management commonly requires that requirements be versioned.
 
+[#ASCIIREQ-VERSIONING-0805, reftext="ASCIIREQ-VERSIONING-0805", .req]
+ASCIIREQ-VERSIONING-0805:: _Document version_
++
+--
+<<ASCIIREQ-DOCUMENT>>s
+SHOULD hold a `:revnumber:` document attribute
+giving its version.
+--
+
+The whole document is classically versiones,
+but each requirement as well.
+
 [#ASCIIREQ-VERSIONING-0800, reftext="ASCIIREQ-VERSIONING-0800", .req]
-ASCIIREQ-VERSIONING-0800:: _AsciiReq requirement version_
+ASCIIREQ-VERSIONING-0800:: _Requirement version attribute_
 +
 --
 <<ASCIIREQ-REQUIREMENT>>s
-SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>
-with a `X.Y` text value.
+SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>,
+with text value.
 --
 +
 * *Version:* 0.1
@@ -1219,26 +1231,29 @@ with a `X.Y` text value.
 ** <<ASCIIREQ-WRITER>>
 
 [#ASCIIREQ-VERSIONING-0860, reftext="ASCIIREQ-VERSIONING-0860", .req]
-ASCIIREQ-VERSIONING-0860:: _SemVer versions recommended_
+ASCIIREQ-VERSIONING-0860:: _SemVer requirement versions_
 +
 --
-Other kind of versioning strategies may be considered.
-Nevertheless, the `Version` <<ASCIIREQ-ATTRIBUTE>> value
-SHOULD follow the <<SEMVER>> versioning rules.
+<<ASCIIREQ-REQ-VERSION>>s
+SHOULD follow the <<SEMVER>> versioning rules,
+with _MAJOR_ and _MINOR_ parts only.
 --
 +
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+Other kind of versioning strategies may be considered.
+Nevertheless, <<SEMVER>> remains recommended.
+
 [#ASCIIREQ-VERSIONING-0870, reftext="ASCIIREQ-VERSIONING-0870", .req]
-ASCIIREQ-VERSIONING-0870:: _Version MAJOR.MINOR synchronized with the document version_
+ASCIIREQ-VERSIONING-0870:: _Requirement version synchronized with document_
 +
 --
-In the `X.Y` text value of the `Version` <<ASCIIREQ-ATTRIBUTE>>,
-`X` and `Y` SHOULD be the <<SEMVER>> _MAJOR_ and _MINOR_ parts
-of the <<ASCIIREQ-DOCUMENT>> version
-corresponding with the latest modification of the <<ASCIIREQ-REQUIREMENT>>.
+When modified,
+the <<ASCIIREQ-REQ-VERSION>>
+SHOULD follow the version
+of the <<ASCIIREQ-DOCUMENT>>.
 --
 +
 * *Version:* 0.1
@@ -1305,7 +1320,6 @@ unless the previous text led to wrong understandings of the requirement.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-
 The main interest of requirement versioning
 comes with traceability and impact analyses.
 
@@ -1327,6 +1341,7 @@ then the version of the foreign <<ASCIIREQ-REQUIREMENT>>.
 ** <<ASCIIREQ-READER>>
 
 See the <<introduction-example>>.
+
 
 === Scenario specification
 
