@@ -178,7 +178,12 @@ apply to this document.
 The AsciiReq attributes for the requirements in this document are the following:
 
 Version::
-As defined by <<ASCIIREQ-VERSIONING-1120>>.
++
+--
+See <<ASCIIREQ-REQUIREMENT-VERSION>>.
+
+See other applicable requirements in the <<versioning>> section.
+--
 
 Actors::
 +
