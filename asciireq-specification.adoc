@@ -1081,7 +1081,7 @@ The following requirement recommends a pattern
 to ease AsciiDoc cross references for AsciiReq items.
 
 [#ASCIIREQ-XREF-0900, reftext="ASCIIREQ-XREF-0900", .req]
-ASCIIREQ-XREF-0900:: _AsciiReq item cross reference anchor
+ASCIIREQ-XREF-0900:: _AsciiReq item cross reference anchor_
 +
 --
 An <<ASCIIREQ-ITEM>> SHOULD be attached
@@ -1267,6 +1267,10 @@ link:https://docs.asciidoctor.org/asciidoc/latest/document/revision-information/
 link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
 giving its version.
 --
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 Let's formally identify the version of an AsciiReq document as <<ASCIIREQ-DOCUMENT-VERSION>>.
 
@@ -1277,6 +1281,9 @@ ASCIIREQ-VERSIONING-1110:: _SemVer requirement versions_
 <<ASCIIREQ-DOCUMENT-VERSION>>s
 SHOULD follow the <<SEMVER>> versioning rules.
 --
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
 
 The whole document is classically versioned,
 but each requirement may be versioned as well,
@@ -1553,10 +1560,12 @@ See https://semver.org/spec/v2.0.0.html.
 
 [cols="1,3,1,2"]
 |===
-|Requirement id
-|Requirement title
-|Requirement version
-|Actors
+4+h|Requirement
+
+h|Identifier
+h|Title
+h|Version
+h|Actors
 
 |<<ASCIIREQ-DOC-0100>>
 |_``.adoc`` file name extension_
@@ -1701,7 +1710,7 @@ a|
 * <<ASCIIREQ-WRITER>>
 
 |<<ASCIIREQ-XREF-0900>>
-|_AsciiReq item cross reference anchor
+|_AsciiReq item cross reference anchor_
 |0.1
 a|
 * <<ASCIIREQ-WRITER>>
@@ -1728,13 +1737,16 @@ a|
 
 |<<ASCIIREQ-VERSIONING-1100>>
 |_Document version_
-|
-|
+|0.1
+a|
+* <<ASCIIREQ-WRITER>>
+* <<ASCIIREQ-READER>>
 
 |<<ASCIIREQ-VERSIONING-1110>>
 |_SemVer requirement versions_
-|
-|
+|0.1
+a|
+* <<ASCIIREQ-WRITER>>
 
 |<<ASCIIREQ-VERSIONING-1120>>
 |_Requirement version attribute_
