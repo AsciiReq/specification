@@ -1802,4 +1802,13 @@ a|
 
 === Requirements by actors
 
-TODO
+[cols="1,2,1,2,1,2"]
+|===
+|Actor id
+|Actor title
+|Requirement id
+|Requirement title
+|Requirement version
+|Justification
+
+|===
