@@ -1046,7 +1046,6 @@ both with <<ASCIIREQ-IDENTIFIER>> for value.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-
 [#ASCIIREQ-XREF-0710, reftext="ASCIIREQ-XREF-0710", .req]
 ASCIIREQ-XREF-0710:: _AsciiReq item cross reference_
 +
