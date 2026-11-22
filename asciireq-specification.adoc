@@ -292,6 +292,13 @@ giving the version of <<ASCIIREQ>> specification used,
 and stating consequently that the <<ASCIIDOC>> document is actually an <<ASCIIREQ-DOCUMENT>>.
 --
 
+[#ASCIIREQ-DOCUMENT-VERSION, reftext="ASCIIREQ-DOCUMENT-VERSION", .req-data]
++
+--
+Version of an <<ASCIIREQ-DOCUMENT>>,
+as of <<ASCIIREQ-VERSIONING-0805>>.
+--
+
 
 === AsciiReq items
 
@@ -378,6 +385,16 @@ One attribute
 in the attribute set (as of <<ASCIIREQ-ATTRIBUTES-0600>>)
 of an <<ASCIIREQ-REQUIREMENT>> (requirements only!),
 part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
+--
+
+
+=== Common attributes
+
+[#ASCIIREQ-REQUIREMENT-VERSION, reftext="ASCIIREQ-REQUIREMENT-VERSION", .req-data]
++
+--
+Version of an <<ASCIIREQ-DOCUMENT>>,
+as of <<ASCIIREQ-VERSIONING-0800>>.
 --
 
 
@@ -1210,12 +1227,24 @@ ASCIIREQ-VERSIONING-0805:: _Document version_
 +
 --
 <<ASCIIREQ-DOCUMENT>>s
-SHOULD hold a `:revnumber:` document attribute
+SHOULD hold an <<ASCIIDOC>>
+link:https://docs.asciidoctor.org/asciidoc/latest/document/revision-information/#revision-attributes[`:revnumber:`]
+link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
 giving its version.
 --
 
-The whole document is classically versiones,
-but each requirement as well.
+[#ASCIIREQ-VERSIONING-0806, reftext="ASCIIREQ-VERSIONING-0806", .req]
+ASCIIREQ-VERSIONING-0806:: _SemVer requirement versions_
++
+--
+<<ASCIIREQ-DOCUMENT-VERSION>>s
+SHOULD follow the <<SEMVER>> versioning rules.
+--
+
+The whole document is classically versioned,
+but each requirement may be versioned as well,
+in order to track changes
+in a more accurate way.
 
 [#ASCIIREQ-VERSIONING-0800, reftext="ASCIIREQ-VERSIONING-0800", .req]
 ASCIIREQ-VERSIONING-0800:: _Requirement version attribute_
@@ -1234,7 +1263,7 @@ with text value.
 ASCIIREQ-VERSIONING-0860:: _SemVer requirement versions_
 +
 --
-<<ASCIIREQ-REQ-VERSION>>s
+<<ASCIIREQ-REQUIREMENT-VERSION>>s
 SHOULD follow the <<SEMVER>> versioning rules,
 with _MAJOR_ and _MINOR_ parts only.
 --
@@ -1246,14 +1275,18 @@ with _MAJOR_ and _MINOR_ parts only.
 Other kind of versioning strategies may be considered.
 Nevertheless, <<SEMVER>> remains recommended.
 
+The reason why the _PATCH_ version
+should not be given
+is due to impact analyses concerns
+combined with the <<ASCIIREQ-VERSIONING-0870>> recommendation.
+
 [#ASCIIREQ-VERSIONING-0870, reftext="ASCIIREQ-VERSIONING-0870", .req]
 ASCIIREQ-VERSIONING-0870:: _Requirement version synchronized with document_
 +
 --
 When modified,
-the <<ASCIIREQ-REQ-VERSION>>
-SHOULD follow the version
-of the <<ASCIIREQ-DOCUMENT>>.
+the <<ASCIIREQ-REQUIREMENT-VERSION>>
+SHOULD follow the <<ASCIIREQ-DOCUMENT-VERSION>>.
 --
 +
 * *Version:* 0.1
@@ -1265,6 +1298,22 @@ with the one of the <<ASCIIREQ-DOCUMENT>>
 makes it easier to understand
 when the change occurred.
 
+As a consequence:
+
+[#ASCIIREQ-VERSIONING-0875, reftext="ASCIIREQ-VERSIONING-0875", .req]
+ASCIIREQ-VERSIONING-0875:: _Document version bumping_
++
+--
+When a new version of an <<ASCIIREQ-DOCUMENT>> is released,
+its <<ASCIIREQ-DOCUMENT-VERSION>>
+SHOULD be aligned
+with the highest <<ASCIIREQ-REQUIREMENT-VERSION>>
+it contains.
+--
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
 The following requirements
 give recommendations on situations
 when the requirement version
@@ -1275,19 +1324,9 @@ ASCIIREQ-VERSIONING-0820:: _Version update on significant changes_
 +
 --
 When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>),
-the `Version` <<ASCIIREQ-ATTRIBUTE>> must be updated
-with the current version of the <<ASCIIREQ-DOCUMENT>>.
---
-+
-* *Version:* 0.1
-* *Actors:*
-** <<ASCIIREQ-WRITER>>
+the `Version` <<ASCIIREQ-ATTRIBUTE>> MUST be updated.
 
-[#ASCIIREQ-VERSIONING-0830, reftext="ASCIIREQ-VERSIONING-0830", .req]
-ASCIIREQ-VERSIONING-0830:: _No version update on non significant changes_
-+
---
-When the <<ASCIIREQ-REQUIREMENT>> is modified without significant changes,
+When the <<ASCIIREQ-REQUIREMENT>> is modified without significant changes (according to <<SEMVER>>),
 its version MUST NOT be modified.
 --
 +
@@ -1295,8 +1334,15 @@ its version MUST NOT be modified.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+Even though the <<SEMVER>> reference
+tells much about when to bump a version or not,
+the requirements after
+intend to clarify what should be understood
+as significant changes
+in terms of requirement management.
+
 [#ASCIIREQ-VERSIONING-0840, reftext="ASCIIREQ-VERSIONING-0840", .req]
-ASCIIREQ-VERSIONING-0840:: _Typos fixed do not change the version_
+ASCIIREQ-VERSIONING-0840:: _No version update on typos_
 +
 --
 Typos fixed in an <<ASCIIREQ-REQUIREMENT>>
@@ -1320,7 +1366,8 @@ unless the previous text led to wrong understandings of the requirement.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-The main interest of requirement versioning
+As already introduced before,
+the main interest of requirement versioning
 comes with traceability and impact analyses.
 
 [#ASCIIREQ-VERSIONING-0810, reftext="ASCIIREQ-VERSIONING-0810", .req]
