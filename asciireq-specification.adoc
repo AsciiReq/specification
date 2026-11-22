@@ -56,7 +56,7 @@ AsciiReq syntax:
 
 [source, asciidoc]
 ----
-[.req]
+[#REQ-010, reftext="REQ-010", .req]
 REQ-010:: _Requirement title_
 +
 --
@@ -77,7 +77,7 @@ It may also use regular AsciiDoc formatting syntax
 Regular AsciiDoc rendering:
 
 ****
-[.req]
+[#REQ-010, reftext="REQ-010", .req]
 REQ-010:: _Requirement title_
 +
 --
@@ -1046,17 +1046,6 @@ both with <<ASCIIREQ-IDENTIFIER>> for value.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-[example]
-.AsciiReq item cross reference anchor
-====
-With this suggestion, the heading of the <<introduction-example>> becomes:
-
-[source, asciidoc]
-----
-[#REQ-010, reftext="REQ-010", .req]
-REQ-010:: _Requirement title_
-----
-====
 
 [#ASCIIREQ-XREF-0710, reftext="ASCIIREQ-XREF-0710", .req]
 ASCIIREQ-XREF-0710:: _AsciiReq item cross reference_

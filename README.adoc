@@ -18,7 +18,7 @@ AsciiReq syntax:
 
 [source, asciidoc]
 ----
-[.req]
+[#REQ-010, reftext="REQ-010", .req]
 REQ-010:: _Requirement title_
 +
 --
@@ -39,7 +39,7 @@ It may also use regular AsciiDoc formatting syntax
 Regular AsciiDoc rendering:
 
 ****
-[.req]
+[#REQ-010, reftext="REQ-010", .req]
 REQ-010:: _Requirement title_
 +
 --
