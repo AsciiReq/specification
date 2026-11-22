@@ -628,15 +628,13 @@ The <<ASCIIDOC>> role assigned MUST be one of :
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
-Let's formally identify an AsciiReq item as <<ASCIIREQ-ITEM>>.
+Let's formally identify:
 
-Let's formally identify a formal actor as <<ASCIIREQ-ACTOR>>.
-
-Let's formally identify a formal data as <<ASCIIREQ-DATA>>.
-
-Let's formally identify a requirement as <<ASCIIREQ-REQUIREMENT>>.
-
-Let's formally identify a foreign reference as <<ASCIIREQ-REF>>.
+* an AsciiReq item as <<ASCIIREQ-ITEM>>,
+* a formal actor as <<ASCIIREQ-ACTOR>>,
+* a formal data as <<ASCIIREQ-DATA>>,
+* a requirement as <<ASCIIREQ-REQUIREMENT>>,
+* a foreign reference as <<ASCIIREQ-REF>>.
 
 The following requirement ensures
 that the whole content of an <<ASCIIREQ-ITEM>>
