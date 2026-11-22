@@ -1234,9 +1234,9 @@ Example:
 ** UPPER-REQ-100
 ----
 
-This requirement comes as a recommendation, in as much as
-if there's only one requirement source to cover,
-then it may be considered trivial which requirement source is being covered.
+This requirement comes as a recommendation,
+even though in case there's only one requirement source to cover,
+it may be considered trivial which requirement source is being covered.
 
 Nevertheless:
 
