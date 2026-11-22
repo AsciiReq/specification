@@ -464,6 +464,8 @@ MUST process the <<ASCIIDOC>> include directives.
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
+Let's formally identify an AsciiReq document as <<ASCIIREQ-DOCUMENT>>.
+
 
 ==== Document header
 
@@ -503,6 +505,8 @@ used to write the <<ASCIIREQ-DOCUMENT>>.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+
+Let's formally identify the `:asciireq-version:` document attribute as <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>.
 
 The usage of the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> is REQUIRED on purpose,
 so that an <<ASCIIREQ-READER>>
@@ -618,6 +622,16 @@ The <<ASCIIDOC>> role assigned MUST be one of :
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
+Let's formally identify an AsciiReq item as <<ASCIIREQ-ITEM>>.
+
+Let's formally identify a formal actor as <<ASCIIREQ-ACTOR>>.
+
+Let's formally identify a formal data as <<ASCIIREQ-DATA>>.
+
+Let's formally identify a requirement as <<ASCIIREQ-REQUIREMENT>>.
+
+Let's formally identify a foreign reference as <<ASCIIREQ-REF>>.
+
 The following requirement ensures
 that the whole content of an <<ASCIIREQ-ITEM>>
 remains _AsciiDoc-ly_ attached to it.
@@ -641,6 +655,8 @@ MUST be used to ensure the continuation of the _description_.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
+
+Let's formally identify the compound content of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-COMPOUND-CONTENT>>.
 
 
 ==== Identifier
@@ -666,6 +682,8 @@ of an <<ASCIIDOC>> description list item).
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
+
+Let's formally identify the identifier of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-IDENTIFIER>>.
 
 [#ASCIIREQ-ID-0310, reftext="ASCIIREQ-ID-0310", .req]
 ASCIIREQ-ID-0310:: _AsciiReq item identifier authorized characters_
@@ -747,6 +765,8 @@ Titles are RECOMMENDED for <<ASCIIREQ-REQUIREMENT>>s.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
+
+Let's formally identify the title of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-TITLE>>.
 
 [#ASCIIREQ-TITLE-0410, reftext="ASCIIREQ-TITLE-0410", .req]
 ASCIIREQ-TITLE-0410:: _Requirement title recommendation_
@@ -886,6 +906,8 @@ of an <<ASCIIREQ-ITEM>>.
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
 
+Let's formally identify the body of an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-BODY>>.
+
 Defining the requirement body as an open block makes it possible to
 write it freely with several paragraphs,
 and use any AsciiDoc formatting (lists, tables, admonitions, ...).
@@ -923,6 +945,8 @@ of an <<ASCIIREQ-REQUIREMENT>>.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 ** <<ASCIIREQ-READER>>
+
+Let's formally identify an attribute of an <<ASCIIREQ-REQUIREMENT>> as <<ASCIIREQ-ATTRIBUTE>>.
 
 [#ASCIIREQ-ATTRIBUTES-0610, reftext="ASCIIREQ-ATTRIBUTES-0610", .req]
 ASCIIREQ-ATTRIBUTES-0610:: _AsciiReq requirement attribute name uniqueness_
@@ -1063,6 +1087,8 @@ both with <<ASCIIREQ-IDENTIFIER>> for value.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
+Let's formally identify the anchor set on an <<ASCIIREQ-ITEM>> as <<ASCIIREQ-ANCHOR>>.
+
 [#ASCIIREQ-XREF-0710, reftext="ASCIIREQ-XREF-0710", .req]
 ASCIIREQ-XREF-0710:: _AsciiReq item cross reference_
 +
@@ -1077,6 +1103,8 @@ between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xr
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+
+Let's formally identify a cross reference to an <<ASCIIREQ-ANCHOR>> as <<ASCIIREQ-CROSS-REFERENCE>>.
 
 The double angled bracket format
 makes it simple for humans to read the raw AsciiDoc file,
@@ -1233,6 +1261,8 @@ link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes
 giving its version.
 --
 
+Let's formally identify the version of an <<ASCIIREQ-DOCUMENT>> as <<ASCIIREQ-DOCUMENT-VERSION>>.
+
 [#ASCIIREQ-VERSIONING-0806, reftext="ASCIIREQ-VERSIONING-0806", .req]
 ASCIIREQ-VERSIONING-0806:: _SemVer requirement versions_
 +
@@ -1258,6 +1288,8 @@ with text value.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+
+Let's formally identify the version of an <<ASCIIREQ-REQUIREMENT>> as <<ASCIIREQ-REQUIREMENT-VERSION>>.
 
 [#ASCIIREQ-VERSIONING-0860, reftext="ASCIIREQ-VERSIONING-0860", .req]
 ASCIIREQ-VERSIONING-0860:: _SemVer requirement versions_
