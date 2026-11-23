@@ -200,7 +200,7 @@ See the <<#actors>> section of this document for the list of possible actor valu
 The `Actors` attribute is defined
 as a _justified list attribute_ (as of <<ASCIIREQ-ATTRIBUTES-0730>>),
 whose items are <<ASCIIREQ>> actors
-given as an <<ASCIIREQ-CROSS-REFERENCE>>s.
+given as <<ASCIIREQ-CROSS-REFERENCE>>s.
 
 Example:
 [source, asciidoc]
@@ -465,7 +465,7 @@ is `.adoc`.
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
 
-Spliting a large specification document in different files
+Splitting a large specification document in different files
 generally helps for maintenance.
 
 [#ASCIIREQ-DOC-0110, reftext="ASCIIREQ-DOC-0110", .req]
@@ -1051,7 +1051,7 @@ it should define its items as of <<ASCIIREQ-ATTRIBUTES-0720>>.
 Each attribute list item
 MAY receive justifications.
 
-Attribute list item justfifications
+Attribute list item justifications
 SHOULD be given
 as level 3
 <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list] items
@@ -1395,7 +1395,7 @@ it contains.
 ====
 When the major version of an AsciiReq document
 must be bumped
-due to compatibilty reasons for certain requirements,
+due to compatibility reasons for certain requirements,
 other requirements
 which would normally require their minor version to be bumped only
 as of <<SEMVER>>,
@@ -1481,7 +1481,7 @@ ASCIIREQ-VERSIONING-1190:: _Versioned requirement references_
 +
 --
 In a level 2 traceability reference (as of <<ASCIIREQ-TRACEABILITY-1000>>),
-if the foreign <<ASCIIREQ-REQUIREMENT>> holds aN <<ASCIIREQ-REQUIREMENT-VERSION>>,
+if the foreign <<ASCIIREQ-REQUIREMENT>> holds an <<ASCIIREQ-REQUIREMENT-VERSION>>,
 the foreign <<ASCIIREQ-IDENTIFIER>> reference
 SHOULD be followed by
 the `` - `` pattern,
