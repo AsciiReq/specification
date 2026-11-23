@@ -195,7 +195,7 @@ Actors::
 --
 <<ASCIIREQ>> actors concerned by the requirement.
 
-See the <<Actors>> section of this document for the list of possible actor values.
+See the <<#actors>> section of this document for the list of possible actor values.
 
 The `Actors` attribute is defined
 as a _justified list attribute_ (as of <<ASCIIREQ-ATTRIBUTES-0730>>),
