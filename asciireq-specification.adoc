@@ -1330,6 +1330,7 @@ with text value.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
 
 Let's formally identify the version of an AsciiReq requirement as <<ASCIIREQ-REQUIREMENT-VERSION>>.
 
@@ -1785,6 +1786,7 @@ a|
 |0.1
 a|
 * <<ASCIIREQ-WRITER>>
+* <<ASCIIREQ-READER>>
 
 |<<ASCIIREQ-VERSIONING-1130>>
 |_SemVer requirement versions_
@@ -1846,8 +1848,9 @@ h|Identifier
 h|Title
 h|Version
 
-.30+|<<ASCIIREQ-WRITER>>
-.30+|_AsciiReq writer_
+.33+|<<ASCIIREQ-WRITER>>
+.33+|_AsciiReq writer_
+
 |<<ASCIIREQ-DOC-0100>>
 |_``.adoc`` file name extension_
 |0.1
@@ -1940,6 +1943,14 @@ h|Version
 |_Specialized ``Refers`` requirement attribute_
 |0.1
 
+|<<ASCIIREQ-VERSIONING-1100>>
+|_Document version_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1110>>
+|_SemVer requirement versions_
+|0.1
+
 |<<ASCIIREQ-VERSIONING-1120>>
 |_Requirement version attribute_
 |0.1
@@ -1950,6 +1961,10 @@ h|Version
 
 |<<ASCIIREQ-VERSIONING-1140>>
 |_Requirement version synchronized with document_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1150>>
+|_Document version bumping_
 |0.1
 
 |<<ASCIIREQ-VERSIONING-1160>>
@@ -1968,8 +1983,9 @@ h|Version
 |_Versioned requirement references_
 |0.1
 
-.16+|<<ASCIIREQ-READER>>
-.16+|_AsciiReq reader_
+.18+|<<ASCIIREQ-READER>>
+.18+|_AsciiReq reader_
+
 |<<ASCIIREQ-DOC-0110>>
 |_AsciiDoc includes_
 |0.1
@@ -2028,6 +2044,14 @@ h|Version
 
 |<<ASCIIREQ-TRACEABILITY-1010>>
 |_Specialized ``Refers`` requirement attribute_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1100>>
+|_Document version_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1120>>
+|_Requirement version attribute_
 |0.1
 
 |<<ASCIIREQ-VERSIONING-1190>>
