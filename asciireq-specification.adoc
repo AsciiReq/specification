@@ -1846,6 +1846,220 @@ h|Identifier
 h|Title
 h|Version
 
+.33+|<<ASCIIREQ-WRITER>>
+.33+|_AsciiReq writer_
+|<<ASCIIREQ-DOC-0100>>
+|_``.adoc`` file name extension_
+|0.1
+
+|<<ASCIIREQ-DOC-0110>>
+|_AsciiDoc includes_
+|0.1
+
+|<<ASCIIREQ-HEADER-0200>>
+|_AsciiReq version declaration_
+|0.1
+
+|<<ASCIIREQ-HEADER-0220>>
+|_AsciiReq versioned URLs_
+|0.1
+
+|<<ASCIIREQ-ITEM-0300>>
+|_AsciiReq item_
+|0.1
+
+|<<ASCIIREQ-ITEM-0310>>
+|_AsciiReq item compound content_
+|0.1
+
+|<<ASCIIREQ-ID-0400>>
+|_AsciiReq item identifier_
+|0.1
+
+|<<ASCIIREQ-ID-0410>>
+|_AsciiReq item identifier authorized characters_
+|0.1
+
+|<<ASCIIREQ-ID-0420>>
+|_AsciiReq item identifier unicity_
+|0.1
+
+|<<ASCIIREQ-TITLE-0500>>
+|_AsciiReq item title_
+|0.1
+
+|<<ASCIIREQ-TITLE-0510>>
+|_Requirement title recommendation_
+|0.1
+
+|<<ASCIIREQ-TITLE-0520>>
+|_One line heading style_
+|0.1
+
+|<<ASCIIREQ-TITLE-0530>>
+|_Requirement item title decoration_
+|0.1
+
+|<<ASCIIREQ-BODY-0600>>
+|_AsciiReq item body_
+|0.1
+
+|<<ASCIIREQ-ATTRIBUTES-0700>>
+|_AsciiReq requirement attributes_
+|0.1
+
+|<<ASCIIREQ-ATTRIBUTES-0710>>
+|_AsciiReq requirement attribute name uniqueness_
+|0.1
+
+|<<ASCIIREQ-ATTRIBUTES-0720>>
+|_List attributes_
+|0.1
+
+|<<ASCIIREQ-ATTRIBUTES-0730>>
+|_Justified list attributes_
+|0.1
+
+|<<ASCIIREQ-JUSTIFICATIONS-0800>>
+|_Justification as free text_
+|0.1
+
+|<<ASCIIREQ-XREF-0900>>
+|_AsciiReq item cross reference anchor_
+|0.1
+
+|<<ASCIIREQ-XREF-0910>>
+|_AsciiReq item cross reference_
+|0.1
+
+|<<ASCIIREQ-TRACEABILITY-1000>>
+|_``Refers`` requirement attribute_
+|0.1
+
+|<<ASCIIREQ-TRACEABILITY-1010>>
+|_Specialized ``Refers`` requirement attribute_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1100>>
+|_Document version_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1110>>
+|_SemVer requirement versions_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1120>>
+|_Requirement version attribute_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1130>>
+|_SemVer requirement versions_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1140>>
+|_Requirement version synchronized with document_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1150>>
+|_Document version bumping_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1160>>
+|_Version update on significant changes_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1170>>
+|_Typos & requirement version_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1180>>
+|_Cosmetic rewordings & requirement version_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1190>>
+|_Versioned requirement references_
+|0.1
+
+.17+|<<ASCIIREQ-READER>>
+.17+|_AsciiReq reader_
+|<<ASCIIREQ-DOC-0110>>
+|_AsciiDoc includes_
+|0.1
+
+|<<ASCIIREQ-HEADER-0210>>
+|_AsciiReq version processing_
+|0.1
+
+|<<ASCIIREQ-HEADER-0220>>
+|_AsciiReq versioned URLs_
+|0.1
+
+|<<ASCIIREQ-HEADER-0230>>
+|_AsciiReq URL fetching_
+|0.1
+
+|<<ASCIIREQ-ITEM-0300>>
+|_AsciiReq item_
+|0.1
+
+|<<ASCIIREQ-ITEM-0310>>
+|_AsciiReq item compound content_
+|0.1
+
+|<<ASCIIREQ-ID-0400>>
+|_AsciiReq item identifier_
+|0.1
+
+|<<ASCIIREQ-TITLE-0500>>
+|_AsciiReq item title_
+|0.1
+
+|<<ASCIIREQ-TITLE-0540>>
+|_Decorated title parsing_
+|0.1
+
+|<<ASCIIREQ-BODY-0600>>
+|_AsciiReq item body_
+|0.1
+
+|<<ASCIIREQ-ATTRIBUTES-0700>>
+|_AsciiReq requirement attributes_
+|0.1
+
+|<<ASCIIREQ-ATTRIBUTES-0720>>
+|_List attributes_
+|0.1
+
+|<<ASCIIREQ-ATTRIBUTES-0730>>
+|_Justified list attributes_
+|0.1
+
+|<<ASCIIREQ-TRACEABILITY-1000>>
+|_``Refers`` requirement attribute_
+|0.1
+
+|<<ASCIIREQ-TRACEABILITY-1010>>
+|_Specialized ``Refers`` requirement attribute_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1100>>
+|_Document version_
+|0.1
+
+|<<ASCIIREQ-VERSIONING-1190>>
+|_Versioned requirement references_
+|0.1
+
+|===
+2+h|Actors
+3+h|Requirements
+
+h|Identifier
+h|Title
+h|Identifier
+h|Title
+h|Version
+
 .30+|<<ASCIIREQ-WRITER>>
 .30+|_AsciiReq writer_
 |<<ASCIIREQ-DOC-0100>>
