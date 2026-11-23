@@ -1303,7 +1303,7 @@ giving its version.
 Let's formally identify the version of an AsciiReq document as <<ASCIIREQ-DOCUMENT-VERSION>>.
 
 [#ASCIIREQ-VERSIONING-1110, reftext="ASCIIREQ-VERSIONING-1110", .req]
-ASCIIREQ-VERSIONING-1110:: _SemVer requirement versions_
+ASCIIREQ-VERSIONING-1110:: _SemVer document versions_
 +
 --
 <<ASCIIREQ-DOCUMENT-VERSION>>s
@@ -1776,7 +1776,7 @@ a|
 * <<ASCIIREQ-READER>>
 
 |<<ASCIIREQ-VERSIONING-1110>>
-|_SemVer requirement versions_
+|_SemVer document versions_
 |0.1
 a|
 * <<ASCIIREQ-WRITER>>
@@ -1948,7 +1948,7 @@ h|Version
 |0.1
 
 |<<ASCIIREQ-VERSIONING-1110>>
-|_SemVer requirement versions_
+|_SemVer document versions_
 |0.1
 
 |<<ASCIIREQ-VERSIONING-1120>>
