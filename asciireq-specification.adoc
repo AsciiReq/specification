@@ -492,7 +492,7 @@ The single <<ASCIIDOC>> custom attribute defined for <<ASCIIREQ>>
 gives the AsciiReq version used to write the current document.
 
 [#ASCIIREQ-HEADER-0200, reftext="ASCIIREQ-HEADER-0200", .req]
-ASCIIREQ-HEADER-0200:: _<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> declaration_
+ASCIIREQ-HEADER-0200:: _AsciiReq version declaration_
 +
 --
 When writing an <<ASCIIREQ-DOCUMENT>>,
@@ -519,7 +519,7 @@ can figure out which version of AsciiReq it is working with
 as specified in <<ASCIIREQ-HEADER-0210>>.
 
 [#ASCIIREQ-HEADER-0210, reftext="ASCIIREQ-HEADER-0210", .req]
-ASCIIREQ-HEADER-0210:: _<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> processing_
+ASCIIREQ-HEADER-0210:: _AsciiReq version processing_
 +
 --
 An <<ASCIIREQ-READER>>,
@@ -1581,13 +1581,13 @@ a|
 * <<ASCIIREQ-READER>>
 
 |<<ASCIIREQ-HEADER-0200>>
-|_<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> declaration_
+|_AsciiReq version declaration_
 |0.1
 a|
 * <<ASCIIREQ-WRITER>>
 
 |<<ASCIIREQ-HEADER-0210>>
-|_<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> processing_
+|_AsciiReq version processing_
 |0.1
 a|
 * <<ASCIIREQ-READER>>
@@ -1824,7 +1824,7 @@ a|
 |
 
 |<<ASCIIREQ-HEADER-0200>>
-|_<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> declaration_
+|_AsciiReq version declaration_
 |0.1
 |
 
@@ -1971,7 +1971,7 @@ a|
 |
 
 |<<ASCIIREQ-HEADER-0210>>
-|_<<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> processing_
+|_AsciiReq version processing_
 |0.1
 |
 
