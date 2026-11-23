@@ -298,6 +298,7 @@ and stating consequently that the <<ASCIIDOC>> document is actually an <<ASCIIRE
 --
 
 [#ASCIIREQ-DOCUMENT-VERSION, reftext="ASCIIREQ-DOCUMENT-VERSION", .req-data]
+ASCIIREQ-DOCUMENT-VERSION:: _AsciiReq document version_
 +
 --
 Version of an <<ASCIIREQ-DOCUMENT>>,
@@ -396,6 +397,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 === Common attributes
 
 [#ASCIIREQ-REQUIREMENT-VERSION, reftext="ASCIIREQ-REQUIREMENT-VERSION", .req-data]
+ASCIIREQ-REQUIREMENT-VERSION:: _AsciiReq requirement version_
 +
 --
 Version of an <<ASCIIREQ-DOCUMENT>>,
