@@ -513,10 +513,9 @@ used to write the <<ASCIIREQ-DOCUMENT>>.
 
 Let's formally identify the `:asciireq-version:` document attribute as <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>>.
 
-The usage of the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> is REQUIRED on purpose,
+The usage of the <<ASCIIREQ-VERSION-DOCUMENT-ATTRIBUTE>> is required on purpose,
 so that an <<ASCIIREQ-READER>>
-can figure out which version of AsciiReq it is working with
-as specified in <<ASCIIREQ-HEADER-0210>>.
+can figure out which version of AsciiReq it is working with.
 
 [#ASCIIREQ-HEADER-0210, reftext="ASCIIREQ-HEADER-0210", .req]
 ASCIIREQ-HEADER-0210:: _AsciiReq version processing_
