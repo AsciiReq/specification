@@ -1,0 +1,63 @@
+[#general-syntax]
+= General AsciiDoc syntax
+
+The AsciiReq format must enable
+the processing of requirement documents
+in a fast and deterministic way.
+
+[#ASCIIREQ-ITEM-0300, reftext="ASCIIREQ-ITEM-0300", .req]
+ASCIIREQ-ITEM-0300:: _AsciiReq item_
++
+--
+Inside an <<ASCIIREQ-DOCUMENT>>,
+an AsciiReq item is defined
+as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list] item
+with an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/role/[role]
+assigned to it.
+
+The <<ASCIIDOC>> role assigned MUST be one of :
+
+`.req-ref`:: The `.req-ref` <<ASCIIDOC>> role defines a foreign reference.
+`.req-actor`:: The `.req-actor` <<ASCIIDOC>> role defines a formal AsciiReq actor.
+`.req-data`:: The `.req-data` <<ASCIIDOC>> role defines a formal AsciiReq data.
+`.req`:: The `.req` <<ASCIIDOC>> role defines an AsciiReq requirement.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify:
+
+* an AsciiReq item as <<ASCIIREQ-ITEM>>,
+* a formal actor as <<ASCIIREQ-ACTOR>>,
+* a formal data as <<ASCIIREQ-DATA>>,
+* a requirement as <<ASCIIREQ-REQUIREMENT>>,
+* a foreign reference as <<ASCIIREQ-REF>>.
+
+The following requirement ensures
+that the whole content of an <<ASCIIREQ-ITEM>>
+remains _AsciiDoc-ly_ attached to it.
+
+[#ASCIIREQ-ITEM-0310, reftext="ASCIIREQ-ITEM-0310", .req]
+ASCIIREQ-ITEM-0310:: _AsciiReq item compound content_
++
+--
+The _description_
+(as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy]
+of an <<ASCIIDOC>> description list item)
+of an <<ASCIIREQ-ITEM>>
+MUST be link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[compound].
+
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/#list-continuation[List continuations]
+(i.e. `+` lines)
+MUST be used to ensure the continuation of the _description_.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify the compound content of an AsciiReq item as <<ASCIIREQ-COMPOUND-CONTENT>>.

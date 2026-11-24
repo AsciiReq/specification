@@ -1,0 +1,42 @@
+[#asciireq-document-extension]
+= File extension
+
+The following recommendation makes the <<ASCIIREQ-DOCUMENT>>
+compatible with general <<ASCIIDOC-RENDERER>>s.
+
+[#ASCIIREQ-DOC-0100, reftext="ASCIIREQ-DOC-0100", .req]
+ASCIIREQ-DOC-0100:: _``.adoc`` file name extension_
++
+--
+When writing an <<ASCIIREQ-DOCUMENT>>,
+it is RECOMMENDED that the file name extension of the <<ASCIIREQ-DOCUMENT>>
+is `.adoc`.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Splitting a large specification document in different files
+generally helps for maintenance.
+
+[#ASCIIREQ-DOC-0110, reftext="ASCIIREQ-DOC-0110", .req]
+ASCIIREQ-DOC-0110:: _AsciiDoc includes_
++
+--
+An <<ASCIIREQ-DOCUMENT>>
+MAY be defined with different `.adoc` files
+using the <<ASCIIDOC>> ability
+to link:https://docs.asciidoctor.org/asciidoc/latest/directives/include/[include files].
+
+To read the full <<ASCIIREQ-DOCUMENT>>,
+an <<ASCIIREQ-READER>>
+MUST process the <<ASCIIDOC>> include directives.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify an AsciiReq document as <<ASCIIREQ-DOCUMENT>>.

@@ -1,0 +1,28 @@
+[#body]
+= Body
+
+The requirement body then gives the full text of the requirement.
+
+[#ASCIIREQ-BODY-0600, reftext="ASCIIREQ-BODY-0600", .req]
+ASCIIREQ-BODY-0600:: _AsciiReq item body_
++
+--
+The REQUIRED body of an <<ASCIIREQ-ITEM>> is given
+as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
+in the <<ASCIIREQ-COMPOUND-CONTENT>>.
+
+There MUST be only one <<ASCIIDOC>> open block
+at the root level of the <<ASCIIREQ-COMPOUND-CONTENT>>
+of an <<ASCIIREQ-ITEM>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify the body of an AsciiReq item as <<ASCIIREQ-BODY>>.
+
+Defining the requirement body as an open block makes it possible to
+write it freely with several paragraphs,
+and use any AsciiDoc formatting (lists, tables, admonitions, ...).

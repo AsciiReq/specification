@@ -455,6 +455,7 @@ The requirements defining the AsciiReq format are listed below.
 [#asciireq-document]
 === AsciiReq document
 
+
 [#asciireq-document-extension]
 ==== File extension
 
@@ -497,6 +498,7 @@ MUST process the <<ASCIIDOC>> include directives.
 ** <<ASCIIREQ-READER>>
 
 Let's formally identify an AsciiReq document as <<ASCIIREQ-DOCUMENT>>.
+
 
 
 [#asciireq-document-header]
@@ -629,8 +631,11 @@ See:
 * <<ASCIIREQ-DOCUMENT-VERSION>>
 
 
+
+
 [#asciireq-items]
 === AsciiReq items
+
 
 [#general-syntax]
 ==== General AsciiDoc syntax
@@ -695,6 +700,7 @@ MUST be used to ensure the continuation of the _description_.
 ** <<ASCIIREQ-READER>>
 
 Let's formally identify the compound content of an AsciiReq item as <<ASCIIREQ-COMPOUND-CONTENT>>.
+
 
 
 [#identifier]
@@ -771,6 +777,7 @@ in an <<ASCIIREQ-DOCUMENT>>.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+
 
 
 [#title]
@@ -922,6 +929,7 @@ to parse the <<ASCIIREQ-TITLE>>.
 ** <<ASCIIREQ-READER>>
 
 
+
 [#body]
 ==== Body
 
@@ -950,6 +958,7 @@ Let's formally identify the body of an AsciiReq item as <<ASCIIREQ-BODY>>.
 Defining the requirement body as an open block makes it possible to
 write it freely with several paragraphs,
 and use any AsciiDoc formatting (lists, tables, admonitions, ...).
+
 
 
 [#attributes]
@@ -1073,6 +1082,8 @@ below the justified items.
 ** <<ASCIIREQ-READER>>
 
 
+
+
 [#justifications]
 === Justifications
 
@@ -1099,6 +1110,7 @@ Apart from <<ASCIIREQ-BODY>> justifications,
 dedicated justifications
 may also be attached with <<ASCIIREQ-ATTRIBUTE>>s
 (see <<ASCIIREQ-TRACEABILITY-1000>> for instance).
+
 
 
 [#cross-references]
@@ -1201,6 +1213,7 @@ Still, it creates a pitfall, and errors can be made, but it is assumed.
 ====
 
 
+
 [#traceability]
 === Traceability
 
@@ -1287,6 +1300,7 @@ Nevertheless:
   practical for humans.
 * It also prepares maintainability
   in case other sets of <<ASCIIREQ-REF>> coverage are added in the future.
+
 
 
 [#versioning]
@@ -1506,6 +1520,7 @@ of the foreign <<ASCIIREQ-REQUIREMENT>>.
 See the <<introduction-example, introduction example>>.
 
 
+
 [#scenario-specification]
 === Scenario specification
 
@@ -1514,6 +1529,7 @@ Not covered yet.
 Shall be specified
 in a future version of AsciiReq
 (see issue link:https://github.com/AsciiReq/specification/issues/3[#3]).
+
 
 
 
