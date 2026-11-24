@@ -1,0 +1,85 @@
+= Design of the `asciireq-publish` tool
+:toc:
+
+== Purpose
+
+`scripts/publish/` is a self-contained npm package holding the publish tool:
+`asciireq-publish.js`, `package.json` and `package-lock.json`.
+
+The specification sources live in `src/`, split into one `.adoc` file per
+section, included from `src/asciireq-specification.adoc` with
+`include::...[leveloffset=+1]` directives.
+GitHub does not resolve AsciiDoc `include::` directives when rendering `.adoc`
+files, so the tool publishes self-contained copies at the repository root
+(`README.adoc` and `asciireq-specification.adoc`) with all includes resolved,
+and removes stale root-level `.adoc` files.
+
+Usage:
+
+----
+cd scripts/publish
+npm install
+npm run publish
+----
+
+== Why not a single asciidoctor built-in call?
+
+Include resolution itself is an asciidoctor built-in, already used by the
+tool: it drives asciidoctor's own `PreprocessorReader`
+(`asciidoctor.PreprocessorReader.$new(doc, content, cursor)`, then reads lines
+to exhaustion). `resolveIncludes()` does not re-implement include resolution.
+
+However, asciidoctor offers no built-in that writes the resolved document back
+as AsciiDoc source:
+
+* the CLI and `convertFile()` resolve includes only at conversion time, and
+  only into backend output (html5, docbook5, manpage): `-b asciidoc` fails
+  with "missing converter for backend 'asciidoc'", and there is no
+  "dump resolved source" option;
+* publishing a self-contained `.adoc` file therefore requires reading the
+  preprocessed lines ourselves.
+
+== Why the `env-github` conditional is protected
+
+The preprocessor always evaluates `ifdef::` / `ifndef::` directives; there is
+no "pass-through" mode. Without protection, the
+`ifdef::env-github[]` / `ifndef::env-github[]` block of
+`src/asciireq-specification.adoc` (the GitHub rendering hack for Mermaid
+diagrams) would be collapsed to a single `:MERMAID:` line in the published
+file, and the hack would stop working on GitHub.
+
+The tool therefore hides those blocks behind placeholder comment lines before
+preprocessing and restores them verbatim afterwards, so the hack remains
+active in the published file: `MERMAID` resolves to `source, mermaid` when
+`env-github` is set (GitHub rendering) and to `mermaid` otherwise.
+
+== Why `applyLevelOffsets()` is needed
+
+Included files start with a level 1 title and are included with
+`leveloffset=+1`; nested includes accumulate the offset. The
+`PreprocessorReader` handles `leveloffset` by emitting `:leveloffset: +N` /
+`:leveloffset!:` attribute markers around the included content instead of
+rewriting the titles.
+
+In a flattened file that is re-parsed standalone (as GitHub does), those
+markers do not accumulate across sibling nested includes: each
+`:leveloffset!:` resets the offset to 0. Reproduced with
+`main -> chapter[leveloffset=+1] -> part1[+1] / part2[+1]`: the markers-only
+flattened file parses `Part2` at level 1 instead of level 2.
+
+`applyLevelOffsets()` therefore bakes the accumulated offset into the `=`
+count of each section title (simulating the push/pop of the markers with a
+stack) and drops the marker lines. The published file thus contains no
+`:leveloffset:` markers and is structurally identical to a hand-written
+monolith: parsing the published `asciireq-specification.adoc` yields the same
+33 sections (level, id, title) as the previously published single file.
+
+== Verification
+
+* `npm run publish` is idempotent: running it twice leaves the tree unchanged;
+* published files contain no `include::` directive (the tool throws an error
+  otherwise);
+* the published `asciireq-specification.adoc` parses to the same 33 sections
+  as before the split, with the `env-github` hack present and `MERMAID`
+  resolving to `source, mermaid` with `env-github` set and to `mermaid`
+  without it.
