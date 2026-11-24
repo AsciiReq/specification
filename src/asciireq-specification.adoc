@@ -13,14 +13,14 @@ ifndef::env-github[]
 :MERMAID: mermaid
 endif::[]
 
-include::about.adoc[]
+include::about.adoc[leveloffset=+1]
 
-include::actors.adoc[]
+include::actors.adoc[leveloffset=+1]
 
-include::data.adoc[]
+include::data.adoc[leveloffset=+1]
 
-include::requirements.adoc[]
+include::requirements.adoc[leveloffset=+1]
 
-include::references.adoc[]
+include::references.adoc[leveloffset=+1]
 
-include::tables.adoc[]
+include::tables.adoc[leveloffset=+1]

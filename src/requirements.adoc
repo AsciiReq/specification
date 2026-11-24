@@ -1,14 +1,14 @@
 [#requirements]
-== Requirements
+= Requirements
 
 The requirements defining the AsciiReq format are listed below.
 
 
 [#asciireq-document]
-=== AsciiReq document
+== AsciiReq document
 
 [#asciireq-document-extension]
-==== File extension
+=== File extension
 
 The following recommendation makes the <<ASCIIREQ-DOCUMENT>>
 compatible with general <<ASCIIDOC-RENDERER>>s.
@@ -52,7 +52,7 @@ Let's formally identify an AsciiReq document as <<ASCIIREQ-DOCUMENT>>.
 
 
 [#asciireq-document-header]
-==== Document header
+=== Document header
 
 In order to make it clear
 that an AsciiDoc document contains AsciiReq content,
@@ -182,10 +182,10 @@ See:
 
 
 [#asciireq-items]
-=== AsciiReq items
+== AsciiReq items
 
 [#general-syntax]
-==== General AsciiDoc syntax
+=== General AsciiDoc syntax
 
 The AsciiReq format must enable
 the processing of requirement documents
@@ -250,7 +250,7 @@ Let's formally identify the compound content of an AsciiReq item as <<ASCIIREQ-C
 
 
 [#identifier]
-==== Identifier
+=== Identifier
 
 Requirement management commonly requires
 that requirements be identified
@@ -326,7 +326,7 @@ in an <<ASCIIREQ-DOCUMENT>>.
 
 
 [#title]
-==== Title
+=== Title
 
 It is usually practical to define requirement titles,
 i.e. a short phrase summarizing
@@ -475,7 +475,7 @@ to parse the <<ASCIIREQ-TITLE>>.
 
 
 [#body]
-==== Body
+=== Body
 
 The requirement body then gives the full text of the requirement.
 
@@ -505,7 +505,7 @@ and use any AsciiDoc formatting (lists, tables, admonitions, ...).
 
 
 [#attributes]
-==== Attributes
+=== Attributes
 
 It is common in requirement management
 to use additional attributes
@@ -626,7 +626,7 @@ below the justified items.
 
 
 [#justifications]
-=== Justifications
+== Justifications
 
 [#ASCIIREQ-JUSTIFICATIONS-0800, reftext="ASCIIREQ-JUSTIFICATIONS-0800", .req]
 ASCIIREQ-JUSTIFICATIONS-0800:: _Justification as free text_
@@ -654,7 +654,7 @@ may also be attached with <<ASCIIREQ-ATTRIBUTE>>s
 
 
 [#cross-references]
-=== Cross references
+== Cross references
 
 Cross references may be convenient to help humans
 navigate within an AsciiReq document.
@@ -754,7 +754,7 @@ Still, it creates a pitfall, and errors can be made, but it is assumed.
 
 
 [#traceability]
-=== Traceability
+== Traceability
 
 Traceability is one of the main goals of requirement management.
 
@@ -842,7 +842,7 @@ Nevertheless:
 
 
 [#versioning]
-=== Requirement versioning
+== Requirement versioning
 
 Requirement management commonly requires that requirements be versioned.
 
@@ -1059,7 +1059,7 @@ See the <<introduction-example, introduction example>>.
 
 
 [#scenario-specification]
-=== Scenario specification
+== Scenario specification
 
 Not covered yet.
 

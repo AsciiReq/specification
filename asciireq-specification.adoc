@@ -8,6 +8,7 @@
 // Inspired from https://github.com/orgs/community/discussions/106933#discussioncomment-14246791
 :MERMAID: source, mermaid
 
+
 [#about]
 == About this document
 
@@ -222,6 +223,8 @@ for the understanding of the capitalized keywords
 
 AsciiReq versions follow <<SEMVER>> rules.
 
+
+
 [#actors]
 == Actors
 
@@ -265,6 +268,8 @@ Examples:
 * Git platforms, such as link:https://github.com/[GitHub]
 * ...
 --
+
+
 
 [#data]
 == Data
@@ -427,6 +432,8 @@ ASCIIREQ-CROSS-REFERENCE:: _AsciiReq item cross reference_
 Cross reference to an <<ASCIIREQ-ANCHOR>>
 as of <<ASCIIREQ-XREF-0910>>.
 --
+
+
 
 [#requirements]
 == Requirements
@@ -1497,6 +1504,8 @@ Shall be specified
 in a future version of AsciiReq
 (see issue link:https://github.com/AsciiReq/specification/issues/3[#3]).
 
+
+
 [#references]
 [appendix]
 == References
@@ -1572,6 +1581,8 @@ SEMVER:: _Semantic Versioning 2.0.0_
 --
 See https://semver.org/spec/v2.0.0.html.
 --
+
+
 
 [#tables]
 [appendix]
@@ -2048,3 +2059,4 @@ h|Version
 |0.1
 
 |===
+

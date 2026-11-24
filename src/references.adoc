@@ -1,6 +1,6 @@
 [#references]
 [appendix]
-== References
+= References
 
 [#ASCIIDOC, reftext="ASCIIDOC", .req-ref]
 ASCIIDOC:: _AsciiDoc_

@@ -1,12 +1,12 @@
 [#data]
-== Data
+= Data
 
 The following data definitions help writing this specification
 in a more formal way.
 
 
 [#data-document]
-=== AsciiReq document
+== AsciiReq document
 
 [#ASCIIREQ-DOCUMENT, reftext="ASCIIREQ-DOCUMENT", .req-data]
 ASCIIREQ-DOCUMENT:: _AsciiReq document_
@@ -40,7 +40,7 @@ as of <<ASCIIREQ-VERSIONING-1100>>.
 
 
 [#data-items]
-=== AsciiReq items
+== AsciiReq items
 
 [#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
 ASCIIREQ-ITEM:: _AsciiReq item_
@@ -82,7 +82,7 @@ ASCIIREQ-REF:: _AsciiReq foreign reference_
 
 
 [#data-item-parts]
-=== AsciiReq item parts
+== AsciiReq item parts
 
 [#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
 ASCIIREQ-IDENTIFIER:: _AsciiReq item identifier_
@@ -130,7 +130,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 
 
 [#data-attributes]
-=== Common attributes
+== Common attributes
 
 [#ASCIIREQ-REQUIREMENT-VERSION, reftext="ASCIIREQ-REQUIREMENT-VERSION", .req-data]
 ASCIIREQ-REQUIREMENT-VERSION:: _AsciiReq requirement version_
@@ -142,7 +142,7 @@ as of <<ASCIIREQ-VERSIONING-1120>>.
 
 
 [#data-cross-references]
-=== AsciiReq cross references
+== AsciiReq cross references
 
 [#ASCIIREQ-ANCHOR, reftext="ASCIIREQ-ANCHOR", .req-data]
 ASCIIREQ-ANCHOR:: _AsciiReq item anchor_

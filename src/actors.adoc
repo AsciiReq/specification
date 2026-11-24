@@ -1,5 +1,5 @@
 [#actors]
-== Actors
+= Actors
 
 The following actors interact with AsciiReq specifications.
 
