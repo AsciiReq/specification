@@ -113,3 +113,6 @@ The `.adoc` files at the root of this repository are published copies,
 generated from `src/` with `make publish` (e.g. for direct reading on GitHub).
 Do not edit the root files directly:
 edit the sources in `src/`, then run `make publish`.
+
+The specification itself is split into one `.adoc` file per section,
+included from `src/asciireq-specification.adoc`.
