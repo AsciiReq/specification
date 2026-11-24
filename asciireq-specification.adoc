@@ -1615,6 +1615,7 @@ See https://semver.org/spec/v2.0.0.html.
 [appendix]
 == Tables
 
+
 [#tables-requirements]
 === Requirements
 
@@ -1861,6 +1862,7 @@ a|
 |===
 
 
+
 [#tables-requirements-by-actors]
 === Requirements by actors
 
@@ -2086,4 +2088,5 @@ h|Version
 |0.1
 
 |===
+
 
