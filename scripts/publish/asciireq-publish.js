@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const asciidoctor = require('asciidoctor')();
 
-const rootDir = path.resolve(__dirname);
+const rootDir = path.resolve(__dirname, '..', '..');
 const srcDir = path.join(rootDir, 'src');
 const publishedFiles = ['README.adoc', 'asciireq-specification.adoc'];
 

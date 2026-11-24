@@ -3,7 +3,7 @@
   "private": true,
   "description": "AsciiReq - Requirements with AsciiDoc",
   "scripts": {
-    "publish": "node publish.js"
+    "publish": "node scripts/publish/asciireq-publish.js"
   },
   "devDependencies": {
     "asciidoctor": "^3.0.0"
