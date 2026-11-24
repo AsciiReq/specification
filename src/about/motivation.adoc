@@ -1,0 +1,34 @@
+[#motivation]
+= Motivation
+
+One major interest of defining a specification format
+based upon a plain text technology
+such as <<ASCIIDOC>>
+is that it makes it compatible with source code management tools
+like <<GIT>>.
+Doing so, lots of aspects become easier:
+
+* modification history,
+* collaborative working,
+* branches,
+* versioning,
+* ...
+
+Furthermore,
+<<MERMAID>> diagrams,
+being a plain text technology as well,
+integrate naturally with AsciiDoc,
+which makes great sense when writing specifications.
+
+Using <<ASCIIDOC>>
+instead of <<MARKDOWN>>
+is motivated by the fact that AsciiDoc comes with a couple of native key features
+which make it easier to write and maintain large technical documentations:
+
+* automatic link:https://docs.asciidoctor.org/asciidoc/latest/toc/[table of content],
+* automatic link:https://docs.asciidoctor.org/asciidoc/latest/sections/numbers/[section numbers]
+* link:https://docs.asciidoctor.org/asciidoc/latest/directives/include/[includes]
+  which make it possible to split a large document,
+* better link:https://docs.asciidoctor.org/asciidoc/latest/tables/build-a-basic-table/[table] management in smaller lines,
+* better link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross-reference] support,
+* ...

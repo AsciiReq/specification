@@ -1,0 +1,92 @@
+[#purpose]
+= Purpose
+
+This document specifies the AsciiReq format,
+used to write requirements with AsciiDoc.
+
+An AsciiReq document is a regular AsciiDoc document.
+Requirements are written inside it, following the conventions defined below,
+so that they can be identified, referenced and processed by tier tools.
+
+The following example shows the format in action:
+
+[#introduction-example]
+[example]
+.Introduction example
+====
+AsciiReq syntax:
+
+[source, asciidoc]
+----
+[#REQ-010, reftext="REQ-010", .req]
+REQ-010:: _Requirement title_
++
+--
+Text defining the requirement body.
+
+The requirement body may contain several paragraphs.
+
+It may also use regular AsciiDoc formatting syntax
+(such as lists, tables, admonitions, ...)
+--
++
+* *Version:* 1.0
+* *Refers:*
+** UPPER-REQ-100 - 1.2
+*** Coverage justification.
+----
+
+Regular AsciiDoc rendering:
+
+****
+[#REQ-010, reftext="REQ-010", .req]
+REQ-010:: _Requirement title_
++
+--
+Text defining the requirement body.
+
+The requirement body may contain several paragraphs.
+
+It may also use regular AsciiDoc formatting syntax
+(such as lists, tables, admonitions, ...)
+--
++
+* *Version:* 1.0
+* *Refers:*
+** UPPER-REQ-100 - 1.2
+*** Coverage justification.
+****
+====
+
+The following sequence diagram shows a typical workflow
+involving the actors of the AsciiReq format:
+
+[{MERMAID}]
+....
+sequenceDiagram
+
+participant ASCIIREQ-WRITER
+participant ASCIIREQ-DOCUMENT
+participant ASCIIDOC-RENDERER
+participant ASCIIREQ-READER as Tool (ASCIIREQ-READER)
+actor Human
+
+Note over ASCIIREQ-WRITER,ASCIIREQ-DOCUMENT: Document creation
+ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: Create
+activate ASCIIREQ-DOCUMENT
+ASCIIREQ-WRITER->>ASCIIREQ-DOCUMENT: Update
+
+Note over ASCIIREQ-DOCUMENT,Human: Raw AsciiReq reading
+Human->>ASCIIREQ-DOCUMENT: Read (as AsciiReq)
+
+Note over ASCIIREQ-DOCUMENT,Human: AsciiDoc rendering
+Human->>ASCIIDOC-RENDERER: Use
+ASCIIDOC-RENDERER->>ASCIIREQ-DOCUMENT: Read (as AsciiDoc)
+ASCIIDOC-RENDERER-->>Human: Deliver AsciiDoc display
+
+Note over ASCIIREQ-DOCUMENT,ASCIIREQ-READER: Document processing with tools
+ASCIIREQ-READER->>ASCIIREQ-DOCUMENT: Read (as AsciiReq)
+ASCIIREQ-READER-->>ASCIIREQ-READER: Process a task
+
+deactivate ASCIIREQ-DOCUMENT
+....

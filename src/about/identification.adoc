@@ -1,0 +1,20 @@
+[#document-identification]
+= Identification
+
+[cols="1,5"]
+|===
+|Name|
+{doctitle}
+
+|Authors|
+link:https://github.com/alxroyer[alxroyer]
+
+|Version|
+{revnumber}
+
+|Date|
+{revdate}
+
+|URL|
+https://github.com/AsciiReq/specification/blob/{revnumber}/asciireq-specification.adoc
+|===
