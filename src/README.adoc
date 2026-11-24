@@ -14,48 +14,7 @@ but are expected as tier tools.
 
 == Example
 
-AsciiReq syntax:
-
-[source, asciidoc]
-----
-[#REQ-010, reftext="REQ-010", .req]
-REQ-010:: _Requirement title_
-+
---
-Text defining the requirement body.
-
-The requirement body may contain several paragraphs.
-
-It may also use regular AsciiDoc formatting syntax
-(such as lists, tables, admonitions, ...)
---
-+
-* *Version:* 1.0
-* *Refers:*
-** UPPER-REQ-100 - 1.2
-*** Coverage justification.
-----
-
-Regular AsciiDoc rendering:
-
-****
-[#REQ-010, reftext="REQ-010", .req]
-REQ-010:: _Requirement title_
-+
---
-Text defining the requirement body.
-
-The requirement body may contain several paragraphs.
-
-It may also use regular AsciiDoc formatting syntax
-(such as lists, tables, admonitions, ...)
---
-+
-* *Version:* 1.0
-* *Refers:*
-** UPPER-REQ-100 - 1.2
-*** Coverage justification.
-****
+include::examples/introduction-example.adoc[]
 
 [NOTE]
 ====
