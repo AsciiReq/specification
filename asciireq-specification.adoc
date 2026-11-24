@@ -1,7 +1,7 @@
 = AsciiReq specification version 0.1
 :asciireq-version: https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
-:revnumber: 0.1.0
-:revdate: 2026-11-23
+:revnumber: 0.1.1
+:revdate: TODO
 :sectnums:
 :toc:
 :toclevels: 5
