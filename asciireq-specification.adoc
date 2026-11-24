@@ -318,6 +318,7 @@ as of <<ASCIIREQ-VERSIONING-1100>>.
 --
 
 
+
 [#data-items]
 === AsciiReq items
 
@@ -358,6 +359,7 @@ ASCIIREQ-REF:: _AsciiReq foreign reference_
 --
 <<ASCIIREQ-ITEM>> for a foreign reference definition (as of <<ASCIIREQ-ITEM-0300>>).
 --
+
 
 
 [#data-item-parts]
@@ -408,6 +410,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
 
+
 [#data-attributes]
 === Common attributes
 
@@ -418,6 +421,7 @@ ASCIIREQ-REQUIREMENT-VERSION:: _AsciiReq requirement version_
 Version of an <<ASCIIREQ-DOCUMENT>>,
 as of <<ASCIIREQ-VERSIONING-1120>>.
 --
+
 
 
 [#data-cross-references]
@@ -438,6 +442,7 @@ ASCIIREQ-CROSS-REFERENCE:: _AsciiReq item cross reference_
 Cross reference to an <<ASCIIREQ-ANCHOR>>
 as of <<ASCIIREQ-XREF-0910>>.
 --
+
 
 
 

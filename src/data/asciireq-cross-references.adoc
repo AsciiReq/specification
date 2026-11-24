@@ -1,0 +1,18 @@
+[#data-cross-references]
+= AsciiReq cross references
+
+[#ASCIIREQ-ANCHOR, reftext="ASCIIREQ-ANCHOR", .req-data]
+ASCIIREQ-ANCHOR:: _AsciiReq item anchor_
++
+--
+Anchor set on an <<ASCIIREQ-ITEM>>
+as of <<ASCIIREQ-XREF-0900>>.
+--
+
+[#ASCIIREQ-CROSS-REFERENCE, reftext="ASCIIREQ-CROSS-REFERENCE", .req-data]
+ASCIIREQ-CROSS-REFERENCE:: _AsciiReq item cross reference_
++
+--
+Cross reference to an <<ASCIIREQ-ANCHOR>>
+as of <<ASCIIREQ-XREF-0910>>.
+--
