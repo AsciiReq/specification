@@ -13,7 +13,7 @@ ifndef::env-github[]
 :MERMAID: mermaid
 endif::[]
 
-include::about-this-document.adoc[]
+include::about.adoc[]
 
 include::actors.adoc[]
 
