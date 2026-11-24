@@ -9,16 +9,29 @@ const publishedFiles = ['README.adoc', 'asciireq-specification.adoc'];
 function resolveIncludes(fileName) {
   const docfile = path.join(srcDir, fileName);
   const content = fs.readFileSync(docfile, 'utf8');
+  // Keep the GitHub rendering hack (ifdef::env-github[]) active in the published
+  // file: hide it from the preprocessor, then restore it in the resolved output.
+  const envGithubConditionals = [];
+  const protectedContent = content.replace(
+    /^(?:ifdef|ifndef)::env-github\[\]\n[\s\S]*?^endif::\[\]\n?/gm,
+    (match) => {
+      const placeholder = `// asciireq-publish:keep:${envGithubConditionals.length}\n`;
+      envGithubConditionals.push(match);
+      return placeholder;
+    }
+  );
   const doc = asciidoctor.load('= placeholder\n', {
     safe: 'safe',
     base_dir: srcDir,
-    attributes: { 'env-github': '' },
   });
   const cursor = asciidoctor.Reader.Cursor.$new(docfile, srcDir);
-  const reader = asciidoctor.PreprocessorReader.$new(doc, content, cursor);
+  const reader = asciidoctor.PreprocessorReader.$new(doc, protectedContent, cursor);
   const lines = [];
   while (reader.hasMoreLines()) lines.push(reader.readLine());
-  const resolved = applyLevelOffsets(lines).join('\n') + '\n';
+  let resolved = applyLevelOffsets(lines).join('\n') + '\n';
+  envGithubConditionals.forEach((conditional, index) => {
+    resolved = resolved.replace(`// asciireq-publish:keep:${index}\n`, conditional);
+  });
   if (/^include::/m.test(resolved)) {
     throw new Error(`Unresolved include directive left in ${fileName}`);
   }

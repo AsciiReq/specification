@@ -6,7 +6,12 @@
 :toc:
 :toclevels: 5
 // Inspired from https://github.com/orgs/community/discussions/106933#discussioncomment-14246791
+ifdef::env-github[]
 :MERMAID: source, mermaid
+endif::[]
+ifndef::env-github[]
+:MERMAID: mermaid
+endif::[]
 
 
 [#about]
