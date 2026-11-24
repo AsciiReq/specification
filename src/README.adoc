@@ -30,21 +30,3 @@ include::about/motivation.adoc[leveloffset=+1]
 
 See the link:./asciireq-specification.adoc[full specification]
 written in AsciiReq itself.
-
-
-== Repository layout
-
-Source `.adoc` files live in the `src/` directory.
-The specification is split into one `.adoc` file per section,
-included from `src/asciireq-specification.adoc`.
-
-Only two `.adoc` files are published at the root of this repository:
-`README.adoc` and `asciireq-specification.adoc`.
-They are generated from `src/` with `npm run publish` (after `npm install`),
-which resolves the AsciiDoc `include::` directives with
-link:https://docs.asciidoctor.org/asciidoctor.js/latest/[asciidoctor.js],
-so that the published files are self-contained
-and render correctly on GitHub
-(GitHub does not resolve AsciiDoc includes itself).
-Do not edit the root files directly:
-edit the sources in `src/`, then run `npm run publish`.
