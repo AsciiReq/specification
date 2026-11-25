@@ -14,7 +14,7 @@ The following example shows the format in action:
 [example]
 .Introduction example
 ====
-include::../examples/introduction-example.adoc[]
+include::../examples/introduction.adoc[]
 ====
 
 The following sequence diagram shows a typical workflow

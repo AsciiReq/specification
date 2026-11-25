@@ -14,7 +14,7 @@ but are expected as tier tools.
 
 == Example
 
-include::examples/introduction-example.adoc[]
+include::examples/introduction.adoc[]
 
 [NOTE]
 ====
