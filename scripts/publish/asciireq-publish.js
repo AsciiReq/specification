@@ -50,6 +50,17 @@ function restoreEnvGithubConditionals(resolved, conditionals) {
   return resolved;
 }
 
+/**
+ * Resolves the include directives of the given source file into a
+ * self-contained AsciiDoc document: the `env-github` conditional blocks are
+ * kept unevaluated (see {@link protectEnvGithubConditionals}), includes are
+ * resolved with asciidoctor's `PreprocessorReader`, and the `leveloffset`
+ * markers are applied to the section titles (see {@link applyLevelOffsets}).
+ *
+ * @param {string} fileName - the source file name, relative to `src/`
+ * @returns {string} the published, self-contained content
+ * @throws {Error} if an include directive could not be resolved
+ */
 function resolveIncludes(fileName) {
   const docfile = path.join(srcDir, fileName);
   const { protectedContent, conditionals } = protectEnvGithubConditionals(
@@ -73,9 +84,14 @@ function resolveIncludes(fileName) {
   return resolved;
 }
 
-// The preprocessor marks included files with `:leveloffset:` attribute entries.
-// Apply those offsets to the section titles, so that the published file is
-// self-contained with the final title levels.
+/**
+ * Applies the `:leveloffset:` markers emitted by the preprocessor around
+ * included files to the section titles, so that the published file is
+ * self-contained with the final title levels (and contains no marker).
+ *
+ * @param {string[]} lines - the preprocessed lines, with `:leveloffset:` markers
+ * @returns {string[]} the lines with final title levels, without markers
+ */
 function applyLevelOffsets(lines) {
   const stack = [];
   let offset = 0;
