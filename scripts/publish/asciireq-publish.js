@@ -101,8 +101,59 @@ function applyLevelOffsets(lines) {
   return out;
 }
 
+/**
+ * Loads the AsciiReq reference definitions (`.req-ref` items) from
+ * `src/references.adoc`, as a map of anchor to `{ url, title }`, where `url`
+ * is the first URL found in the reference body and `title` its title.
+ *
+ * @returns {Object<string, {url: string, title: string}>} the references by anchor
+ */
+function loadReferences() {
+  const content = fs.readFileSync(path.join(srcDir, 'references.adoc'), 'utf8');
+  const references = {};
+  const referenceRe = /\[#([A-Z0-9-]+), reftext="[^"]*", \.req-ref\]\n[A-Z0-9-]+:: _([^_]+)_\n\+\n--\n([\s\S]*?)\n--/g;
+  let m;
+  while ((m = referenceRe.exec(content)) !== null) {
+    const urlMatch = m[3].match(/https?:\/\/[^\s]+/);
+    references[m[1]] = {
+      url: urlMatch ? urlMatch[0].replace(/[.,;:)]+$/, '') : '',
+      title: m[2],
+    };
+  }
+  return references;
+}
+
+/**
+ * Replaces the AsciiReq cross-references (`<<ANCHOR>>` or `<<ANCHOR, text>>`)
+ * of the given content with AsciiDoc `link:...` directives, using the
+ * reference definitions loaded from `references.adoc`. Cross-references to
+ * unknown anchors are left unchanged.
+ *
+ * @param {string} content - the resolved AsciiDoc content
+ * @param {Object<string, {url: string, title: string}>} references - the references by anchor
+ * @returns {string} the content with resolved cross-references
+ */
+function resolveAsciiReqReferences(content, references) {
+  return content.replace(/<<([A-Z0-9-]+)(?:,([^>]+))?>>/g, (match, anchor, text) => {
+    const reference = references[anchor];
+    if (!reference || !reference.url) {
+      return match;
+    }
+    const label = text !== undefined ? text.trim() : reference.title;
+    return `link:${reference.url}[${label}]`;
+  });
+}
+
+const references = loadReferences();
+
 for (const fileName of publishedFiles) {
-  fs.writeFileSync(path.join(rootDir, fileName), resolveIncludes(fileName));
+  let content = resolveIncludes(fileName);
+  // README.adoc does not include references.adoc: resolve its AsciiReq
+  // cross-references into link:... directives so that it renders standalone.
+  if (fileName === 'README.adoc') {
+    content = resolveAsciiReqReferences(content, references);
+  }
+  fs.writeFileSync(path.join(rootDir, fileName), content);
   console.log(`published ${fileName}`);
 }
 
