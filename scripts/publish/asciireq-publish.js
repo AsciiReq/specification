@@ -32,7 +32,9 @@ function resolveIncludes(fileName) {
   const cursor = asciidoctor.Reader.Cursor.$new(docfile, srcDir);
   const reader = asciidoctor.PreprocessorReader.$new(doc, protectedContent, cursor);
   const lines = [];
-  while (reader.hasMoreLines()) lines.push(reader.readLine());
+  while (reader.hasMoreLines()) {
+    lines.push(reader.readLine());
+  }
   let resolved = applyLevelOffsets(lines).join('\n') + '\n';
   envGithubConditionals.forEach((conditional, index) => {
     resolved = resolved.replace(`// asciireq-publish:keep:${index}\n`, conditional);
