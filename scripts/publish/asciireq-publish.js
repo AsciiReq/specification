@@ -6,7 +6,10 @@ const asciidoctor = require('asciidoctor')();
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const srcDir = path.join(rootDir, 'src');
-const publishedFiles = ['README.adoc', 'asciireq-specification.adoc'];
+const publishedFiles = [
+  'README.adoc',
+  'asciireq-specification.adoc',
+];
 
 function resolveIncludes(fileName) {
   const docfile = path.join(srcDir, fileName);
