@@ -16,6 +16,7 @@ and removes stale root-level `.adoc` files.
 
 Usage:
 
+[source,sh]
 ----
 cd scripts/publish
 npm clean-install
