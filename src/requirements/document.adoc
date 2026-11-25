@@ -3,4 +3,4 @@
 
 include::document/file-extension.adoc[leveloffset=+1]
 
-include::document-header.adoc[leveloffset=+1]
+include::document/document-header.adoc[leveloffset=+1]
