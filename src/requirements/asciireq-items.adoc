@@ -1,7 +1,7 @@
 [#asciireq-items]
 = AsciiReq items
 
-include::general-asciidoc-syntax.adoc[leveloffset=+1]
+include::asciireq-items/asciidoc-syntax.adoc[leveloffset=+1]
 
 include::identifier.adoc[leveloffset=+1]
 
