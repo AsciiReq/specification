@@ -80,6 +80,8 @@ function resolveIncludes(fileName) {
   while (reader.hasMoreLines()) {
     lines.push(reader.readLine());
   }
+  // readLine() strips line terminators, so the join has no final newline:
+  // add it back so that the published file ends with exactly one newline.
   let resolved = applyLevelOffsets(lines).join('\n') + '\n';
   resolved = restoreEnvGithubConditionals(resolved, conditionals);
   if (/^include::/m.test(resolved)) {
