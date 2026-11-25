@@ -172,10 +172,3 @@ for (const fileName of publishedFiles) {
   fs.writeFileSync(path.join(rootDir, fileName), content);
   console.log(`published ${fileName}`);
 }
-
-for (const entry of fs.readdirSync(rootDir)) {
-  if (entry.endsWith('.adoc') && !publishedFiles.includes(entry)) {
-    fs.unlinkSync(path.join(rootDir, entry));
-    console.log(`removed stale ${entry}`);
-  }
-}
