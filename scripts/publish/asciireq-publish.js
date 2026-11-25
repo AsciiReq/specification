@@ -41,7 +41,7 @@ function protectEnvGithubConditionals(content) {
  *
  * @param {string} resolved - the resolved content containing the placeholders
  * @param {string[]} conditionals - the conditional blocks in placeholder order
- * @returns {string} the content with the conditional blocks restored
+ * @returns {string} the resolved content with the conditional blocks restored
  */
 function restoreEnvGithubConditionals(resolved, conditionals) {
   conditionals.forEach((conditional, index) => {
