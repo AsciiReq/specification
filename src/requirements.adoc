@@ -3,7 +3,7 @@
 
 The requirements defining the AsciiReq format are listed below.
 
-include::requirements/asciireq-document.adoc[leveloffset=+1]
+include::requirements/document.adoc[leveloffset=+1]
 
 include::requirements/asciireq-items.adoc[leveloffset=+1]
 
