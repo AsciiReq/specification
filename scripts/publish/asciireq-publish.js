@@ -17,6 +17,9 @@ const publishedFiles = [
  * comment line. This keeps the GitHub rendering hack unevaluated, so that it
  * remains active in the published file.
  *
+ * There may be several locations to protect in the `content`: each placeholder
+ * contains the index of its protected block, e.g. `// asciireq-publish:keep-index:0`.
+ *
  * @param {string} content - the AsciiDoc source content to protect
  * @returns {{protectedContent: string, conditionals: string[]}} the protected
  *   content, and the replaced conditional blocks in placeholder order
@@ -26,7 +29,7 @@ function protectEnvGithubConditionals(content) {
   const protectedContent = content.replace(
     /^(?:ifdef|ifndef)::env-github\[\]\n[\s\S]*?^endif::\[\]\n?/gm,
     (match) => {
-      const placeholder = `// asciireq-publish:keep:${conditionals.length}\n`;
+      const placeholder = `// asciireq-publish:keep-index:${conditionals.length}\n`;
       conditionals.push(match);
       return placeholder;
     }
@@ -37,7 +40,8 @@ function protectEnvGithubConditionals(content) {
 /**
  * Restores into the resolved content the `env-github` conditional blocks hidden
  * by {@link protectEnvGithubConditionals} (reverse operation), replacing each
- * placeholder comment line with its original conditional block.
+ * placeholder comment line (which contains the index of its protected block)
+ * with that original conditional block.
  *
  * @param {string} resolved - the resolved content containing the placeholders
  * @param {string[]} conditionals - the conditional blocks in placeholder order
@@ -45,7 +49,7 @@ function protectEnvGithubConditionals(content) {
  */
 function restoreEnvGithubConditionals(resolved, conditionals) {
   conditionals.forEach((conditional, index) => {
-    resolved = resolved.replace(`// asciireq-publish:keep:${index}\n`, conditional);
+    resolved = resolved.replace(`// asciireq-publish:keep-index:${index}\n`, conditional);
   });
   return resolved;
 }
