@@ -2,6 +2,7 @@
 :toc:
 
 
+[#purpose]
 == Purpose
 
 This project specifies a format based on
@@ -12,6 +13,7 @@ Requirement management tools are not part of this repository,
 but are expected as tier tools.
 
 
+[#example]
 == Example
 
 include::examples/introduction.adoc[]
@@ -26,6 +28,7 @@ by link:https://github.com/hpenne[hpenne].
 
 include::about/motivation.adoc[leveloffset=+1]
 
+[#full-specification]
 == Full specification
 
 See the link:./asciireq-specification.adoc[full specification]
