@@ -12,4 +12,4 @@ include::data/asciireq-item-parts.adoc[leveloffset=+1]
 
 include::data/common-attributes.adoc[leveloffset=+1]
 
-include::data/asciireq-cross-references.adoc[leveloffset=+1]
+include::data/cross-references.adoc[leveloffset=+1]
