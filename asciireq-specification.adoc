@@ -1,8 +1,5 @@
 = AsciiReq specification version 0.1
 :asciireq-version: https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
-// The :revnumber: and :revdate: TODO placeholders below are resolved at publish
-// time by scripts/publish/ (`npm run publish`): :revnumber: from the VERSION
-// file at the repository root, :revdate: from the current date.
 :revnumber: 0.1.1
 :revdate: 2026-11-26
 :sectnums:

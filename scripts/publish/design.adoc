@@ -59,7 +59,9 @@ monolith: parsing the published `asciireq-specification.adoc` yields the same
 
 The `src/` sources never hardcode a version or a date:
 `src/asciireq-specification.adoc` keeps `:revnumber: TODO` and `:revdate: TODO`
-placeholders (with an explanatory comment), the version lives in the `VERSION`
+placeholders (with a short note in the placeholder value, e.g.
+`:revnumber: TODO (from VERSION at publish)` — the whole line is replaced at
+publish, so no comment line leaks into the published file), the version lives in the `VERSION`
 file at the repository root (the single source of truth, also used to tag
 releases), and the date is the day `npm run publish` runs. The tool resolves
 those placeholders in place (`applyRevisionInfo()`, which throws if one is

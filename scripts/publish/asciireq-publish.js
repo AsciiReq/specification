@@ -192,8 +192,10 @@ function currentDate() {
  * Resolves in place the `:revnumber:` / `:revdate:` placeholders of the given
  * content: `:revnumber:` with the version read from the `VERSION` file, and
  * `:revdate:` with the current date. The placeholders stay in the `src/` files
- * (marked `TODO`, with an explanatory comment), so the published file keeps
- * the original header layout and always carries the current version and date.
+ * (marked `TODO`, with a short note in the placeholder value that the publish
+ * tool replaces along with the value), so nothing extra leaks into the
+ * published file, which keeps the original header layout and always carries
+ * the current version and date.
  *
  * @param {string} content - the resolved AsciiDoc content with the placeholders
  * @param {string} version - the version read from the `VERSION` file
