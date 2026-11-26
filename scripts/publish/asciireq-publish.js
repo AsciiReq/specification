@@ -6,6 +6,7 @@ const asciidoctor = require('asciidoctor')();
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const srcDir = path.join(rootDir, 'src');
+const versionFile = path.join(rootDir, 'VERSION');
 const publishedFiles = [
   'README.adoc',
   'asciireq-specification.adoc',
@@ -166,7 +167,55 @@ function resolveAsciiReqReferences(content, references) {
   });
 }
 
+/**
+ * Reads the AsciiReq specification version from the `VERSION` file at the
+ * repository root: the single source of truth for the document version, so
+ * that the `src/` files never hardcode it.
+ *
+ * @returns {string} the trimmed version, e.g. `0.1.1`
+ */
+function loadVersion() {
+  return fs.readFileSync(versionFile, 'utf8').trim();
+}
+
+/**
+ * Returns the current date in ISO `YYYY-MM-DD` format, used as the `:revdate:`
+ * value of the published documents.
+ *
+ * @returns {string} the current date
+ */
+function currentDate() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+/**
+ * Stamps the revision information into the header of a published document:
+ * drops any existing `:revnumber:` / `:revdate:` attribute entries from the
+ * given content, then inserts `:revnumber: <version>` and `:revdate: <date>`
+ * right after the document title. The published file thus always carries the
+ * version of the `VERSION` file and the date of the publication run.
+ *
+ * @param {string} content - the resolved AsciiDoc content
+ * @param {string} version - the version read from the `VERSION` file
+ * @param {string} revdate - the current date, in ISO `YYYY-MM-DD` format
+ * @returns {string} the content with the revision attributes set in the header
+ * @throws {Error} if the content has no document title
+ */
+function applyRevisionInfo(content, version, revdate) {
+  const lines = content
+    .split('\n')
+    .filter((line) => !/^:(?:revnumber|revdate):/.test(line));
+  const titleIndex = lines.findIndex((line) => /^= /.test(line));
+  if (titleIndex === -1) {
+    throw new Error('No document title found to attach the revision attributes to');
+  }
+  lines.splice(titleIndex + 1, 0, `:revnumber: ${version}`, `:revdate: ${revdate}`);
+  return lines.join('\n');
+}
+
 const references = loadReferences();
+const version = loadVersion();
+const revdate = currentDate();
 
 for (const fileName of publishedFiles) {
   let content = resolveIncludes(fileName);
@@ -175,6 +224,7 @@ for (const fileName of publishedFiles) {
   if (fileName === 'README.adoc') {
     content = resolveAsciiReqReferences(content, references);
   }
+  content = applyRevisionInfo(content, version, revdate);
   fs.writeFileSync(path.join(rootDir, fileName), content);
-  console.log(`published ${fileName}`);
+  console.log(`published ${fileName} (version ${version}, date ${revdate})`);
 }

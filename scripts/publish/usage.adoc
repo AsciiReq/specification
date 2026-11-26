@@ -10,6 +10,12 @@ GitHub does not resolve AsciiDoc `include::` directives when rendering `.adoc`
 files, so the tool publishes self-contained copies at the repository root
 (`README.adoc` and `asciireq-specification.adoc`) with all includes resolved.
 
+The version of the specification is read from the `VERSION` file at the
+repository root, and the publication date is the current date: `npm run publish`
+stamps `:revnumber: <VERSION>` and `:revdate: <current date>` in the header of
+each published `.adoc` file. The `src/` files therefore never hardcode a version
+or a date; bump the `VERSION` file when releasing a new version.
+
 Usage:
 
 [source,sh]
