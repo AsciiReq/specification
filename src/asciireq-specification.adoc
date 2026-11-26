@@ -1,7 +1,7 @@
 = AsciiReq specification version 0.1
 :asciireq-version: https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
-:revnumber: TODO (from VERSION at publish)
-:revdate: TODO (current date at publish)
+:revnumber: (resolved from the VERSION file when published)
+:revdate: (resolved from current date when published)
 :sectnums:
 :toc:
 :toclevels: 5

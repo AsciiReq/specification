@@ -170,7 +170,7 @@ function resolveAsciiReqReferences(content, references) {
 /**
  * Reads the AsciiReq specification version from the `VERSION` file at the
  * repository root: the single source of truth for the document version, the
- * `src/` files keeping only a `TODO` placeholder for it.
+ * `src/` files keeping only a placeholder line for it.
  *
  * @returns {string} the trimmed version, e.g. `0.1.1`
  */
@@ -192,10 +192,10 @@ function currentDate() {
  * Resolves in place the `:revnumber:` / `:revdate:` placeholders of the given
  * content: `:revnumber:` with the version read from the `VERSION` file, and
  * `:revdate:` with the current date. The placeholders stay in the `src/` files
- * (marked `TODO`, with a short note in the placeholder value that the publish
- * tool replaces along with the value), so nothing extra leaks into the
- * published file, which keeps the original header layout and always carries
- * the current version and date.
+ * (e.g. `:revnumber: (resolved from the VERSION file when published)` — the
+ * whole line is replaced along with the value), so nothing extra leaks into
+ * the published file, which keeps the original header layout and always
+ * carries the current version and date.
  *
  * @param {string} content - the resolved AsciiDoc content with the placeholders
  * @param {string} version - the version read from the `VERSION` file
