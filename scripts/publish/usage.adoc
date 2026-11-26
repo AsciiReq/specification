@@ -1,0 +1,20 @@
+= Usage of the `asciireq-publish` tool
+
+`scripts/publish/` is a self-contained npm package holding the publish tool:
+`asciireq-publish.js`, `package.json` and `package-lock.json`.
+
+The specification sources live in `src/`, split into one `.adoc` file per
+section, included from `src/asciireq-specification.adoc` with
+`include::...[leveloffset=+1]` directives.
+GitHub does not resolve AsciiDoc `include::` directives when rendering `.adoc`
+files, so the tool publishes self-contained copies at the repository root
+(`README.adoc` and `asciireq-specification.adoc`) with all includes resolved.
+
+Usage:
+
+[source,sh]
+----
+cd scripts/publish
+npm clean-install
+npm run publish
+----
