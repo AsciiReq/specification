@@ -55,15 +55,18 @@ stack) and drops the marker lines. The published file thus contains no
 monolith: parsing the published `asciireq-specification.adoc` yields the same
 33 sections (level, id, title) as the previously published single file.
 
-== Why the version and date are stamped at publish time
+== Why the version and date are resolved at publish time
 
-The `src/` sources never hardcode a version or a date: the version lives in the
-`VERSION` file at the repository root (the single source of truth, also used to
-tag releases), and the date is the day `npm run publish` runs. The tool therefore
-drops any `:revnumber:` / `:revdate:` entries from the resolved content and
-inserts fresh ones right after the document title (`applyRevisionInfo()`), so a
-published file always carries the current version and date (never a leftover
-`TODO`), and re-running the tool on the same day is idempotent.
+The `src/` sources never hardcode a version or a date:
+`src/asciireq-specification.adoc` keeps `:revnumber: TODO` and `:revdate: TODO`
+placeholders (with an explanatory comment), the version lives in the `VERSION`
+file at the repository root (the single source of truth, also used to tag
+releases), and the date is the day `npm run publish` runs. The tool resolves
+those placeholders in place (`applyRevisionInfo()`, which throws if one is
+missing), so the published file keeps the original header layout and always
+carries the current version and date (never a leftover `TODO`); re-running the
+tool on the same day is idempotent. Documents without those placeholders (e.g.
+`README.adoc`) are published without revision info.
 
 == Why CommonJS instead of ESM?
 
@@ -85,8 +88,9 @@ this tiny internal build script, CommonJS keeps it configuration-free.
 
 * `npm run publish` is idempotent within a day: running it twice on the same
   day leaves the tree unchanged;
-* each published file header carries `:revnumber:` read from the `VERSION` file
-  and `:revdate:` set to the current date;
+* the published `asciireq-specification.adoc` header carries `:revnumber:` read
+  from the `VERSION` file and `:revdate:` set to the current date, in place of
+  the `TODO` placeholders; `README.adoc` is published without revision info;
 * published files contain no `include::` directive (the tool throws an error
   otherwise);
 * the published `asciireq-specification.adoc` parses to the same 33 sections

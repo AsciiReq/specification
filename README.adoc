@@ -1,6 +1,4 @@
 = AsciiReq - Requirements with AsciiDoc
-:revnumber: 0.1.1
-:revdate: 2026-11-26
 :toc:
 
 
