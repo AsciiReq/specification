@@ -1,0 +1,119 @@
+[#attributes]
+= Attributes
+
+It is common in requirement management
+to use additional attributes
+in order to fit the process
+with the specific needs of a project.
+
+Please note that attributes apply to requirements only
+(not to actors, data, nor foreign references).
+
+[#ASCIIREQ-ATTRIBUTES-0700, reftext="ASCIIREQ-ATTRIBUTES-0700", .req]
+ASCIIREQ-ATTRIBUTES-0700:: _AsciiReq requirement attributes_
++
+--
+The OPTIONAL requirement attributes of an <<ASCIIREQ-REQUIREMENT>> are defined
+as an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list]
+of `*name:* value` pairs
+at the end of the <<ASCIIREQ-COMPOUND-CONTENT>>.
+
+The full `name:` pattern,
+including the `:` separator at its end,
+MUST be written in link:https://docs.asciidoctor.org/asciidoc/latest/text/bold/[bold].
+
+There MUST be only one <<ASCIIDOC>> unordered list
+at the root level of the <<ASCIIREQ-COMPOUND-CONTENT>>
+of an <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify an attribute of an AsciiReq requirement as <<ASCIIREQ-ATTRIBUTE>>.
+
+[#ASCIIREQ-ATTRIBUTES-0710, reftext="ASCIIREQ-ATTRIBUTES-0710", .req]
+ASCIIREQ-ATTRIBUTES-0710:: _AsciiReq requirement attribute name uniqueness_
++
+--
+<<ASCIIREQ-ATTRIBUTE>> names
+MUST be unique for a given <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+It may happen that no attributes be useful for a given specification or a single requirement.
+That's the reason why requirement attributes remain optional.
+
+A link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/[description list]
+would have been syntactically better
+to define requirement attributes as `name:: value` pairs.
+
+However,
+requirement attributes are defined as a simple unordered list
+for visual presentation concerns with regular <<ASCIIDOC-RENDERER>>s
+which may not be configurable
+(especially the GitHub web platform).
+
+A description list would display badly
+and make the reading more difficult for humans.
+
+As a workaround,
+the `name:` pattern is written in bold.
+Including the `:` separator at the end of the bold part
+should make it deterministic
+to parse requirement attributes.
+
+Repeating an attribute name in the unordered list
+could have been understood
+as defining several items of a same list.
+
+The choice of unicity in <<ASCIIREQ-ATTRIBUTES-0710>> is assumed,
+and lets the opportunity in future versions of AsciiReq
+to define attributes with a description list.
+
+If one needs to define list values,
+the general pattern below is recommended.
+
+[#ASCIIREQ-ATTRIBUTES-0720, reftext="ASCIIREQ-ATTRIBUTES-0720", .req]
+ASCIIREQ-ATTRIBUTES-0720:: _List attributes_
++
+--
+When an <<ASCIIREQ-ATTRIBUTE>> is defined as a list,
+its items
+SHOULD be given
+as level 2
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list] items.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+[#ASCIIREQ-ATTRIBUTES-0730, reftext="ASCIIREQ-ATTRIBUTES-0730", .req]
+ASCIIREQ-ATTRIBUTES-0730:: _Justified list attributes_
++
+--
+When an <<ASCIIREQ-ATTRIBUTE>> is defined as a list,
+with items being justified,
+it should define its items as of <<ASCIIREQ-ATTRIBUTES-0720>>.
+
+Each attribute list item
+MAY receive justifications.
+
+Attribute list item justifications
+SHOULD be given
+as level 3
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/lists/unordered/[unordered list] items
+below the justified items.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>

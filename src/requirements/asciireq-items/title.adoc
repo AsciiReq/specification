@@ -1,0 +1,147 @@
+[#title]
+= Title
+
+It is usually practical to define requirement titles,
+i.e. a short phrase summarizing
+the purpose of the requirement.
+This is especially useful
+when requirements are listed in tables,
+in order to quickly understand
+what the requirement talks about.
+
+As stated by <<ASCIIREQ-TITLE-0510>>,
+titles are recommended for requirements.
+They may also be useful for other items, but remain optional.
+It gives the opportunity to display quick information on the latter:
+in table columns, hover pop-ups, ...
+
+[#ASCIIREQ-TITLE-0500, reftext="ASCIIREQ-TITLE-0500", .req]
+ASCIIREQ-TITLE-0500:: _AsciiReq item title_
++
+--
+An OPTIONAL title for an <<ASCIIREQ-ITEM>> may be defined
+as a first <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/[paragraph]
+at the beginning of the <<ASCIIREQ-COMPOUND-CONTENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify the title of an AsciiReq item as <<ASCIIREQ-TITLE>>.
+
+[#ASCIIREQ-TITLE-0510, reftext="ASCIIREQ-TITLE-0510", .req]
+ASCIIREQ-TITLE-0510:: _Requirement title recommendation_
++
+--
+<<ASCIIREQ-TITLE>>s are RECOMMENDED
+for <<ASCIIREQ-REQUIREMENT>>s.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+According to <<ASCIIDOC>> definition,
+an link:https://docs.asciidoctor.org/asciidoc/latest/blocks/open-blocks/[open block]
+IS NOT a link:https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/[paragraph].
+Consequently, the formulation in <<ASCIIREQ-TITLE-0500>> ensures
+an optional <<ASCIIREQ-TITLE>> cannot be confused
+with the <<ASCIIREQ-BODY>>.
+
+<<ASCIIREQ-TITLE-0500>> labels "first (...) paragraph"
+for compliance purpose with AsciiDoc syntax definitions,
+but a title will generally be a single line in practice.
+
+As a consequence,
+it may be a good option to present the title
+on the same text line as the identifier.
+Doing so enables `grep` commands to retrieve
+corresponding identifiers and titles
+in single rows.
+
+[#ASCIIREQ-TITLE-0520, reftext="ASCIIREQ-TITLE-0520", .req]
+ASCIIREQ-TITLE-0520:: _One line heading style_
++
+--
+The <<ASCIIREQ-TITLE>> (if any)
+of an <<ASCIIREQ-ITEM>>
+SHOULD be presented on the same line
+as its <<ASCIIREQ-IDENTIFIER>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+[example]
+.One line heading style
+====
+Instead of:
+
+[source, asciidoc]
+----
+REQ-010::
+Requirement title
+----
+
+prefer:
+
+[source, asciidoc]
+----
+REQ-010:: Requirement title
+----
+====
+
+In order to make them more readable
+for humans using an <<ASCIIDOC-RENDERER>>,
+titles should be decorated,
+in order to detach them from the following bodies.
+
+[#ASCIIREQ-TITLE-0530, reftext="ASCIIREQ-TITLE-0530", .req]
+ASCIIREQ-TITLE-0530:: _Requirement item title decoration_
++
+--
+The <<ASCIIREQ-TITLE>> (if any)
+of an <<ASCIIREQ-ITEM>>
+SHOULD be decorated
+in <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/text/italic/[italic].
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+[example]
+.Italic title decoration
+====
+Instead of:
+
+[source, asciidoc]
+----
+REQ-010:: Requirement title
+----
+
+prefer:
+
+[source, asciidoc]
+----
+REQ-010:: _Requirement title_
+----
+====
+
+[#ASCIIREQ-TITLE-0540, reftext="ASCIIREQ-TITLE-0540", .req]
+ASCIIREQ-TITLE-0540:: _Decorated title parsing_
++
+--
+When an <<ASCIIREQ-TITLE>>
+is entirely decorated
+in <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/text/italic/[italic],
+<<ASCIIREQ-READER>>s SHOULD remove this decoration
+to parse the <<ASCIIREQ-TITLE>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-READER>>

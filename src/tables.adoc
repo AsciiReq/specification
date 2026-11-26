@@ -1,0 +1,7 @@
+[#tables]
+[appendix]
+= Tables
+
+include::tables/requirements.adoc[leveloffset=+1]
+
+include::tables/requirements-by-actors.adoc[leveloffset=+1]

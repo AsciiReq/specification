@@ -1,0 +1,15 @@
+[#data]
+= Data
+
+The following data definitions help writing this specification
+in a more formal way.
+
+include::data/document.adoc[leveloffset=+1]
+
+include::data/asciireq-items.adoc[leveloffset=+1]
+
+include::data/asciireq-item-parts.adoc[leveloffset=+1]
+
+include::data/common-attributes.adoc[leveloffset=+1]
+
+include::data/cross-references.adoc[leveloffset=+1]

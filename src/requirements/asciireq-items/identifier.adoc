@@ -1,0 +1,74 @@
+[#identifier]
+= Identifier
+
+Requirement management commonly requires
+that requirements be identified
+with unique identifiers.
+
+The same goes with formal items
+like actors, data and references.
+
+[#ASCIIREQ-ID-0400, reftext="ASCIIREQ-ID-0400", .req]
+ASCIIREQ-ID-0400:: _AsciiReq item identifier_
++
+--
+The REQUIRED identifier of an <<ASCIIREQ-ITEM>> is defined
+as the _term_
+(as of the link:https://docs.asciidoctor.org/asciidoc/latest/lists/description/#anatomy[anatomy]
+of an <<ASCIIDOC>> description list item).
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify the identifier of an AsciiReq item as <<ASCIIREQ-IDENTIFIER>>.
+
+[#ASCIIREQ-ID-0410, reftext="ASCIIREQ-ID-0410", .req]
+ASCIIREQ-ID-0410:: _AsciiReq item identifier authorized characters_
++
+--
+<<ASCIIREQ-ITEM>> identifiers (as of <<ASCIIREQ-ID-0400>>)
+MUST be non empty strings,
+and MUST contain only the following characters:
+
+* letters
+* numbers
+* underscores
+* hyphens
+* slashes
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Slashes are useful to separate parts in an identifier,
+for data/subdata definitions for instance.
+
+Other special characters are not authorized
+in order to avoid breaking AsciiDoc compatibility, especially:
+
+* *dots:*
+  Parts would be interpreted as AsciiDoc roles
+  when used in the AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
+  shorthand syntax.
+* *sharps:*
+  May be misinterpreted due to AsciiDoc link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
+  shorthand syntax as well.
+
+<<ASCIIREQ-ID-0410>> is defined as a restrictive set for the moment.
+It may be extended in future versions of AsciiReq.
+
+[#ASCIIREQ-ID-0420, reftext="ASCIIREQ-ID-0420", .req]
+ASCIIREQ-ID-0420:: _AsciiReq item identifier unicity_
++
+--
+<<ASCIIREQ-IDENTIFIER>>s MUST be unique
+in an <<ASCIIREQ-DOCUMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>

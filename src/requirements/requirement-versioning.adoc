@@ -1,0 +1,215 @@
+[#versioning]
+= Requirement versioning
+
+Requirement management commonly requires that requirements be versioned.
+
+[#ASCIIREQ-VERSIONING-1100, reftext="ASCIIREQ-VERSIONING-1100", .req]
+ASCIIREQ-VERSIONING-1100:: _Document version_
++
+--
+<<ASCIIREQ-DOCUMENT>>s
+SHOULD hold an <<ASCIIDOC>>
+link:https://docs.asciidoctor.org/asciidoc/latest/document/revision-information/#revision-attributes[`:revnumber:`]
+link:https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes/[document attribute]
+giving its version.
+--
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify the version of an AsciiReq document as <<ASCIIREQ-DOCUMENT-VERSION>>.
+
+[#ASCIIREQ-VERSIONING-1110, reftext="ASCIIREQ-VERSIONING-1110", .req]
+ASCIIREQ-VERSIONING-1110:: _SemVer document versions_
++
+--
+<<ASCIIREQ-DOCUMENT-VERSION>>s
+SHOULD follow the <<SEMVER>> versioning rules.
+--
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+The whole document is classically versioned,
+but each requirement may be versioned as well,
+in order to track changes
+in a more accurate way.
+
+[#ASCIIREQ-VERSIONING-1120, reftext="ASCIIREQ-VERSIONING-1120", .req]
+ASCIIREQ-VERSIONING-1120:: _Requirement version attribute_
++
+--
+<<ASCIIREQ-REQUIREMENT>>s
+SHOULD have a `Version` <<ASCIIREQ-ATTRIBUTE>>,
+with text value.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+Let's formally identify the version of an AsciiReq requirement as <<ASCIIREQ-REQUIREMENT-VERSION>>.
+
+[#ASCIIREQ-VERSIONING-1130, reftext="ASCIIREQ-VERSIONING-1130", .req]
+ASCIIREQ-VERSIONING-1130:: _SemVer requirement versions_
++
+--
+<<ASCIIREQ-REQUIREMENT-VERSION>>s
+SHOULD follow the <<SEMVER>> versioning rules,
+with _MAJOR_ and _MINOR_ parts only.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Other kind of versioning strategies may be considered.
+Nevertheless, <<SEMVER>> remains recommended.
+
+The reason why the _PATCH_ version
+should not be given
+in AsciiReq requirement versions
+is due to impact analysis concerns
+combined with the <<ASCIIREQ-VERSIONING-1140>> recommendation.
+
+[#ASCIIREQ-VERSIONING-1140, reftext="ASCIIREQ-VERSIONING-1140", .req]
+ASCIIREQ-VERSIONING-1140:: _Requirement version synchronized with document_
++
+--
+When modified,
+the <<ASCIIREQ-REQUIREMENT-VERSION>>
+SHOULD follow the <<ASCIIREQ-DOCUMENT-VERSION>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Aligning the requirement version
+with the one of the AsciiReq document
+makes it easier to understand
+when the change occurred.
+
+As a consequence:
+
+[#ASCIIREQ-VERSIONING-1150, reftext="ASCIIREQ-VERSIONING-1150", .req]
+ASCIIREQ-VERSIONING-1150:: _Document version bumping_
++
+--
+When a new version of an <<ASCIIREQ-DOCUMENT>> is released,
+its <<ASCIIREQ-DOCUMENT-VERSION>>
+SHOULD be aligned
+with the highest <<ASCIIREQ-REQUIREMENT-VERSION>>
+it contains.
+--
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+[WARNING]
+.Major / minor document & requirement versioning
+====
+When the major version of an AsciiReq document
+must be bumped
+due to compatibility reasons for certain requirements,
+other requirements
+which would normally require their minor version to be bumped only
+as of <<SEMVER>>,
+should still be aligned with the new major document version
+as of <<ASCIIREQ-VERSIONING-1140>>.
+
+It is the responsibility of the document publisher to decide whether modifications
+should be delivered in a single major version,
+making the minor modifications appear as major ones,
+or in two document versions:
+a minor followed by a major.
+====
+
+The following requirements
+give recommendations on situations
+when the requirement version
+should be updated or not.
+
+[#ASCIIREQ-VERSIONING-1160, reftext="ASCIIREQ-VERSIONING-1160", .req]
+ASCIIREQ-VERSIONING-1160:: _Version update on significant changes_
++
+--
+When the <<ASCIIREQ-REQUIREMENT>> changes significantly (according to <<SEMVER>>),
+its <<ASCIIREQ-REQUIREMENT-VERSION>>
+MUST be updated.
+
+When the <<ASCIIREQ-REQUIREMENT>> is modified without significant changes (according to <<SEMVER>>),
+its <<ASCIIREQ-REQUIREMENT-VERSION>>
+MUST NOT be updated.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Even though the <<SEMVER>> reference
+tells much already
+about when to bump a version or not,
+the requirements after
+intend to clarify what should be understood
+as "significant changes"
+in terms of requirement management.
+
+[#ASCIIREQ-VERSIONING-1170, reftext="ASCIIREQ-VERSIONING-1170", .req]
+ASCIIREQ-VERSIONING-1170:: _Typos & requirement version_
++
+--
+Typos fixed in an <<ASCIIREQ-REQUIREMENT>>
+MUST NOT change
+its <<ASCIIREQ-REQUIREMENT-VERSION>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+[#ASCIIREQ-VERSIONING-1180, reftext="ASCIIREQ-VERSIONING-1180", .req]
+ASCIIREQ-VERSIONING-1180:: _Cosmetic rewordings & requirement version_
++
+--
+Rewordings for clarification of an <<ASCIIREQ-REQUIREMENT>>
+SHOULD NOT update
+its <<ASCIIREQ-REQUIREMENT-VERSION>>,
+unless the previous text led to
+wrong understandings
+of the <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+As already introduced before,
+the main interest of requirement versioning
+comes with traceability and impact analyses.
+
+The following requirement
+completes the requirements
+from the "Traceability" section before.
+
+[#ASCIIREQ-VERSIONING-1190, reftext="ASCIIREQ-VERSIONING-1190", .req]
+ASCIIREQ-VERSIONING-1190:: _Versioned requirement references_
++
+--
+In a level 2 traceability reference (as of <<ASCIIREQ-TRACEABILITY-1000>>),
+if the foreign <<ASCIIREQ-REQUIREMENT>> holds an <<ASCIIREQ-REQUIREMENT-VERSION>>,
+the foreign <<ASCIIREQ-IDENTIFIER>> reference
+SHOULD be followed by
+the `` - `` pattern,
+then the <<ASCIIREQ-REQUIREMENT-VERSION>>
+of the foreign <<ASCIIREQ-REQUIREMENT>>.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+** <<ASCIIREQ-READER>>
+
+See the <<introduction-example, introduction example>>.

@@ -1,0 +1,35 @@
+= AsciiReq - Requirements with AsciiDoc
+:toc:
+
+
+[#purpose]
+== Purpose
+
+This project specifies a format based on
+link:https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
+to write requirements compatible for requirement management.
+
+Requirement management tools are not part of this repository,
+but are expected as tier tools.
+
+
+[#example]
+== Example
+
+include::examples/introduction.adoc[]
+
+[NOTE]
+====
+Syntax originally inspired
+from the link:https://github.com/hpenne/asciireqs[AsciiReqs] (with a final 's') Python project
+by link:https://github.com/hpenne[hpenne].
+====
+
+
+include::about/motivation.adoc[leveloffset=+1]
+
+[#full-specification]
+== Full specification
+
+See the link:./asciireq-specification.adoc[full specification]
+written in AsciiReq itself.

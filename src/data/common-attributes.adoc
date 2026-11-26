@@ -1,0 +1,10 @@
+[#data-attributes]
+= Common attributes
+
+[#ASCIIREQ-REQUIREMENT-VERSION, reftext="ASCIIREQ-REQUIREMENT-VERSION", .req-data]
+ASCIIREQ-REQUIREMENT-VERSION:: _AsciiReq requirement version_
++
+--
+Version of an <<ASCIIREQ-DOCUMENT>>,
+as of <<ASCIIREQ-VERSIONING-1120>>.
+--

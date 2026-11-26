@@ -1,0 +1,52 @@
+[#conventions]
+= Conventions
+
+Because it is the aim of it,
+this document follows the <<ASCIIREQ>> specification given by itself
+(which constitutes some kind of proof of concept).
+
+All <<ASCIIREQ>> requirements,
+even though RECOMMENDED or OPTIONAL,
+apply to this document.
+
+The AsciiReq attributes for the requirements in this document are the following:
+
+Version::
++
+--
+See <<ASCIIREQ-REQUIREMENT-VERSION>>.
+
+See other applicable requirements in the <<versioning>> section.
+--
+
+Actors::
++
+--
+<<ASCIIREQ>> actors concerned by the requirement.
+
+See the <<#actors>> section of this document for the list of possible actor values.
+
+The `Actors` attribute is defined
+as a _justified list attribute_ (as of <<ASCIIREQ-ATTRIBUTES-0730>>),
+whose items are <<ASCIIREQ>> actors
+given as <<ASCIIREQ-CROSS-REFERENCE>>s.
+
+Example:
+[source, asciidoc]
+----
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+*** Justification.
+*** Justification.
+** <<ASCIIREQ-READER>>
+*** Justification.
+----
+--
+
+This document furthermore uses <<RFC-2119>> and <<RFC-8174>> conventions
+for the understanding of the capitalized keywords
+"MAY",
+"MUST", "MUST NOT",
+"SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT",
+"REQUIRED", "RECOMMENDED", and "OPTIONAL".

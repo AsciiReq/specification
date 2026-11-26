@@ -1,0 +1,12 @@
+[#about]
+= About this document
+
+include::about/identification.adoc[leveloffset=+1]
+
+include::about/purpose.adoc[leveloffset=+1]
+
+include::about/motivation.adoc[leveloffset=+1]
+
+include::about/conventions.adoc[leveloffset=+1]
+
+include::about/asciireq-versions.adoc[leveloffset=+1]

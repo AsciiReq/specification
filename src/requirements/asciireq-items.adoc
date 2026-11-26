@@ -1,0 +1,12 @@
+[#asciireq-items]
+= AsciiReq items
+
+include::asciireq-items/asciidoc-syntax.adoc[leveloffset=+1]
+
+include::asciireq-items/identifier.adoc[leveloffset=+1]
+
+include::asciireq-items/title.adoc[leveloffset=+1]
+
+include::asciireq-items/body.adoc[leveloffset=+1]
+
+include::asciireq-items/attributes.adoc[leveloffset=+1]
