@@ -1,7 +1,7 @@
 = AsciiReq specification version 0.1
 :asciireq-version: https://github.com/AsciiReq/specification/blob/0.1/asciireq-specification.adoc
-:revnumber: 0.1.0
-:revdate: 2026-11-23
+:revnumber: 0.1.1
+:revdate: 2026-11-27
 :sectnums:
 :toc:
 :toclevels: 5
@@ -16,6 +16,7 @@ endif::[]
 
 [#about]
 == About this document
+
 
 [#document-identification]
 === Identification
@@ -37,6 +38,7 @@ link:https://github.com/alxroyer[alxroyer]
 |URL|
 https://github.com/AsciiReq/specification/blob/{revnumber}/asciireq-specification.adoc
 |===
+
 
 
 [#purpose]
@@ -133,6 +135,7 @@ deactivate ASCIIREQ-DOCUMENT
 ....
 
 
+
 [#motivation]
 === Motivation
 
@@ -167,6 +170,7 @@ which make it easier to write and maintain large technical documentations:
 * better link:https://docs.asciidoctor.org/asciidoc/latest/tables/build-a-basic-table/[table] management in smaller lines,
 * better link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross-reference] support,
 * ...
+
 
 
 [#conventions]
@@ -223,10 +227,13 @@ for the understanding of the capitalized keywords
 "REQUIRED", "RECOMMENDED", and "OPTIONAL".
 
 
+
 [#asciireq-versions]
 === AsciiReq versions
 
 AsciiReq versions follow <<SEMVER>> rules.
+
+
 
 
 [#actors]
@@ -274,6 +281,7 @@ Examples:
 --
 
 
+
 [#data]
 == Data
 
@@ -313,6 +321,7 @@ ASCIIREQ-DOCUMENT-VERSION:: _AsciiReq document version_
 Version of an <<ASCIIREQ-DOCUMENT>>,
 as of <<ASCIIREQ-VERSIONING-1100>>.
 --
+
 
 
 [#data-items]
@@ -355,6 +364,7 @@ ASCIIREQ-REF:: _AsciiReq foreign reference_
 --
 <<ASCIIREQ-ITEM>> for a foreign reference definition (as of <<ASCIIREQ-ITEM-0300>>).
 --
+
 
 
 [#data-item-parts]
@@ -405,6 +415,7 @@ part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
 --
 
 
+
 [#data-attributes]
 === Common attributes
 
@@ -415,6 +426,7 @@ ASCIIREQ-REQUIREMENT-VERSION:: _AsciiReq requirement version_
 Version of an <<ASCIIREQ-DOCUMENT>>,
 as of <<ASCIIREQ-VERSIONING-1120>>.
 --
+
 
 
 [#data-cross-references]
@@ -437,6 +449,8 @@ as of <<ASCIIREQ-XREF-0910>>.
 --
 
 
+
+
 [#requirements]
 == Requirements
 
@@ -445,6 +459,7 @@ The requirements defining the AsciiReq format are listed below.
 
 [#asciireq-document]
 === AsciiReq document
+
 
 [#asciireq-document-extension]
 ==== File extension
@@ -488,6 +503,7 @@ MUST process the <<ASCIIDOC>> include directives.
 ** <<ASCIIREQ-READER>>
 
 Let's formally identify an AsciiReq document as <<ASCIIREQ-DOCUMENT>>.
+
 
 
 [#asciireq-document-header]
@@ -620,8 +636,11 @@ See:
 * <<ASCIIREQ-DOCUMENT-VERSION>>
 
 
+
+
 [#asciireq-items]
 === AsciiReq items
+
 
 [#general-syntax]
 ==== General AsciiDoc syntax
@@ -686,6 +705,7 @@ MUST be used to ensure the continuation of the _description_.
 ** <<ASCIIREQ-READER>>
 
 Let's formally identify the compound content of an AsciiReq item as <<ASCIIREQ-COMPOUND-CONTENT>>.
+
 
 
 [#identifier]
@@ -762,6 +782,7 @@ in an <<ASCIIREQ-DOCUMENT>>.
 * *Version:* 0.1
 * *Actors:*
 ** <<ASCIIREQ-WRITER>>
+
 
 
 [#title]
@@ -913,6 +934,7 @@ to parse the <<ASCIIREQ-TITLE>>.
 ** <<ASCIIREQ-READER>>
 
 
+
 [#body]
 ==== Body
 
@@ -941,6 +963,7 @@ Let's formally identify the body of an AsciiReq item as <<ASCIIREQ-BODY>>.
 Defining the requirement body as an open block makes it possible to
 write it freely with several paragraphs,
 and use any AsciiDoc formatting (lists, tables, admonitions, ...).
+
 
 
 [#attributes]
@@ -1064,6 +1087,8 @@ below the justified items.
 ** <<ASCIIREQ-READER>>
 
 
+
+
 [#justifications]
 === Justifications
 
@@ -1090,6 +1115,7 @@ Apart from <<ASCIIREQ-BODY>> justifications,
 dedicated justifications
 may also be attached with <<ASCIIREQ-ATTRIBUTE>>s
 (see <<ASCIIREQ-TRACEABILITY-1000>> for instance).
+
 
 
 [#cross-references]
@@ -1192,6 +1218,7 @@ Still, it creates a pitfall, and errors can be made, but it is assumed.
 ====
 
 
+
 [#traceability]
 === Traceability
 
@@ -1278,6 +1305,7 @@ Nevertheless:
   practical for humans.
 * It also prepares maintainability
   in case other sets of <<ASCIIREQ-REF>> coverage are added in the future.
+
 
 
 [#versioning]
@@ -1497,6 +1525,7 @@ of the foreign <<ASCIIREQ-REQUIREMENT>>.
 See the <<introduction-example, introduction example>>.
 
 
+
 [#scenario-specification]
 === Scenario specification
 
@@ -1505,6 +1534,8 @@ Not covered yet.
 Shall be specified
 in a future version of AsciiReq
 (see issue link:https://github.com/AsciiReq/specification/issues/3[#3]).
+
+
 
 
 [#references]
@@ -1584,16 +1615,18 @@ See https://semver.org/spec/v2.0.0.html.
 --
 
 
+
 [#tables]
 [appendix]
 == Tables
+
 
 [#tables-requirements]
 === Requirements
 
 [cols="1,3,1,2"]
 |===
-4+h|Requirement
+4+h|Requirements
 
 h|Identifier
 h|Title
@@ -1834,6 +1867,7 @@ a|
 |===
 
 
+
 [#tables-requirements-by-actors]
 === Requirements by actors
 
@@ -2059,3 +2093,5 @@ h|Version
 |0.1
 
 |===
+
+

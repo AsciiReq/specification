@@ -1,0 +1,4 @@
+[#asciireq-versions]
+= AsciiReq versions
+
+AsciiReq versions follow <<SEMVER>> rules.

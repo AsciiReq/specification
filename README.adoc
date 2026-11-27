@@ -2,6 +2,7 @@
 :toc:
 
 
+[#purpose]
 == Purpose
 
 This project specifies a format based on
@@ -12,6 +13,7 @@ Requirement management tools are not part of this repository,
 but are expected as tier tools.
 
 
+[#example]
 == Example
 
 AsciiReq syntax:
@@ -65,13 +67,15 @@ by link:https://github.com/hpenne[hpenne].
 ====
 
 
+
+[#motivation]
 == Motivation
 
 One major interest of defining a specification format
 based upon a plain text technology
-such as link:https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
+such as link:https://asciidoc.org/[AsciiDoc]
 is that it makes it compatible with source code management tools
-like link:https://git-scm.com/[git].
+like link:https://git-scm.com/[Git SCM].
 Doing so, lots of aspects become easier:
 
 * modification history,
@@ -81,13 +85,13 @@ Doing so, lots of aspects become easier:
 * ...
 
 Furthermore,
-link:https://mermaid.js.org/intro/[Mermaid] diagrams,
+link:https://mermaid.js.org/[Mermaid] diagrams,
 being a plain text technology as well,
 integrate naturally with AsciiDoc,
 which makes great sense when writing specifications.
 
-Using link:https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
-instead of link:https://daringfireball.net/projects/markdown/syntax[Markdown]
+Using link:https://asciidoc.org/[AsciiDoc]
+instead of link:https://daringfireball.net/projects/markdown/[Markdown]
 is motivated by the fact that AsciiDoc comes with a couple of native key features
 which make it easier to write and maintain large technical documentations:
 
@@ -100,6 +104,7 @@ which make it easier to write and maintain large technical documentations:
 * ...
 
 
+[#full-specification]
 == Full specification
 
 See the link:./asciireq-specification.adoc[full specification]

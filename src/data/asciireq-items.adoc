@@ -1,0 +1,40 @@
+[#data-items]
+= AsciiReq items
+
+[#ASCIIREQ-ITEM, reftext="ASCIIREQ-ITEM", .req-data]
+ASCIIREQ-ITEM:: _AsciiReq item_
++
+--
+General AsciiReq item (as of <<ASCIIREQ-ITEM-0300>>).
+--
+
+General <<ASCIIREQ-ITEM>>s
+correspond to one of the following specialized items.
+
+[#ASCIIREQ-ACTOR, reftext="ASCIIREQ-ACTOR", .req-data]
+ASCIIREQ-ACTOR:: _AsciiReq formal actor_
++
+--
+<<ASCIIREQ-ITEM>> for a formal actor definition (as of <<ASCIIREQ-ITEM-0300>>).
+--
+
+[#ASCIIREQ-DATA, reftext="ASCIIREQ-DATA", .req-data]
+ASCIIREQ-DATA:: _AsciiReq formal data_
++
+--
+<<ASCIIREQ-ITEM>> for a formal data definition (as of <<ASCIIREQ-ITEM-0300>>).
+--
+
+[#ASCIIREQ-REQUIREMENT, reftext="ASCIIREQ-REQUIREMENT", .req-data]
+ASCIIREQ-REQUIREMENT:: _AsciiReq requirement_
++
+--
+<<ASCIIREQ-ITEM>> defining a requirement (as of <<ASCIIREQ-ITEM-0300>>).
+--
+
+[#ASCIIREQ-REF, reftext="ASCIIREQ-REF", .req-data]
+ASCIIREQ-REF:: _AsciiReq foreign reference_
++
+--
+<<ASCIIREQ-ITEM>> for a foreign reference definition (as of <<ASCIIREQ-ITEM-0300>>).
+--

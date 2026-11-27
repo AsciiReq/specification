@@ -1,0 +1,23 @@
+= Changelog
+:toc:
+
+
+== 0.1.1 - 2026-11-27
+
+AsciiReq version 0.1.1 release.
+
+Changes:
+
+* link:https://github.com/AsciiReq/specification/issues/13[#13]:
+  Split AsciiDoc sources into `src/` and publish documents at the root level of the repository.
+
+** `scripts/publish/` added to publish root .adoc files.
+** Version defined in a single VERSION file.
+
+
+== 0.1.0 - 2026-11-23
+
+AsciiReq version 0.1.0 release.
+
+Initial delivery of the specification
+(`README.adoc` and `asciireq-specification.adoc`).

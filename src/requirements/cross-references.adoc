@@ -1,0 +1,98 @@
+[#cross-references]
+= Cross references
+
+Cross references may be convenient to help humans
+navigate within an AsciiReq document.
+
+It also helps ensuring AsciiReq consistency,
+in as much as AsciiReq formal item references,
+implemented as AsciiDoc cross references,
+can be verified by regular AsciiDoc verification tools.
+
+The following requirement recommends a pattern
+to ease AsciiDoc cross references for AsciiReq items.
+
+[#ASCIIREQ-XREF-0900, reftext="ASCIIREQ-XREF-0900", .req]
+ASCIIREQ-XREF-0900:: _AsciiReq item cross reference anchor_
++
+--
+An <<ASCIIREQ-ITEM>> SHOULD be attached
+an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/attributes/id/[ID attribute]
+and an <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref-text-and-style/#default-styling[reftext attribute],
+both with <<ASCIIREQ-IDENTIFIER>> for value.
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Let's formally identify the anchor set on an AsciiReq item as <<ASCIIREQ-ANCHOR>>.
+
+[#ASCIIREQ-XREF-0910, reftext="ASCIIREQ-XREF-0910", .req]
+ASCIIREQ-XREF-0910:: _AsciiReq item cross reference_
++
+--
+<<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[cross references]
+to an <<ASCIIREQ-ANCHOR>>
+SHOULD be made
+with the <<ASCIIREQ-IDENTIFIER>>
+between <<ASCIIDOC>> link:https://docs.asciidoctor.org/asciidoc/latest/macros/xref/[double angled brackets].
+--
++
+* *Version:* 0.1
+* *Actors:*
+** <<ASCIIREQ-WRITER>>
+
+Let's formally identify a cross reference to an AsciiReq anchor as <<ASCIIREQ-CROSS-REFERENCE>>.
+
+The double angled bracket format
+makes it simple for humans to read the raw AsciiDoc file,
+even if not rendered.
+
+[example]
+.AsciiReq item cross reference
+====
+[source, asciidoc]
+----
+This is a cross reference: <<REQ-010>>.
+----
+====
+
+[WARNING]
+.Cross references redundancy
+====
+The drawback of this pattern is that it creates redundancy between
+
+1. the AsciiDoc ID attribute,
+2. the AsciiDoc `reftext` attribute,
+3. the AsciiReq identifier itself.
+
+One could hope that
+the `reftext` attribute could be spared,
+which would quite kill this redundancy issue.
+
+Nevertheless, without `reftext` attributes, AsciiDoc renderers seem to behave differently:
+
+* `asciidoctor` (v2.0.20 and v3.2.0) displays cross references with AsciiReq identifiers between square brackets,
+* GitHub seems to behave the same as `asciidoctor`.
+* The link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc VSCode extension]
+  displays the AsciiReq identifiers only (without square brackets).
+* ...
+
+Worse, sometimes renderers fail:
+
+* The link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc VSCode extension]
+  sometimes displays `null` for an AsciiReq item reference.
+
+With `reftext` attributes,
+AsciiReq identifiers only (without square brackets)
+are always displayed.
+
+That's the reason why
+<<ASCIIREQ-XREF-0900>> assumes the duplication of the AsciiReq identifier information again
+with the addition of a `reftext` attribute.
+
+As shown in the <<introduction-example>>,
+the redundant information remains packed in the heading part of the requirement.
+Still, it creates a pitfall, and errors can be made, but it is assumed.
+====

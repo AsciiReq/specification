@@ -1,0 +1,30 @@
+= Usage of the `asciireq-publish` tool
+
+`scripts/publish/` is a self-contained npm package holding the publish tool:
+`asciireq-publish.js`, `package.json` and `package-lock.json`.
+
+The AsciiReq specification sources live in `src/`, split into one `.adoc` file per
+section, included from `src/asciireq-specification.adoc` with
+`include::...[leveloffset=+1]` directives.
+GitHub does not resolve AsciiDoc `include::` directives when rendering `.adoc`
+files, so the tool publishes self-contained copies at the repository root
+(`README.adoc` and `asciireq-specification.adoc`) with all includes resolved.
+
+The version of the specification is read from the `VERSION` file at the
+repository root, and the publication date is the current date: `npm run publish`
+resolves the `:revnumber:` and `:revdate:` placeholder lines of
+`src/asciireq-specification.adoc` (e.g. `:revnumber: (resolved from the
+VERSION file when published)`) in place — `:revnumber:` from the `VERSION`
+file, `:revdate:` from the current date — when publishing
+`asciireq-specification.adoc` at the repository root (`README.adoc` has no
+revision header and gets none). Bump the `VERSION` file when releasing a new
+version.
+
+Usage:
+
+[source,sh]
+----
+cd scripts/publish
+npm clean-install
+npm run publish
+----

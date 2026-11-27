@@ -1,0 +1,46 @@
+[#data-item-parts]
+= AsciiReq item parts
+
+[#ASCIIREQ-IDENTIFIER, reftext="ASCIIREQ-IDENTIFIER", .req-data]
+ASCIIREQ-IDENTIFIER:: _AsciiReq item identifier_
++
+--
+Identifier (as of <<ASCIIREQ-ID-0400>>)
+of an <<ASCIIREQ-ITEM>>.
+--
+
+[#ASCIIREQ-COMPOUND-CONTENT, reftext="ASCIIREQ-COMPOUND-CONTENT", .req-data]
+ASCIIREQ-COMPOUND-CONTENT:: _AsciiReq item content_
++
+--
+Compound content (as of <<ASCIIREQ-ITEM-0310>>)
+attached with an <<ASCIIREQ-ITEM>>.
+--
+
+[#ASCIIREQ-TITLE, reftext="ASCIIREQ-TITLE", .req-data]
+ASCIIREQ-TITLE:: _AsciiReq item title_
++
+--
+Optional title (as of <<ASCIIREQ-TITLE-0500>>)
+of an <<ASCIIREQ-ITEM>>,
+part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
+--
+
+[#ASCIIREQ-BODY, reftext="ASCIIREQ-BODY", .req-data]
+ASCIIREQ-BODY:: _AsciiReq item body_
++
+--
+Body (as of <<ASCIIREQ-BODY-0600>>)
+of an <<ASCIIREQ-ITEM>>,
+part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
+--
+
+[#ASCIIREQ-ATTRIBUTE, reftext="ASCIIREQ-ATTRIBUTE", .req-data]
+ASCIIREQ-ATTRIBUTE:: _AsciiReq requirement attribute_
++
+--
+One attribute
+in the attribute set (as of <<ASCIIREQ-ATTRIBUTES-0700>>)
+of an <<ASCIIREQ-REQUIREMENT>> (requirements only!),
+part of the <<ASCIIREQ-COMPOUND-CONTENT>>.
+--

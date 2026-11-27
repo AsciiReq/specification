@@ -1,0 +1,101 @@
+= Design of the `asciireq-publish` tool
+:toc:
+
+See link:usage.adoc[usage.adoc] for how to run the tool.
+
+== Why not a single asciidoctor built-in call?
+
+Include resolution itself is an asciidoctor built-in, already used by the
+tool: it drives asciidoctor's own `PreprocessorReader`
+(`asciidoctor.PreprocessorReader.$new(doc, content, cursor)`, then reads lines
+to exhaustion). `resolveIncludes()` does not re-implement include resolution.
+
+However, asciidoctor offers no built-in that writes the resolved document back
+as AsciiDoc source:
+
+* the CLI and `convertFile()` resolve includes only at conversion time, and
+  only into backend output (html5, docbook5, manpage): `-b asciidoc` fails
+  with "missing converter for backend 'asciidoc'", and there is no
+  "dump resolved source" option;
+* publishing a self-contained `.adoc` file therefore requires reading the
+  preprocessed lines ourselves.
+
+== Why the `env-github` conditional is protected
+
+The preprocessor always evaluates `ifdef::` / `ifndef::` directives; there is
+no "pass-through" mode. Without protection, the
+`ifdef::env-github[]` / `ifndef::env-github[]` block of
+`src/asciireq-specification.adoc` (the GitHub rendering hack for Mermaid
+diagrams) would be collapsed to a single `:MERMAID:` line in the published
+file, and the hack would stop working on GitHub.
+
+The tool therefore hides those blocks behind placeholder comment lines before
+preprocessing and restores them verbatim afterwards, so the hack remains
+active in the published file: `MERMAID` resolves to `source, mermaid` when
+`env-github` is set (GitHub rendering) and to `mermaid` otherwise.
+
+== Why `applyLevelOffsets()` is needed
+
+Included files start with a level 1 title and are included with
+`leveloffset=+1`; nested includes accumulate the offset. The
+`PreprocessorReader` handles `leveloffset` by emitting `:leveloffset: +N` /
+`:leveloffset!:` attribute markers around the included content instead of
+rewriting the titles.
+
+In a flattened file that is re-parsed standalone (as GitHub does), those
+markers do not accumulate across sibling nested includes: each
+`:leveloffset!:` resets the offset to 0. Reproduced with
+`main -> chapter[leveloffset=+1] -> part1[+1] / part2[+1]`: the markers-only
+flattened file parses `Part2` at level 1 instead of level 2.
+
+`applyLevelOffsets()` therefore bakes the accumulated offset into the `=`
+count of each section title (simulating the push/pop of the markers with a
+stack) and drops the marker lines. The published file thus contains no
+`:leveloffset:` markers and is structurally identical to a hand-written
+monolith: parsing the published `asciireq-specification.adoc` yields the same
+33 sections (level, id, title) as the previously published single file.
+
+== Why the version and date are resolved at publish time
+
+The `src/` sources never hardcode a version or a date:
+`src/asciireq-specification.adoc` keeps `:revnumber:` and `:revdate:`
+placeholder lines (e.g. `:revnumber: (resolved from the VERSION file when
+published)` — the whole line is replaced at publish, so no comment line leaks
+into the published file), the version lives in the `VERSION`
+file at the repository root (the single source of truth, also used to tag
+releases), and the date is the day `npm run publish` runs. The tool resolves
+those placeholders in place (`applyRevisionInfo()`, which throws if one is
+missing), so the published file keeps the original header layout and always
+carries the current version and date (never a leftover placeholder);
+re-running the tool on the same day is idempotent. Documents without those
+placeholders (e.g. `README.adoc`) are published without revision info.
+
+== Why CommonJS instead of ESM?
+
+The tool is a single small file executed directly with
+`node scripts/publish/asciireq-publish.js` — no bundler, no module graph.
+
+* CommonJS is still fully supported in Node.js 22 (nothing is deprecated), and
+  `require('asciidoctor')` is the simplest way to consume the asciidoctor
+  package: the script runs out of the box, with no extra setup.
+* Switching to ESM would require `"type": "module"` in `package.json` (which
+  affects every `.js` file of the package) or a rename to `.mjs`, plus
+  `import ... from 'asciidoctor'` syntax and possibly loader flags for some
+  packages — additional configuration for zero functional gain on this script.
+
+ESM is recommended for new applications/libraries and browser-side code; for
+this tiny internal build script, CommonJS keeps it configuration-free.
+
+== Verification
+
+* `npm run publish` is idempotent within a day: running it twice on the same
+  day leaves the tree unchanged;
+* the published `asciireq-specification.adoc` header carries `:revnumber:` read
+  from the `VERSION` file and `:revdate:` set to the current date, in place of
+  the placeholder lines; `README.adoc` is published without revision info;
+* published files contain no `include::` directive (the tool throws an error
+  otherwise);
+* the published `asciireq-specification.adoc` parses to the same 33 sections
+  as before the split, with the `env-github` hack present and `MERMAID`
+  resolving to `source, mermaid` with `env-github` set and to `mermaid`
+  without it.
