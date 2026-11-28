@@ -1,4 +1,5 @@
 = AsciiReq - Requirements with AsciiDoc
+:revnumber: (resolved from the VERSION file when published)
 :toc:
 
 
@@ -33,3 +34,5 @@ include::about/motivation.adoc[leveloffset=+1]
 
 See the link:./asciireq-specification.adoc[full specification]
 written in AsciiReq itself.
+
+Current version is {revnumber}.

@@ -64,11 +64,13 @@ published)` — the whole line is replaced at publish, so no comment line leaks
 into the published file), the version lives in the `VERSION`
 file at the repository root (the single source of truth, also used to tag
 releases), and the date is the day `npm run publish` runs. The tool resolves
-those placeholders in place (`applyRevisionInfo()`, which throws if one is
-missing), so the published file keeps the original header layout and always
-carries the current version and date (never a leftover placeholder);
-re-running the tool on the same day is idempotent. Documents without those
-placeholders (e.g. `README.adoc`) are published without revision info.
+each of those placeholders in place when the document declares it
+(`applyRevisionInfo()` replaces `:revnumber:` and `:revdate:` independently),
+so the published file keeps the original header layout and carries the current
+version and/or date for the placeholders it declares (never a leftover
+placeholder); re-running the tool on the same day is idempotent. A document
+that lacks one of the placeholders (e.g. `src/README.adoc` has no `:revdate:`)
+gets no revision info for it.
 
 == Why CommonJS instead of ESM?
 
@@ -92,7 +94,8 @@ this tiny internal build script, CommonJS keeps it configuration-free.
   day leaves the tree unchanged;
 * the published `asciireq-specification.adoc` header carries `:revnumber:` read
   from the `VERSION` file and `:revdate:` set to the current date, in place of
-  the placeholder lines; `README.adoc` is published without revision info;
+  the placeholder lines; the published `README.adoc` carries `:revnumber:` read
+  from the `VERSION` file in place of its placeholder line;
 * published files contain no `include::` directive (the tool throws an error
   otherwise);
 * the published `asciireq-specification.adoc` parses to the same 33 sections

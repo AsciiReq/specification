@@ -12,13 +12,13 @@ files, so the tool publishes self-contained copies at the repository root
 
 The version of the specification is read from the `VERSION` file at the
 repository root, and the publication date is the current date: `npm run publish`
-resolves the `:revnumber:` and `:revdate:` placeholder lines of
-`src/asciireq-specification.adoc` (e.g. `:revnumber: (resolved from the
-VERSION file when published)`) in place — `:revnumber:` from the `VERSION`
-file, `:revdate:` from the current date — when publishing
-`asciireq-specification.adoc` at the repository root (`README.adoc` has no
-revision header and gets none). Bump the `VERSION` file when releasing a new
-version.
+resolves in place each `:revnumber:` / `:revdate:` placeholder line declared
+in the header of a published source (e.g. `:revnumber: (resolved from the
+VERSION file when published)`) — `:revnumber:` from the `VERSION` file,
+`:revdate:` from the current date — when publishing at the repository root.
+Each placeholder is resolved independently: `src/README.adoc` declares only
+`:revnumber:`, so the published `README.adoc` gets the version but no date.
+Bump the `VERSION` file when releasing a new version.
 
 Usage:
 

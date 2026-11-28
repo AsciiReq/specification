@@ -189,29 +189,23 @@ function currentDate() {
 }
 
 /**
- * Resolves in place the `:revnumber:` / `:revdate:` placeholders of the given
- * content: `:revnumber:` with the version read from the `VERSION` file, and
- * `:revdate:` with the current date. The placeholders stay in the `src/` files
- * (e.g. `:revnumber: (resolved from the VERSION file when published)` — the
- * whole line is replaced along with the value), so nothing extra leaks into
- * the published file, which keeps the original header layout and always
- * carries the current version and date.
+ * Resolves in place the `:revnumber:` and `:revdate:` placeholders of the given
+ * content, each independently when declared: `:revnumber:` with the version
+ * read from the `VERSION` file, `:revdate:` with the current date. The
+ * placeholders stay in the `src/` files (e.g. `:revnumber: (resolved from
+ * the VERSION file when published)` — the whole line is replaced along with
+ * the value), so nothing extra leaks into the published file, which keeps the
+ * original header layout and carries the current version and/or date for the
+ * placeholders it declares.
  *
  * @param {string} content - the resolved AsciiDoc content with the placeholders
  * @param {string} version - the version read from the `VERSION` file
  * @param {string} revdate - the current date, in ISO `YYYY-MM-DD` format
- * @returns {string} the content with the placeholders resolved
- * @throws {Error} if the `:revnumber:` or `:revdate:` placeholder is missing
+ * @returns {string} the content with the declared placeholders resolved
  */
 function applyRevisionInfo(content, version, revdate) {
-  const withRevnumber = content.replace(/^:revnumber:.*$/m, `:revnumber: ${version}`);
-  if (withRevnumber === content) {
-    throw new Error('No :revnumber: placeholder found in the document header');
-  }
-  const resolved = withRevnumber.replace(/^:revdate:.*$/m, `:revdate: ${revdate}`);
-  if (resolved === withRevnumber) {
-    throw new Error('No :revdate: placeholder found in the document header');
-  }
+  let resolved = content.replace(/^:revnumber:.*$/m, `:revnumber: ${version}`);
+  resolved = resolved.replace(/^:revdate:.*$/m, `:revdate: ${revdate}`);
   return resolved;
 }
 
@@ -226,16 +220,19 @@ for (const fileName of publishedFiles) {
   if (fileName === 'README.adoc') {
     content = resolveAsciiReqReferences(content, references);
   }
-  // Resolve the revision placeholders only in documents that declare them in
-  // their header (asciireq-specification.adoc); README.adoc has none.
-  const stamped = /^:(?:revnumber|revdate):/m.test(content);
-  if (stamped) {
-    content = applyRevisionInfo(content, version, revdate);
+  // Resolve the revision placeholders declared in the document header, if any.
+  const details = [];
+  if (/^:revnumber:/m.test(content)) {
+    details.push(`version ${version}`);
   }
+  if (/^:revdate:/m.test(content)) {
+    details.push(`date ${revdate}`);
+  }
+  content = applyRevisionInfo(content, version, revdate);
   fs.writeFileSync(path.join(rootDir, fileName), content);
   console.log(
-    stamped
-      ? `published ${fileName} (version ${version}, date ${revdate})`
+    details.length > 0
+      ? `published ${fileName} (${details.join(', ')})`
       : `published ${fileName}`
   );
 }
